@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Imaguru</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="style/main.min.css">
+</head>
+<body>
+  <div class="wrapper">
+    <!--header  -->
+    <header class="main-header">
+      <div class="logo">
+        <a href="#" class="logo__link">
+        <img src="img/header-logo.svg" width="180" height="23" class="logo__picture" alt="Imaguru">
+        </a>
+      </div>
+      <!--Menu  -->
+      <div class="menu-icon"></div>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item"><a href="#" class="menu__link">О клубе</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Коворкинг</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Мероприятия</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Обучение</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Организуй у нас</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="promo promo--events">
+
+      <div class="info">
+        <div class="info__left">
+          <div class="info__adress">Минск, ул. Фабрициуса 4</div>
+          <div class="info__time">пн-вс: 08.00 - 22.00</div>
+          <div class="info__phone">
+            <div>+375 29 1 189 189</div>
+            <div>+375 29 1 189 189</div>
+          </div>
+        </div>
+        <div class="info__right">
+          <a href="mailto:info@imaguru.by" class="info__mail">info@imaguru.by</a>
+          <select class="info__lang">
+            <option value="ru">Ru</option>
+            <option value="Eng">Eng</option>
+          </select>
+          <button class="info__share"></button>
+        </div>
+      </div>
+      <!--Slider -->
+      <div class="main-text main-text--slider">
+        <div class="main-text__slide">
+          <p class="main-text__date">16 Июля | 17:00</p>
+          <h1 class="main-text__title main-text__title--events">National Startup Battle</h1>
+          <p class="main-text__paragraph main-text__paragraph--events">Ведущее событие для предпринимателей, которое объединяет авторов прорывных проектов, опытных представителей бизнеса, руководителей венчурных фондов и инвесторов.</p>
+          <a href="#" class="btn btn--event">Подробнее</a>
+        </div>
+        <div class="main-text__slide">
+          <p class="main-text__date">16 Июля | 17:00</p>
+          <h1 class="main-text__title main-text__title--events">National Startup Battle</h1>
+          <p class="main-text__paragraph main-text__paragraph--events">Ведущее событие для предпринимателей, которое объединяет авторов прорывных проектов, опытных представителей бизнеса, руководителей венчурных фондов и инвесторов.</p>
+          <a href="#" class="btn btn--event">Подробнее</a>
+        </div>
+        <div class="main-text__slide">
+          <p class="main-text__date">16 Июля | 17:00</p>
+          <h1 class="main-text__title main-text__title--events">National Startup Battle</h1>
+          <p class="main-text__paragraph main-text__paragraph--events">Ведущее событие для предпринимателей, которое объединяет авторов прорывных проектов, опытных представителей бизнеса, руководителей венчурных фондов и инвесторов.</p>
+          <a href="#" class="btn btn--event">Подробнее</a>
+        </div>
+      </div>
+
+    </div>
+  <div class="events-info">
+    <div class="events-info__left">
+      <div class="events-calendar">
+        <div class="events-calendar__month">
+          <ul>
+            <li class="prev">❮</li>
+            <li class="next">❯</li>
+            <li class="month-name">Август 2016</li>
+          </ul>
+        </div>
+        <ul class="events-calendar__weekdays">
+          <li>Пн</li>
+          <li>Вт</li>
+          <li>Ср</li>
+          <li>Чт</li>
+          <li>Пт</li>
+          <li>Сб</li>
+          <li>Вс</li>
+        </ul>
+        <ul class="events-calendar__days">
+          <li>1</li>
+          <li class="hasEvent">2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li class="hasEvent">6</li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li><span class="active">10</span></li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+          <li>14</li>
+          <li>15</li>
+          <li class="hasEvent">16</li>
+          <li>17</li>
+          <li>18</li>
+          <li>19</li>
+          <li>20</li>
+          <li>21</li>
+          <li>22</li>
+          <li class="hasEvent">23</li>
+          <li>24</li>
+          <li>25</li>
+          <li>26</li>
+          <li>27</li>
+          <li>28</li>
+          <li>29</li>
+          <li>30</li>
+          <li>31</li>
+        </ul>
+      </div>
+      <div class="events-meta">
+        <h4 class="events-meta__title">
+          Категории мероприятий
+        </h4>
+        <ul class="events-meta__list">
+          <li class="events-meta__item"><a class="today" href="#">Kids Guru</a></li>
+          <li class="events-meta__item"><a href="#">Вечеринка</a></li>
+          <li class="events-meta__item"><a href="#">Игры</a></li>
+          <li class="events-meta__item"><a href="#">Конференция</a></li>
+          <li class="events-meta__item"><a class="today" href="#">Мастер-класс</a></li>
+          <li class="events-meta__item"><a href="#">Нетворкинг</a></li>
+          <li class="events-meta__item"><a href="#">Презентация</a></li>
+          <li class="events-meta__item"><a href="#">Хакатон</a></li>
+          <li class="events-meta__item"><a href="#">Бизнес-завтрак</a></li>
+          <li class="events-meta__item"><a class="today" href="#">Конкурс</a></li>
+          <li class="events-meta__item"><a href="#">Круглый стол</a></li>
+          <li class="events-meta__item"><a href="#">Митап</a></li>
+          <li class="events-meta__item"><a class="today" href="#">Пресс-конференция</a></li>
+          <li class="events-meta__item"><a href="#">Обучение</a></li>
+          <li class="events-meta__item"><a href="#">Другое</a></li>
+        </ul>
+      </div>
+      <div class="events-meta events-meta--themes">
+        <h4 class="events-meta__title">
+          Темы мероприятий
+        </h4>
+        <ul class="events-meta__list">
+          <li class="events-meta__item"><a class="today" href="#">IT</a></li>
+          <li class="events-meta__item"><a href="#">Иностранные языки</a></li>
+          <li class="events-meta__item"><a href="#">Менеджмент</a></li>
+          <li class="events-meta__item"><a href="#">Стартапы</a></li>
+          <li class="events-meta__item"><a class="today" href="#">Мастер-класс</a></li>
+          <li class="events-meta__item"><a href="#">Предпринимательство</a></li>
+          <li class="events-meta__item"><a href="#">Маркетинг и PR</a></li>
+          <li class="events-meta__item"><a href="#">Продажи</a></li>
+          <li class="events-meta__item"><a href="#">Другое</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="events-info__right">
+      <!--Timetable  -->
+      <div class="events-timetable">
+        <ul class="events-timetable__list">
+          <li class="events-timetable__item" data-type="entrepreneur">
+            <div class="events-timetable__time">
+              <time>9:00</time>
+              <p>29 июль</p>
+            </div>
+            <div class="events-timetable__info">
+              <p class="events-timetable__category">
+                <a class="events-timetable__category-item" href="#" data-category="entrepreneur">Предпринимательство</a>
+                <a class="events-timetable__category-item" href="#" data-category="masterclass">Мастер-класс</a>
+              </p>
+              <a href="#" class="events-timetable__title">7 шагов к богатству: тренинг Алексея Новицкого и Антона Коваленко</a>
+            </div>
+          </li>
+          <li class="events-timetable__item" data-type="entrepreneur">
+            <div class="events-timetable__time">
+              <time>10:00</time>
+              <p>30 июль</p>
+            </div>
+            <div class="events-timetable__info">
+              <p class="events-timetable__category">
+                <a href="#" class="events-timetable__category-item" data-category="entrepreneur">Предпринимательство</a>
+                <a href="#" class="events-timetable__category-item" data-category="masterclass">Мастер-класс</a>
+              </p>
+              <a href="#" class="events-timetable__title">Тактика и стратегия публичных выступлений</a>
+            </div>
+          </li>
+          <li class="events-timetable__item" data-type="meetup">
+            <div class="events-timetable__time">
+              <time>14:00</time>
+              <p>30 июль</p>
+            </div>
+            <div class="events-timetable__info">
+              <p class="events-timetable__category">
+                <a href="#" class="events-timetable__category-item" data-category="meetup" >Митап</a>
+              </p>
+              <a href="#" class="events-timetable__title">BY Jenkins Meetup #0</a>
+            </div>
+          </li>
+          <li class="events-timetable__item" data-type="course">
+            <div class="events-timetable__time">
+              <time>12:00</time>
+              <p>1 августа</p>
+            </div>
+            <div class="events-timetable__info">
+              <p class="events-timetable__category">
+                <a href="#" class="events-timetable__category-item" data-category="course">Курс</a>
+              </p>
+              <a href="#" class="events-timetable__title">KIDS GURU WEBER</a>
+            </div>
+          </li>
+          <li class="events-timetable__item" data-type="course">
+            <div class="events-timetable__time">
+              <time>12:00</time>
+              <p>1 августа</p>
+            </div>
+            <div class="events-timetable__info">
+              <p class="events-timetable__category">
+                <a href="#" class="events-timetable__category-item" data-category="course">Курс</a>
+              </p>
+              <a  href="#" class="events-timetable__title">KIDS GURU: Юный Ютубер</a>
+            </div>
+          </li>
+          <li class="events-timetable__item" data-type="it">
+            <div class="events-timetable__time">
+              <time>9:00</time>
+              <p>29 июль</p>
+            </div>
+            <div class="events-timetable__info">
+              <p class="events-timetable__category">
+                <a href="#" class="events-timetable__category-item" data-category="it">IT</a>
+                <a href="#" class="events-timetable__category-item" data-category="startup">Стартапы</a>
+              </p>
+              <a href="#" class="events-timetable__title">TechMinsk Summer’16 Batch</a>
+            </div>
+          </li>
+          <li class="events-timetable__item" data-type="entrepreneur">
+            <div class="events-timetable__time">
+              <time>18:00</time>
+              <p>3 августа</p>
+            </div>
+            <div class="events-timetable__info">
+              <p class="events-timetable__category">
+                <a href="#" class="events-timetable__category-item" data-category="entrepreneur">Предпринимательство</a>
+                <a href="#" class="events-timetable__category-item" data-category="masterclass">Мастер-класс</a>
+              </p>
+              <a href="#" class="events-timetable__title">Безбумажная бухгалтерия: как ее организовать.</a>
+            </div>
+          </li>
+          <li class="events-timetable__item" data-type="it">
+            <div class="events-timetable__time">
+              <time>9:00</time>
+              <p>29 июль</p>
+            </div>
+            <div class="events-timetable__info">
+              <p class="events-timetable__category">
+                <a href="#" class="events-timetable__category-item" data-category="it">IT</a>
+                <a href="#" class="events-timetable__category-item" data-category="startup">Стартапы</a>
+              </p>
+              <a href="#" class="events-timetable__title">TechMinsk Summer’16 Batch</a>
+            </div>
+          </li>
+          <li class="events-timetable__item" data-type="it">
+            <div class="events-timetable__time">
+              <time>9:00</time>
+              <p>29 июль</p>
+            </div>
+            <div class="events-timetable__info">
+              <p class="events-timetable__category">
+                <a href="#" class="events-timetable__category-item" data-category="it">IT</a>
+                <a href="#" class="events-timetable__category-item" data-category="startup">Стартапы</a>
+              </p>
+              <a href="#" class="events-timetable__title">TechMinsk Summer’16 Batch</a>
+            </div>
+          </li>
+        </ul>
+        <a href="№" class="events-timetable__more">Показать больше</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!--Courses  -->
+  <div class="posts">
+
+    <div class="preview preview--courses">
+      <div class="preview__overlay"></div>
+      <div class="preview__content">
+        <h2 class="preview__title">Ближайшие<br> курсы</h2>
+        <a href="#" class="btn btn-white">Показать все</a>
+      </div>
+    </div>
+    <div class="posts__item posts__item--courses">
+      <h3 class="posts__title posts__title--courses">Front-end Web developer</h3>
+      <p class="posts__coursedate"> 1 Февраля - 1 Марта</p>
+      <p class="posts__price">740 руб.</p>
+    </div>
+
+    <div class="posts__item posts__item--courses">
+      <h3 class="posts__title posts__title--courses">iOS developer</h3>
+      <p class="posts__coursedate"> 1 Февраля - 1 Марта</p>
+      <p class="posts__price">950 руб.</p>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="welcome welcome--half">
+      <h2 class="welcome__title">Заходите к нам</h2>
+      <p>г. Минск, ул. Фабрициуса, 4</p>
+    </div>
+    <div class="social social--events">
+      <h2 class="social__title">Мы в социальных сетях</h2>
+      <ul class="social__list">
+        <li>
+          <a href="#" class="social__icon social__icon--fb"></a>
+        </li>
+        <li>
+          <a href="#" class="social__icon social__icon--tw"></a>
+        </li>
+        <li>
+          <a href="#" class="social__icon social__icon--insta"></a>
+        </li>
+        <li>
+          <a href="#" class="social__icon social__icon--in"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!--Footer  -->
+  <footer class="main-footer">
+    <div class="main-footer__left">
+      <form class="footer-form">
+        <h3 class="footer-form__title">Оставайтесь в курсе</h3>
+        <input type="email" class="footer-form__input" placeholder="Введите ваш email" required>
+        <button type="submit" class="btn ">Подписаться на рассылку</button>
+      </form>
+    </div>
+    <div class="main-footer__right">
+      <nav class="footer-menu">
+        <ul class="footer-menu__list">
+          <li class="footer-menu__item"><a href="#" class="footer-menu__link">О клубе</a></li>
+          <li class="footer-menu__item"><a href="#" class="footer-menu__link">Коворкинг</a></li>
+          <li class="footer-menu__item"><a href="#" class="footer-menu__link">Мероприятия</a></li>
+          <li class="footer-menu__item"><a href="#" class="footer-menu__link">Обучение</a></li>
+          <li class="footer-menu__item"><a href="#" class="footer-menu__link">Организуй у нас</a></li>
+          <li class="footer-menu__item"><a href="#" class="footer-menu__link">Контакты</a></li>
+        </ul>
+      </nav>
+      <ul class="footer-social">
+        <li class="footer-social__item"><a href="#">Twitter</a></li>
+        <li class="footer-social__item"><a href="#">Facebook</a></li>
+        <li class="footer-social__item"><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+  </footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/common.js"></script>
+ </body>
+</html>

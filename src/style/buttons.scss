@@ -1,0 +1,30 @@
+.btn {
+  display: inline-block;
+  text-align: center;
+  color: $white-color;
+  font-family: "Raleway Bold", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.2;
+  padding: 20px 40px;
+  border: 3px solid $white-color;
+  border-radius: 3px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  background: none;
+
+  &:hover,
+  &:active {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &--orange {
+    color: $orange;
+    border: 3px solid $orange;
+  }
+
+  @media only screen and (max-width: 480px) {
+    font-size: 0.75rem;
+  }
+}

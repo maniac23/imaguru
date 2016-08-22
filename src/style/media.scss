@@ -1,0 +1,475 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  .subscribe {
+    flex-direction: column;
+
+    text-align: left;
+
+    -webkit-box-orient: vertical;
+
+    &__text {
+      flex: 1 1 auto;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    &__form {
+      flex: 1 1 auto;
+      width: 100%;
+    }
+  }
+}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 1024px) {
+  .logo {
+    flex-basis: 80%;
+  }
+
+  .menu-icon {
+    display: block;
+    flex-basis: 5%;
+  }
+
+  .menu {
+    display: none;
+    flex-basis: 100%;
+
+    &__list {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__item {
+      margin-right: 0;
+      padding: 10px 0;
+    }
+  }
+
+  .info {
+    &__left {
+      flex-direction: column;
+    }
+
+    &__time {
+      margin-bottom: 10px;
+    }
+  }
+
+  .slider {
+    &__image,
+    &__text {
+      float: none;
+      width: 100%;
+    }
+
+    .slick-dots {
+      position: absolute;
+      top: 93%;
+      left: 50%;
+
+      display: block;
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
+
+      transform: translateX(-50%);
+
+      li {
+        display: inline-block;
+        margin-bottom: 0;
+      }
+
+      button {
+        margin-right: 10px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .info {
+    margin-bottom: 50px;
+  }
+
+  .event-data {
+    flex-direction: column;
+
+    text-align: center;
+
+    div:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  .row {
+    flex-direction: column;
+
+    -webkit-box-orient: vertical;
+  }
+
+  .content-block {
+    width: 100%;
+  }
+
+  .posts {
+    flex-wrap: wrap;
+
+    &__item {
+      flex: 1 0 100%;
+      order: 2;
+    }
+  }
+
+  .preview {
+    flex: 1 0 100%;
+    order: 1;
+  }
+
+  .subscribe {
+    &__text {
+      margin-bottom: 40px;
+    }
+
+    &__form {
+      display: block;
+      width: 100%;
+
+      input {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .coworkers {
+    &__item {
+      flex: 0 0 50%;
+    }
+  }
+
+  .about {
+    flex-direction: column;
+
+    &__left,
+    &__right {
+      flex: 0 0 auto;
+    }
+  }
+
+  .video {
+    display: block;
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .main-footer {
+    flex-direction: column;
+    justify-content: center;
+
+    &__left {
+      margin-bottom: 60px;
+    }
+  }
+
+  .footer-form input {
+    width: 100%;
+  }
+
+  .speakers {
+    &__item {
+      flex-basis: 50%;
+    }
+  }
+
+  .event-register {
+    &__form {
+      width: 50%;
+    }
+  }
+
+  .event-video {
+    iframe {
+      height: 300px;
+    }
+  }
+
+  .event-gallery {
+    &__item {
+      flex-basis: 50%;
+    }
+
+    &__more {
+      flex: 100%;
+      min-height: 200px;
+    }
+  }
+
+  .events-info {
+    &__left,
+    &__right {
+      flex-basis: 100%;
+    }
+  }
+
+  .events-meta {
+    display: none;
+  }
+}
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width: 480px) {
+  .main-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .menu {
+    margin-top: 20px;
+  }
+
+  .menu-icon {
+    flex-basis: 10%;
+  }
+
+  .info {
+    flex-direction: column;
+    align-items: center;
+
+    &__left {
+      display: none;
+    }
+
+    &__right {
+      width: 100%;
+
+      text-align: right;
+    }
+  }
+
+  .main-text {
+    .btn:not(:last-child) {
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      display: block;
+      width: 80%;
+      margin: 0 auto;
+      padding: 10px 30px;
+    }
+  }
+
+  .features__item {
+    flex-basis: 50%;
+
+    a {
+      font-size: 0.75rem;
+    }
+  }
+
+  .content-block {
+    &--white {
+      order: -1;
+    }
+
+    &__title {
+      font-size: 1.25rem;
+    }
+
+    p {
+      font-size: 0.875rem;
+    }
+  }
+
+  .slider {
+    &__text {
+      padding: 45px 10.9375%;
+    }
+
+    &__title {
+      margin-bottom: 15px;
+
+      font-size: 1.25rem;
+    }
+
+    p {
+      margin-bottom: 20px;
+
+      font-size: 0.875rem;
+    }
+  }
+
+  .posts {
+    &__item {
+      padding-top: 45px;
+      padding-bottom: 45px;
+    }
+
+    &__date,
+    &__author {
+      font-size: 0.75rem;
+    }
+
+    &__category {
+      font-size: 0.875rem;
+    }
+
+    &__title {
+      font-size: 1.125rem;
+    }
+  }
+
+  .preview {
+    padding: 95px 0;
+
+    font-size: 1.375rem;
+  }
+
+  .coworkers {
+    &__item {
+      flex: 0 0 100%;
+    }
+  }
+
+  .social {
+    padding-top: 30px;
+    padding-bottom: 40px;
+
+    &__icon {
+      width: 45px;
+      height: 45px;
+    }
+
+    &__title {
+      font-size: 1.25rem;
+    }
+  }
+
+  .contact-form {
+    padding-top: 25px;
+    padding-bottom: 40px;
+
+    &__title {
+      font-size: 1.25rem;
+    }
+
+    input {
+      width: 100%;
+
+      font-size: 0.75rem;
+    }
+  }
+
+  .welcome {
+    padding-top: 20px;
+    padding-bottom: 25px;
+
+    &__title {
+      font-size: 1.25rem;
+    }
+
+    p {
+      font-size: 0.75rem;
+    }
+  }
+
+  .event-descr {
+    flex-direction: column;
+
+    &__meta {
+      flex-direction: column;
+    }
+
+    &__categories {
+      margin-right: 0;
+      margin-bottom: 10px;
+
+      span:not(:last-child) {
+        &::after {
+          margin: 0 5px;
+        }
+      }
+    }
+
+    &__content {
+      margin-bottom: 20px;
+    }
+  }
+
+  .share-widget {
+    order: 2;
+    padding: 20px;
+
+    h5 {
+      text-align: left;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__item {
+      margin-bottom: 0;
+    }
+  }
+
+  .speakers {
+    &__item {
+      flex-basis: 100%;
+      margin-bottom: 40px;
+    }
+
+    &__name {
+      margin-bottom: 20px;
+    }
+  }
+
+  .event-register {
+    &__form {
+      width: 80%;
+    }
+  }
+
+  .event-video {
+    iframe {
+      height: 250px;
+    }
+  }
+
+  .event-gallery {
+    &__item {
+      flex-basis: 100%;
+    }
+
+    &__more {
+      flex: 100%;
+      min-height: 200px;
+    }
+  }
+
+  .events-timetable {
+    &__category-item {
+      &:not(:last-child) {
+        &::after {
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+}
+// @media only screen and (max-width: 320px) {
+//
+// }
