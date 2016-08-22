@@ -1681,16 +1681,11 @@ body {
 
     font-family: "Open Sans", Arial, sans-serif;
 
-    time {
-      font-weight: 600;
-      font-size: 1rem;
-    }
-
     p {
       margin: 0;
       padding: 0;
 
-      font-weight: 400;
+      font-weight: 600;
       font-size: 1rem;
     }
   }
@@ -1719,7 +1714,7 @@ body {
         content: "";
 
         display: inline-block;
-        width: 1px;
+        width: 2px;
         height: 20px;
         margin: 0 10px;
 
