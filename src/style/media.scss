@@ -333,6 +333,10 @@
     padding: 95px 0;
 
     font-size: 1.375rem;
+
+    &--events-gallery {
+      padding: 0;
+    }
   }
 
   .coworkers {
@@ -467,6 +471,16 @@
           margin: 0 5px;
         }
       }
+    }
+  }
+
+  .events-slider {
+    & .slick-arrow {
+      left: 5%;
+    }
+
+    & .slick-next {
+      left: 90%;
     }
   }
 }
