@@ -689,6 +689,12 @@ body {
     line-height: 1.2;
 
     border-right: 1px solid $white-color;
+
+    &--post {
+      border-right: none;
+      font-weight: 300;
+      font-size: 1.25rem;
+    }
   }
 
   &__author {
@@ -708,6 +714,11 @@ body {
     line-height: 1.2;
     font-family: Raleway, Arial, sans-serif;
     text-transform: capitalize;
+
+    &--post {
+      font-weight: 300;
+      font-size: 1.5rem;
+    }
   }
 
   &__overlay {
@@ -729,6 +740,9 @@ body {
     font-size: 1.5rem;
     line-height: 1.5;
     font-family: Raleway, Arial, sans-serif;
+    color: $white-color;
+    text-decoration: none;
+    display: block;
 
     &--courses {
       margin-bottom: 30px;
@@ -737,6 +751,11 @@ body {
       font-size: 1.875rem;
       font-family: Raleway, Arial, sans-serif;
       text-transform: uppercase;
+    }
+
+    &--post {
+      font-weight: 600;
+      margin-bottom: 40px;
     }
   }
 
@@ -1903,7 +1922,7 @@ body {
   }
 }
 
-.blog-data {
+.post-data {
   display: flex;
   justify-content: space-between;
 
@@ -1944,10 +1963,14 @@ body {
 
 }
 
-.blog-content {
+.post-content {
   display: flex;
   flex-wrap: wrap;
   padding: 80px $section-padding;
+
+  &__text {
+    flex: 0 0 85%;
+  }
 
   p {
     font-size: 1.25rem;

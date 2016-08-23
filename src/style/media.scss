@@ -121,6 +121,10 @@
       }
     }
   }
+
+  .post-content__text {
+    flex-basis: 80%;
+  }
 }
 
 
@@ -253,6 +257,10 @@
 
   .events-meta {
     display: none;
+  }
+
+  .post-content__text {
+    flex-basis: 77%;
   }
 }
 /* Extra Small Devices, Phones */
@@ -524,7 +532,7 @@
     }
   }
 
-  .blog-data {
+  .post-data {
     flex-direction: column;
 
     &__category {
@@ -536,6 +544,12 @@
         display: block;
         margin-bottom: 30px;
       }
+    }
+  }
+
+  .post-content {
+    &__text {
+      flex: 0 0 100%;
     }
   }
 }
