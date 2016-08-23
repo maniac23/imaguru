@@ -1141,8 +1141,20 @@ body {
 
   background-color: $orange;
 
-  &--events {
+  &--half {
     flex-basis: 50%;
+  }
+
+  &--post {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    min-height: 150px;
+
+    .btn {
+      margin-bottom: 0;
+    }
   }
 
   &__title {
@@ -1983,6 +1995,113 @@ body {
   &__image {
     max-width: 100%;
     margin-bottom: 80px;
+  }
+}
+
+.comments {
+
+  text-align: center;
+  background-color: $grey;
+  color: $dark-font-color;
+
+  &__wrapper {
+    padding: 45px $section-padding;
+    background-color: $grey;
+
+    &--white {
+      background-color: $white-color;
+    }
+  }
+
+  &__form {
+    margin-top: 70px;
+    text-align: center;
+    display: none;
+
+    input {
+      display: block;
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid $dark-font-color;
+      margin-bottom: 40px;
+      padding: 5px 10px;
+      outline: none;
+      transition: all 0.3s ease-in;
+      border-radius: 0;
+
+      &:focus {
+        border-bottom: 1px solid $orange;
+      }
+    }
+  }
+
+  &__count {
+    margin: 0;
+    padding: 0;
+    font-size: 1.875rem;
+    font-weight: 300;
+    text-align: left;
+    margin-bottom: 80px;
+    padding-left: 20px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: left;
+    background: $white-color;
+  }
+
+  &__item {
+    padding: 30px 20px;
+
+    &:not(:last-child) {
+      border-bottom: 2px solid $grey;
+    }
+  }
+
+  &__author {
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  &__date {
+    font-size: 1.25rem;
+    margin-right: 15px;
+  }
+
+  &__reply {
+    color: $dark-font-color;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 12px;
+      height: 10px;
+      background: url("../img/reply_icon.svg");
+      margin-right: 10px;
+    }
   }
 }
 

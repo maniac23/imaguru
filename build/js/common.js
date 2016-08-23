@@ -66,4 +66,8 @@ $(document).ready(function() {
     mainClass: 'mfp-fade'
   });
 
+  $('#comments__btn').click(function() {
+    $('.comments__form').slideToggle();
+  });
+
 });
