@@ -271,6 +271,10 @@
     flex-basis: 10%;
   }
 
+  .promo--blog {
+    padding-top: 150px;
+  }
+
   .info {
     flex-direction: column;
     align-items: center;
@@ -297,6 +301,10 @@
       width: 80%;
       margin: 0 auto;
       padding: 10px 30px;
+    }
+
+    &--blog {
+      margin-bottom: 130px;
     }
   }
 
@@ -512,6 +520,21 @@
 
     & .slick-next {
       left: 90%;
+    }
+  }
+
+  .blog-data {
+    flex-direction: column;
+
+    &__category {
+      margin-bottom: 30px;
+    }
+
+    &__info {
+      span {
+        display: block;
+        margin-bottom: 30px;
+      }
     }
   }
 }
