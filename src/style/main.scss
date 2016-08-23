@@ -1944,4 +1944,23 @@ body {
 
 }
 
+.blog-content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 80px $section-padding;
+
+  p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+
+  &__image {
+    max-width: 100%;
+    margin-bottom: 80px;
+  }
+}
+
 @import "media.scss";
