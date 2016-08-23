@@ -25,6 +25,11 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 1024px) {
+  .main-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
   .logo {
     flex-basis: 80%;
   }
@@ -40,7 +45,8 @@
 
     &__list {
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
+      margin-top: 20px;
     }
 
     &__item {
@@ -50,6 +56,27 @@
       a {
         font-size: 1.3rem;
       }
+
+      &--hasDropdown {
+        .menu-dropdown a {
+          color: $dark-font-color;
+          margin-left: 20px;
+          margin-right: 0;
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+
+  .menu-dropdown {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    background-color: transparent;
+    position: static;
+
+    a {
+      color: $dark-font-color;
     }
   }
 
