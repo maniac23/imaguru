@@ -32,9 +32,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   width: 100%;
-  padding: 20px $section-padding;
+  padding: 0 $section-padding;
+  position: relative;
 }
 
 .logo {
@@ -69,12 +70,13 @@ body {
   &__item {
     flex: 1 1 auto;
     margin-right: 20px;
-    padding: 10px 0;
-    border-bottom: 3px solid transparent;
+    padding: 30px 0;
     transition: all 0.3s ease-in;
 
     &:hover {
-      border-bottom: 3px solid $dark-font-color;
+      a {
+        color: $orange;
+      }
     }
 
     a {
@@ -87,13 +89,47 @@ body {
     }
 
     &--active {
-      border-bottom: 3px solid $dark-font-color;
-
       a {
-        font-weight: 600;
-        font-family: Raleway, Arial, sans-serif;
+        color: $orange;
       }
     }
+
+    &--hasDropdown {
+      &:hover .menu-dropdown,
+      &:active .menu-dropdown {
+        display: flex;
+      }
+
+      .menu-dropdown a {
+        color: $white-color;
+
+        &:hover,
+        &:active {
+          color: $orange;
+        }
+      }
+    }
+  }
+}
+
+.menu-dropdown {
+  display: none;
+  justify-content: center;
+  flex-direction: row;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  padding: 20px 0;
+  background-color: $header-font-color;
+  color: $white-color;
+  width: 100%;
+  z-index: 2;
+
+  a {
+    color: $white-color;
+    font-weight: 300;
+    font-size: 1rem;
+    margin-right: 30px;
   }
 }
 
