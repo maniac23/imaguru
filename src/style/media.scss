@@ -147,6 +147,19 @@
     flex-basis: 80%;
   }
 
+  .blog-latest {
+    width: 100%;
+
+    &--column {
+      display: block;
+
+      .blog-latest__item {
+        width: 50%;
+        float: left;
+      }
+    }
+  }
+
   .blog-archive {
     .slick-arrow {
       left: 3%;
@@ -292,6 +305,25 @@
 
   .post-content__text {
     flex-basis: 77%;
+  }
+
+  .blog-latest {
+    width: 100%;
+
+    &--column {
+      display: block;
+
+      &::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      .blog-latest__item {
+        width: 100%;
+        float: left;
+      }
+    }
   }
 }
 /* Extra Small Devices, Phones */
@@ -595,7 +627,6 @@
   }
 
   .blog-latest {
-    flex: 0 0 100%;
 
     &__title {
       font-size: 1.5rem;

@@ -177,6 +177,7 @@ body {
 
 .promo {
   padding: 0 $section-padding 60px;
+  position: relative;
 
   background: url("../img/main-bg.jpg") center;
   background-size: cover;
@@ -533,6 +534,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  position: relative;
 }
 
 .content-block {
@@ -1232,6 +1234,8 @@ body {
   justify-content: space-between;
   align-items: baseline;
   padding: 70px 14.453125%;
+  position: relative;
+  z-index: 2;
 
   font-weight: 300;
   font-family: Raleway, Arial, sans-serif;
@@ -2152,36 +2156,36 @@ body {
 }
 
 .blog-latest {
-  flex: 0 0 50%;
+  float: left;
+  width: 50%;
   color: $white-color;
+  position: relative;
 
   &--column {
     display: flex;
     flex-direction: column;
     -webkit-box-orient: vertical;
-
-    .blog-latest__item {
-      padding-bottom: 0;
-    }
   }
 
   &__item {
     position: relative;
+    height: 100%;
+    z-index: 1000000;
   }
 
   &__image {
     width: 100%;
     display: block;
+    position: relative;
   }
 
   &__overlay {
     position: absolute;
     top: 0;
     left: 0;
-    bottom: 0;
-    right: 0;
     padding: 55px 8.59375% 50px;
     width: 100%;
+    height: 100%;
     background-color: rgba($blue, 0.8);
 
     &--orange {
@@ -2235,6 +2239,9 @@ body {
 }
 
 .blog-archive {
+  position: relative;
+  
+
   &--hidden {
     height: 0;
   }
@@ -2242,13 +2249,16 @@ body {
   h2 {
     font-size: 1.875rem;
     font-weight: 300;
+    margin: 0;
     padding: 60px 0 60px 4.6875%;
+    position: relative;
   }
 
   &__slider {
     width: 100%;
     display: flex;
     flex-direction: row;
+    position: relative;
   }
 
   &__slide {
@@ -2302,7 +2312,7 @@ body {
     border: none;
     font-size: 0;
     position: absolute;
-    z-index: 20;
+    z-index: 1;
     width: 40px;
     height: 40px;
     border-right: 1px solid $white-color;
@@ -2321,7 +2331,15 @@ body {
   }
 }
 
+.row--blog {
+  display: block;
 
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
 
 
 @import "media.scss";
