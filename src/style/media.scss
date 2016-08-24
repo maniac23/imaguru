@@ -146,6 +146,16 @@
   .post-content__text {
     flex-basis: 80%;
   }
+
+  .blog-archive {
+    .slick-arrow {
+      left: 3%;
+    }
+
+    .slick-next {
+      left: 93%;
+    }
+  }
 }
 
 
@@ -310,7 +320,7 @@
     flex-basis: 10%;
   }
 
-  .promo--blog {
+  .promo--post {
     padding-top: 150px;
   }
 
@@ -584,6 +594,23 @@
     }
   }
 
+  .blog-latest {
+    flex: 0 0 100%;
+
+    &__title {
+      font-size: 1.5rem;
+    }
+
+    &__text {
+      font-size: 1rem;
+    }
+  }
+
+  .blog-archive {
+    .slick-next {
+      left: 84%;
+    }
+  }
 }
 // @media only screen and (max-width: 320px) {
 //
