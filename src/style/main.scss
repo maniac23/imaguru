@@ -117,15 +117,30 @@ body {
   }
 
   &__search {
-    width: 0%;
-    position: absolute;
-    left: 29%;
-    display: none;
-  }
-
-  &__search-icon {
     width: 1.2rem;
-    height: 1.2rem;
+    height: 21px;
+    background-image: url("../img/search_icon.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    transition: all 0.3s ease-in;
+    position: absolute;
+    border-radius: 0;
+    right: 0;
+    border: none;
+    outline: none;
+    font-size: 0;
+    z-index: 200;
+    cursor: pointer;
+    // padding: 10px 5px;
+    color: $dark-font-color;
+
+    &:focus {
+      width: 700px;
+      font-size: 1rem;
+      background-color: $white-color;
+      border-bottom: 1px solid $dark-font-color;
+      cursor: text;
+    }
   }
 
   &__select {
@@ -133,6 +148,7 @@ body {
     outline: none;
     font-weight: 600;
     color: $dark-font-color;
+    appearance: none;
     opacity: 0.8;
     font-size: 1rem;
   }

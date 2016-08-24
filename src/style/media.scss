@@ -65,6 +65,27 @@
           padding: 10px 0;
         }
       }
+
+      &--margin {
+        margin-left: 0;
+        margin-bottom: 30px;
+      }
+    }
+
+    &__search {
+      width: 300px;
+      height: 25px;
+      right: 0;
+      left: 0;
+      border-bottom: 1px solid $dark-font-color;
+      background-position: left center;
+      padding-left: 35px;
+      font-size: 1rem;
+
+      &:focus {
+        width: 300px;
+        font-size: 1rem;
+      }
     }
   }
 
@@ -273,6 +294,16 @@
 
   .menu {
     margin-top: 20px;
+
+    &__search {
+      width: 200px;
+      font-size: 1.25rem;
+
+      &:focus {
+        width: 200px;
+        font-size: 1.25rem;
+      }
+    }
   }
 
   .menu-icon {
@@ -552,6 +583,7 @@
       flex: 0 0 100%;
     }
   }
+
 }
 // @media only screen and (max-width: 320px) {
 //
