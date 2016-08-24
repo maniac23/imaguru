@@ -68,7 +68,14 @@ $(document).ready(function() {
 
 // comments show
   $('#comments__btn').click(function() {
+    e.preventDefault();
     $('.comments__form').slideToggle();
+  });
+
+  $('#show').click(function(e) {
+    e.preventDefault();
+    // $('.blog-archive--hidden').animate({height: '100%'}, 'slow');
+    $('.blog-archive--hidden').slideToggle().animate({height: '100%'}, 'slow');
   });
 
 });

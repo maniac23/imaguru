@@ -2235,6 +2235,10 @@ body {
 }
 
 .blog-archive {
+  &--hidden {
+    height: 0;
+  }
+
   h2 {
     font-size: 1.875rem;
     font-weight: 300;
