@@ -33,7 +33,7 @@ $(document).ready(function() {
     autoplay: true
   });
 
-  $('.events-slider .posts, .blog-archive__slider').slick({
+  $('.events-gallery__list--slider, .blog-archive__slider').slick({
     infinite: false,
     slidesToShow: 3,
     slidesToScroll: 1,

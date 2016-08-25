@@ -170,6 +170,15 @@
       left: 93%;
     }
   }
+  .events-gallery {
+    .slick-arrow {
+      left: 3%;
+    }
+
+    .slick-next {
+      left: 93%;
+    }
+  }
 }
 
 
@@ -677,6 +686,12 @@
   }
 
   .blog-archive {
+    .slick-next {
+      left: 84%;
+    }
+  }
+
+  .events-gallery {
     .slick-next {
       left: 84%;
     }
