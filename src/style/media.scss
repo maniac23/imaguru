@@ -181,10 +181,6 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-  .info {
-    margin-bottom: 50px;
-  }
-
   .event-data {
     flex-direction: column;
 
@@ -270,6 +266,14 @@
     width: 100%;
   }
 
+  .footer-form .btn {
+    font-size: 1rem;
+  }
+
+  .footer-menu__link {
+    font-size: 1.2rem;
+  }
+
   .speakers {
     &__item {
       flex-basis: 50%;
@@ -343,6 +347,10 @@
 /* Extra Small Devices, Phones */
 
 @media only screen and (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
   .main-header {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -366,6 +374,10 @@
 
   .menu-icon {
     flex-basis: 10%;
+  }
+
+  .promo {
+    padding-bottom: 10px;
   }
 
   .promo--post {
@@ -393,6 +405,10 @@
       margin-bottom: 40px;
     }
 
+    &__title {
+      font-size: 2rem;
+    }
+
     .btn {
       display: block;
       width: 80%;
@@ -402,6 +418,20 @@
 
     &--blog {
       margin-bottom: 130px;
+    }
+
+    &__descr {
+      font-size: 1rem;
+      margin-top: 10%;
+      margin-bottom: 8%;
+    }
+
+    &__date {
+      margin-bottom: 0;
+
+      &--blog {
+        font-size: 1rem;
+      }
     }
   }
 
@@ -491,7 +521,7 @@
     }
 
     &__title {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
     }
   }
 
@@ -515,11 +545,11 @@
     padding-bottom: 25px;
 
     &__title {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
     }
 
     p {
-      font-size: 0.75rem;
+      font-size: 1rem;
     }
   }
 
