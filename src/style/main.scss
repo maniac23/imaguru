@@ -877,6 +877,10 @@ body {
     background-image: url("../img/post_img.jpg");
   }
 
+  &--courses {
+    background-image: url("../img/courses__bg.jpg");
+  }
+
   &--noorder {
     order: 0;
   }
@@ -912,6 +916,7 @@ body {
     line-height: 1.5;
     font-family: Raleway, Arial, sans-serif;
     text-transform: uppercase;
+    width: 100%;
   }
 
   &__image {
@@ -2505,6 +2510,7 @@ body {
     margin-bottom: 30px;
     text-align: center;
     text-transform: uppercase;
+    width: 100%;
   }
 
   &__subname {
