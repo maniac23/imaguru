@@ -96,22 +96,6 @@ body {
       }
     }
 
-    &--hasdropdown {
-      &:hover .menu-dropdown,
-      &:active .menu-dropdown {
-        display: flex;
-      }
-
-      .menu-dropdown a {
-        color: $white-color;
-
-        &:hover,
-        &:active {
-          color: $orange;
-        }
-      }
-    }
-
     &--margin {
       position: relative;
 
@@ -187,6 +171,19 @@ body {
     font-weight: 300;
     font-size: 1rem;
     color: $white-color;
+  }
+}
+
+.menu__item--hasDropdown:hover .menu-dropdown {
+  display: flex;
+}
+
+.menu__item--hasDropdown .menu-dropdown a {
+  color: $white-color;
+
+  &:hover,
+  &:active {
+    color: $orange;
   }
 }
 
@@ -2515,7 +2512,5 @@ body {
     }
   }
 }
-
-
 
 @import "media.scss";
