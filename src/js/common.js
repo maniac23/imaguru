@@ -30,7 +30,7 @@ $(document).ready(function() {
     slidesToScroll: 1,
     dots: true,
     arrows: false,
-    autoplay: false
+    autoplay: true
   });
 
   $('.events-slider .posts, .blog-archive__slider').slick({
