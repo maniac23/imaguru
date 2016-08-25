@@ -33,8 +33,8 @@ $(document).ready(function() {
     autoplay: true
   });
 
-  $('.events-slider .posts').slick({
-    infinite: true,
+  $('.events-slider .posts, .blog-archive__slider').slick({
+    infinite: false,
     slidesToShow: 3,
     slidesToScroll: 1,
     dots: false,
@@ -67,8 +67,21 @@ $(document).ready(function() {
   });
 
 // comments show
-  $('#comments__btn').click(function() {
+  $('#comments__btn').click(function(e) {
+    e.preventDefault();
     $('.comments__form').slideToggle();
   });
 
+
+// show more archive
+  $('#show').click(function(e) {
+    e.preventDefault();
+    $('.blog-archive--hidden').animate({height: '100%'}, 'slow');
+  });
+
+// show subscription form
+  $('.blog-archive__subscribe').click(function(e) {
+    e.preventDefault();
+    $('.blog-subscribe').slideToggle();
+  });
 });

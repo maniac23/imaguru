@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Imaguru</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="style/main.min.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="main-header">
+      <div class="logo">
+        <a href="#" class="logo__link">
+        <img src="img/header-logo.svg" width="180" height="23" class="logo__picture" alt="Imaguru">
+        </a>
+      </div>
+      <!--Menu  -->
+      <div class="menu-icon"></div>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item"><a href="#" class="menu__link">О клубе</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Коворкинг</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Мероприятия</a></li>
+          <li class="menu__item menu__item--hasDropdown"><a href="#" class="menu__link">Обучение</a>
+            <div class="menu-dropdown">
+              <a href="#" class="menu-dropdown__item">Coding Academy</a>
+              <a href="#" class="menu-dropdown__item">Business Academy</a>
+            </div>
+          </li>
+          <li class="menu__item"><a href="#" class="menu__link">Организуй у нас</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+          <li class="menu__item menu__item--margin">
+            <input class="menu__search" type="search" placeholder="Поиск">
+          </li>
+          <li class="menu__item">
+            <select class="menu__select" name="lang">
+              <option value="RU">RU</option>
+              <option value="EN">EN</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="promo promo--blog">
+
+      <div class="info">
+        <div class="info__left">
+          <div class="info__adress">Минск, ул. Фабрициуса 4</div>
+          <div class="info__time">пн-вс: 08.00 - 22.00</div>
+          <div class="info__phone">
+            <div>+375 29 1 189 189</div>
+            <div>+375 29 1 189 189</div>
+          </div>
+        </div>
+        <div class="info__right">
+          <a href="mailto:info@imaguru.by" class="info__mail">info@imaguru.by</a>
+          <select class="info__lang">
+            <option value="ru">Ru</option>
+            <option value="Eng">Eng</option>
+          </select>
+          <button class="info__share"></button>
+        </div>
+      </div>
+      <!--Slider -->
+      <div class="main-text main-text--slider">
+        <div class="main-text__slide">
+          <h1 class="main-text__title main-text__title--blog">Неделя №31:<br>Быстро поднятый реактор не считается упавшим</h1>
+          <p class="main-text__descr">
+            <span class="main-text__category">Такие дела</span>
+            <span class="main-text__date main-text__date--blog">15 августа 2016</span>
+          </p>
+          <a href="#" class="btn btn--event">Читать</a>
+        </div>
+        <div class="main-text__slide">
+          <h1 class="main-text__title main-text__title--blog">Неделя №31:<br>Быстро поднятый реактор не считается упавшим</h1>
+          <p class="main-text__descr">
+            <span class="main-text__category">Такие дела</span>
+            <span class="main-text__date main-text__date--blog">15 августа 2016</span>
+          </p>
+          <a href="#" class="btn btn--event">Читать</a>
+        </div>
+        <div class="main-text__slide">
+          <h1 class="main-text__title main-text__title--blog">Неделя №31:<br>Быстро поднятый реактор не считается упавшим</h1>
+          <p class="main-text__descr">
+            <span class="main-text__category">Такие дела</span>
+            <span class="main-text__date main-text__date--blog">15 августа 2016</span>
+          </p>
+          <a href="#" class="btn btn--event">Читать</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row row--blog">
+      <div class="blog-latest">
+        <div class="blog-latest__item">
+          <img src="img/blog_img1.jpg" alt="" class="blog-latest__image" width="640" height="640">
+          <div class="blog-latest__overlay">
+            <h2 class="blog-latest__title">
+              Pokemon GO создал ажиотаж на акции Nintendo, Google и Apple
+            </h2>
+            <p class="blog-latest__descr">
+              <span class="blog-latest__category">Такие дела</span>
+              <span class="blog-latest__date">15 августа 2015</span>
+            </p>
+            <p class="blog-latest__text">
+              Белорусы стали активно интересоваться инвестициями в акции компаний, имеющих отношение к популярной игре Pokemon GO. Если в середине июля востребованы были в основном акции Nintendo, то к началу августа интерес сдвинулся в сторону ценных бумаг Google и Apple. Возможность инвестировать
+            </p>
+            <a href="#" class="blog-latest__more">Читать далее</a>
+          </div>
+        </div>
+      </div>
+      <div class="blog-latest blog-latest--column">
+        <div class="blog-latest__item">
+          <img src="img/blog_img2.jpg" alt="" class="blog-latest__image" width="640" height="320">
+          <div class="blog-latest__overlay blog-latest__overlay--orange">
+            <h2 class="blog-latest__title">О Беларуси прочитала вся Западная Европа и США</h2>
+            <p class="blog-latest__descr">
+              <span class="blog-latest__category">Тема недели</span>
+              <span class="blog-latest__date">15 августа 2015</span>
+            </p>
+            <a href="#" class="blog-latest__more">Читать далее</a>
+          </div>
+        </div>
+        <div class="blog-latest__item">
+          <img src="img/blog_img2.jpg" alt="" class="blog-latest__image" width="640" height="320">
+          <div class="blog-latest__overlay blog-latest__overlay--light-blue">
+            <h2 class="blog-latest__title">О Беларуси прочитала вся Западная Европа и США</h2>
+            <p class="blog-latest__descr">
+              <span class="blog-latest__category">Тема недели</span>
+              <span class="blog-latest__date">15 августа 2015</span>
+            </p>
+            <a href="#" class="blog-latest__more">Читать далее</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="blog-archive">
+      <h2>Август 2016</h2>
+      <div class="blog-archive__slider">
+        <a href="#" class="blog-archive__slide">
+          <img src="img/blog_slider1.jpg" alt="" height="420">
+          <div class="blog-archive__overlay">
+            <h3 class="blog-archive__title">
+              Воробьи - слуги сатаны. Но это неточно.
+            </h3>
+            <p class="blog-archive__info">
+              <span class="blog-archive__category">Тема недели</span>
+              <span class="blog-archive__date">18.12.2016</span>
+            </p>
+          </div>
+        </a>
+        <a href="#" class="blog-archive__slide">
+          <img src="img/blog_slider2.jpg" alt="" height="420">
+          <div class="blog-archive__overlay">
+            <h3 class="blog-archive__title">
+              Воробьи - слуги сатаны. Но это неточно.
+            </h3>
+            <p class="blog-archive__info">
+              <span class="blog-archive__category">Тема недели</span>
+              <span class="blog-archive__date">18.12.2016</span>
+            </p>
+          </div>
+        </a>
+        <div class="blog-archive__slide">
+          <img src="img/blog_slider3.jpg" alt="" height="420">
+          <div class="blog-archive__overlay blog-archive__overlay--subscribe">
+            <h3 class="blog-archive__title blog-archive__title--subscribe">
+              Прямо сейчас мы пишем для ваc новый пост
+            </h3>
+            <a href="#" class="blog-archive__subscribe">Подписаться на обновления</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="blog-subscribe">
+      <h2 class="blog-subscribe__title">Новостная рассылка</h2>
+      <form class="blog-subscribe__form">
+        <input type="email" placeholder="Введите ваш Email">
+        <button type="submit" name="button" class="btn btn--orange">Подписаться</button>
+      </form>
+    </div>
+
+    <section class="blog-archive">
+      <h2>Июль 2016</h2>
+      <div class="blog-archive__slider">
+        <a href="#" class="blog-archive__slide">
+          <img src="img/blog_slider1.jpg" alt="" height="420">
+          <div class="blog-archive__overlay">
+            <h3 class="blog-archive__title">
+              Воробьи - слуги сатаны. Но это неточно.
+            </h3>
+            <p class="blog-archive__info">
+              <span class="blog-archive__category">Тема недели</span>
+              <span class="blog-archive__date">18.12.2016</span>
+            </p>
+          </div>
+        </a>
+        <a href="#" class="blog-archive__slide">
+          <img src="img/blog_slider2.jpg" alt="" height="420">
+          <div class="blog-archive__overlay">
+            <h3 class="blog-archive__title">
+              Воробьи - слуги сатаны. Но это неточно.
+            </h3>
+            <p class="blog-archive__info">
+              <span class="blog-archive__category">Тема недели</span>
+              <span class="blog-archive__date">18.12.2016</span>
+            </p>
+          </div>
+        </a>
+        <a href="#" class="blog-archive__slide">
+          <img src="img/blog_slider3.jpg" alt="" height="420">
+          <div class="blog-archive__overlay">
+            <h3 class="blog-archive__title">
+              Воробьи - слуги сатаны. Но это неточно.
+            </h3>
+            <p class="blog-archive__info">
+              <span class="blog-archive__category">Тема недели</span>
+              <span class="blog-archive__date">18.12.2016</span>
+            </p>
+          </div>
+        </a>
+        <a href="#" class="blog-archive__slide">
+          <img src="img/blog_slider1.jpg" alt="" height="420">
+          <div class="blog-archive__overlay">
+            <h3 class="blog-archive__title">
+              Воробьи - слуги сатаны. Но это неточно.
+            </h3>
+            <p class="blog-archive__info">
+              <span class="blog-archive__category">Тема недели</span>
+              <span class="blog-archive__date">18.12.2016</span>
+            </p>
+          </div>
+        </a>
+        <a href="#" class="blog-archive__slide">
+          <img src="img/blog_slider2.jpg" alt="" height="420">
+          <div class="blog-archive__overlay">
+            <h3 class="blog-archive__title">
+              Воробьи - слуги сатаны. Но это неточно.
+            </h3>
+            <p class="blog-archive__info">
+              <span class="blog-archive__category">Тема недели</span>
+              <span class="blog-archive__date">18.12.2016</span>
+            </p>
+          </div>
+        </a>
+        <a href="#" class="blog-archive__slide">
+          <img src="img/blog_slider3.jpg" alt="" height="420">
+          <div class="blog-archive__overlay">
+            <h3 class="blog-archive__title">
+              Воробьи - слуги сатаны. Но это неточно.
+            </h3>
+            <p class="blog-archive__info">
+              <span class="blog-archive__category">Тема недели</span>
+              <span class="blog-archive__date">18.12.2016</span>
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <a href="#" id="show" class="blog-archive__more">Показать больше</a>
+
+    <section class="blog-archive blog-archive--hidden">
+      <h2>Июнь 2016</h2>
+      <div class="blog-archive__slider">
+        <a href="#" class="blog-archive__slide">
+          <img src="img/blog_slider1.jpg" alt="" height="420">
+          <div class="blog-archive__overlay">
+            <h3 class="blog-archive__title">
+              Воробьи - слуги сатаны. Но это неточно.
+            </h3>
+            <p class="blog-archive__info">
+              <span class="blog-archive__category">Тема недели</span>
+              <span class="blog-archive__date">18.12.2016</span>
+            </p>
+          </div>
+        </a>
+        <a href="#" class="blog-archive__slide">
+          <img src="img/blog_slider2.jpg" alt="" height="420">
+          <div class="blog-archive__overlay">
+            <h3 class="blog-archive__title">
+              Воробьи - слуги сатаны. Но это неточно.
+            </h3>
+            <p class="blog-archive__info">
+              <span class="blog-archive__category">Тема недели</span>
+              <span class="blog-archive__date">18.12.2016</span>
+            </p>
+          </div>
+        </a>
+        <a href="#" class="blog-archive__slide">
+          <img src="img/blog_slider3.jpg" alt="" height="420">
+          <div class="blog-archive__overlay">
+            <h3 class="blog-archive__title">
+              Воробьи - слуги сатаны. Но это неточно.
+            </h3>
+            <p class="blog-archive__info">
+              <span class="blog-archive__category">Тема недели</span>
+              <span class="blog-archive__date">18.12.2016</span>
+            </p>
+          </div>
+        </a>
+        <a href="#" class="blog-archive__slide">
+          <img src="img/blog_slider1.jpg" alt="" height="420">
+          <div class="blog-archive__overlay">
+            <h3 class="blog-archive__title">
+              Воробьи - слуги сатаны. Но это неточно.
+            </h3>
+            <p class="blog-archive__info">
+              <span class="blog-archive__category">Тема недели</span>
+              <span class="blog-archive__date">18.12.2016</span>
+            </p>
+          </div>
+        </a>
+        <a href="#" class="blog-archive__slide">
+          <img src="img/blog_slider2.jpg" alt="" height="420">
+          <div class="blog-archive__overlay">
+            <h3 class="blog-archive__title">
+              Воробьи - слуги сатаны. Но это неточно.
+            </h3>
+            <p class="blog-archive__info">
+              <span class="blog-archive__category">Тема недели</span>
+              <span class="blog-archive__date">18.12.2016</span>
+            </p>
+          </div>
+        </a>
+        <a href="#" class="blog-archive__slide">
+          <img src="img/blog_slider3.jpg" alt="" height="420">
+          <div class="blog-archive__overlay">
+            <h3 class="blog-archive__title">
+              Воробьи - слуги сатаны. Но это неточно.
+            </h3>
+            <p class="blog-archive__info">
+              <span class="blog-archive__category">Тема недели</span>
+              <span class="blog-archive__date">18.12.2016</span>
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <div class="row">
+      <div class="welcome welcome--half">
+        <h2 class="welcome__title">Заходите к нам</h2>
+        <p>г. Минск, ул. Фабрициуса, 4</p>
+      </div>
+      <div class="social social--events">
+        <h2 class="social__title">Мы в социальных сетях</h2>
+        <ul class="social__list">
+          <li>
+            <a href="#" class="social__icon social__icon--fb"></a>
+          </li>
+          <li>
+            <a href="#" class="social__icon social__icon--tw"></a>
+          </li>
+          <li>
+            <a href="#" class="social__icon social__icon--insta"></a>
+          </li>
+          <li>
+            <a href="#" class="social__icon social__icon--in"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--Footer -->
+    <footer class="main-footer">
+      <div class="main-footer__left">
+        <form class="footer-form">
+          <h3 class="footer-form__title">Оставайтесь в курсе</h3>
+          <input type="email" class="footer-form__input" placeholder="Введите ваш email" required>
+          <button type="submit" class="btn">Подписаться на рассылку</button>
+        </form>
+      </div>
+      <div class="main-footer__right">
+        <nav class="footer-menu">
+          <ul class="footer-menu__list">
+            <li class="footer-menu__item"><a href="#" class="footer-menu__link">О клубе</a></li>
+            <li class="footer-menu__item"><a href="#" class="footer-menu__link">Коворкинг</a></li>
+            <li class="footer-menu__item"><a href="#" class="footer-menu__link">Мероприятия</a></li>
+            <li class="footer-menu__item"><a href="#" class="footer-menu__link">Обучение</a></li>
+            <li class="footer-menu__item"><a href="#" class="footer-menu__link">Организуй у нас</a></li>
+            <li class="footer-menu__item"><a href="#" class="footer-menu__link">Контакты</a></li>
+          </ul>
+        </nav>
+        <ul class="footer-social">
+          <li class="footer-social__item"><a href="#">Twitter</a></li>
+          <li class="footer-social__item"><a href="#">Facebook</a></li>
+          <li class="footer-social__item"><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/common.js"></script>
+</body>
+</html>
