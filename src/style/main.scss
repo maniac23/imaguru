@@ -856,66 +856,6 @@ body {
     font-size: 1.875rem;
     font-family: Raleway, Arial, sans-serif;
   }
-
-
-  &--events {
-    .posts__item {
-      position: relative;
-      z-index: 1;
-
-      display: flex;
-      flex: 1 1 30%;
-      justify-content: center;
-      align-items: center;
-      min-height: 320px;
-
-      font-weight: 600;
-      font-family: Raleway, Arial, sans-serif;
-      text-align: center;
-
-      background: transparent url("../img/events-img2.jpg") no-repeat;
-      background-position: 44% 40%;
-
-      &:nth-child(2n+1) {
-        order: 2;
-      }
-
-      &--summit {
-        background: transparent url("../img/events-img1.jpg") no-repeat;
-        background-position: 65% 10%;
-
-        .posts__overlay {
-          background-color: $blue;
-        }
-      }
-
-      .posts__content {
-        position: relative;
-        z-index: 10;
-      }
-
-      .posts__title {
-        margin: 0;
-        margin-bottom: 10px;
-        padding: 0;
-
-        font-weight: 600;
-        font-size: 1.885rem;
-        line-height: 1.5;
-        text-transform: uppercase;
-      }
-
-      .posts__subtitle {
-        margin: 0;
-        padding: 0;
-
-        font-weight: 300;
-        font-size: 1.25rem;
-        line-height: 1.8;
-        text-transform: uppercase;
-      }
-    }
-  }
 }
 
 .preview {
@@ -925,6 +865,21 @@ body {
   flex: 1 0 30%;
   order: 1;
   text-align: center;
+  background-image: url("../img/news-img.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &--events {
+    background-image: url("../img/events-img2.jpg");
+  }
+
+  &--post {
+    background-image: url("../img/post_img.jpg");
+  }
+
+  &--noorder {
+    order: 0;
+  }
 
   &__overlay {
     position: absolute;
@@ -950,6 +905,7 @@ body {
     margin: 0;
     margin-bottom: 35px;
     padding: 0;
+    color: $white-color;
 
     font-weight: 600;
     font-size: 1.875rem;
@@ -2499,6 +2455,7 @@ body {
   &__list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   &__item {
@@ -2520,6 +2477,14 @@ body {
     bottom: 0;
     width: 100%;
     background-color: rgba(#000000, 0.7);
+
+    &--blue {
+      background-color: rgba($blue, 0.7);
+    }
+
+    &--orange{
+      background-color: rgba($orange, 0.7);
+    }
   }
 
   &__content {
@@ -2538,6 +2503,14 @@ body {
     margin: 0;
     padding: 0;
     margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__subname {
+    color: $white-color;
+    font-size: 1.25rem;
+    font-weight: 600;
   }
 
   .btn {

@@ -346,6 +346,12 @@
       width: 80%;
     }
   }
+
+  .events-gallery {
+    &__list {
+      flex-direction: column;
+    }
+  }
 }
 /* Extra Small Devices, Phones */
 
@@ -505,6 +511,11 @@
 
     &--events-gallery {
       padding: 0;
+    }
+
+    &__title {
+      margin-top: 20px;
+      margin-bottom: 15px;
     }
   }
 
