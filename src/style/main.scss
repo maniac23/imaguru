@@ -535,6 +535,16 @@ body {
   justify-content: space-between;
   width: 100%;
   position: relative;
+
+  &--blog {
+    display: block;
+
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
 }
 
 .content-block {
@@ -2240,7 +2250,7 @@ body {
 
 .blog-archive {
   position: relative;
-  
+
 
   &--hidden {
     height: 0;
@@ -2329,17 +2339,31 @@ body {
     left: 95%;
     transform: translateY(-50%) rotate(-45deg);
   }
-}
 
-.row--blog {
-  display: block;
-
-  &::after {
-    content: "";
+  &__more {
+    text-align: center;
     display: block;
-    clear: both;
+    padding: 70px 0;
+    color: $orange;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-bottom: 3px solid $orange;
+      border-right: 3px solid $orange;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) rotate(45deg);
+    }
   }
 }
+
 
 
 @import "media.scss";
