@@ -57,16 +57,6 @@
         font-size: 1.3rem;
       }
 
-      &--hasdropdown {
-        .menu-dropdown a {
-          margin-right: 0;
-          margin-left: 20px;
-          padding: 10px 0;
-
-          color: $dark-font-color;
-        }
-      }
-
       &--margin {
         margin-bottom: 30px;
         margin-left: 0;
@@ -106,6 +96,10 @@
     a {
       color: $dark-font-color;
     }
+  }
+
+  .menu__item--hasDropdown .menu-dropdown a {
+    color: $dark-font-color;
   }
 
   .info {

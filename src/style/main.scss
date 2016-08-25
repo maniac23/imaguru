@@ -922,29 +922,9 @@ body {
   position: relative;
   z-index: 1;
 
-  flex: 1 1 30%;
+  flex: 1 0 30%;
   order: 1;
-  padding: 125px 0;
-
   text-align: center;
-
-  background: $dark-font-color url("../img/news-img.jpg") center no-repeat;
-
-  &--events {
-    background: $dark-font-color url("../img/events-img3.jpg") center no-repeat;
-    background-size: cover;
-  }
-
-  &--courses {
-    background: $dark-font-color url("../img/courses__bg.jpg") center no-repeat;
-    background-size: cover;
-  }
-
-  &--events-gallery {
-    padding: 0;
-
-    background: none;
-  }
 
   &__img {
     position: absolute;
@@ -964,6 +944,10 @@ body {
     width: 100%;
 
     background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   &__content {
@@ -989,6 +973,11 @@ body {
     line-height: 1.5;
     font-family: Raleway, Arial, sans-serif;
     text-transform: uppercase;
+  }
+
+  &__image {
+    max-width: 100%;
+    display: block;
   }
 }
 
