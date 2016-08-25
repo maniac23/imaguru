@@ -29,13 +29,14 @@ body {
 }
 
 .main-header {
+  position: relative;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 0 $section-padding;
-  position: relative;
 }
 
 .logo {
@@ -71,6 +72,7 @@ body {
     flex: 1 1 auto;
     margin-right: 20px;
     padding: 30px 0;
+
     transition: all 0.3s ease-in;
 
     &:hover {
@@ -94,7 +96,7 @@ body {
       }
     }
 
-    &--hasDropdown {
+    &--hasdropdown {
       &:hover .menu-dropdown,
       &:active .menu-dropdown {
         display: flex;
@@ -111,32 +113,39 @@ body {
     }
 
     &--margin {
-      margin-left: 60px;
       position: relative;
+
+      margin-left: 60px;
     }
   }
 
   &__search {
+    position: absolute;
+    right: 0;
+    z-index: 200;
+
     width: 1.2rem;
     height: 21px;
-    background-image: url("../img/search_icon.svg");
-    background-repeat: no-repeat;
-    background-position: right center;
-    transition: all 0.3s ease-in;
-    position: absolute;
-    border-radius: 0;
-    right: 0;
-    border: none;
-    outline: none;
+
     font-size: 0;
-    z-index: 200;
-    cursor: pointer;
     // padding: 10px 5px;
     color: $dark-font-color;
 
+    background-image: url("../img/search_icon.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    cursor: pointer;
+
+    transition: all 0.3s ease-in;
+
     &:focus {
       width: 700px;
+
       font-size: 1rem;
+
       background-color: $white-color;
       border-bottom: 1px solid $dark-font-color;
       cursor: text;
@@ -144,40 +153,47 @@ body {
   }
 
   &__select {
+    font-weight: 600;
+    font-size: 1rem;
+    color: $dark-font-color;
+
     border: none;
     outline: none;
-    font-weight: 600;
-    color: $dark-font-color;
-    appearance: none;
     opacity: 0.8;
-    font-size: 1rem;
+
+    appearance: none;
   }
 }
 
 .menu-dropdown {
-  display: none;
-  justify-content: center;
-  flex-direction: row;
   position: absolute;
-  left: 0;
   top: 100%;
-  padding: 20px 0;
-  background-color: $header-font-color;
-  color: $white-color;
-  width: 100%;
+  left: 0;
   z-index: 2;
 
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 0;
+
+  color: $white-color;
+
+  background-color: $header-font-color;
+
   a {
-    color: $white-color;
+    margin-right: 30px;
+
     font-weight: 300;
     font-size: 1rem;
-    margin-right: 30px;
+    color: $white-color;
   }
 }
 
 .promo {
-  padding: 0 $section-padding 60px;
   position: relative;
+
+  padding: 0 $section-padding 60px;
 
   background: url("../img/main-bg.jpg") center;
   background-size: cover;
@@ -193,9 +209,10 @@ body {
   }
 
   &--post {
+    padding: 200px $section-padding 30px;
+
     background: url("../img/blog__bg.jpg") center;
     background-size: cover;
-    padding: 200px $section-padding 30px;
   }
 
   &--blog {
@@ -362,13 +379,13 @@ body {
     }
 
     &--post {
-      font-size: 2.5rem;
       font-weight: 500;
+      font-size: 2.5rem;
     }
 
     &--blog {
-      font-size: 2.5rem;
       font-weight: 500;
+      font-size: 2.5rem;
     }
   }
 
@@ -399,9 +416,10 @@ body {
     font-family: Raleway, Arial, sans-serif;
 
     &--blog {
-      font-size: 1.25rem;
-      font-weight: 600;
       padding-left: 10px;
+
+      font-weight: 600;
+      font-size: 1.25rem;
     }
   }
 
@@ -434,15 +452,17 @@ body {
 
   &__descr {
     margin: 0;
-    padding: 0;
     margin-top: 30px;
     margin-bottom: 70px;
+    padding: 0;
   }
 
   &__category {
-    font-size: 1.25rem;
-    font-weight: 600;
     padding: 0 15px;
+
+    font-weight: 600;
+    font-size: 1.25rem;
+
     border-right: 1px solid $white-color;
   }
 }
@@ -530,18 +550,20 @@ body {
 }
 
 .row {
+  position: relative;
+  z-index: 10;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  position: relative;
-  z-index: 10;
 
   &--blog {
     display: block;
 
     &::after {
       content: "";
+
       display: block;
       clear: both;
     }
@@ -750,9 +772,10 @@ body {
     border-right: 1px solid $white-color;
 
     &--post {
-      border-right: none;
       font-weight: 300;
       font-size: 1.25rem;
+
+      border-right: none;
     }
   }
 
@@ -792,6 +815,7 @@ body {
   }
 
   &__title {
+    display: block;
     margin: 0;
     padding: 0;
 
@@ -801,7 +825,6 @@ body {
     font-family: Raleway, Arial, sans-serif;
     color: $white-color;
     text-decoration: none;
-    display: block;
 
     &--courses {
       margin-bottom: 30px;
@@ -813,8 +836,9 @@ body {
     }
 
     &--post {
-      font-weight: 600;
       margin-bottom: 40px;
+
+      font-weight: 600;
     }
   }
 
@@ -1206,8 +1230,8 @@ body {
 
   &--post {
     display: flex;
-    justify-content: center;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
     min-height: 150px;
 
@@ -1240,13 +1264,14 @@ body {
 
 
 .main-footer {
+  position: relative;
+  z-index: 2;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
   padding: 70px 14.453125%;
-  position: relative;
-  z-index: 2;
 
   font-weight: 300;
   font-family: Raleway, Arial, sans-serif;
@@ -2001,9 +2026,9 @@ body {
 
   &__category {
     a {
-      color: $white-color;
       font-weight: 300;
       font-size: 1rem;
+      color: $white-color;
       text-decoration: none;
 
       &:hover {
@@ -2013,27 +2038,29 @@ body {
       &:not(:last-child) {
         &::after {
           content: "";
+
           display: inline-block;
-          vertical-align: middle;
           width: 1px;
           height: 1rem;
-          background-color: $white-color;
           margin-left: 5px;
+
+          vertical-align: middle;
+
+          background-color: $white-color;
         }
       }
     }
   }
 
   &__info {
-    color: $white-color;
-    font-size: 1rem;
     font-weight: 300;
+    font-size: 1rem;
+    color: $white-color;
   }
 
   &__date {
     margin-right: 10px;
   }
-
 }
 
 .post-content {
@@ -2046,11 +2073,12 @@ body {
   }
 
   p {
-    font-size: 1.25rem;
-    font-weight: 400;
     margin: 0;
-    padding: 0;
     margin-bottom: 40px;
+    padding: 0;
+
+    font-weight: 400;
+    font-size: 1.25rem;
   }
 
   &__image {
@@ -2060,13 +2088,14 @@ body {
 }
 
 .comments {
-
   text-align: center;
-  background-color: $grey;
   color: $dark-font-color;
+
+  background-color: $grey;
 
   &__wrapper {
     padding: 45px $section-padding;
+
     background-color: $grey;
 
     &--white {
@@ -2075,21 +2104,24 @@ body {
   }
 
   &__form {
-    margin-top: 70px;
-    text-align: center;
     display: none;
+    margin-top: 70px;
+
+    text-align: center;
 
     input {
       display: block;
       width: 100%;
+      margin-bottom: 40px;
+      padding: 5px 10px;
+
       background: transparent;
       border: none;
       border-bottom: 1px solid $dark-font-color;
-      margin-bottom: 40px;
-      padding: 5px 10px;
-      outline: none;
-      transition: all 0.3s ease-in;
       border-radius: 0;
+      outline: none;
+
+      transition: all 0.3s ease-in;
 
       &:focus {
         border-bottom: 1px solid $orange;
@@ -2099,19 +2131,22 @@ body {
 
   &__count {
     margin: 0;
-    padding: 0;
-    font-size: 1.875rem;
-    font-weight: 300;
-    text-align: left;
     margin-bottom: 80px;
+    padding: 0;
     padding-left: 20px;
+
+    font-weight: 300;
+    font-size: 1.875rem;
+    text-align: left;
   }
 
   &__list {
     margin: 0;
     padding: 0;
+
     list-style-type: none;
     text-align: left;
+
     background: $white-color;
   }
 
@@ -2124,30 +2159,33 @@ body {
   }
 
   &__author {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+
     font-weight: 600;
     font-size: 1.25rem;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 20px;
   }
 
   &__text {
-    font-size: 1.25rem;
-    font-weight: 400;
     margin: 0;
-    padding: 0;
     margin-bottom: 20px;
+    padding: 0;
+
+    font-weight: 400;
+    font-size: 1.25rem;
   }
 
   &__date {
-    font-size: 1.25rem;
     margin-right: 15px;
+
+    font-size: 1.25rem;
   }
 
   &__reply {
-    color: $dark-font-color;
-    font-size: 0.875rem;
     font-weight: 600;
+    font-size: 0.875rem;
+    color: $dark-font-color;
     text-decoration: none;
 
     &:hover,
@@ -2157,46 +2195,55 @@ body {
 
     &::before {
       content: "";
+
       display: inline-block;
       width: 12px;
       height: 10px;
-      background: url("../img/reply_icon.svg");
       margin-right: 10px;
+
+      background: url("../img/reply_icon.svg");
     }
   }
 }
 
 .blog-latest {
+  position: relative;
+
   float: left;
   width: 50%;
+
   color: $white-color;
-  position: relative;
 
   &--column {
     display: flex;
     flex-direction: column;
+
     -webkit-box-orient: vertical;
   }
 
   &__item {
     position: relative;
-    height: 100%;
     z-index: 1000000;
+
+    height: 100%;
   }
 
   &__image {
-    width: 100%;
-    display: block;
     position: relative;
+
+    display: block;
+    width: 100%;
   }
 
   &__overlay {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 55px 8.59375% 50px;
+
     width: 100%;
     height: 100%;
+    padding: 55px 8.59375% 50px;
+
     background-color: rgba($blue, 0.8);
 
     &--orange {
@@ -2210,42 +2257,46 @@ body {
 
   &__title {
     margin: 0;
-    padding: 0;
-    font-size: 2rem;
-    font-weight: 600;
     margin-bottom: 26px;
+    padding: 0;
+
+    font-weight: 600;
+    font-size: 2rem;
   }
 
   &__descr {
     margin: 0;
-    padding: 0;
     margin-bottom: 30px;
+    padding: 0;
   }
 
   &__category {
-    font-size: 1.25rem;
-    font-weight: 300;
     padding-right: 5px;
+
+    font-weight: 300;
+    font-size: 1.25rem;
+
     border-right: 1px solid $white-color;
   }
 
   &__date {
-    font-size: 1.25rem;
     font-weight: 300;
+    font-size: 1.25rem;
   }
 
   &__text {
-    font-size: 1.3rem;
-    font-weight: 300;
     margin: 0;
-    padding: 0;
     margin-bottom: 60px;
+    padding: 0;
+
+    font-weight: 300;
+    font-size: 1.3rem;
   }
 
   &__more {
-    color: $white-color;
-    font-size: 1rem;
     font-weight: 700;
+    font-size: 1rem;
+    color: $white-color;
   }
 }
 
@@ -2257,27 +2308,31 @@ body {
   }
 
   h2 {
-    font-size: 1.875rem;
-    font-weight: 300;
+    position: relative;
+
     margin: 0;
     padding: 60px 0 60px 4.6875%;
-    position: relative;
+
+    font-weight: 300;
+    font-size: 1.875rem;
   }
 
   &__slider {
-    width: 100%;
+    position: relative;
+
     display: flex;
     flex-direction: row;
-    position: relative;
+    width: 100%;
   }
 
   &__slide {
-    flex: 1 0 30%;
     position: relative;
 
+    flex: 1 0 30%;
+
     img {
-      width: 100%;
       display: block;
+      width: 100%;
     }
   }
 
@@ -2285,14 +2340,17 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    width: 100%;
+    height: 100%;
     padding: 0 14.05%;
+
     color: $white-color;
-    flex-direction: column;
+
     background-color: rgba(#000000, 0.7);
 
     &--subscribe {
@@ -2301,14 +2359,15 @@ body {
   }
 
   &__title {
-    font-size: 1.25rem;
+    width: 100%;// fix for ie
     margin: 0;
-    padding: 0;
-    font-weight: 600;
     margin-bottom: 30px;
+    padding: 0;
+
+    font-weight: 600;
+    font-size: 1.25rem;
     color: $white-color;
     text-decoration: none;
-    width: 100%;// fix for ie
 
     &--subscribe {
       font-weight: 400;
@@ -2319,18 +2378,20 @@ body {
   &__info {
     margin: 0;
     padding: 0;
-    font-size: 1.25rem;
+
     font-weight: 300;
+    font-size: 1.25rem;
   }
 
   &__category {
     padding-right: 10px;
+
     border-right: 1px solid $white-color;
   }
 
   &__subscribe {
-    color: $white-color;
     font-weight: 700;
+    color: $white-color;
     text-decoration: none;
 
     &:hover,
@@ -2340,78 +2401,93 @@ body {
   }
 
   .slick-arrow {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 0;
     position: absolute;
-    z-index: 1;
-    width: 40px;
-    height: 40px;
-    border-right: 1px solid $white-color;
-    border-bottom: 1px solid $white-color;
-    transform: translateY(-50%) rotate(-225deg);
     top: 50%;
     left: 1%;
+    z-index: 1;
+
+    display: block;
+    width: 40px;
+    height: 40px;
+
+    font-size: 0;
+
+    background: none;
+    border: none;
+    border-right: 1px solid $white-color;
+    border-bottom: 1px solid $white-color;
     outline: none;
+    transform: translateY(-50%) rotate(-225deg);
     cursor: pointer;
   }
 
   .slick-next {
-    display: block;
     left: 95%;
+
+    display: block;
+
     transform: translateY(-50%) rotate(-45deg);
   }
 
   &__more {
-    text-align: center;
+    position: relative;
+
     display: block;
     padding: 70px 0;
-    color: $orange;
-    font-size: 1rem;
+
     font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+    color: $orange;
     text-decoration: none;
-    position: relative;
 
     &::after {
       content: "";
+      position: absolute;
+      left: 50%;
+
       display: block;
       width: 10px;
       height: 10px;
-      border-bottom: 3px solid $orange;
+
       border-right: 3px solid $orange;
-      position: absolute;
-      left: 50%;
+      border-bottom: 3px solid $orange;
       transform: translateX(-50%) rotate(45deg);
     }
   }
 }
 
 .blog-subscribe {
-  text-align: center;
-  padding: 70px 0 50px;
-  background-color: $grey;
   position: relative;
+
   display: none;
+  padding: 70px 0 50px;
+
+  text-align: center;
+
+  background-color: $grey;
 
   &::before {
     content: "";
-    width: 20px;
-    height: 20px;
-    display: block;
-    background-color: $grey;
-    transform: rotate(-45deg);
     position: absolute;
     top: -2.5%;
     right: 15%;
+
+    display: block;
+    width: 20px;
+    height: 20px;
+
+    background-color: $grey;
+    transform: rotate(-45deg);
   }
 
   &__title {
     margin: 0;
-    padding: 0;
-    font-size: 1.875rem;
-    font-weight: 400;
     margin-bottom: 50px;
+    padding: 0;
+
+    font-weight: 400;
+    font-size: 1.875rem;
   }
 
   &__form {
@@ -2420,16 +2496,18 @@ body {
     margin: 0 auto;
 
     input {
+      display: block;
+      width: 100%;
+      margin-bottom: 60px;
+      padding: 5px 0;
+
       background-color: transparent;
       border: none;
       border-bottom: 1px solid $dark-font-color;
       border-radius: 0;
-      display: block;
-      width: 100%;
-      padding: 5px 0;
-      margin-bottom: 60px;
-      transition: all 0.3s ease-in;
       outline: none;
+
+      transition: all 0.3s ease-in;
 
       &:focus {
         border-bottom: 1px solid $orange;
