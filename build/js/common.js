@@ -34,7 +34,7 @@ $(document).ready(function() {
   });
 
   $('.events-slider .posts, .blog-archive__slider').slick({
-    infinite: true,
+    infinite: false,
     slidesToShow: 3,
     slidesToScroll: 1,
     dots: false,
@@ -72,9 +72,16 @@ $(document).ready(function() {
     $('.comments__form').slideToggle();
   });
 
+
+// show more archive
   $('#show').click(function(e) {
     e.preventDefault();
     $('.blog-archive--hidden').animate({height: '100%'}, 'slow');
   });
 
+// show subscription form
+  $('.blog-archive__subscribe').click(function(e) {
+    e.preventDefault();
+    $('.blog-subscribe').slideToggle();
+  });
 });

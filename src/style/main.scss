@@ -535,6 +535,7 @@ body {
   justify-content: space-between;
   width: 100%;
   position: relative;
+  z-index: 10;
 
   &--blog {
     display: block;
@@ -2251,7 +2252,6 @@ body {
 .blog-archive {
   position: relative;
 
-
   &--hidden {
     height: 0;
   }
@@ -2294,6 +2294,10 @@ body {
     color: $white-color;
     flex-direction: column;
     background-color: rgba(#000000, 0.7);
+
+    &--subscribe {
+      background-color: $blue;
+    }
   }
 
   &__title {
@@ -2302,6 +2306,14 @@ body {
     padding: 0;
     font-weight: 600;
     margin-bottom: 30px;
+    color: $white-color;
+    text-decoration: none;
+    width: 100%;// fix for ie
+
+    &--subscribe {
+      font-weight: 400;
+      font-size: 2rem;
+    }
   }
 
   &__info {
@@ -2314,6 +2326,17 @@ body {
   &__category {
     padding-right: 10px;
     border-right: 1px solid $white-color;
+  }
+
+  &__subscribe {
+    color: $white-color;
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
   }
 
   .slick-arrow {
@@ -2360,6 +2383,57 @@ body {
       position: absolute;
       left: 50%;
       transform: translateX(-50%) rotate(45deg);
+    }
+  }
+}
+
+.blog-subscribe {
+  text-align: center;
+  padding: 70px 0 50px;
+  background-color: $grey;
+  position: relative;
+  display: none;
+
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-color: $grey;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: -2.5%;
+    right: 15%;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    font-size: 1.875rem;
+    font-weight: 400;
+    margin-bottom: 50px;
+  }
+
+  &__form {
+    display: block;
+    width: 23.4375%;
+    margin: 0 auto;
+
+    input {
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid $dark-font-color;
+      border-radius: 0;
+      display: block;
+      width: 100%;
+      padding: 5px 0;
+      margin-bottom: 60px;
+      transition: all 0.3s ease-in;
+      outline: none;
+
+      &:focus {
+        border-bottom: 1px solid $orange;
+      }
     }
   }
 }
