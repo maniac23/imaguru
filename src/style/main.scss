@@ -755,6 +755,8 @@ body {
   &__item {
     flex: 1 1 30%;
     padding: 60px 4.6875%;
+    color: $white-color;
+    text-decoration: none;
 
     background-color: $blue;
 
@@ -2540,6 +2542,8 @@ body {
     text-align: center;
     text-transform: uppercase;
     width: 100%;
+    text-decoration: none;
+
   }
 
   &__subname {
