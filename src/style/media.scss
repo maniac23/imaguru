@@ -424,7 +424,7 @@
   }
 
   .promo--post {
-    padding-top: 150px;
+    padding-top: 60px;
   }
 
   .info {
@@ -463,14 +463,23 @@
       margin-bottom: 130px;
     }
 
+    &--post {
+      margin-bottom: 60px;
+    }
+
     &__descr {
       font-size: 1rem;
       margin-top: 10%;
       margin-bottom: 8%;
     }
 
+    &__subtitle {
+      font-size: 2rem;
+    }
+
     &__date {
       margin-bottom: 0;
+      font-size: 1rem;
 
       &--blog {
         font-size: 1rem;
@@ -478,25 +487,17 @@
     }
   }
 
+  .main-text .main-text__paragraph {
+    font-size: 1.5rem;
+  }
+
   .features__item {
     flex-basis: 50%;
-
-    a {
-      font-size: 0.75rem;
-    }
   }
 
   .content-block {
     &--white {
       order: -1;
-    }
-
-    &__title {
-      font-size: 1.25rem;
-    }
-
-    p {
-      font-size: 0.875rem;
     }
   }
 
@@ -507,35 +508,29 @@
 
     &__title {
       margin-bottom: 15px;
-
-      font-size: 1.25rem;
     }
 
     p {
       margin-bottom: 20px;
-
-      font-size: 0.875rem;
     }
   }
 
   .posts {
+    &__title {
+      &--courses {
+        font-size: 1.5rem;
+      }
+    }
+
+    &__coursedate {
+      font-size: 1.3rem;
+      margin-bottom: 40px;
+    }
+
     &__item {
       padding-top: 45px;
       padding-bottom: 45px;
       flex-basis: 100%;
-    }
-
-    &__date,
-    &__author {
-      font-size: 0.75rem;
-    }
-
-    &__category {
-      font-size: 0.875rem;
-    }
-
-    &__title {
-      font-size: 1.125rem;
     }
   }
 
@@ -578,14 +573,8 @@
     padding-top: 25px;
     padding-bottom: 40px;
 
-    &__title {
-      font-size: 1.25rem;
-    }
-
     input {
       width: 100%;
-
-      font-size: 0.75rem;
     }
   }
 
@@ -596,9 +585,11 @@
     &__title {
       font-size: 1.5rem;
     }
+  }
 
-    p {
-      font-size: 1rem;
+  .footer-form {
+    &__title {
+      font-size: 1.8rem;
     }
   }
 
@@ -664,12 +655,19 @@
   }
 
   .event-video {
+    h2 {
+      margin-top: 40px;
+    }
     iframe {
       height: 250px;
     }
   }
 
   .event-gallery {
+    h2 {
+      margin-top: 40px;
+    }
+
     &__item {
       flex-basis: 100%;
     }
@@ -702,6 +700,7 @@
 
   .post-data {
     flex-direction: column;
+    text-align: center;
 
     &__category {
       margin-bottom: 30px;
@@ -719,6 +718,10 @@
     &__text {
       flex: 0 0 100%;
     }
+
+    &__image {
+      margin-bottom: 40px;
+    }
   }
 
   .blog-latest {
@@ -727,7 +730,7 @@
     }
 
     &__text {
-      font-size: 1rem;
+      font-size: 1.3rem;
     }
   }
 
