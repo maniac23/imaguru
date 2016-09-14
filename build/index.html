@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title>Imaguru</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&subset=cyrillic" rel="stylesheet">
-	<link rel="stylesheet" href="style/main.min.css">
+	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
   <div class="wrapper">
@@ -18,8 +18,12 @@
         </a>
       </div>
       <!--Menu  -->
-      <div class="search-icon"></div>
-      <div class="menu-icon"></div>
+      <div class="search-icon">
+        <!--вставить svg  -->
+      </div>
+      <div class="menu-icon">
+      <!--вставить svg  -->
+      </div>
       <nav class="menu">
         <ul class="menu__list">
           <li class="menu__item"><a href="#" class="menu__link">О клубе</a></li>
@@ -62,32 +66,41 @@
             <option value="ru">Ru</option>
             <option value="Eng">Eng</option>
           </select>
-          <button class="info__share"></button>
+          <button class="info__share">
+            <!--вставить svg  -->
+          </button>
         </div>
       </div>
 
       <div class="main-text">
-        <img class="main-text__img" src="img/logo-big.png" alt="Imaguru">
+        <img class="main-text__img" src="img/logo-big.svg" alt="Imaguru">
         <p class="main-text__paragraph">Место встречи инноваторов в  бизнесе</p>
-        <a href="#" class="btn">Коворкинг</a>
-        <a href="#" class="btn">Мероприятия</a>
+        <div class="main-text__buttons">
+          <a href="#" class="btn">Коворкинг</a>
+          <a href="#" class="btn">Мероприятия</a>
+        </div>
       </div>
-
+<!--Заменить иконки на svg  -->
       <div class="features">
         <ul class="features__list">
           <li class="features__item">
+            <img src="img/kids.png" alt="" class="features__icon">
             <a href="#">Teen &amp; Kids</a>
           </li>
           <li class="features__item features__item--begginer">
+            <img src="img/beginner.png" alt="" class="features__icon">
             <a href="#">Начинающим</a>
           </li>
           <li class="features__item features__item--devs">
+              <img src="img/devs.png" alt="" class="features__icon">
             <a href="#">Программистам</a>
           </li>
           <li class="features__item features__item--owners">
+              <img src="img/owners.png" alt="" class="features__icon">
             <a href="#">Собственникам</a>
           </li>
           <li class="features__item features__item--corps">
+              <img src="img/corps.png" alt="" class="features__icon">
             <a href="#">Корпорациям</a>
           </li>
         </ul>
