@@ -1,0 +1,30 @@
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__left,
+  &__right {
+    display: flex;
+    flex: 1 0 50%;
+    flex-direction: column;
+  }
+
+  &__left {
+    &--orange {
+      background-color: $orange;
+    }
+  }
+}
+
+// ******** MEDIA *********
+@media only screen and (max-width: 768px) {
+  .about {
+    flex-direction: column;
+
+    &__left,
+    &__right {
+      flex: 0 0 auto;
+    }
+  }
+}

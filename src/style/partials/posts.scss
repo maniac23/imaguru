@@ -1,0 +1,155 @@
+.posts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+
+  color: $white-color;
+
+  &__item {
+    flex: 1 1 33.33%;
+    padding: 60px 4.6875%;
+
+    color: $white-color;
+    text-decoration: none;
+
+    background-color: $blue;
+
+    &:nth-child(2n+1) {
+      order: 2;
+
+      background-color: $orange;
+    }
+
+    &--blog {
+      background-color: $orange;
+      padding: 90px 4.6875%;
+
+      &:nth-child(2n+1) {
+        order: 2;
+
+        background-color: $blue;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  &__date {
+    margin-right: 40px;
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
+
+  &__day {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 1.625rem;
+    font-weight: 600;
+  }
+
+  &__month {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  &__period {
+    font-weight: 300;
+    font-size: 1.875rem;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
+  &__price {
+    font-weight: 600;
+    font-size: 1.875rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__tags {
+    a {
+      color: $white-color;
+      font-size: 0.875rem;
+      text-decoration: none;
+      padding-right: 5px;
+
+      &:not(:last-child) {
+        border-right: 1px solid $white-color;
+      }
+    }
+  }
+
+  &__title {
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+    padding-left: 12px;
+
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    font-family: Raleway, Arial, sans-serif;
+    color: $white-color;
+    text-decoration: none;
+    border-left: 3px solid $white-color;
+
+    &--blog {
+      border: none;
+      padding: 0;
+    }
+
+    &--course {
+
+      border: none;
+      font-weight: 600;
+      font-size: 1.875rem;
+    }
+  }
+
+  &__author {
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
+
+  &__more {
+    color: $white-color;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+
+}
+
+// **************** MEDIA *******************
+@media only screen and (max-width: 768px) {
+  .posts {
+    flex-wrap: wrap;
+
+    &__item {
+      flex: 1 0 50%;
+      order: 2;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .posts {
+    &__item {
+      flex-basis: 100%;
+      padding-top: 45px;
+      padding-bottom: 45px;
+    }
+  }
+}

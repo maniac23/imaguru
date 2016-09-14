@@ -1,0 +1,62 @@
+.welcome {
+  padding: 50px 11.71875%;
+
+  color: $white-color;
+
+  background-color: $orange;
+
+  &--half {
+    flex-basis: 50%;
+  }
+
+  &--post {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+
+    .btn {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 16px;
+    padding: 0;
+
+    font-weight: 300;
+    font-size: 1.875rem;
+    line-height: 1.2;
+    font-family: Raleway, Arial, sans-serif;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    font-family: Raleway, Arial, sans-serif;
+  }
+}
+
+// ************ MEDIA ************
+@media only screen and (max-width: 768px) {
+  .welcome {
+    min-height: 100px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .welcome {
+    padding-top: 20px;
+    padding-bottom: 25px;
+
+    &__title {
+      font-size: 1.5rem;
+    }
+  }
+}
