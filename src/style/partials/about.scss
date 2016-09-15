@@ -20,11 +20,12 @@
 // ******** MEDIA *********
 @media only screen and (max-width: 768px) {
   .about {
-    flex-direction: column;
+    display: block;
 
     &__left,
     &__right {
-      flex: 0 0 auto;
+      display: block;
+      width: 100%;
     }
   }
 }
