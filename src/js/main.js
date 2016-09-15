@@ -7,4 +7,5 @@
 
 $(document).ready(function() {
    //= partials/slider.js
+   //= partials/timetable-slider.js
 });

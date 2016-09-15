@@ -33,6 +33,10 @@
 
   background-color: $orange;
 
+  &--no-padding {
+    padding: 0;
+  }
+
   &--corners {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -325,6 +329,8 @@
 // ************ MEDIA *************
 @media screen and (max-width: 980px) {
   .content-block {
+    min-height: 400px;
+
     &__descr {
       &--sale {
         font-size: 3rem;
@@ -353,8 +359,8 @@
   .content-block {
     flex-basis: 100%;
 
-    &--high {
-      min-height: 500px;
+    &--timetable {
+      min-height: 650px;
     }
 
     &--yellow,
@@ -371,9 +377,11 @@
 
 @media only screen and (max-width: 480px) {
   .content-block {
-    &--high {
-      min-height: 640px;
-    }
+    min-height: 500px;
+
+    // &--timetable {
+    //   min-height: 800px;
+    // }
 
     &--work {
       .btn {
