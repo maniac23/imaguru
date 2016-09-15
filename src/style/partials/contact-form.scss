@@ -1,5 +1,6 @@
 .contact-form {
   padding: 60px 11.71875%;
+  background-color: $grey;
 
   font-weight: 300;
   font-family: Raleway, Arial, sans-serif;
@@ -20,9 +21,10 @@
     width: 68.75%;
     margin-bottom: 40px;
     padding: 5px 0;
+    background: transparent;
 
     border: none;
-    border-bottom: 2px solid $grey;
+    border-bottom: 2px solid ($grey - 7);
     border-radius: 0;
     outline: none;
 

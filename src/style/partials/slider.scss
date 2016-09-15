@@ -80,20 +80,20 @@
     font-weight: 300;
   }
 
-  &__descr {
-    margin: 0;
-    margin-bottom: 15px;
-    padding: 0;
-
-    font-size: 1.25rem;
-    line-height: 1.2;
-
-    &--coworking {
-      margin-bottom: 20px;
-
-      font-size: 1rem;
-    }
-  }
+  // &__descr {
+  //   margin: 0;
+  //   margin-bottom: 15px;
+  //   padding: 0;
+  //
+  //   font-size: 1.25rem;
+  //   line-height: 1.2;
+  //
+  //   &--coworking {
+  //     margin-bottom: 20px;
+  //
+  //     font-size: 1rem;
+  //   }
+  // }
 
   // &__benefits {
   //   margin: 0;
@@ -173,19 +173,6 @@
 
     &__image {
       order: -1;
-    }
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .slider {
-    &__text {
-      padding-bottom: 60px;
-
-      &--startups,
-      &--developers {
-        padding-top: 60px;
-      }
     }
   }
 }

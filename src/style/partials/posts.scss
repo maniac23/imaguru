@@ -40,9 +40,11 @@
   }
 
   &__date {
-    margin-right: 40px;
+    font-family: "Open Sans", Arial, sans-serif;
     font-size: 1.125rem;
     font-weight: 400;
+    padding-right: 10px;
+    border-right: 1px solid $white-color;
   }
 
   &__day {
@@ -116,6 +118,7 @@
   &__author {
     font-size: 1.125rem;
     font-weight: 400;
+    padding: 0 10px;
   }
 
   &__more {
