@@ -7,16 +7,16 @@
   justify-content: space-between;
   width: 100%;
 
-  &--blog {
-    display: block;
-
-    &::after {
-      content: "";
-
-      display: block;
-      clear: both;
-    }
-  }
+  // &--blog {
+  //   display: block;
+  //
+  //   &::after {
+  //     content: "";
+  //
+  //     display: block;
+  //     clear: both;
+  //   }
+  // }
 }
 
 .content-block {
@@ -28,7 +28,6 @@
   padding: 60px 9.375%;
 
   font-weight: 500;
-  font-family: Raleway, Arial, sans-serif;
   color: $white-color;
 
   background-color: $orange;
@@ -152,27 +151,29 @@
     font-size: 2.5rem;
     line-height: 1.2;
 
-    &--coworking {
-      margin-bottom: 40px;
-
-      font-weight: 400;
-      font-size: 2.25rem;
-      text-align: center;
-    }
+    // &--coworking {
+    //   margin-bottom: 40px;
+    //
+    //   font-weight: 400;
+    //   font-size: 2.25rem;
+    //   text-align: center;
+    // }
   }
 
   p {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+
+    font-weight: 300;
     font-size: 1.25rem;
     line-height: 1.5;
-    font-weight: 300;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 30px;
   }
 
   &__list {
     margin: 0;
     padding: 0;
+
     list-style-type: none;
     font-weight: 400;
     font-size: 1.25rem;
@@ -180,22 +181,21 @@
 
   &__li {
     margin-bottom: 20px;
-    
 
     &--with-tick {
       &::before {
         content: "";
+
         display: inline-block;
         width: 1.25rem;
         height: 1rem;
+        margin-right: 10px;
+
         background-image: url("../img/tick--white.svg");
         background-repeat: no-repeat;
-        margin-right: 10px;
       }
     }
   }
-
-
 
   // &__date {
   //   margin: 0;
@@ -308,43 +308,43 @@
     }
   }
 
-  &__benefits {
-    margin: 0;
-    padding: 0;
-
-    list-style-type: none;
-    color: $dark-font-color;
-
-    li {
-      margin-bottom: 30px;
-
-      font-weight: 500;
-      font-size: 1.125rem;
-
-      &::before {
-        content: "";
-
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        margin-right: 15px;
-
-        vertical-align: top;
-
-        background: url("../img/tick.svg") no-repeat;
-      }
-    }
-
-    &--work {
-      color: $white-color;
-
-      li {
-        &::before {
-          background: url("../img/tick_white.svg") no-repeat;
-        }
-      }
-    }
-  }
+  // &__benefits {
+  //   margin: 0;
+  //   padding: 0;
+  //
+  //   list-style-type: none;
+  //   color: $dark-font-color;
+  //
+  //   li {
+  //     margin-bottom: 30px;
+  //
+  //     font-weight: 500;
+  //     font-size: 1.125rem;
+  //
+  //     &::before {
+  //       content: "";
+  //
+  //       display: inline-block;
+  //       width: 20px;
+  //       height: 20px;
+  //       margin-right: 15px;
+  //
+  //       vertical-align: top;
+  //
+  //       background: url("../img/tick.svg") no-repeat;
+  //     }
+  //   }
+  //
+  //   &--work {
+  //     color: $white-color;
+  //
+  //     li {
+  //       &::before {
+  //         background: url("../img/tick_white.svg") no-repeat;
+  //       }
+  //     }
+  //   }
+  // }
 
   .btn {
     bottom: 10%;
@@ -354,49 +354,40 @@
 }
 
 // ************ MEDIA *************
-@media screen and (max-width: 980px) {
-  .content-block {
-    min-height: 400px;
-
-    &__descr {
-      &--sale {
-        font-size: 3rem;
-      }
-
-      &--cite {
-        &::after {
-          right: -20%;
-        }
-      }
-
-      &--price {
-        font-size: 4rem;
-      }
-    }
-  }
-}
+// @media screen and (max-width: 980px) {
+//   .row {
+//     display: block;
+//   }
+//
+//   // .content-block {
+//   //   &__descr {
+//   //     &--sale {
+//   //       font-size: 3rem;
+//   //     }
+//   //
+//   //     // &--cite {
+//   //     //   &::after {
+//   //     //     right: -20%;
+//   //     //   }
+//   //     // }
+//   //
+//   //     // &--price {
+//   //     //   font-size: 4rem;
+//   //     // }
+//   //   }
+//   // }
+// }
 
 @media screen and (max-width: 768px) {
   .row {
-    flex-direction: column;
-
-    -webkit-box-orient: vertical;
+    display: block;
   }
 
   .content-block {
-    flex-basis: 100%;
-
-    &--timetable {
-      min-height: 650px;
-    }
-
-    &--yellow,
-    &--blue {
-      min-height: 600px;
-    }
+    display: block;
+    width: 100%;
 
     &--corners {
-      min-height: 450px;
       padding-top: 80px;
     }
   }
@@ -404,12 +395,6 @@
 
 @media only screen and (max-width: 480px) {
   .content-block {
-    min-height: 500px;
-
-    // &--timetable {
-    //   min-height: 800px;
-    // }
-
     &--work {
       .btn {
         width: 70%;
@@ -417,8 +402,6 @@
     }
 
     &--corners {
-      min-height: inherit;
-
       &::before {
         border-top: 100px solid $white-color;
         border-right: 100px solid transparent;
@@ -438,24 +421,19 @@
       }
     }
 
-    &--yellow,
-    &--blue {
-      min-height: 600px;
-    }
-
-    &__date,
-    &__price,
-    &__descr {
-      margin-bottom: 30px;
-    }
-
-    &__descr {
-      &--cite {
-        &::after {
-          display: none;
-        }
-      }
-    }
+    // &__date,
+    // &__price,
+    // &__descr {
+    //   margin-bottom: 30px;
+    // }
+    //
+    // &__descr {
+    //   &--cite {
+    //     &::after {
+    //       display: none;
+    //     }
+    //   }
+    // }
 
     &__wrap {
       width: 80%;
@@ -463,21 +441,21 @@
   }
 }
 
-
-@media screen and (min-width: 768px) and (max-width: 980px) {
-  .content-block {
-    &--flex {
-      &__wrapper {
-        margin: auto;
-
-        font-size: 2.8rem;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .content-block--flex {
-    padding: 4.2rem 0;
-  }
-}
+//
+// @media screen and (min-width: 768px) and (max-width: 980px) {
+//   .content-block {
+//     &--flex {
+//       &__wrapper {
+//         margin: auto;
+//
+//         font-size: 2.8rem;
+//       }
+//     }
+//   }
+// }
+//
+// @media screen and (max-width: 768px) {
+//   .content-block--flex {
+//     padding: 4.2rem 0;
+//   }
+// }
