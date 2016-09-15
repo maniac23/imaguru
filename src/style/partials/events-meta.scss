@@ -1,0 +1,55 @@
+.events-meta {
+  padding: 50px 10%;
+
+  &--themes {
+    padding-top: 0;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+
+    font-weight: 500;
+    font-size: 1.875rem;
+    text-align: left;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+    column-count: 2;
+  }
+
+  &__item {
+    margin-bottom: 15px;
+
+    a {
+      font-weight: 300;
+      font-size: 1.25rem;
+      color: $dark-font-color;
+      text-decoration: none;
+
+      &:hover,
+      &:active {
+        text-decoration: underline;
+      }
+
+      &.today {
+        font-weight: 600;
+        color: $orange;
+      }
+    }
+  }
+}
+
+
+//  ********** MEDIA *************
+
+@media only screen and (max-width: 768px) {
+  .events-meta {
+    display: none;
+  }
+}

@@ -69,13 +69,12 @@
     //   display: block;
     //   clear: both;
     // }
-
+    &.course,
     &.tech {
       border-left: 3px solid $green;
     }
 
     &.meetup,
-    &.course,
     &.startup,
     &.business {
       border-left: 3px solid $orange;
