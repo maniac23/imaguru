@@ -125,7 +125,7 @@
 
   &__left,
   &__right {
-    flex: 1 1 auto;
+    flex: 1 1 50%;
     margin-top: 40px;
   }
 
@@ -134,20 +134,27 @@
   }
 
   &__left {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    text-align: left;
+  }
+
+  &__adress {
+    margin-bottom: 10px;
+
+    span {
+      margin-right: 20px;
+    }
+  }
+
+  &__phone {
+    @extend .info__adress;
   }
 
   &__mail {
-    margin-right: 3.125%;
-
+    display: block;
     font-size: 1rem;
-    font-family: "Open Sans", Arial, sans-serif;
     color: $white-color;
     text-decoration: none;
-
-    opacity: 0.8;
+    margin-bottom: 10px;
 
     &:hover,
     &:active {
@@ -155,55 +162,28 @@
     }
   }
 
-  &__lang {
-    display: inline-block;
-    margin-right: 3.125%;
+  &__social {
+    a {
+      color: $white-color;
+      text-decoration: none;
+      transition: all 0.3s ease-in;
+      vertical-align: baseline;
 
-    font-size: 1rem;
-    font-family: "Open Sans", Arial, sans-serif;
-    vertical-align: top;
-    color: $white-color;
+      &:hover,
+      &:active {
+        text-decoration: underline;
+      }
 
-    background: transparent;
-    border: none;
-    outline: none;
-    opacity: 0.8;
-
-    appearance: none;
-
-    &:hover {
-      cursor: pointer;
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
     }
-  }
 
-  &__share {
-    position: relative;
-
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    padding: 0;
-
-    vertical-align: top;
-
-    background: transparent;
-    border: none;
-    outline: none;
-
-    &:hover {
-      cursor: pointer;
+    img {
+      width: 16px;
+      margin-right: 5px;
+      vertical-align: baseline;
     }
-  }
-
-  // &__wrap {
-  //   position: relative;
-  //
-  //   display: inline-block;
-  // }
-
-  &__share-img {
-    width: 25px;
-    height: 25px;
   }
 }
 
@@ -268,8 +248,8 @@
 
   &__paragraph {
     margin: 0;
-    padding: 0;
     margin-bottom: 40px;
+    padding: 0;
 
     font-size: 1.875rem;
 
@@ -299,8 +279,8 @@
   }
 
   &__buttons {
-    flex: 1 1 auto;
     display: flex;
+    flex: 1 1 auto;
     justify-content: space-between;
     width: 50%;
     margin: 0 auto;
@@ -431,6 +411,21 @@
   }
 }
 
+@media only screen and (max-width: 980px) {
+  .info {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__left,
+    &__right {
+      flex: 0 0 50%;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .main-text {
     &__buttons {
@@ -441,6 +436,12 @@
       .slick-dots {
         top: 95%;
       }
+    }
+  }
+
+  .features {
+    &__item {
+      flex-basis: 30%;
     }
   }
 }
@@ -468,32 +469,18 @@
       text-align: right;
     }
 
-    &__wrap {
-      margin-bottom: 40px;
+    &__mail {
+      margin-bottom: 25px;
     }
 
-    &__dropdown {
-      right: 100%;
-
-      width: 200px;
-
-      &::after {
-        content: "";
-
-        display: block;
-        clear: both;
-      }
-
+    &__social {
       a {
-        float: left;
-        width: 30px;
-        height: 30px;
-        margin-right: 20px;
-      }
+        display: block;
+        margin-bottom: 15px;
 
-      svg {
-        width: 30px;
-        height: 30px;
+        &:not(:last-child) {
+          margin-right: 0;
+        }
       }
     }
   }
@@ -506,6 +493,6 @@
   }
 
   .features__item {
-    flex-basis: 50%;
+    flex-basis: 100%;
   }
 }
