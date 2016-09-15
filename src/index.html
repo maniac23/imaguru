@@ -11,45 +11,7 @@
 <body>
     //= template/sprite.html
   <div class="wrapper">
-    <!--header  -->
-    <header class="main-header">
-      <div class="logo">
-        <a href="/" class="logo__link">
-          <svg class="logo__picture">
-            <use xlink:href="#header-logo"></use>
-          </svg>
-        </a>
-      </div>
-      <!--Menu  -->
-      <svg class="search-icon">
-        <use xlink:href="#search_icon"></use>
-      </svg>
-      <svg class="menu-icon">
-        <use xlink:href="#menu-icon"></use>
-      </svg>
-      <nav class="menu">
-        <ul class="menu__list">
-          <li class="menu__item"><a href="#" class="menu__link">О клубе</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">Коворкинг</a></li>
-          <li class="menu__item"><a href="events.html" class="menu__link">Мероприятия</a></li>
-          <li class="menu__item menu__item--hasDropdown"><a href="#" class="menu__link">Обучение</a>
-            <div class="menu-dropdown">
-              <a href="#" class="menu-dropdown__item">Coding Academy</a>
-              <a href="#" class="menu-dropdown__item">Business Academy</a>
-            </div>
-          </li>
-          <li class="menu__item"><a href="#" class="menu__link">Организуй у нас</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
-        </ul>
-      </nav>
-      <form action="none" class="menu__form">
-        <input class="menu__search" type="search" placeholder="Поиск">
-        <select class="menu__select" name="lang">
-          <option value="RU">RU</option>
-          <option value="EN">EN</option>
-        </select>
-      </form>
-    </header>
+    //= template/header.html
 
     <!--Promo section  -->
     <div class="promo">
@@ -137,7 +99,7 @@
 
       <div class="content-block content-block--white content-block--no-padding content-block--timetable">
         <div class="events-timetable">
-          <ul class="events-timetable__list">
+          <ul class="events-timetable__list" id="events-timetable">
 
             <li class="events-timetable__item business">
               <div class="events-timetable__time">
@@ -514,34 +476,4 @@
       </div>
     </div>
 
-    <!--Footer -->
-    <footer class="main-footer">
-      <div class="main-footer__left">
-        <form class="footer-form">
-          <h3 class="footer-form__title">Оставайтесь в курсе</h3>
-          <input type="email" class="footer-form__input" placeholder="Введите ваш email" required>
-          <button type="submit" class="btn ">Подписаться на рассылку</button>
-        </form>
-      </div>
-      <div class="main-footer__right">
-        <nav class="footer-menu">
-          <ul class="footer-menu__list">
-            <li class="footer-menu__item"><a href="#" class="footer-menu__link">О клубе</a></li>
-            <li class="footer-menu__item"><a href="#" class="footer-menu__link">Коворкинг</a></li>
-            <li class="footer-menu__item"><a href="#" class="footer-menu__link">Мероприятия</a></li>
-            <li class="footer-menu__item"><a href="#" class="footer-menu__link">Обучение</a></li>
-            <li class="footer-menu__item"><a href="#" class="footer-menu__link">Организуй у нас</a></li>
-            <li class="footer-menu__item"><a href="#" class="footer-menu__link">Контакты</a></li>
-          </ul>
-        </nav>
-        <ul class="footer-social">
-          <li class="footer-social__item"><a href="#">Twitter</a></li>
-          <li class="footer-social__item"><a href="#">Facebook</a></li>
-          <li class="footer-social__item"><a href="#">Instagram</a></li>
-        </ul>
-      </div>
-    </footer>
-  </div>
-  <script src="js/main.js"></script>
-</body>
-</html>
+  //= template/footer.html

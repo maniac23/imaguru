@@ -9,4 +9,6 @@ $(document).ready(function() {
   //= partials/menu.js
    //= partials/slider.js
    //= partials/timetable-slider.js
+   //= partials/main-text__slider.js
+   //= partials/events-gallery.js
 });

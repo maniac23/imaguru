@@ -1,0 +1,37 @@
+.events-info {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__left {
+    flex-basis: 50%;
+    width: 50%;
+  }
+
+
+  &__right {
+    flex-basis: 50%;
+    width: 50%;
+  }
+
+  &__image {
+    width: 100%;
+  }
+}
+
+
+// **************** MEDIA **********
+
+@media only screen and (max-width: 768px) {
+  .events-info {
+    &__left,
+    &__right {
+      flex-basis: 100%;
+    }
+
+    &__right {
+      &--swap {
+        order: -1;
+      }
+    }
+  }
+}
