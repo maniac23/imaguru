@@ -13,4 +13,7 @@ $(document).ready(function() {
    //= partials/main-text__slider.js
    //= partials/events-gallery.js
    //= partials/event-gallery.js
+   //= partials/blog-archive-slider.js
+   //= partials/blog-show.js
+   //= partials/blog-more.js
 });

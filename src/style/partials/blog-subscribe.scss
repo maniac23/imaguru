@@ -1,0 +1,58 @@
+.blog-subscribe {
+  position: relative;
+
+  display: none;
+  padding: 70px 0 50px;
+
+  text-align: center;
+
+  background-color: $grey;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2.5%;
+    right: 15%;
+
+    display: block;
+    width: 20px;
+    height: 20px;
+
+    background-color: $grey;
+    transform: rotate(-45deg);
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
+
+    font-weight: 400;
+    font-size: 1.875rem;
+  }
+
+  &__form {
+    display: block;
+    width: 23.4375%;
+    margin: 0 auto;
+
+    input {
+      display: block;
+      width: 100%;
+      margin-bottom: 60px;
+      padding: 5px 0;
+
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid $dark-font-color;
+      border-radius: 0;
+      outline: none;
+
+      transition: all 0.3s ease-in;
+
+      &:focus {
+        border-bottom: 1px solid $orange;
+      }
+    }
+  }
+}
