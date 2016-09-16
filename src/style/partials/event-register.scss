@@ -1,0 +1,54 @@
+.event-register {
+  padding: 70px $section-padding;
+
+  text-align: center;
+  color: $dark-font-color;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 60px;
+    padding: 0;
+
+    font-weight: 400;
+    font-size: 1.875rem;
+  }
+
+  &__form {
+    width: 37.5%;
+    margin: 0 auto;
+
+    text-align: center;
+
+    input {
+      display: block;
+      width: 100%;
+      margin-bottom: 35px;
+      padding: 5px 0;
+
+      border: none;
+      border-bottom: 1px solid $dark-font-color;
+      border-radius: 0;
+      outline: none;
+
+      transition: all 0.3s ease-in;
+
+      &:focus {
+        border-bottom: 1px solid $orange;
+      }
+    }
+
+    .btn {
+      margin-top: 60px;
+      padding: 15px 50px;
+    }
+  }
+}
+
+// ************ MEDIA ************
+@media only screen and (max-width: 768px) {
+  .event-register {
+    &__form {
+      width: 80%;
+    }
+  }
+}
