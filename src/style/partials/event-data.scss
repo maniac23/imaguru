@@ -1,0 +1,35 @@
+.event-data {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px $section-padding;
+
+  font-size: 1.25rem;
+  color: $dark-font-color;
+
+  background-color: $grey +7;
+
+  &__icon {
+    display: inline-block;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 10px;
+
+    vertical-align: baseline;
+  }
+
+  &__price {
+    color: $orange;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .event-data {
+    flex-direction: column;
+
+    text-align: center;
+
+    div:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+}
