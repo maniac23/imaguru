@@ -52,6 +52,12 @@
     background-size: cover;
   }
 
+  &--post {
+    padding: 200px $section-padding 30px;
+    background: url("../img/blog__bg.jpg") center;
+    background-size: cover;
+  }
+
   &__video-iframe {
     position: absolute;
     left: 0;
@@ -220,6 +226,10 @@
     transform: translate(-50%, -50%);
   }
 
+  &--post {
+    margin-bottom: 170px;
+  }
+
   &__title {
     margin: 0;
     margin-bottom: 40px;
@@ -234,6 +244,11 @@
 
       font-weight: 500;
       font-size: 3.75rem;
+    }
+
+    &--post {
+      font-weight: 500;
+      font-size: 2.5rem;
     }
   }
 
@@ -468,7 +483,18 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .promo {
+    &--post {
+      padding-top: 100px;
+      padding-bottom: 200px;
+    }
+  }
+
   .main-text {
+    &--post {
+      margin-bottom: 40px;
+    }
+
     &__buttons {
       width: 90%;
     }
@@ -494,6 +520,7 @@
 
   .promo--post {
     padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   .info {
@@ -527,9 +554,18 @@
   }
 
   .main-text {
+
+
     &__buttons {
       flex-direction: column;
       width: 100%;
+    }
+
+    &__title {
+      &--post {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+      }
     }
   }
 

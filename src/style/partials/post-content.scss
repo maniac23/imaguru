@@ -1,0 +1,36 @@
+.post-content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 80px $section-padding;
+
+  &__text {
+    flex: 0 0 80%;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
+
+    font-weight: 400;
+    font-size: 1.25rem;
+  }
+
+  &__image {
+    max-width: 100%;
+    margin-bottom: 80px;
+  }
+}
+
+// ************* MEDIA **********
+@media only screen and (max-width: 768px) {
+  .post-content__text {
+    flex-basis: 75%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .post-content__text {
+    flex-basis: 100%;
+  }
+}

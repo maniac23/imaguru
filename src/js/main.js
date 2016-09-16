@@ -16,4 +16,5 @@ $(document).ready(function() {
    //= partials/blog-archive-slider.js
    //= partials/blog-show.js
    //= partials/blog-more.js
+   //= partials/comments.js
 });

@@ -24,6 +24,18 @@
     background-image: url("../img/blog-preview_img.jpg");
   }
 
+  &--events {
+    background-image: url("../img/events-img2.jpg");
+  }
+
+  &--post {
+    background-image: url("../img/post_img.jpg");
+  }
+
+  &--courses {
+    background-image: url("../img/courses__bg.jpg");
+  }
+
   &__overlay {
     position: absolute;
     top: 0;
