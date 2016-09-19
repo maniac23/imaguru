@@ -23,13 +23,15 @@ var path = {
         js: 'build/js/',
         css: 'build/css/',
         img: 'build/img/',
+        php: 'build/php/',
         fonts: 'build/fonts/',
     },
     src: {
         html: 'src/*.html',
-        js: 'src/js/main.js',
+        js: 'src/js/*.js',
         style: 'src/style/main.scss',
         img: 'src/img/*.*',
+        php: 'src/php/*.php',
         fonts: 'src/fonts/**/*.*',
         svg: 'src/img/svg_sprite/*.*',
     },
@@ -38,6 +40,7 @@ var path = {
         js: 'src/js/**/*.js',
         style: 'src/style/**/*.scss',
         img: 'src/img/*.*',
+        php: 'src/php/*.*',
         fonts: 'src/fonts/**/*.*'
     },
     clean: './build'
@@ -70,7 +73,7 @@ gulp.task('html:build', function () {
 gulp.task('js:build', function () {
     gulp.src(path.src.js)
         .pipe(rigger())
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({stream: true}));
 });
@@ -109,6 +112,11 @@ gulp.task('fonts:build', function() {
         .pipe(gulp.dest(path.build.fonts))
 });
 
+gulp.task('php:build', function() {
+    gulp.src(path.src.php)
+        .pipe(gulp.dest(path.build.php))
+});
+
 gulp.task('svgstore', function () {
     return gulp
         .src('src/img/svg_sprite/*.svg')
@@ -132,19 +140,29 @@ gulp.task('build', [
     'js:build',
     'style:build',
     'fonts:build',
-    'image:build'
+    'image:build',
+    'php:build'
 ]);
 
 
 gulp.task('watch', function(){
     watch([path.watch.html], function(event, cb) {
-        gulp.start('html:build');
+            gulp.start('html:build');
     });
     watch([path.watch.style], function(event, cb) {
-        gulp.start('style:build');
+        setTimeout(function(){
+            gulp.start('style:build');
+        }, 300);
     });
     watch([path.watch.js], function(event, cb) {
-        gulp.start('js:build');
+        setTimeout(function(){
+            gulp.start('js:build');
+        }, 300);
+    });
+    watch([path.watch.php], function(event, cb) {
+        setTimeout(function(){
+            gulp.start('php:build');
+        }, 300);
     });
     watch([path.watch.img], function(event, cb) {
         gulp.start('image:build');

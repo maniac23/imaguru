@@ -13,15 +13,27 @@
   margin-bottom: 20px;
   background: none;
 
+  cursor: pointer;
+  transition: background-color .2s, color .2s, transform .2s;
+
+
   &:hover,
   &:active {
-    text-decoration: underline;
-    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &:active {
+    transform: scale(.97);
   }
 
   &--orange {
     color: $orange;
     border: 3px solid $orange;
+
+    &:hover {
+      background-color: $orange;
+      color: $white-color;
+    }
   }
 
   &--orange-bg {
@@ -29,6 +41,14 @@
     color: $white-color;
     border-radius: 5px;
     border: none;
+  }
+
+  .promo & {
+    &:hover {
+      background-color: #fff;
+      text-decoration: none;
+      color: #000;
+    }
   }
 
   @media only screen and (max-width: 480px) {

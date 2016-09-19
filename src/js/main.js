@@ -17,4 +17,5 @@ $(document).ready(function() {
    //= partials/blog-show.js
    //= partials/blog-more.js
    //= partials/comments.js
+   //= partials/course-page.js
 });
