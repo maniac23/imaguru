@@ -134,12 +134,11 @@
     <div class="content-block">
       <h2 class="content-block__title">Новичкам</h2>
       <p>Только думаете войти в IT и не знаете, что вам подойдет? Приходите на наши преивенты и определяйтесь. А если уже знаете чем хотите заниматься - выбирайте курс и начинайте строить новое будущее вместе с imaguru.</p>
-      <a href="#" class="btn">Узнать больше</a>
+      <a href="#" class="btn">Просмотреть курсы</a>
     </div>
     <div class="content-block content-block--white content-block--no-padding">
       <ul class="course-tab">
-        <li>
-          <a href="#" class="course-tab__links course-tab__links--active" onclick="openCity(event, 'London')">
+        <li class="course-tab__links course-tab__links--active" data-tab="frontend">
             <div class="course-tab__date">
               <p class="course-tab__month">июль</p>
               <p class="course-tab__day">29</p>
@@ -150,10 +149,8 @@
                 Первый модуль
               </p>
             </div>
-          </a>
         </li>
-        <li>
-          <a href="#" class="course-tab__links" onclick="openCity(event, 'Paris')">
+        <li class="course-tab__links" data-tab="backend">
             <div class="course-tab__date">
               <p class="course-tab__month">август</p>
               <p class="course-tab__day">2</p>
@@ -164,10 +161,8 @@
                 Первый модуль
               </p>
             </div>
-          </a>
         </li>
-        <li>
-          <a href="#" class="course-tab__links" onclick="openCity(event, 'Tokyo')">
+        <li class="course-tab__links" data-tab="ios">
             <div class="course-tab__date">
               <p class="course-tab__month">август</p>
               <p class="course-tab__day">10</p>
@@ -178,10 +173,8 @@
                 Для начинающих
               </p>
             </div>
-          </a>
         </li>
-        <li>
-          <a href="#" class="course-tab__links" onclick="openCity(event, 'Tokyo')">
+        <li class="course-tab__links" data-tab="php">
             <div class="course-tab__date">
               <p class="course-tab__month">август</p>
               <p class="course-tab__day">10</p>
@@ -192,9 +185,121 @@
                 Для начинающих
               </p>
             </div>
-          </a>
         </li>
       </ul>
+    </div>
+  </div>
+
+  <div class="course course--is-active" id="frontend">
+    <div class="course__header">
+      <div class="course__header-left">
+        <h3 class="course__title">Front-end developer</h3>
+        <p class="course__subtitle">Первый модуль</p>
+      </div>
+      <div class="course__header-right">
+        <h3 class="course__start">Старт курса</h3>
+        <p class="course__date">29 июля</p>
+      </div>
+    </div>
+    <p class="course__descr">Front-end — это разработка той части сайта или веб-приложения, которая видна пользователю, с которой ему предстоит взаимодействовать. Для сайта это: верстка страниц, программирование кнопок, выпадающих списков меню и других интерактивных элементов.  Кстати, знаменитый стандарт HTML5, позволяющий создавать даже мобильные приложения также относится к front-end разработке.</p>
+    <div class="course__footer">
+      <div class="course__footer-left">
+        <div class="course__info-wrap">
+          <p class="course__info">Продолжительность обучения</p>
+          <p class="course__info-text">3 месяца (160 ак. ч.)</p>
+        </div>
+        <div class="course__info-wrap">
+          <p class="course__info">Средняя зарплата</p>
+          <p class="course__info-text">800$</p>
+        </div>
+      </div>
+      <div class="course__footer-right">
+        <a href="#" class="btn btn--orange">Перейти к курсу</a>
+      </div>
+    </div>
+  </div>
+  <div class="course" id="ios">
+    <div class="course__header">
+      <div class="course__header-left">
+        <h3 class="course__title">iOS developer</h3>
+        <p class="course__subtitle">Первый модуль</p>
+      </div>
+      <div class="course__header-right">
+        <h3 class="course__start">Старт курса</h3>
+        <p class="course__date">29 июля</p>
+      </div>
+    </div>
+    <p class="course__descr">Front-end — это разработка той части сайта или веб-приложения, которая видна пользователю, с которой ему предстоит взаимодействовать. Для сайта это: верстка страниц, программирование кнопок, выпадающих списков меню и других интерактивных элементов.  Кстати, знаменитый стандарт HTML5, позволяющий создавать даже мобильные приложения также относится к front-end разработке.</p>
+    <div class="course__footer">
+      <div class="course__footer-left">
+        <div class="course__info-wrap">
+          <p class="course__info">Продолжительность обучения</p>
+          <p class="course__info-text">3 месяца (160 ак. ч.)</p>
+        </div>
+        <div class="course__info-wrap">
+          <p class="course__info">Средняя зарплата</p>
+          <p class="course__info-text">800$</p>
+        </div>
+      </div>
+      <div class="course__footer-right">
+        <a href="#" class="btn btn--orange">Перейти к курсу</a>
+      </div>
+    </div>
+  </div>
+  <div class="course" id="backend">
+    <div class="course__header">
+      <div class="course__header-left">
+        <h3 class="course__title">Back-end developer</h3>
+        <p class="course__subtitle">Первый модуль</p>
+      </div>
+      <div class="course__header-right">
+        <h3 class="course__start">Старт курса</h3>
+        <p class="course__date">29 июля</p>
+      </div>
+    </div>
+    <p class="course__descr">Front-end — это разработка той части сайта или веб-приложения, которая видна пользователю, с которой ему предстоит взаимодействовать. Для сайта это: верстка страниц, программирование кнопок, выпадающих списков меню и других интерактивных элементов.  Кстати, знаменитый стандарт HTML5, позволяющий создавать даже мобильные приложения также относится к front-end разработке.</p>
+    <div class="course__footer">
+      <div class="course__footer-left">
+        <div class="course__info-wrap">
+          <p class="course__info">Продолжительность обучения</p>
+          <p class="course__info-text">3 месяца (160 ак. ч.)</p>
+        </div>
+        <div class="course__info-wrap">
+          <p class="course__info">Средняя зарплата</p>
+          <p class="course__info-text">800$</p>
+        </div>
+      </div>
+      <div class="course__footer-right">
+        <a href="#" class="btn btn--orange">Перейти к курсу</a>
+      </div>
+    </div>
+  </div>
+  <div class="course" id="php">
+    <div class="course__header">
+      <div class="course__header-left">
+        <h3 class="course__title">PHP developer</h3>
+        <p class="course__subtitle">Первый модуль</p>
+      </div>
+      <div class="course__header-right">
+        <h3 class="course__start">Старт курса</h3>
+        <p class="course__date">29 июля</p>
+      </div>
+    </div>
+    <p class="course__descr">Front-end — это разработка той части сайта или веб-приложения, которая видна пользователю, с которой ему предстоит взаимодействовать. Для сайта это: верстка страниц, программирование кнопок, выпадающих списков меню и других интерактивных элементов.  Кстати, знаменитый стандарт HTML5, позволяющий создавать даже мобильные приложения также относится к front-end разработке.</p>
+    <div class="course__footer">
+      <div class="course__footer-left">
+        <div class="course__info-wrap">
+          <p class="course__info">Продолжительность обучения</p>
+          <p class="course__info-text">3 месяца (160 ак. ч.)</p>
+        </div>
+        <div class="course__info-wrap">
+          <p class="course__info">Средняя зарплата</p>
+          <p class="course__info-text">800$</p>
+        </div>
+      </div>
+      <div class="course__footer-right">
+        <a href="#" class="btn btn--orange">Перейти к курсу</a>
+      </div>
     </div>
   </div>
 

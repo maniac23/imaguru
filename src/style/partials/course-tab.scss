@@ -1,5 +1,5 @@
 .course-tab {
-  padding: 60px 5%;
+  padding: 50px 5%;
   list-style-type: none;
 
   li:not(:last-child) {
@@ -43,7 +43,7 @@
   }
 
   &__info {
-    flex: 1 0 80%;
+    flex: 1 0 70%;
     padding: 10px 20px;
   }
 
@@ -61,6 +61,7 @@
     font-weight: 300;
   }
 }
+
 
 // ************* MEDIA **************
 @media only screen and (max-width: 480px) {

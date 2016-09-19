@@ -18,4 +18,5 @@ $(document).ready(function() {
    //= partials/blog-more.js
    //= partials/comments.js
    //= partials/review-slider.js
+   //= partials/tabs.js
 });
