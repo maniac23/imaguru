@@ -554,7 +554,10 @@
   }
 
   .main-text {
-
+    &__paragraph {
+      font-size: 1.3rem;
+      text-align: left;
+    }
 
     &__buttons {
       flex-direction: column;
