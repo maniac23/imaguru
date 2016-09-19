@@ -1,15 +1,6 @@
-(function(){
+(function($){
 
 	var eMail = 'tk@imaguru.by';
-
-// плавный скроллинг к элементу
-	var scrollTo = function(element, delay){
-		var position = element.offset().top;
-		delay = delay || 700;
-		$('html, body').animate({scrollTop: position - 30}, delay);
-	};
-
-
 
 	$('.header__nav-toggler').on('click', function(){
 		$('.header__nav').toggleClass('show');
@@ -20,7 +11,6 @@
 	});
 
 	var registrationForm = $('.course-registration-form');
-
 
 	var letterConstructor = function(form){
 		return { 'first_name': form.elements['f_name'].value,
@@ -54,14 +44,12 @@
 		return false;
 	});
 
-
 	$('.marker').on('click', function(evt){
 		evt.preventDefault();
 		var selector = $(this).attr('href');
 		scrollTo($(selector), 800);
 		return false;
 	});
-
 
 // learn more
 	var learnMoreBtn = $('.learn-more-btn');
@@ -90,4 +78,4 @@
 		learnMoreSection.toggleClass('_show');
 		setLearnMoreHeight();
 	});
-}());
+}(jQuery));

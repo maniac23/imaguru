@@ -12974,14 +12974,28 @@
 
 
 $(document).ready(function() {
-  // open menu
-  $('.menu-icon').click(function() {
-    $('.menu').slideToggle();
-  });
-  // open search
-  $('.search-icon').click(function() {
-    $('.menu__search').slideToggle('slow');
-  });
+   
+   // плавный скроллинг к элементу
+   // element - элемент, к которому скроллим
+   // duration - продолжительность анимации
+   // offset - смещение, на которое недоскроллит скролл -
+   // чтобы пользователь понимал где оказался,
+   // должен быть видет соседний элемент
+   
+   var scrollTo = function(element, duration, offset){
+   	var position = element.offset().top;
+   	duration = duration || 700;
+   	offset = offset || 0;
+   	$('html, body').animate({scrollTop: position - offset}, duration);
+   };
+   // open menu
+   $('.menu-icon').click(function() {
+     $('.menu').slideToggle();
+   });
+   // open search
+   $('.search-icon').click(function() {
+     $('.menu__search').slideToggle('slow');
+   });
    $('.slider').slick({
      infinite: true,
      slidesToShow: 1,
@@ -13095,18 +13109,9 @@ $(document).ready(function() {
      e.preventDefault();
      $('.comments__form').slideToggle();
    });
-   (function(){
+   (function($){
    
    	var eMail = 'tk@imaguru.by';
-   
-   // плавный скроллинг к элементу
-   	var scrollTo = function(element, delay){
-   		var position = element.offset().top;
-   		delay = delay || 700;
-   		$('html, body').animate({scrollTop: position - 30}, delay);
-   	};
-   
-   
    
    	$('.header__nav-toggler').on('click', function(){
    		$('.header__nav').toggleClass('show');
@@ -13117,7 +13122,6 @@ $(document).ready(function() {
    	});
    
    	var registrationForm = $('.course-registration-form');
-   
    
    	var letterConstructor = function(form){
    		return { 'first_name': form.elements['f_name'].value,
@@ -13151,14 +13155,12 @@ $(document).ready(function() {
    		return false;
    	});
    
-   
    	$('.marker').on('click', function(evt){
    		evt.preventDefault();
    		var selector = $(this).attr('href');
    		scrollTo($(selector), 800);
    		return false;
    	});
-   
    
    // learn more
    	var learnMoreBtn = $('.learn-more-btn');
@@ -13187,5 +13189,5 @@ $(document).ready(function() {
    		learnMoreSection.toggleClass('_show');
    		setLearnMoreHeight();
    	});
-   }());
+   }(jQuery));
 });

@@ -7,7 +7,8 @@
 
 
 $(document).ready(function() {
-  //= partials/menu.js
+   //= partials/common-functions.js
+   //= partials/menu.js
    //= partials/slider.js
    //= partials/timetable-slider.js
    //= partials/main-text__slider.js

@@ -1,3 +1,10 @@
+button {
+  background-color: transparent;
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
 .btn {
   display: inline-block;
   text-align: center;
@@ -11,15 +18,20 @@
   border-radius: 3px;
   text-decoration: none;
   margin-bottom: 20px;
-  background: none;
+  // background: none;
 
   cursor: pointer;
-  transition: background-color .2s, color .2s, transform .2s;
+  transition: background-color .2s, color .2s, transform .05s;
 
 
   &:hover,
   &:active {
     text-decoration: none;
+  }
+
+  &:hover {
+    background-color: #fff;
+    color: #000;
   }
 
   &:active {
@@ -43,12 +55,19 @@
     border: none;
   }
 
-  .promo & {
+  .promo &,
+  .main-footer & {
     &:hover {
       background-color: #fff;
       text-decoration: none;
       color: #000;
     }
+  }
+
+  .course-registration .course-registration-form &{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   @media only screen and (max-width: 480px) {
