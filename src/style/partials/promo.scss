@@ -54,6 +54,7 @@
 
   &--post {
     padding: 200px $section-padding 30px;
+
     background: url("../img/blog__bg.jpg") center;
     background-size: cover;
   }
@@ -126,37 +127,46 @@
 
 .breadcrumbs {
   position: absolute;
-  z-index: 2000;
   top: 0;
   left: 0;
+  z-index: 2000;
+
   width: 100%;
   padding: 3px $section-padding;
+
   background-color: rgba($dark-font-color, 0.6);
 
   &__item {
-    color: $white-color;
-    opacity: 0.8;
-    text-decoration: none;
-    padding: 0;
     margin-right: 15px;
-    transition: all 0.3s ease-in;
+    padding: 0;
+
     font-weight: 400;
+    color: $white-color;
+    text-decoration: none;
+
+    opacity: 0.8;
+
+    transition: all 0.3s ease-in;
 
     &:not(:last-child) {
       &::after {
         content: "";
+
         display: inline-block;
         width: 7px;
         height: 7px;
+        margin-left: 15px;
+
+        vertical-align: middle;
+
         background-color: $orange;
         border-radius: 50%;
-        vertical-align: middle;
-        margin-left: 15px;
       }
     }
 
     &:hover {
       text-decoration: underline;
+
       opacity: 1;
     }
 
@@ -164,9 +174,10 @@
       font-weight: 600;
 
       &:hover {
-        opacity: 0.8;
         text-decoration: none;
+
         cursor: default;
+        opacity: 0.8;
       }
     }
   }
@@ -216,10 +227,11 @@
 
   &__mail {
     display: block;
+    margin-bottom: 10px;
+
     font-size: 1rem;
     color: $white-color;
     text-decoration: none;
-    margin-bottom: 10px;
 
     &:hover,
     &:active {
@@ -229,10 +241,11 @@
 
   &__social {
     a {
+      vertical-align: baseline;
       color: $white-color;
       text-decoration: none;
+
       transition: all 0.3s ease-in;
-      vertical-align: baseline;
 
       &:hover,
       &:active {
@@ -250,6 +263,7 @@
     width: 16px;
     height: 16px;
     margin-right: 5px;
+
     vertical-align: baseline;
   }
 }
@@ -524,14 +538,15 @@
 @media only screen and (max-width: 980px) {
   .info {
     flex-direction: column;
-    align-items: center;
     justify-content: flex-start;
+    align-items: center;
 
     &__left,
     &__right {
       flex: 0 0 50%;
-      text-align: center;
       margin-bottom: 40px;
+
+      text-align: center;
     }
   }
 }
@@ -587,6 +602,7 @@
 
     &__right {
       width: 100%;
+      margin-bottom: 0;
 
       text-align: right;
     }
@@ -596,10 +612,13 @@
     }
 
     &__social {
+      text-align: center;
+
       a {
         display: inline-block;
-        font-size: 0;
         margin-bottom: 15px;
+
+        font-size: 0;
 
         &:not(:last-child) {
           margin-right: 0;
@@ -610,14 +629,13 @@
     &__icon {
       width: 25px;
       height: 25px;
-      margin-right: 10px;
+      margin-right: 20px;
     }
   }
 
   .main-text {
     &__paragraph {
       font-size: 1.3rem;
-      text-align: left;
     }
 
     &__buttons {
@@ -627,8 +645,9 @@
 
     &__title {
       &--post {
-        font-size: 1.5rem;
         margin-bottom: 0;
+
+        font-size: 1.5rem;
       }
     }
   }
