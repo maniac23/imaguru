@@ -1,0 +1,16 @@
+.short-form {
+	width: 50%;
+	margin: 0 auto;
+
+	input,
+	.btn {
+	}
+	input {
+		display: block;
+		float: left;
+	}
+	.btn {
+		display: block;
+		float: right;
+	}
+}

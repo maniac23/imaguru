@@ -1,0 +1,45 @@
+.offers {
+	.offer-item {
+		&__text {}
+		&__photo {
+			background-image: url(../img/nordic.jpg);
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			min-height: 50vw;
+		}
+	}
+}
+
+.icon-before {
+	&:before {
+		content: '';
+		display: inline-block;
+		height: 1.5em;
+		width: 1.5em;
+		padding: 0;
+		vertical-align: middle;
+		transform: translateY(-.2em);
+		margin-right: .5em;
+		background-size: contain;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+	}
+	&--people:before {
+		background-image: url(../img/people.svg);
+		width: 1.7em;
+	}
+	&--price:before {
+		background-image: url(../img/price.svg);
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.offers {
+		.offer-item {
+			&__photo {
+				min-height: 0;
+			}
+		}
+	}
+}

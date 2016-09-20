@@ -1,0 +1,27 @@
+.text-input {
+
+	width: 100%;
+	padding: .5em 0;
+	margin-bottom: .8em;
+	border: none;
+	border-bottom: 2px solid #eee;
+	background-color: transparent;
+	color: #fff;
+	outline: none;
+	transition: all .2s;
+
+	&:focus {
+		border-color: $orange;
+		width: 100%;
+	}
+
+
+
+	&--blur {
+		opacity: .8;
+		&:focus {
+			opacity: 1;
+		}
+	}
+
+}

@@ -1,0 +1,22 @@
+.flex-container-50-50 {
+	display: flex;
+	flex-wrap: wrap;
+
+	&__element {
+		flex: 1 1 384px;
+	}
+
+}
+
+
+@media only screen and (min-width: 768px) {
+	.offers .flex-container-50-50:nth-child(2n){
+		background-color: #aaa;
+		.flex-container-50-50__element:last-child {
+			order: 1;
+		}
+		.flex-container-50-50__element:first-child {
+			order: 2;
+		}
+	}
+}
