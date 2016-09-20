@@ -14,6 +14,14 @@
     }
   }
 
+  &--children {
+    .course-tab__links--active {
+      .course-tab__date {
+        border-right: 4px solid $light-green;
+      }
+    }
+  }
+
   &__links {
     display: flex;
     cursor: pointer;

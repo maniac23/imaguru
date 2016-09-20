@@ -29,6 +29,11 @@
     border: 3px solid $blue;
   }
 
+  &--green {
+    color: $light-green;
+    border: 3px solid $light-green;
+  }
+
   &--orange-bg {
     background: $orange;
     color: $white-color;

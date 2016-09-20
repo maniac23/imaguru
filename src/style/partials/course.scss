@@ -2,6 +2,8 @@
   padding: 60px $section-padding;
   background-color: $grey;
   display: none;
+  background-size: cover;
+  background-position: center;
 
   &--is-active {
     display: block;
@@ -15,8 +17,16 @@
     .course__subtitle {
       color: $blue;
     }
+  }
 
+  &--children {
+    .course__title {
+      color: $light-green;
+    }
 
+    .course__subtitle {
+      color: $light-green;
+    }
   }
 
   &__header {
