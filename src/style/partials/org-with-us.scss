@@ -11,6 +11,39 @@
 	}
 }
 
+.call-us {
+	.colored-info-box__title {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0;
+		justify-content: space-between;
+		h3 {
+			text-align: center;
+			line-height: 1.2em;
+			padding: 0 .5em;
+			flex-basis: 100%;
+		}
+		h3:not(:last-child) {
+			margin-bottom: .8em;
+		}
+	}
+}
+
+
+@media only screen and (min-width: 900px) {
+	.call-us {
+		.colored-info-box__title {
+			h3 {
+				flex-basis: auto;
+			}
+			h3:not(:last-child) {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+
 .icon-before {
 	&:before {
 		content: '';

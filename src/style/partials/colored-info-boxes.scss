@@ -2,6 +2,8 @@ $blue-info: #4665bb;
 $red-info: #f05030;
 $grey-bg-color: #f2f2f2;
 
+
+
 .colored-info-box {
 	padding: 4rem 0;
 	font-size: 1em;
@@ -9,7 +11,7 @@ $grey-bg-color: #f2f2f2;
 
 	.container {
 		height: 100%;
-		width: calc(100% * 2 / 3);
+		width: 75%;
 		position: relative;
 		margin: 0 auto;
 	}
@@ -19,6 +21,7 @@ $grey-bg-color: #f2f2f2;
 		padding: 0;
 
 		h2,
+		h3,
 		h4 {
 			font-weight: 400;
 			margin: 0;
@@ -27,6 +30,10 @@ $grey-bg-color: #f2f2f2;
 		h2 {
 			font-size:  1.875em;
 			margin-bottom: .2em;
+		}
+
+		h3 {
+			font-size: 1.5em;
 		}
 
 		h4 {
@@ -50,6 +57,7 @@ $grey-bg-color: #f2f2f2;
 				background: url("../img/clock.svg");
 			}
 		}
+
 	}
 
 	&__description {
@@ -151,8 +159,14 @@ $grey-bg-color: #f2f2f2;
 
 @media only screen and (min-width: 768px) {
 	.colored-info-box {
+
 		.container {
-			
+			width: 83%;
+		}
+	}
+	.flex-container-50-50__element.colored-info-box {
+		.container {
+			width: 66%;
 		}
 	}
 }
