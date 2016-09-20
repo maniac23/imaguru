@@ -52,6 +52,10 @@
 
       border-right: none;
     }
+
+    &--no-border-right {
+      border-right: none;
+    }
   }
 
   &__day {
@@ -109,6 +113,11 @@
     text-decoration: none;
     border-left: 3px solid $white-color;
 
+    &--light {
+      font-weight: 300;
+      font-size: 1.5rem;
+    }
+
     &--blog {
       border: none;
       padding: 0;
@@ -120,6 +129,11 @@
       font-weight: 600;
       font-size: 1.5rem;
       border: none;
+      padding: 0;
+    }
+
+    &--no-border-left {
+      border-left: none;
       padding: 0;
     }
 
@@ -173,12 +187,7 @@
 // **************** MEDIA *******************
 @media only screen and (max-width: 768px) {
   .posts {
-    flex-wrap: wrap;
-
-    &__item {
-      flex: 1 0 50%;
-      order: 2;
-    }
+    display: block;
   }
 }
 
