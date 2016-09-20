@@ -1,6 +1,6 @@
 .offers {
 	.offer-item {
-		&__text {}
+
 		&__photo {
 			background-image: url(../img/nordic.jpg);
 			background-position: 50% 50%;
@@ -22,6 +22,13 @@
 			line-height: 1.2em;
 			padding: 0 .5em;
 			flex-basis: 100%;
+			a {
+				color: #fff;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
 		}
 		h3:not(:last-child) {
 			margin-bottom: .8em;

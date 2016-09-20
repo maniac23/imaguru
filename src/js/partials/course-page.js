@@ -56,7 +56,6 @@
 	var learnMoreSection = $('.learn-more');
 	var programmSection = $('.programm-section');
 
-
 	var setLearnMoreHeight = function(){
 		var height = 0;
 
@@ -78,4 +77,5 @@
 		learnMoreSection.toggleClass('_show');
 		setLearnMoreHeight();
 	});
+
 }(jQuery));

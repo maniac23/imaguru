@@ -1,0 +1,126 @@
+.catering-promotion {
+
+	input[type='radio'] {
+		display: none;
+	}
+
+	label {
+		cursor: pointer;
+		text-align: center;
+		padding: 0 1em;
+		opacity: .6;
+
+		&:hover {
+			text-decoration: underline;
+			opacity: 1;
+		}
+	}
+
+	.colored-info-box.tabs-container {
+		padding-bottom: 0;
+		padding-top: 2.5em;
+		display: none;
+		.colored-info-box__title.tabs {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+	}
+
+	.colored-info-box.main-info {
+		padding: 1.5em 0;
+		.colored-info-box__description {
+			min-height: 4.2em;
+		}
+	}
+
+	.colored-info-box__description {
+		max-width: none;
+		p {
+			font-size: 1em;
+		}
+	}
+
+	.tab-content {
+		.colored-info-box__title {
+			margin: 0 0 2em;
+		}
+
+		// &--catering {
+		// 	.colored-info-box.main-info {
+		// 		background-color: #e9e9e9;
+		// 	}
+		// }
+	}
+
+	.button-section {
+		text-align: center;
+		padding: 2em 0;
+		color: $orange;
+		font-weight: 700;
+	}
+
+	.show-more-info {
+		.colored-info-box {
+			padding: 1em 0;
+
+			&__description {
+			}
+
+			&--image-bg {
+				color: #fff;
+				padding: 3em 0;
+			}
+		}
+
+		.img-box {
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+}
+
+
+@media only screen and (min-width: 768px) {
+	.catering-promotion {
+		.colored-info-box.tabs-container {
+			display: block;
+		}
+
+		.tab-content {
+			display: none;
+			.main-info .colored-info-box__title {
+				display: none;
+			}
+		}
+	}
+
+	#tab-maintenance:checked ~ .tab-content--maintenance {
+		display: block;
+	}
+
+	#tab-catering:checked ~ .tab-content--catering {
+		display: block;
+	}
+
+	#tab-promotion:checked ~ .tab-content--promotion {
+		display: block;
+	}
+
+	#tab-maintenance:checked ~ .tabs-container .tabs label[for="tab-maintenance"] {
+		text-decoration: underline;
+		opacity: 1;
+	}
+
+	#tab-catering:checked ~ .tabs-container .tabs label[for="tab-catering"] {
+		text-decoration: underline;
+		opacity: 1;
+	}
+
+	#tab-promotion:checked ~ .tabs-container .tabs label[for="tab-promotion"] {
+		text-decoration: underline;
+		opacity: 1;
+	}
+}

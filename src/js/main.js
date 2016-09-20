@@ -19,4 +19,5 @@ $(document).ready(function() {
    //= partials/blog-more.js
    //= partials/comments.js
    //= partials/course-page.js
+   //= partials/org-with-us.js
 });
