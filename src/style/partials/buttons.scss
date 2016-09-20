@@ -24,6 +24,11 @@
     border: 3px solid $orange;
   }
 
+  &--blue {
+    color: $blue;
+    border: 3px solid $blue;
+  }
+
   &--orange-bg {
     background: $orange;
     color: $white-color;

@@ -7,6 +7,18 @@
     display: block;
   }
 
+  &--senior {
+    .course__title {
+      color: $blue;
+    }
+
+    .course__subtitle {
+      color: $blue;
+    }
+
+
+  }
+
   &__header {
     display: flex;
     justify-content: space-between;

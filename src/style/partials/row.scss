@@ -21,16 +21,20 @@
 
 .content-block {
   position: relative;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   flex-basis: 50%;
-  flex-direction: row;
-  flex-wrap: wrap;
   padding: 60px 9.375%;
 
   font-weight: 500;
   color: $white-color;
 
   background-color: $orange;
+
+  .btn {
+    align-self: flex-start;
+  }
 
   &--no-padding {
     padding: 0;
