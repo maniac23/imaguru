@@ -1,6 +1,10 @@
 .three-cols {
   padding: 60px $section-padding;
 
+  &--grey {
+    background-color: $grey;
+  }
+
   &__title {
     text-align: center;
     font-size: 1.875rem;
@@ -40,6 +44,22 @@
     display: block;
     margin: 0 auto;
     margin-bottom: 40px;
+  }
+
+  &__image {
+    @extend .three-cols__icon;
+    max-width: 120px;
+    max-height: 120px;
+    border-radius: 50%;
+  }
+
+  &__position {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    margin-top: -35px;
+    margin-bottom: 20px;
   }
 
   &__subtitle {
