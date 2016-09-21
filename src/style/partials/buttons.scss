@@ -46,6 +46,11 @@
     border: none;
   }
 
+  &--white-bg {
+    background-color: $white-color;
+    color: $blue;
+  }
+
   @media only screen and (max-width: 480px) {
     padding: 15px 30px;
   }
