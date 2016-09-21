@@ -16,11 +16,6 @@
     background-size: cover;
   }
 
-  &--coworking {
-    background: url("../img/coworking_bg.jpg") center top;
-    background-size: cover;
-  }
-
   &--startups {
     background: url("../img/startups_bg.jpg") center;
     background-size: cover;
@@ -56,6 +51,11 @@
     padding: 200px $section-padding 30px;
 
     background: url("../img/blog__bg.jpg") center;
+    background-size: cover;
+  }
+
+  &--coworking {
+    background-image: url("../img/coworking_bg.jpg");
     background-size: cover;
   }
 
