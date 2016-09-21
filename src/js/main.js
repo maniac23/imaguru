@@ -19,4 +19,6 @@ $(document).ready(function() {
    //= partials/comments.js
    //= partials/review-slider.js
    //= partials/tabs.js
+   //= partials/pricelist-slider.js
+   //= partials/content-block-slider.js
 });

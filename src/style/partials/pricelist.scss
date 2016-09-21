@@ -1,0 +1,92 @@
+.pricelist {
+  & > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: block;
+
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+  // размеры задаются плагином слайдера slick carousel
+
+  &__item {
+    padding: 40px 3%;
+    text-align: left;
+    position: relative;
+    min-height: 500px;
+
+    &:nth-child(2n+2) {
+      background-color: $grey;
+    }
+  }
+
+  &__name {
+    text-transform: uppercase;
+    font-size: 1.875rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__descr {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__features {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: left;
+
+    li {
+      font-size: 1.125rem;
+      font-weight: 500;
+      margin-bottom: 25px;
+
+      &::before {
+        content: "";
+        display: block;
+        float: left;
+        height: 40px;
+        width: 20px;
+        background: url("../img/tick.svg") no-repeat;
+        background-size: 100%;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .btn {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 40px;
+  }
+
+  .slick-arrow {
+    border-color: $dark-font-color;
+    opacity: 0.6;
+  }
+
+}
+
+
+@media only screen and (max-width: 800px) {
+  .pricelist {
+    &__features {
+      margin-bottom: 40px;
+    }
+  }
+}
