@@ -27,6 +27,10 @@
   &__container {
     display: none;
     justify-content: space-between;
+
+    &--is-visible {
+      display: flex;
+    }
   }
 
   &__left,
