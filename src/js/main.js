@@ -21,4 +21,5 @@ $(document).ready(function() {
    //= partials/tabs.js
    //= partials/pricelist-slider.js
    //= partials/content-block-slider.js
+   //= partials/show.js
 });
