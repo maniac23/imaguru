@@ -17,7 +17,7 @@
     //= template/header.html
 
     <!--Promo section  -->
-    <section class="promo promo--event">
+    <section class="promo promo--event promo--section">
 
       <div class="info">
         <div class="info__left">
@@ -58,16 +58,21 @@
         </div>
       </div>
 
-      <div class="main-text main-text--event">
-<!--         <h2 class="main-text__title main-text__title--event">Стильная и удобная площадка для проведения ваших мероприятий</h2> -->
-
-        <form class="short-form short-form--inline" action=''>
-          <p class="short-form__description">Оставьте свой номер и мы перезвоним в течении 5 минут</p>
-          <input type="phone" class="text-input" placeholder="Номер телефона">
-          <button class="btn btn--event usual-button" type="submit">Жду</button>
-        </form>
-        
+      <div class="colored-info-box colored-info-box--promo-text">
+        <div class="colored-info-box__title">
+          <h2>Стильная и удобная площадка для проведения ваших мероприятий</h2>
+        </div>
+        <div class="colored-info-box__description">
+          <form class="short-form short-form--inline" action=''>
+            <p>Оставьте свой номер и мы перезвоним в течении 5 минут</p>
+            <div class="short-form__box">
+              <input type="phone" class="text-input" placeholder="Номер телефона">
+              <button class="btn btn--event usual-button" type="submit">Жду</button>
+            </div>
+          </form>
+        </div>
       </div>
+
     </section>
 
 
@@ -143,26 +148,72 @@
                 </div>
           </section>
 
-          <section class="show-more-info slider-block">
-            <div class="colored-info-box colored-info-box--image-bg slider-block__item" style="background-image: url(img/catering-1.jpg)">
-                <div class="container">
-                      <div class="colored-info-box__title">
-                        <h2>Кофе-пауза сет №3</h2>
-                        <h3>12 BYN/чел.</h3>
-                      </div>
-                      <div class="colored-info-box__description">
-                        <ul>
-                          <li>Кофе, чай</li>
-                          <li>Сахар</li>
-                          <li>Молоко</li>
-                          <li>Лимон</li>
-                          <li>Печенье с различными начинками</li>
-                          <li>Шоколадные конфеты</li>
-                          <li>Канапе с колбасой, сыром, оливками</li>
-                          <li>Роллы с красной рыбой и крабовым мясом/сэндвичи</li>
-                        </ul>
-                      </div>
-                </div>
+          <section class="show-more-info">
+
+            <div class="slider-block__catering">
+
+              <article class="colored-info-box colored-info-box--image-bg slider-block__item" style="background-image: url(img/catering-1.jpg)">
+                  <div class="container">
+                        <div class="colored-info-box__title">
+                          <h2>Кофе-пауза сет №3</h2>
+                          <h3>12 BYN/чел.</h3>
+                        </div>
+                        <div class="colored-info-box__description">
+                          <ul>
+                            <li>Кофе, чай</li>
+                            <li>Сахар</li>
+                            <li>Молоко</li>
+                            <li>Лимон</li>
+                            <li>Печенье с различными начинками</li>
+                            <li>Шоколадные конфеты</li>
+                            <li>Канапе с колбасой, сыром, оливками</li>
+                            <li>Роллы с красной рыбой и крабовым мясом/сэндвичи</li>
+                          </ul>
+                        </div>
+                  </div>
+              </article>
+
+              <article class="colored-info-box colored-info-box--image-bg slider-block__item" style="background-image: url(img/catering-1.jpg)">
+                  <div class="container">
+                        <div class="colored-info-box__title">
+                          <h2>Кофе-пауза сет №4</h2>
+                          <h3>12 BYN/чел.</h3>
+                        </div>
+                        <div class="colored-info-box__description">
+                          <ul>
+                            <li>Кофе, чай</li>
+                            <li>Сахар</li>
+                            <li>Молоко</li>
+                            <li>Лимон</li>
+                            <li>Печенье с различными начинками</li>
+                            <li>Шоколадные конфеты</li>
+                            <li>Канапе с колбасой, сыром, оливками</li>
+                            <li>Роллы с красной рыбой и крабовым мясом/сэндвичи</li>
+                          </ul>
+                        </div>
+                  </div>
+              </article>
+
+              <article class="colored-info-box colored-info-box--image-bg slider-block__item" style="background-image: url(img/catering-1.jpg)">
+                  <div class="container">
+                        <div class="colored-info-box__title">
+                          <h2>Кофе-пауза сет №5</h2>
+                          <h3>12 BYN/чел.</h3>
+                        </div>
+                        <div class="colored-info-box__description">
+                          <ul>
+                            <li>Кофе, чай</li>
+                            <li>Сахар</li>
+                            <li>Молоко</li>
+                            <li>Лимон</li>
+                            <li>Печенье с различными начинками</li>
+                            <li>Шоколадные конфеты</li>
+                            <li>Канапе с колбасой, сыром, оливками</li>
+                            <li>Роллы с красной рыбой и крабовым мясом/сэндвичи</li>
+                          </ul>
+                        </div>
+                  </div>
+              </article>
             </div>
           </section>
 
@@ -186,12 +237,15 @@
           </section>
 
           <section class="show-more-info">
-            <div class="colored-info-box colored-info-box">
+            <div class="colored-info-box">
                 <div class="container">
                       <div class="colored-info-box__description">
                         <p>Широкий спектр опций для брендирования и нестандартных промо-решений: еженедельная рассылка, размещение анонсов TB роликов и компьютерной графики на LCD панелях бизнес-клуба, продвижение в социальных медиа, раздаточные материалы на стойках, афиши и плакаты, звуковая реклама и многое другое.</p>
                       </div>
                 </div>
+            </div>
+            <div class="img-box">
+              <img src="img/promotion.jpg" alt="">
             </div>
           </section>
           <section class="colored-info-box button-section">
@@ -201,11 +255,7 @@
           </section>
         </article>
 
-
-
     </section>
-
-
 
     <section class="colored-info-box colored-info-box--red call-us">
       <div class="container">
@@ -234,7 +284,24 @@
                 <li class="icon-before icon-before--price">От 60 BYN/час</li>
               </ul>
             </div>
-            <button class="btn">Бронирование</button>
+            <button class="btn show-hidden">Бронирование</button>
+          </div>
+
+          <div class="colored-info-box colored-info-box--hidden">
+            <div class="container">
+              <div class="colored-info-box__title">
+                <h2>Бронирование</h2>
+              </div>
+              <div class="colored-info-box__description">
+                <p>Дата проведения</p>
+                <span class="icon-before icon-before--calendar check-date"><input type="date"></span>
+
+                <p>Время проведения</p>
+                <span class="icon-before icon-before--clock check-time"><input type="time"></span>
+                <button class="btn">Забронировать</button>
+                <button class="close-button"></button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="flex-container-50-50__element colored-info-box--image offer-item__photo" style="background-image: url('img/nordic.jpg')">
@@ -258,7 +325,22 @@
                 <li class="icon-before icon-before--price">От 60 BYN/час</li>
               </ul>
             </div>
-            <button class="btn">Бронирование</button>
+            <button class="btn show-hidden">Бронирование</button>
+          </div>
+          <div class="colored-info-box colored-info-box--hidden">
+            <div class="container">
+              <div class="colored-info-box__title">
+                <h2>Бронирование</h2>
+              </div>
+              <div class="colored-info-box__descriptioin">
+                <p>Дата проведения</p>
+                <p>Дата проведения</p>
+                <p>Дата проведения</p>
+                <p>Время проведения</p>
+                <button class="btn">Забронировать</button>
+                <button class="close-button"></button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="flex-container-50-50__element colored-info-box--image offer-item__photo" style="background-image: url('img/nordic.jpg')">
@@ -282,7 +364,22 @@
                 <li class="icon-before icon-before--price">От 60 BYN/час</li>
               </ul>
             </div>
-            <button class="btn">Бронирование</button>
+            <button class="btn show-hidden">Бронирование</button>
+          </div>
+          <div class="colored-info-box colored-info-box--hidden">
+            <div class="container">
+              <div class="colored-info-box__title">
+                <h2>Бронирование</h2>
+              </div>
+              <div class="colored-info-box__descriptioin">
+                <p>Дата проведения</p>
+                <p>Дата проведения</p>
+                <p>Дата проведения</p>
+                <p>Время проведения</p>
+                <button class="btn">Забронировать</button>
+                <button class="close-button"></button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="flex-container-50-50__element colored-info-box--image offer-item__photo" style="background-image: url('img/nordic.jpg')">
@@ -307,7 +404,22 @@
                 <li class="icon-before icon-before--price">От 60 BYN/час</li>
               </ul>
             </div>
-            <button class="btn">Бронирование</button>
+            <button class="btn show-hidden">Бронирование</button>
+          </div>
+          <div class="colored-info-box colored-info-box--hidden">
+            <div class="container">
+              <div class="colored-info-box__title">
+                <h2>Бронирование</h2>
+              </div>
+              <div class="colored-info-box__descriptioin">
+                <p>Дата проведения</p>
+                <p>Дата проведения</p>
+                <p>Дата проведения</p>
+                <p>Время проведения</p>
+                <button class="btn">Забронировать</button>
+                <button class="close-button"></button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="flex-container-50-50__element colored-info-box--image offer-item__photo" style="background-image: url('img/nordic.jpg')">

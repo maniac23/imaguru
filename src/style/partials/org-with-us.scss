@@ -9,6 +9,12 @@
 			min-height: 50vw;
 		}
 	}
+
+	.check-date,
+	.check-time {
+		display: block;
+		margin-top: .5em;
+	}
 }
 
 .call-us {
@@ -71,6 +77,12 @@
 	}
 	&--price:before {
 		background-image: url(../img/price.svg);
+	}
+	&--calendar:before {
+		background-image: url(../img/calendar.svg);
+	}
+	&--clock:before {
+		background-image: url(../img/clock-bl.svg);
 	}
 }
 

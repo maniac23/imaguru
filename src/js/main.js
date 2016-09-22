@@ -7,9 +7,9 @@
 
 
 $(document).ready(function() {
-   //= partials/common-functions.js
    //= partials/menu.js
    //= partials/slider.js
+   //= partials/common-functions.js
    //= partials/timetable-slider.js
    //= partials/main-text__slider.js
    //= partials/events-gallery.js

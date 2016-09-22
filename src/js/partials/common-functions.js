@@ -23,15 +23,19 @@ var dropDown = function(button, element) {
 		evt.preventDefault();
 		var self = this;
 		var height = 0;
-
+		var transition = element.css('transition');
 		var textBefore = button.data('textbefore');
 		var textAfter = button.data('textafter');
 
 		if (element.outerHeight() == 0) {
+			element.css('transition', '');
+			element.css('height', 'auto');
+			height = element.outerHeight();
+			element.css('height', '0');
+			element.css('transition', transition);
+			console.log(element.css('transition'));
+			element.css('height', height);
 
-			element.children().each(function(){
-				height += $(this).outerHeight();
-			});
 //меняем текст в кнопке, на указанный в атрибутах data-textbefore/text-after
 			if (textAfter) {
 				$(self).text(textAfter);
@@ -48,9 +52,19 @@ var dropDown = function(button, element) {
 				element.css('height', height + 'px');
 			});
 		};
-
-
 	});
 
 };
 
+// функция для скрытых форм регистрации,
+// как на странице организуй у нас
+var showHiddenBox = function(button, element){
+
+	button.on('click', function(evt){
+		evt.preventDefault();
+		element.addClass('_show');
+	});
+	element.find('.close-button').on('click', function(){
+		element.removeClass('_show');
+	});
+};

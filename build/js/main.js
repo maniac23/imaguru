@@ -12974,61 +12974,6 @@
 
 
 $(document).ready(function() {
-   
-   // плавный скроллинг к элементу
-   // element - элемент, к которому скроллим
-   // duration - продолжительность анимации
-   // offset - смещение, на которое недоскроллит скролл -
-   // чтобы пользователь понимал где оказался,
-   // должен быть видет соседний элемент
-   
-   var scrollTo = function(element, duration, offset, callback){
-   	var position = element.offset().top;
-   	duration = duration || 700;
-   	offset = offset || 0;
-   	$('html, body').animate({scrollTop: position - offset}, duration, callback);
-   };
-   
-   
-   // вешает на элемент button обработчик события по click
-   // на который открывается элемент element
-   
-   var dropDown = function(button, element) {
-   
-   	button.on('click', function(evt){
-   		evt.preventDefault();
-   		var self = this;
-   		var height = 0;
-   
-   		var textBefore = button.data('textbefore');
-   		var textAfter = button.data('textafter');
-   
-   		if (element.outerHeight() == 0) {
-   
-   			element.children().each(function(){
-   				height += $(this).outerHeight();
-   			});
-   //меняем текст в кнопке, на указанный в атрибутах data-textbefore/text-after
-   			if (textAfter) {
-   				$(self).text(textAfter);
-   			};
-   
-   			element.css('height', height + 'px');
-   			scrollTo(element, 300, 30);
-   		} else {
-   //меняем текст в кнопке, на указанный в атрибутах data-textbefore/text-after
-   			if (textBefore) {
-   				$(self).text(textBefore);
-   			};
-   			scrollTo(element.parent(), 300, 100, function(){
-   				element.css('height', height + 'px');
-   			});
-   		};
-   
-   
-   	});
-   
-   };
    // open menu
    $('.menu-icon').click(function() {
      $('.menu').slideToggle();
@@ -13055,6 +13000,76 @@ $(document).ready(function() {
        }
      ]
    });
+   
+   // плавный скроллинг к элементу
+   // element - элемент, к которому скроллим
+   // duration - продолжительность анимации
+   // offset - смещение, на которое недоскроллит скролл -
+   // чтобы пользователь понимал где оказался,
+   // должен быть видет соседний элемент
+   
+   var scrollTo = function(element, duration, offset, callback){
+   	var position = element.offset().top;
+   	duration = duration || 700;
+   	offset = offset || 0;
+   	$('html, body').animate({scrollTop: position - offset}, duration, callback);
+   };
+   
+   
+   // вешает на элемент button обработчик события по click
+   // на который открывается элемент element
+   
+   var dropDown = function(button, element) {
+   
+   	button.on('click', function(evt){
+   		evt.preventDefault();
+   		var self = this;
+   		var height = 0;
+   		var transition = element.css('transition');
+   		var textBefore = button.data('textbefore');
+   		var textAfter = button.data('textafter');
+   
+   		if (element.outerHeight() == 0) {
+   			element.css('transition', '');
+   			element.css('height', 'auto');
+   			height = element.outerHeight();
+   			element.css('height', '0');
+   			element.css('transition', transition);
+   			console.log(element.css('transition'));
+   			element.css('height', height);
+   
+   //меняем текст в кнопке, на указанный в атрибутах data-textbefore/text-after
+   			if (textAfter) {
+   				$(self).text(textAfter);
+   			};
+   
+   			element.css('height', height + 'px');
+   			scrollTo(element, 300, 30);
+   		} else {
+   //меняем текст в кнопке, на указанный в атрибутах data-textbefore/text-after
+   			if (textBefore) {
+   				$(self).text(textBefore);
+   			};
+   			scrollTo(element.parent(), 300, 100, function(){
+   				element.css('height', height + 'px');
+   			});
+   		};
+   	});
+   
+   };
+   
+   // функция для скрытых форм регистрации,
+   // как на странице организуй у нас
+   var showHiddenBox = function(button, element){
+   
+   	button.on('click', function(evt){
+   		evt.preventDefault();
+   		element.addClass('_show');
+   	});
+   	element.find('.close-button').on('click', function(){
+   		element.removeClass('_show');
+   	});
+   };
    $('#events-timetable').slick({
      slidesToShow: 2,
      slidesToScroll: 1,
@@ -13233,17 +13248,31 @@ $(document).ready(function() {
    }(jQuery));
    ;(function(){
    
+   // владки
    	var tabContent = $('.tab-content');
    
-   for (var i = 0; i < tabContent.length; i++){
+   	for (var i = 0; i < tabContent.length; i++){
    
-   	var showMoreButton = tabContent.eq(i).find('.show-more');
-   	var showMoreContent = tabContent.eq(i).find('.show-more-info');
+   		var showMoreButton = tabContent.eq(i).find('.show-more');
+   		var showMoreContent = tabContent.eq(i).find('.show-more-info');
    
-   	dropDown(showMoreButton, showMoreContent);
-   };
+   		dropDown(showMoreButton, showMoreContent);
+   	};
+   // слайдер на вкладке с едой
+   	$('.slider-block__catering').slick({
+   		infinite: true,
+   		dots: true,
+   		slidesToShow: 1,
+   		slidesToScroll: 1,
+   		autoplay: true
+   	});
    
-   
-   
+   // скрытые формы 
+   	var offers = $('.offer-item');
+   	for (var i = 0; i < offers.length; i++) {
+   		var showHidden = offers.eq(i).find('.show-hidden');
+   		var hiddenBox = offers.eq(i).find('.colored-info-box--hidden');
+   		showHiddenBox(showHidden, hiddenBox);
+   	};
    }());
 });

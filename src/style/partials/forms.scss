@@ -1,24 +1,46 @@
 .short-form {
+	margin: 0 auto;
+	width: 100%;
 	max-width: 50em;
+	text-align: center;
 
-	&__description {
-		font-size: 1.5em;
-		margin-bottom: 3em;
-	}
+	&__box {
+		input,
+		.btn {
+			display: block;
+			margin: 3em auto;
+		}
 
-	&--inline {
-
-		.text-input {
-			width: 50%;
-			float: left;
+		input {
+			width: 75%;
+			text-align: center;
+			&:focus {
+				width: 75%;
+			}
 		}
 		.btn {
-			float: right;
 		}
-		&:after {
-			content: '';
-			display: block;
-			clear: both;
+	}
+
+}
+@media only screen and (min-width: 768px) {
+	.short-form {
+		&__box {
+			input,
+			.btn {
+				display: inline-block;
+			}
+			.btn {
+				float: right;
+			}
+			input {
+				text-align: left;
+				float: left;
+				width: 60%;
+				&:focus {
+					width: 60%;
+				}
+			}
 		}
 	}
 }
