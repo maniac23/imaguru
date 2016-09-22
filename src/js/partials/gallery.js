@@ -1,4 +1,4 @@
-$('.event-gallery__item').magnificPopup({
+$('.event-gallery__item, .image-slider__slide').magnificPopup({
   type: 'image',
   gallery: {
     enabled: true
