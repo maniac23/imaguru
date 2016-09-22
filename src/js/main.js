@@ -20,4 +20,7 @@ $(document).ready(function() {
    //= partials/comments.js
    //= partials/course-page.js
    //= partials/org-with-us.js
+   //= partials/jobs-show.js
+   //= partials/team-show.js
+   //= partials/partners-show.js
 });

@@ -13275,4 +13275,23 @@ $(document).ready(function() {
    		showHiddenBox(showHidden, hiddenBox);
    	};
    }());
+     $('#jobs-button').click(function() {
+       $('#jobs li:hidden').slice(0, 3).fadeIn();
+       if ($('#jobs li').length == $('#jobs li:visible').length) {
+         $('#jobs-button').fadeOut();
+       }
+     });
+   
+     $('#team-button').click(function() {
+       $('#team li:hidden').slice(0, 3).fadeIn();
+       if ($('#team li').length == $('#team li:visible').length) {
+         $('#team-button').fadeOut();
+       }
+     });
+     $('#partners-button').click(function() {
+       $('#partners li:hidden').slice(0, 4).fadeIn();
+       if ($('#partners li').length == $('#partners li:visible').length) {
+         $('#partners-button').fadeOut();
+       }
+     });
 });
