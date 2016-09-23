@@ -193,7 +193,7 @@
   width: 100%;
   margin-top: 15px;
 
-  font-size: 1rem;
+  font-size: .9rem;
   font-family: "Open Sans", Arial, sans-serif;
   color: $white-color;
 
@@ -473,7 +473,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     margin: 0;
     padding: 0;
 
@@ -551,6 +551,16 @@
   }
 }
 
+
+@media only screen and (max-width: 1040px) {
+  .features {
+    &__item {
+      flex-basis: 30%;
+    }
+  }
+}
+
+
 @media only screen and (max-width: 768px) {
   .promo {
     &--post {
@@ -574,13 +584,16 @@
       }
     }
   }
+}
 
+@media only screen and (max-width: 650px) {
   .features {
     &__item {
-      flex-basis: 30%;
+      flex-basis: 50%;
     }
   }
 }
+
 
 @media only screen and (max-width: 480px) {
   .promo {
