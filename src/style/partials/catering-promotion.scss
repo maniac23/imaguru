@@ -53,6 +53,10 @@
 		// }
 	}
 
+	.tab-content--maintenance .main-info {
+		padding-top: 3em;
+	}
+
 	.button-section {
 		text-align: center;
 		padding: 2em 0;
@@ -95,8 +99,14 @@
 			.main-info .colored-info-box__title {
 				display: none;
 			}
+
+			&--maintenance .main-info {
+				padding-top: 1.5em;
+			}
+
 		}
 	}
+
 
 	#tab-maintenance:checked ~ .tab-content--maintenance {
 		// display: block;
@@ -157,6 +167,9 @@
 
 @media only screen and (min-width: 320px) {
 	.slider-block__catering {
+		.slick-arrow {
+			display: none;
+		}
 		.slick-dots, .slider--right .slick-dots {
 		    top: 95%;
 		    left: 50%;
