@@ -23,4 +23,5 @@ $(document).ready(function() {
    //= partials/content-block-slider.js
    //= partials/show.js
    //= partials/image-slider.js
+   //= partials/calc.js
 });
