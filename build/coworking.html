@@ -178,6 +178,109 @@
           <p>Light - это простой и доступный способ побывать у нас и попробовать поработать. Усаживайтесь на любое свободное место и работайте. Можете заказать себе кофе и печенек, но дешевле выбрать вариант Flex - и в Вашем распоряжении кухня IMAGURU, на которой можно найти чай, кофе, печеньки</p>
         </div>
       </div>
+
+      <div class="content-block content-block--white content-block--no-padding">
+        <form action="none" class="calc" id="calc">
+          <h3 class="calc__title">Время</h3>
+          <div class="calc__wrapper">
+            <div>
+              <input type="radio" id="1day" class="calc__radio" name="time" value="1" checked>
+              <label for="1day" class="calc-item"><span></span>1 день</label>
+            </div>
+
+            <div>
+              <input type="radio" id="1week" class="calc__radio" name="time" value="7">
+              <label for="1week" class="calc__item"><span></span>1 неделя</label>
+            </div>
+
+            <div>
+              <input type="radio" id="1month" class="calc__radio" name="time" value="30">
+              <label for="1month" class="calc__item"><span></span>1 месяц</label>
+            </div>
+
+            <div>
+              <input type="radio" id="6months" class="calc__radio" name="time" value="180">
+              <label for="6months" class="calc__item"><span></span>6 месяцев</label>
+            </div>
+
+            <div>
+              <input type="radio" id="1year" class="calc__radio" name="time" value="365">
+              <label for="1year" class="calc__item"><span></span>1 год</label>
+            </div>
+          </div>
+
+          <h3 class="calc__title">Кол-во человек</h3>
+          <div class="calc__wrapper">
+            <div>
+              <input type="radio" id="1person" class="calc__radio" name="people" value="1" checked>
+              <label for="1person" class="calc__item"><span></span>1 человек</label>
+            </div>
+
+            <div>
+              <input type="radio" id="2person" class="calc__radio" name="people" value="2">
+              <label for="2person" class="calc__item"><span></span>2 человека</label>
+            </div>
+
+            <div>
+              <input type="radio" id="3person" class="calc__radio" name="people" value="3">
+              <label for="3person" class="calc__item"><span></span>3 человек</label>
+            </div>
+
+            <div>
+              <input type="radio" id="10person" class="calc__radio" name="people" value="10">
+              <label for="10person" class="calc__item"><span></span>10 человек</label>
+            </div>
+          </div>
+          <div class="calc__wrapper">
+            <div>
+              <input type="radio" id="light" class="calc__radio" name="price" value="3" checked>
+              <label for="light" class="calc__item">
+                <p>Light</p>
+                <p>3 руб.</p>
+              </label>
+            </div>
+
+            <div>
+              <input type="radio" id="flex" class="calc__radio" name="price" value="3">
+              <label for="flex" class="calc__item">
+                <p>Flex</p>
+                <p>3 руб.</p>
+              </label>
+            </div>
+
+            <div>
+              <input type="radio" id="fix" class="calc__radio" name="price" value="8">
+              <label for="fix" class="calc__item">
+                <p>Fix</p>
+                <p>8 руб.</p>
+              </label>
+            </div>
+
+            <div>
+              <input type="radio" id="desk" class="calc__radio" name="price" value="6">
+              <label for="desk" class="calc__item">
+                <p>Desk</p>
+                <p>6 руб.</p>
+              </label>
+            </div>
+
+            <div>
+              <input type="radio" id="team" class="calc__radio" name="price" value="16">
+              <label for="team" class="calc__item">
+                <p>Team</p>
+                <p>16 руб.</p>
+              </label>
+            </div>
+
+          </div>
+          <div class="calc__wrapper">
+            <button class="btn btn--orange">Забронировать</button>
+            <p class="calc__cost">
+              Cумма: <span>0</span> рублей
+            </p>
+          </div>
+        </form>
+      </div>
     </div>
 
     <div class="slider">
@@ -515,7 +618,7 @@
       <div class="tour__content">
         <h2 class="tour__title">Виртуальный тур</h2>
         <svg class="tour__icon">
-          <use xlink:href="#360icon"></use>
+          <use xlink:href="#360ico"></use>
         </svg>
         <a href="#" class="btn">Пройтись по клубу</a>
       </div>
