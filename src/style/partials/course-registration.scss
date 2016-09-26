@@ -1,0 +1,50 @@
+.course-registration {
+	padding: 2em 0;
+	h2 {
+		text-align: center;
+		margin-bottom: .8em;
+	}
+	form {
+		width: 30em;
+		margin: 0 auto;
+		max-width: 100%;
+		position: relative;
+		input {
+			outline: none;
+			border: none;
+			padding: .5em 0;
+			border-bottom: 2px solid #eee;
+			margin-bottom: .8em;
+			width: 95%;
+			transition: all .2s;
+			&:focus {
+				border-color: #f34f30;
+				width: 100%;
+			}
+		}
+		.success-message {
+			display: none;
+		}
+
+		&._sended {
+			.success-message {
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background-color: #fff;
+				span {
+					display: block;
+					position: relative;
+					text-align: center;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%,-50%);
+				}
+			}
+		}
+	}
+
+}

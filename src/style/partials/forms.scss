@@ -1,0 +1,46 @@
+.short-form {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 50em;
+	text-align: center;
+
+	&__box {
+		input,
+		.btn {
+			display: block;
+			margin: 3em auto;
+		}
+
+		input {
+			width: 75%;
+			text-align: center;
+			&:focus {
+				width: 75%;
+			}
+		}
+		.btn {
+		}
+	}
+
+}
+@media only screen and (min-width: 768px) {
+	.short-form {
+		&__box {
+			input,
+			.btn {
+				display: inline-block;
+			}
+			.btn {
+				float: right;
+			}
+			input {
+				text-align: left;
+				float: left;
+				width: 60%;
+				&:focus {
+					width: 60%;
+				}
+			}
+		}
+	}
+}
