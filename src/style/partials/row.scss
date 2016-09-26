@@ -6,31 +6,24 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-
-  &--blog {
-    display: block;
-
-    &::after {
-      content: "";
-
-      display: block;
-      clear: both;
-    }
-  }
 }
 
 .content-block {
   position: relative;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   flex-basis: 50%;
-  flex-direction: row;
-  flex-wrap: wrap;
   padding: 60px 9.375%;
 
   font-weight: 500;
   color: $white-color;
 
   background-color: $orange;
+
+  .btn {
+    align-self: flex-start;
+  }
 
   &--no-padding {
     padding: 0;
@@ -109,6 +102,10 @@
     background-color: $blue;
   }
 
+  &--green {
+    background-color: $light-green;
+  }
+
   // &--move {
   //   position: relative;
   //
@@ -159,7 +156,7 @@
     // }
   }
 
-  p {
+  & > p {
     margin: 0;
     margin-bottom: 30px;
     padding: 0;

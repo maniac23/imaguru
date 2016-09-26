@@ -31,8 +31,8 @@
     background-size: cover;
   }
 
-  &--fe-courses {
-    background: url("../img/startups_bg.jpg") center;
+  &--courses {
+    background: url("../img/courses_bg.jpg") center;
     background-size: cover;
   }
 
@@ -54,6 +54,7 @@
 
   &--post {
     padding: 200px $section-padding 30px;
+
     background: url("../img/blog__bg.jpg") center;
     background-size: cover;
   }
@@ -125,6 +126,64 @@
   }
 }
 
+.breadcrumbs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+
+  width: 100%;
+  padding: 3px $section-padding;
+
+  background-color: rgba($dark-font-color, 0.6);
+
+  &__item {
+    margin-right: 15px;
+    padding: 0;
+
+    font-weight: 400;
+    color: $white-color;
+    text-decoration: none;
+
+    opacity: 0.8;
+
+    transition: all 0.3s ease-in;
+
+    &:not(:last-child) {
+      &::after {
+        content: "";
+
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        margin-left: 15px;
+
+        vertical-align: middle;
+
+        background-color: $orange;
+        border-radius: 50%;
+      }
+    }
+
+    &:hover {
+      text-decoration: underline;
+
+      opacity: 1;
+    }
+
+    &--active {
+      font-weight: 600;
+
+      &:hover {
+        text-decoration: none;
+
+        cursor: default;
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
 .info {
   display: flex;
   flex: 1 1 auto;
@@ -133,6 +192,7 @@
   justify-content: space-between;
   align-self: flex-start;
   width: 100%;
+  margin-top: 15px;
 
   font-size: .9rem;
   font-family: "Open Sans", Arial, sans-serif;
@@ -168,10 +228,11 @@
 
   &__mail {
     display: block;
+    margin-bottom: 10px;
+
     font-size: 1rem;
     color: $white-color;
     text-decoration: none;
-    margin-bottom: 10px;
 
     &:hover,
     &:active {
@@ -181,10 +242,11 @@
 
   &__social {
     a {
+      vertical-align: baseline;
       color: $white-color;
       text-decoration: none;
+
       transition: all 0.3s ease-in;
-      vertical-align: baseline;
 
       &:hover,
       &:active {
@@ -195,14 +257,15 @@
         margin-right: 20px;
       }
     }
+  }
 
-    svg {
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      margin-right: 5px;
-      vertical-align: baseline;
-    }
+  &__icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+
+    vertical-align: baseline;
   }
 }
 
@@ -279,6 +342,11 @@
     max-height: 100px;
     margin: 0 auto;
     margin-bottom: 40px;
+
+    &--academy {
+      max-width: 500px;
+      margin-bottom: 20px;
+    }
   }
 
   &__paragraph {
@@ -472,14 +540,15 @@
 @media only screen and (max-width: 980px) {
   .info {
     flex-direction: column;
-    align-items: center;
     justify-content: flex-start;
+    align-items: center;
 
     &__left,
     &__right {
       flex: 0 0 50%;
-      text-align: center;
       margin-bottom: 40px;
+
+      text-align: center;
     }
   }
 }
@@ -535,6 +604,7 @@
 
     &__right {
       width: 100%;
+      margin-bottom: 0;
 
       text-align: right;
     }
@@ -544,19 +614,31 @@
     }
 
     &__social {
+      text-align: center;
+
       a {
-        display: block;
+        display: inline-block;
         margin-bottom: 15px;
+
+        font-size: 0;
 
         &:not(:last-child) {
           margin-right: 0;
         }
       }
     }
+
+    &__icon {
+      width: 25px;
+      height: 25px;
+      margin-right: 20px;
+    }
   }
 
   .main-text {
-
+    &__paragraph {
+      font-size: 1.3rem;
+    }
 
     &__buttons {
       flex-direction: column;
@@ -565,8 +647,9 @@
 
     &__title {
       &--post {
-        font-size: 1.5rem;
         margin-bottom: 0;
+
+        font-size: 1.5rem;
       }
     }
   }

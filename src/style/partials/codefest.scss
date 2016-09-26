@@ -1,0 +1,36 @@
+.codefest {
+  padding: 90px $section-padding 60px;
+  background: linear-gradient(45deg, #ec593f, #b93541);
+  display: flex;
+  justify-content: space-between;
+
+  &__left,
+  &__right {
+    flex: 0 0 40%;
+    color: $yellow;
+  }
+
+  &__logo {
+    max-width: 100%;
+  }
+
+  &__subtitle {
+    font-size: 1.25rem;
+    padding-left: 60px;
+  }
+
+  &__text {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+}
+
+// ************ MEDIA ****************
+@media only screen and (max-width: 480px) {
+  .codefest {
+    flex-direction: column;
+  }
+}

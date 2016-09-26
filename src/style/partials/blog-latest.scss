@@ -1,7 +1,6 @@
 .blog-latest {
   position: relative;
-
-  float: left;
+  display: flex;
   width: 50%;
 
   color: $white-color;
@@ -16,8 +15,10 @@
   &__item {
     position: relative;
     z-index: 1000000;
-
-    height: 100%;
+    width: 100%;
+    min-height: 300px;
+    background-size: cover;
+    background-position: center top;
   }
 
   &__image {
@@ -42,7 +43,7 @@
       background-color: rgba($orange, 0.8);
     }
 
-    &-light-blue {
+    &--light-blue {
       background-color: rgba($light-blue, 0.8);
     }
   }
@@ -97,35 +98,20 @@
 @media only screen and (max-width: 1024px) {
   .blog-latest {
     width: 100%;
-
-    &--column {
-      display: block;
-
-      .blog-latest__item {
-        float: left;
-        width: 50%;
-      }
-    }
   }
 }
 
 @media only screen and (max-width: 768px) {
   .blog-latest {
-    width: 100%;
-
     &--column {
-      display: block;
+      flex-direction: row;
+    }
 
-      &::after {
-        content: "";
+    &__item {
+      min-height: 400px;
 
-        display: block;
-        clear: both;
-      }
-
-      .blog-latest__item {
-        float: left;
-        width: 100%;
+      &--high {
+        min-height: 500px;
       }
     }
   }
@@ -133,6 +119,25 @@
 
 @media only screen and (max-width: 480px) {
   .blog-latest {
+    &--column {
+      display: block;
+      width: 100%;
+
+      .blog-latest__item {
+        float: none;
+        width: 100%;
+      }
+    }
+
+    &__item {
+      float: none;
+      width: 100%;
+
+      &--high {
+        min-height: 740px;
+      }
+    }
+
     &__title {
       font-size: 1.5rem;
     }

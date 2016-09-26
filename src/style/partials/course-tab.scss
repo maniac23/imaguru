@@ -1,0 +1,96 @@
+.course-tab {
+  padding: 50px 5%;
+  list-style-type: none;
+
+  li:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &--senior {
+    .course-tab__links--active {
+      .course-tab__date {
+        border-right: 4px solid $blue;
+      }
+    }
+  }
+
+  &--children {
+    .course-tab__links--active {
+      .course-tab__date {
+        border-right: 4px solid $light-green;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    cursor: pointer;
+    color: $dark-font-color;
+    text-decoration: none;
+    transition: all 0.3s ease-in;
+
+    &--active {
+      .course-tab__date {
+        border-right: 4px solid $orange;
+      }
+    }
+  }
+
+  &__date {
+    flex: 0 0 20%;
+    padding: 10px 20px;
+    text-align: right;
+    border-right: 4px solid transparent;
+  }
+
+  &__month {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+
+  &__day {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__info {
+    flex: 1 0 70%;
+    padding: 10px 20px;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  &__subtitle {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+}
+
+
+// ************* MEDIA **************
+@media only screen and (max-width: 480px) {
+  .course-tab {
+    &__month,
+    &__subtitle {
+      font-size: 1rem;
+    }
+
+    &__day,
+    &__title {
+      font-size: 1.5rem;
+    }
+  }
+}

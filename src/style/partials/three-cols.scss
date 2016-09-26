@@ -1,0 +1,113 @@
+.three-cols {
+  padding: 60px $section-padding;
+
+  &--grey {
+    background-color: $grey;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 1.875rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 60px;
+  }
+
+  &__text {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    flex: 0 1 25%;
+    text-align: center;
+    position: relative;
+  }
+
+  &__icon {
+    width: 100%;
+    max-width: 70px;
+    max-height: 70px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  &__image {
+    @extend .three-cols__icon;
+    max-width: 120px;
+    max-height: 120px;
+    border-radius: 50%;
+  }
+
+  &__position {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    margin-top: -35px;
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+
+  &__descr {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+
+  &__link {
+    color: $orange;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+  }
+}
+
+
+// *********** MEDIA ***********
+@media only screen and (max-width: 768px) {
+  .three-cols {
+    &__list {
+      display: block;
+    }
+
+    &__item {
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    &__descr {
+      margin-bottom: 20px;
+    }
+
+    &__link {
+      position: static;
+    }
+  }
+}

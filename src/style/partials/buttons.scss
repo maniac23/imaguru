@@ -48,6 +48,21 @@ button {
     }
   }
 
+  &--blue {
+    color: $blue;
+    border: 3px solid $blue;
+  }
+
+  &--green {
+    color: $light-green;
+    border: 3px solid $light-green;
+  }
+
+  &--yellow {
+    color: $yellow;
+    border: 3px solid $yellow;
+  }
+
   &--orange-bg {
     background: $orange;
     color: $white-color;

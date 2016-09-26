@@ -95,7 +95,7 @@
   &__search {
     position: absolute;
     right: 50px;
-    z-index: 200;
+    z-index: 20000;
 
     width: 1.2rem;
     height: 21px;
@@ -141,7 +141,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: 2;
+  z-index: 2000000;
 
   display: none;
   flex-direction: row;
