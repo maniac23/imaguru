@@ -30,6 +30,6 @@ $(document).ready(function() {
    //= partials/partners-show.js
    //= partials/team-show.js
    //= partials/jobs-show.js
-
+   //= partials/course-page.js
 
 });
