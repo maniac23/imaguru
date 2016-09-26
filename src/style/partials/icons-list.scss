@@ -1,0 +1,81 @@
+.icons-list {
+	list-style: none;
+	font-size: 2em;
+	padding: 0;
+
+	li {
+		width: 2.4em;
+		margin-right: .2em;
+		position: relative;
+		display: inline-block;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		a {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			svg {
+				height: 100%;
+				width: 100%;
+			}
+		}
+
+		&:before {
+			content: '';
+			display: block;
+			padding-top: 100%;
+		}
+
+	}
+}
+
+.colored-info-box .icons-list {
+	padding: 0;
+
+	li {
+		padding: 0;
+	}
+}
+
+
+@media only screen and (min-width: 400px) {
+	.icons-list {
+		li {
+			width: 2.7em;
+			margin-right: .35em;
+		}
+	}
+}
+
+@media only screen and (min-width: 480px) {
+	.icons-list {
+		li {
+			width: 3.2em;
+			margin-right: .5em;
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.icons-list {
+		li {
+			width: 2.7em;
+			margin-right: .35em;
+		}
+	}
+}
+
+@media only screen and (min-width: 860px) {
+	.icons-list {
+		li {
+			width: 3.2em;
+			margin-right: .5em;
+		}
+	}
+}

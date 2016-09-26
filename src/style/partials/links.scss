@@ -1,0 +1,9 @@
+.unstyled-link {
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+	&--white {
+		color: #fff;
+	}
+}

@@ -24,4 +24,5 @@ $(document).ready(function() {
    //= partials/show.js
    //= partials/image-slider.js
    //= partials/calc.js
+   //= partials/moveSocial.js
 });

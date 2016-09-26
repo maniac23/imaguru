@@ -1,0 +1,106 @@
+.team {
+  padding: 60px $section-padding;
+  text-align: center;
+  background-color: $grey;
+
+  &__title {
+    font-size: 1.875rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+
+  &__descr {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    flex: 0 0 30%;
+    margin-bottom: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    &:nth-child(n+4) {
+      display: none;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  &__name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  &__position {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
+  &__item-descr {
+    @extend .team__position;
+  }
+
+  &__button {
+    @extend .benefits__button;
+  }
+}
+.team--vacancies {
+  .team__item {
+    padding-bottom: 5em;
+    position: relative;
+    .btn {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      &:active {
+        transform: translateX(-50%) scale(.97);
+      }
+    }
+  }
+}
+// ************ MEDIA *************
+
+@media only screen and (max-width: 640px) {
+  .team {
+    &__item {
+      flex: 0 0 50%;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .team {
+    &__item {
+      flex: 0 0 100%;
+    }
+  }
+}
