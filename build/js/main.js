@@ -13053,7 +13053,7 @@ $(document).ready(function() {
        }
      ]
    });
-   $('.event-gallery__item').magnificPopup({
+   $('.event-gallery__item, .image-slider__slide').magnificPopup({
      type: 'image',
      gallery: {
        enabled: true
@@ -13134,6 +13134,113 @@ $(document).ready(function() {
      $(this).addClass('course-tab__links--active');
      $('#' + tab_id).addClass('course--is-active');
    });
+   
+   
+   $('.fix__tab').click(function() {
+     var tab_id = $(this).attr('data-tab');
+   
+     $('.fix__tab').removeClass('fix__tab--active');
+     $('.fix__tab-content').removeClass('fix__tab-content--is-active');
+     $(this).addClass('fix__tab--active');
+     $('#' + tab_id).addClass('fix__tab-content--is-active');
+   });
+   $('.pricelist > ul').slick({
+     slidesToShow: 5,
+     slidesToScroll: 1,
+     vertical: false,
+     dots: false,
+     arrows: false,
+     draggable: false,
+     infinite: false,
+     responsive: [
+       {
+         breakpoint: 1200,
+         settings: {
+           slidesToShow: 3,
+           arrows: true,
+           draggable: true
+         }
+       },
+       {
+         breakpoint: 800,
+         settings: {
+           slidesToShow: 2,
+           arrows: true,
+           draggable: true
+         }
+       },
+       {
+         breakpoint: 480,
+         settings: {
+           slidesToShow: 1,
+           arrows: true,
+           draggable: true
+         }
+       }
+     ]
+   });
+   $('.content-block--slider').slick({
+     infinite: true,
+     slidesToShow: 1,
+     slidesToScroll: 1,
+     vertical: true,
+     dots: true,
+     verticalSwiping: true,
+     arrows: false,
+     responsive: [
+       {
+         breakpoint: 800,
+         settings: {
+           vertical: false,
+           verticalSwiping: false
+         }
+       }
+     ]
+   });
+   
+   $('#fix__button').click(function() {
+     $('.fix__container').addClass('fix__container--is-visible');
+   });
+   $('.image-slider').slick({
+     infinite: true,
+     slidesToShow: 3,
+     slidesToScroll: 1,
+     vertical: false,
+     dots: false,
+     arrows: true,
+     responsive: [
+       {
+         breakpoint: 800,
+         settings: {
+           slidesToShow: 2
+         }
+       },
+       {
+         breakpoint: 480,
+         settings: {
+           slidesToShow: 1
+         }
+       }
+     ]
+   });
+   var calc = document.forms['calc'];
+   var elements = calc.elements;
+   
+   
+   
+   for (var i = 0; i < elements.length; i++) {
+     elements[i].addEventListener('change', getCost, false);
+   }
+   
+   function getCost() {
+     var time = calc.elements.time.value;
+     var person = calc.elements.people.value;
+     var price = calc.elements.price.value;
+     var cost = time * person * price;
+     var span = document.querySelector('.calc__cost span');
+     span.innerHTML = cost;
+     span.setAttribute('data-cost', cost);
+   }
    ;(function(){
    	var socialForMove = $('.moveAfterWelcome');
    	var lScrBefEl = $('.lScrBefEl');

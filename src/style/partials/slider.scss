@@ -42,7 +42,7 @@
   }
 
   &__content {
-    padding: 90px 15%;
+    padding: 90px 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,7 +68,7 @@
   }
 
   &__subtitle {
-    font-size: 1.875rem;
+    font-size: 1.5rem;
     font-weight: 500;
     margin: 0;
     padding: 0;
@@ -174,5 +174,11 @@
     &__image {
       order: -1;
     }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .slider__content {
+    padding: 90px 10%;
   }
 }

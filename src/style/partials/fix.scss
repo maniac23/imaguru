@@ -1,0 +1,146 @@
+.fix {
+  &__banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px $section-padding;
+
+    color: $white-color;
+
+    background-color: $blue;
+
+    .btn {
+      margin-bottom: 0;
+      padding: 20px 60px;
+    }
+  }
+
+  &__text {
+    font-size: 1.875rem;
+    font-weight: 600;
+    flex: 0 1 40%;
+    margin: 0;
+    padding: 0;
+
+  }
+
+  &__container {
+    display: none;
+    justify-content: space-between;
+
+    &--is-visible {
+      display: flex;
+    }
+  }
+
+  &__left,
+  &__right {
+    flex: 0 0 50%;
+  }
+
+  &__right {
+    padding: 50px 5%;
+  }
+
+  &__tab-content {
+    flex: 1 1 50%;
+    height: 100%;
+    min-height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+
+    &--is-active {
+      display: inherit;
+    }
+  }
+
+  &__tabs {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__tab {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-bottom: 30px;
+    padding: 0 15px;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+
+    &--active {
+      border-left: 4px solid $orange;
+      transition: all 0.3s ease;
+    }
+
+    .btn {
+      padding: 5px 15px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__tab-name {
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  &__tab-descr {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+// ********** MEDIA **********
+@media only screen and (max-width: 768px) {
+  .fix {
+    &__container--is-visible {
+      display: block;
+    }
+
+    &__left,
+    &__right {
+      display: block;
+      width: 100%;
+    }
+
+    &__tab-content--is-active {
+      display: block;
+      width: 100%;
+      min-height: 350px;
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .fix {
+    &__banner {
+      display: block;
+    }
+
+    &__text {
+      margin-bottom: 30px;
+      width: 100%;
+    }
+
+    &__tab {
+      display: block;
+      width: 100%;
+    }
+
+    &__tab-name {
+      margin-bottom: 15px;
+    }
+
+    &__tab-descr {
+      margin-bottom: 15px;
+    }
+  }
+}

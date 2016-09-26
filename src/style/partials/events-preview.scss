@@ -1,0 +1,29 @@
+.events-preview {
+  padding: 50px 10%;
+  background-image: url("../img/events-preview__bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $white-color;
+
+  &__title {
+    font-size: 1.875rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 25px;
+  }
+
+  &__date {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  &__descr {
+    @extend .events-preview__date;
+    font-weight: 500;
+    margin-bottom: 50px;
+  }
+}

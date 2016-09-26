@@ -1,10 +1,12 @@
 button {
   background-color: transparent;
+
   &:active,
   &:focus {
     outline: none;
   }
 }
+
 .btn {
   display: inline-block;
   text-align: center;
@@ -21,7 +23,7 @@ button {
   // background: none;
 
   cursor: pointer;
-  transition: background-color .2s, color .2s, transform .05s;
+  transition: background-color 0.2s, color 0.2s, transform 0.05s;
 
 
   &:hover,
@@ -30,12 +32,12 @@ button {
   }
 
   &:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: $white-color;
+    color: $dark-font-color;
   }
 
   &:active {
-    transform: scale(.97);
+    transform: scale(0.97);
   }
 
   &--orange {
@@ -70,16 +72,21 @@ button {
     border: none;
   }
 
+  &--white-bg {
+    background-color: $white-color;
+    color: $blue;
+  }
+
   .promo &,
   .main-footer & {
     &:hover {
-      background-color: #fff;
+      background-color: $white-color;
       text-decoration: none;
-      color: #000;
+      color: $dark-font-color;
     }
   }
 
-  .course-registration .course-registration-form &{
+  .course-registration .course-registration-form & {
     display: block;
     margin-left: auto;
     margin-right: auto;
