@@ -19,4 +19,5 @@ $(document).ready(function() {
    //= partials/comments.js
    //= partials/review-slider.js
    //= partials/tabs.js
+   //= partials/moveSocial.js
 });

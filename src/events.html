@@ -16,44 +16,7 @@
 
     <div class="promo promo--events">
 
-      <div class="info">
-        <div class="info__left">
-
-          <div class="info__adress">
-            <span>Минск, ул. Фабрициуса 4</span>
-            <span>пн-вс: 08.00 - 22.00</span>
-          </div>
-
-          <div class="info__phone">
-            <span>+375 29 1 189 189</span>
-            <span>+375 29 1 189 189</span>
-          </div>
-
-        </div>
-        <div class="info__right">
-          <a href="mailto:info@imaguru.by" class="info__mail">info@imaguru.by</a>
-          <div class="info__social">
-            <a href="#" class="info__fb">
-              <svg class="info__icon">
-                <use xlink:href="#info_fb"></use>
-              </svg>
-              Facebook
-            </a>
-            <a href="#" class="info__tw">
-              <svg class="info__icon">
-                <use xlink:href="#info_twitter"></use>
-              </svg>
-              Twitter
-            </a>
-            <a href="#" class="info__insta">
-              <svg class="info__icon">
-                <use xlink:href="#info_insta"></use>
-              </svg>
-              Instagram
-            </a>
-          </div>
-        </div>
-      </div>
+        //= template/promo-info.html
       <!--Slider -->
       <div class="main-text main-text--slider">
         <div class="main-text__slide">
@@ -305,17 +268,21 @@
         </div>
       </div>
     </div>
-    <a href="#" class="posts__item posts__item--courses">
-      <h3 class="posts__title posts__title--courses">Front-end Web developer</h3>
+    <div class="posts__item posts__item--courses">
+      <h3 class="posts__title posts__title--courses">
+        <a class="unstyled-link unstyled-link--white" href="#">Front-end Web developer</a>
+      </h3>
       <p class="posts__coursedate"> 1 Февраля - 1 Марта</p>
       <p class="posts__price">740 руб.</p>
-    </a>
+    </div>
 
-    <a href="#" class="posts__item posts__item--courses">
-      <h3 class="posts__title posts__title--courses">iOS developer</h3>
+    <div class="posts__item posts__item--courses">
+      <h3 class="posts__title posts__title--courses">
+        <a class="unstyled-link unstyled-link--white" href="#">iOS developer</a>
+      </h3>
       <p class="posts__coursedate"> 1 Февраля - 1 Марта</p>
       <p class="posts__price">950 руб.</p>
-    </a>
+    </div>
 
   </div>
 <!--Events slider  -->
@@ -379,7 +346,7 @@
     </div>
   </div>
 
-  <div class="row">
+<!--   <div class="row">
     <div class="welcome welcome--half">
       <h2 class="welcome__title">Заходите к нам</h2>
       <p>г. Минск, ул. Фабрициуса, 4</p>
@@ -417,5 +384,60 @@
         </li>
       </ul>
     </div>
-  </div>
+  </div> -->
+
+    <section class="contact-us flex-container-50-50">
+      <div class="flex-container-50-50__element colored-info-box colored-info-box--red">
+        <div class="container">
+          <div class="colored-info-box__title">
+            <h3>Приходите к нам</h3>
+          </div>
+          <div class="colored-info-box__description">
+            <p>г.Минск ул.&#160;Фабрициуса&#160;4</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex-container-50-50__element colored-info-box colored-info-box--blue">
+        <div class="container">
+          <div class="colored-info-box__title ">
+            <h3>Мы в социальных сетях</h3>
+          </div>
+          
+          <div class="colored-info-box__description">
+            <ul class="icons-list icons-list--inline">
+              <li>
+                <a href="https://www.facebook.com/imaguruby" target="_blank">
+                  <svg>
+                    <use xlink:href="#fb_icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/imaguruby" target="_blank">
+                  <svg>
+                    <use xlink:href="#twitter_icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/explore/locations/223977749/" target="_blank">
+                  <svg>
+                    <use xlink:href="#instagram_icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/groups/8343298"  target="_blank">
+                  <svg>
+                    <use xlink:href="#linkedin_icon"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   //= template/footer.html
