@@ -10,6 +10,7 @@
 
 		dropDown(showMoreButton, showMoreContent);
 	};
+
 // слайдер на вкладке с едой
 	$('.slider-block__catering').slick({
 		infinite: true,
