@@ -53,16 +53,31 @@ button {
   &--blue {
     color: $blue;
     border: 3px solid $blue;
+
+    &:hover {
+      background-color: $blue;
+      color: $white-color;
+    }
   }
 
   &--green {
     color: $light-green;
     border: 3px solid $light-green;
+
+    &:hover {
+      background-color: $light-green;
+      color: $white-color;
+    }
   }
 
   &--yellow {
     color: $yellow;
     border: 3px solid $yellow;
+
+    &:hover {
+      background-color: $yellow;
+      color: $red;
+    }
   }
 
   &--orange-bg {
