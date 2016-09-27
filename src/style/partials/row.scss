@@ -22,7 +22,7 @@
   background-color: $orange;
 
   &--slider {
-    display: block;
+    display: flex;
     width: 50%;
 
     .slick-dots {
@@ -374,29 +374,7 @@
 }
 
 // ************ MEDIA *************
-// @media screen and (max-width: 980px) {
-//   .row {
-//     display: block;
-//   }
-//
-//   // .content-block {
-//   //   &__descr {
-//   //     &--sale {
-//   //       font-size: 3rem;
-//   //     }
-//   //
-//   //     // &--cite {
-//   //     //   &::after {
-//   //     //     right: -20%;
-//   //     //   }
-//   //     // }
-//   //
-//   //     // &--price {
-//   //     //   font-size: 4rem;
-//   //     // }
-//   //   }
-//   // }
-// }
+
 @media screen and (max-width: 1024px) {
   .content-block {
     &--slider {
@@ -421,10 +399,6 @@
   .content-block {
     display: block;
     width: 100%;
-
-    // &--corners {
-    //   padding-top: 80px;
-    // }
 
     &--slider {
       .slick-dots {
@@ -469,41 +443,8 @@
       }
     }
 
-    // &__date,
-    // &__price,
-    // &__descr {
-    //   margin-bottom: 30px;
-    // }
-    //
-    // &__descr {
-    //   &--cite {
-    //     &::after {
-    //       display: none;
-    //     }
-    //   }
-    // }
-
     &__wrap {
       width: 80%;
     }
   }
 }
-
-//
-// @media screen and (min-width: 768px) and (max-width: 980px) {
-//   .content-block {
-//     &--flex {
-//       &__wrapper {
-//         margin: auto;
-//
-//         font-size: 2.8rem;
-//       }
-//     }
-//   }
-// }
-//
-// @media screen and (max-width: 768px) {
-//   .content-block--flex {
-//     padding: 4.2rem 0;
-//   }
-// }
