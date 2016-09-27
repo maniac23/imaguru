@@ -26,14 +26,12 @@ var dropDown = function(button, element) {
 		var transition = element.css('transition');
 		var textBefore = button.data('textbefore');
 		var textAfter = button.data('textafter');
-
 		if (element.outerHeight() == 0) {
 			element.css('transition', '');
 			element.css('height', 'auto');
 			height = element.outerHeight();
 			element.css('height', '0');
 			element.css('transition', transition);
-			console.log(element.css('transition'));
 			element.css('height', height);
 
 //меняем текст в кнопке, на указанный в атрибутах data-textbefore/text-after

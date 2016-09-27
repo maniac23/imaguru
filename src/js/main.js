@@ -7,7 +7,8 @@
 
 
 $(document).ready(function() {
-  //= partials/menu.js
+   //= partials/common-functions.js
+   //= partials/menu.js
    //= partials/slider.js
    //= partials/timetable-slider.js
    //= partials/main-text__slider.js
@@ -25,4 +26,10 @@ $(document).ready(function() {
    //= partials/image-slider.js
    //= partials/calc.js
    //= partials/moveSocial.js
+   //= partials/org-with-us.js
+   //= partials/partners-show.js
+   //= partials/team-show.js
+   //= partials/jobs-show.js
+   //= partials/course-page.js
+
 });
