@@ -1,0 +1,84 @@
+.promo {
+    /* see all styles in promo.scss */
+
+    &--for-startups {
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        label {
+          display: block;
+        }
+
+        // #feature-1:checked ~ .block1 {
+        //  display: block;
+        // }
+
+        // #feature-1:checked ~ .block1 {
+        //  display: block;
+        // }
+
+
+    }
+
+
+    &__main {
+        flex-grow: 1;
+        text-align: center;
+        color: $white-color;
+
+        &__title {
+            margin: 0;
+            margin-bottom: 2rem;
+            padding: 0;
+
+            h2 {
+              font-size: 1.875rem;
+              font-weight: 400;
+              margin: 0;
+            }
+        }
+
+        &__features-carousel {
+          margin-bottom: 2rem;
+
+          &__list {
+            list-style: none;
+
+            &__item {
+              display: inline-block;
+              padding: 0 1rem;
+              opacity: .6;
+              cursor: pointer;
+              transform: scale(.7);
+
+              &._active {
+                transform: scale(1);
+                opacity: 1;
+              }
+
+              &:hover {
+                opacity: 1;
+              }
+            }
+
+          }
+        }
+
+        &__features-text {
+          max-width: 35rem;
+          margin: 0 auto;
+          font-size: 1.5rem;
+        }
+
+        .wrapper {
+          padding-top: 5rem;
+        }
+    }
+
+    .info {
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+}

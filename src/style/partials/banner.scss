@@ -47,6 +47,16 @@
 
   }
 
+  &--white {
+    background-color: $white-color;
+
+    .banner__text {
+      color: $dark-font-color;
+    }
+
+  }
+
+
   &--for-startups {
     text-align: center;
     .banner__text {
