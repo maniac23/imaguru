@@ -17,6 +17,11 @@
   }
 
   &--startups {
+    background: url("../img/for-startups_bg.jpg") center;
+    background-size: cover;
+  }
+
+  &--for-startups {
     background: url("../img/startups_bg.jpg") center;
     background-size: cover;
   }

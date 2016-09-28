@@ -1,19 +1,152 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>Imaguru</title>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&subset=cyrillic" rel="stylesheet">
-	<link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Imaguru</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     //= template/sprite.html
   <div class="wrapper">
     //= template/header.html
 
+    <!--Promo section  -->
+    <div class="promo promo--for-startups">
 
+      //= template/promo-info.html
+      <div class="main-text">
+        <p class="main-text__paragraph">Стартаперам</p>
+      </div>
+<!--Заменить иконки на svg  -->
+      <div class="features">
+
+        <ul class="features__list">
+
+          <li class="features__item">
+            <a href="#">
+              <img src="img/kids.png" alt="" class="features__icon">
+              <span>Teen &amp; Kids</span>
+            </a>
+          </li>
+
+          <li class="features__item features__item--begginer">
+            <a href="#">
+              <img src="img/beginner.png" alt="" class="features__icon">
+              <span>Начинающим</span>
+            </a>
+          </li>
+
+          <li class="features__item features__item--devs">
+              
+            <a href="#">
+              <img src="img/devs.png" alt="" class="features__icon">
+              <span>Программистам</span>
+            </a>
+          </li>
+
+          <li class="features__item features__item--owners">
+            <a href="#">
+              <img src="img/owners.png" alt="" class="features__icon">
+              <span>Собственникам</span>
+            </a>
+          </li>
+
+          <li class="features__item features__item--corps">
+            <a href="#">
+              <img src="img/corps.png" alt="" class="features__icon">
+              <span>Корпорациям</span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+
+    <div class="banner banner--red banner--for-startups">
+      <div class="banner__text">
+        <h3><b>Стартап</b> это</h3>
+        <p>Обучаем малышню программированию. Совместной работе, где можно обмениваться идеями, делиться знаниями и сосредоточенно работать над свои проектом.</p>
+      </div>
+    </div>
+
+    <div class="banner banner--grey banner--for-startups">
+      <div class="banner__text">
+        <h3>Мы предлагаем</h3>
+        <p>Обучаем малышню программированию. Совместной работе, где можно обмениваться идеями, делиться знаниями и сосредоточенно работать над свои проектом.</p>
+      </div>
+    </div>
+
+    <div class="banner banner--blue banner--for-startups">
+      <div class="banner__text">
+        <h3>Резидентство</h3>
+        <p>Обучаем малышню программированию. Совместной работе, где можно обмениваться идеями, делиться знаниями и сосредоточенно работать над свои проектом.</p>
+      </div>
+    </div>
+
+    <!--Prices  -->
+    <div class="pricelist">
+      <ul>
+        <li class="pricelist__item">
+          <h3 class="pricelist__name">Light</h3>
+          <p class="pricelist__descr">3 руб./час</p>
+          <ul class="pricelist__features">
+            <li>Рабочее место</li>
+            <li>Безлимитный интернет</li>
+          </ul>
+          <a href="#" class="btn btn--orange">Выбрать</a>
+        </li>
+        <li class="pricelist__item">
+          <h3 class="pricelist__name">Flex</h3>
+          <p class="pricelist__descr">8 руб./час</p>
+          <ul class="pricelist__features">
+            <li>Рабочее место</li>
+            <li>Безлимитный интернет</li>
+            <li>Кофе и печеньки</li>
+          </ul>
+          <a href="#" class="btn btn--orange">Выбрать</a>
+        </li>
+        <li class="pricelist__item">
+          <h3 class="pricelist__name">Fix</h3>
+          <p class="pricelist__descr">80 руб./месяц</p>
+          <ul class="pricelist__features">
+            <li>Рабочее место</li>
+            <li>Безлимитный интернет</li>
+            <li>Кофе и печеньки</li>
+            <li>Переговорная</li>
+          </ul>
+          <a href="#" class="btn btn--orange">Выбрать</a>
+        </li>
+        <li class="pricelist__item">
+          <h3 class="pricelist__name">Desk</h3>
+          <p class="pricelist__descr">50 руб./месяц</p>
+          <ul class="pricelist__features">
+            <li>Рабочее место</li>
+            <li>Безлимитный интернет</li>
+            <li>Кофе и печеньки</li>
+            <li>Переговорная</li>
+            <li>Mentorship</li>
+          </ul>
+          <a href="#" class="btn btn--orange">Выбрать</a>
+        </li>
+        <li class="pricelist__item">
+          <h3 class="pricelist__name">Team</h3>
+          <p class="pricelist__descr">200 руб./месяц</p>
+          <ul class="pricelist__features">
+            <li>Рабочее место</li>
+            <li>Безлимитный интернет</li>
+            <li>Кофе и печеньки</li>
+            <li>Переговорная</li>
+            <li>Mentorship</li>
+          </ul>
+          <a href="#" class="btn btn--orange">Выбрать</a>
+        </li>
+      </ul>
+    </div>
 
 
 
