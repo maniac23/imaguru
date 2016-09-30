@@ -154,6 +154,16 @@
 	}
 }
 
+.you-can {
+	.ico-title-flex-content-btn__article:not(.red-bg) {
+		color: $red;
+		svg {
+			fill: $red;
+		}
+	}
+}
+
+
 #find-dev-radio:checked ~ .find-somebody__forms,
 #find-mentor-radio:checked ~ .find-somebody__forms,
 #find-outsource-radio:checked ~ .find-somebody__forms {

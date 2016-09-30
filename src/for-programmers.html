@@ -195,51 +195,54 @@
 
     <section class="events-info">
       <div class="events-info__left">
-
-        <article class="hover-ative-box grey-red" style="background-image: url(img/space_slider.jpg)">
-          <div class="container">
-            <div class="container-inner-wrapper">
-              <div class="hover-ative-box__title title-style-1">
-                <h2>Хакатоны</h2>
-              </div>
-              <div class="hover-ative-box__title content-style-1">
-                <p>Найдено: <span class="semibold">3 хакатона</span></p>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="hover-ative-box grey-light-green" style="background-image: url(img/space_slider.jpg)">
-          <div class="container">
-            <div class="container-inner-wrapper">
-              <div class="hover-ative-box__title title-style-1">
-                <h2>Мероприятия</h2>
-              </div>
-              <div class="hover-ative-box__title content-style-1">
-                <p>Найдено: <span class="semibold">16 мероприятий</span></p>
+        <div class="vertical-flex">
+                <article class="hover-ative-box grey-red vertical-flex__element" style="background-image: url(img/space_slider.jpg)">
+            <div class="container">
+              <div class="container-inner-wrapper">
+                <div class="hover-ative-box__title title-style-1">
+                  <h2>Хакатоны</h2>
+                </div>
+                <div class="hover-ative-box__title content-style-1">
+                  <p>Найдено: <span class="semibold">3 хакатона</span></p>
+                </div>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <article class="hover-ative-box grey-blue" style="background-image: url(img/space_slider.jpg)">
-          <div class="container">
-            <div class="container-inner-wrapper">
-              <div class="hover-ative-box__title title-style-1">
-                <h2>Курсы</h2>
-              </div>
-              <div class="hover-ative-box__title content-style-1">
-                <p>Найдено: <span class="semibold">4 курса</span></p>
+          <article class="hover-ative-box grey-light-green vertical-flex__element" style="background-image: url(img/space_slider.jpg)">
+            <div class="container">
+              <div class="container-inner-wrapper">
+                <div class="hover-ative-box__title title-style-1">
+                  <h2>Мероприятия</h2>
+                </div>
+                <div class="hover-ative-box__title content-style-1">
+                  <p>Найдено: <span class="semibold">16 мероприятий</span></p>
+                </div>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
+
+          <article class="hover-ative-box grey-blue vertical-flex__element" style="background-image: url(img/space_slider.jpg)">
+            <div class="container">
+              <div class="container-inner-wrapper">
+                <div class="hover-ative-box__title title-style-1">
+                  <h2>Курсы</h2>
+                </div>
+                <div class="hover-ative-box__title content-style-1">
+                  <p>Найдено: <span class="semibold">4 курса</span></p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
 
       </div>
       <div class="events-info__right">
         <!--Timetable  -->
-        <div class="events-timetable">
-          <ul class="events-timetable__list">
+        <div class="events-timetable events-timetable--height-100">
+          <ul class="events-timetable__list" id="events-timetable">
+
             <li class="events-timetable__item business">
               <div class="events-timetable__time">
                 <p>9:00</p>
@@ -247,20 +250,60 @@
               </div>
               <div class="events-timetable__info">
                 <p class="events-timetable__category">
-                  <a class="events-timetable__category-item" href="#" data-category="business">Предпринимательство</a>
+                  <a class="events-timetable__category-item" href="#" data-category="business">Бизнес</a>
                   <a class="events-timetable__category-item" href="#" data-category="masterclass">Мастер-класс</a>
                 </p>
                 <a href="#" class="events-timetable__title">7 шагов к богатству: тренинг Алексея Новицкого и Антона Коваленко</a>
               </div>
             </li>
+
             <li class="events-timetable__item business">
               <div class="events-timetable__time">
                 <p>10:00</p>
-                <p>30 июль</p>
+                <p>30 август</p>
               </div>
               <div class="events-timetable__info">
                 <p class="events-timetable__category">
-                  <a href="#" class="events-timetable__category-item" data-category="business">Предпринимательство</a>
+                  <a href="#" class="events-timetable__category-item" data-category="business">Бизнес</a>
+                  <a href="#" class="events-timetable__category-item" data-category="masterclass">Мастер-класс</a>
+                </p>
+                <a href="#" class="events-timetable__title">Тактика и стратегия публичных выступлений</a>
+              </div>
+            </li>
+            <li class="events-timetable__item meetup">
+              <div class="events-timetable__time">
+                <p>14:00</p>
+                <p>30 декабрь</p>
+              </div>
+              <div class="events-timetable__info">
+                <p class="events-timetable__category">
+                  <a href="#" class="events-timetable__category-item" data-category="meetup">Митап</a>
+                </p>
+                <a href="#" class="events-timetable__title">Jenkins Meetup #0</a>
+              </div>
+            </li>
+            <li class="events-timetable__item business">
+              <div class="events-timetable__time">
+                <p>9:00</p>
+                <p>29 июль</p>
+              </div>
+              <div class="events-timetable__info">
+                <p class="events-timetable__category">
+                  <a class="events-timetable__category-item" href="#" data-category="business">Бизнес</a>
+                  <a class="events-timetable__category-item" href="#" data-category="masterclass">Мастер-класс</a>
+                </p>
+                <a href="#" class="events-timetable__title">7 шагов к богатству: тренинг Алексея Новицкого и Антона Коваленко</a>
+              </div>
+            </li>
+
+            <li class="events-timetable__item business">
+              <div class="events-timetable__time">
+                <p>10:00</p>
+                <p>30 февраль</p>
+              </div>
+              <div class="events-timetable__info">
+                <p class="events-timetable__category">
+                  <a href="#" class="events-timetable__category-item" data-category="business">Бизнес</a>
                   <a href="#" class="events-timetable__category-item" data-category="masterclass">Мастер-класс</a>
                 </p>
                 <a href="#" class="events-timetable__title">Тактика и стратегия публичных выступлений</a>
@@ -280,21 +323,15 @@
               </div>
             </li>
           </ul>
-          <a href="#" class="events-timetable__more">Показать больше</a>
+
         </div>
       </div>
     </section>
 
 
-
-
-
-
     <section class="you-can">
-
       <section class="flex-25 flex-25--replace-3-4">
-
-        <article class="flex-25__element ico-title-flex-content-btn__article">
+        <article class="flex-25__element red-font ico-title-flex-content-btn__article">
           <div class="ico-title-flex-content-btn__title">
             <div class="ico-title-flex-content-btn__title__icon">
               <svg>
@@ -313,7 +350,7 @@
           <div class="ico-title-flex-content-btn__title">
             <div class="ico-title-flex-content-btn__title__icon">
               <svg>
-                <use xlink:href="#find-mentor"></use>
+                <use xlink:href="#falcon-10"></use>
               </svg>
             </div>
             <h3>Присоединиться к стартапу</h3>
@@ -324,11 +361,11 @@
           <button class="btn">Присединиться</button>
         </article>
 
-        <article class="flex-25__element ico-title-flex-content-btn__article">
+        <article class="flex-25__element red-font ico-title-flex-content-btn__article">
           <div class="ico-title-flex-content-btn__title">
             <div class="ico-title-flex-content-btn__title__icon">
               <svg>
-                <use xlink:href="#find-outsource"></use>
+                <use xlink:href="#skyperoom"></use>
               </svg>
             </div>
             <h3>Забронировать Skyperoom</h3>
@@ -344,7 +381,7 @@
           <div class="ico-title-flex-content-btn__title">
             <div class="ico-title-flex-content-btn__title__icon">
               <svg>
-                <use xlink:href="#find-outsource"></use>
+                <use xlink:href="#planet-earth"></use>
               </svg>
             </div>
             <h3>Взять проект на outsourse</h3>
@@ -364,8 +401,8 @@
         <p>Это простой и доступный способ побывать у нас и попробовать поработать. Усаживайтесь на любое свободное место и работайте. Можете заказать себе кофе и печенек, но дешевле выбрать вариант Flex - и в Вашем распоряжении кухня IMAGURU, на которой можно найти чай, кофе, печеньки</p>
 
         <div>
-          <button class="btn btn--orange">Записаться на курсы</button>
-          <a class="btn btn--orange">Стать преподавателем</a>
+          <a href="#" class="btn btn--orange" >Записаться на курсы</a>
+          <a href="#" class="btn btn--orange no-border">Стать преподавателем</a>
         </div>
       </div>
     </div>
