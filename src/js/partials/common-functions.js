@@ -66,3 +66,10 @@ var showHiddenBox = function(button, element){
 		element.removeClass('_show');
 	});
 };
+
+var createTabDep = function(tabElement, tabContent) {
+	tabElement.on('click', function(){
+		tabElement.addClass('_active').siblings().removeClass('_active');
+		tabContent.addClass('_active').siblings().removeClass('_active');
+	});
+};

@@ -31,5 +31,6 @@ $(document).ready(function() {
    //= partials/team-show.js
    //= partials/jobs-show.js
    //= partials/course-page.js
+   //= partials/for-startups.js
 
 });

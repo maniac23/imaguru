@@ -3,82 +3,79 @@
 
     &--for-startups {
 
-        input[type="radio"] {
-            display: none;
-        }
-
         label {
           display: block;
         }
 
-        // #feature-1:checked ~ .block1 {
-        //  display: block;
-        // }
+        .promo__main {
+            display: flex;
+            flex-grow: 1;
+            text-align: center;
+            color: $white-color;
 
-        // #feature-1:checked ~ .block1 {
-        //  display: block;
-        // }
+            &__title {
+                margin: 0;
+                margin-bottom: 2rem;
+                padding: 0;
 
-
-    }
-
-
-    &__main {
-        flex-grow: 1;
-        text-align: center;
-        color: $white-color;
-
-        &__title {
-            margin: 0;
-            margin-bottom: 2rem;
-            padding: 0;
-
-            h2 {
-              font-size: 1.875rem;
-              font-weight: 400;
-              margin: 0;
+                h2 {
+                  font-size: 1.875rem;
+                  font-weight: 400;
+                  margin: 0;
+                }
             }
-        }
 
-        &__features-carousel {
-          margin-bottom: 2rem;
+            &__features-carousel {
+              margin-bottom: 2rem;
 
-          &__list {
-            list-style: none;
+              &__list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
 
-            &__item {
-              display: inline-block;
-              padding: 0 1rem;
-              opacity: .6;
-              cursor: pointer;
-              transform: scale(.7);
+                &__item {
+                  display: inline-block;
+                  padding: 0 1rem;
+                  opacity: .6;
+                  transform: scale(.7);
+                  transition: opacity .2s, transform .2s;
+                  cursor: pointer;
 
-              &._active {
-                transform: scale(1);
-                opacity: 1;
-              }
+                  &._active {
+                    transform: scale(1);
+                    opacity: 1;
+                  }
 
-              &:hover {
-                opacity: 1;
+                  &:hover {
+                    opacity: 1;
+                  }
+                }
+
               }
             }
 
-          }
+            &__features-text {
+              max-width: 35rem;
+              margin: 0 auto;
+              font-size: 1.5rem;
+              &__text {
+                display: none;
+                &._active {
+                  display: block;
+                }
+              }
+            }
+
+            .wrapper {
+              margin: auto;
+            }
         }
 
-        &__features-text {
-          max-width: 35rem;
-          margin: 0 auto;
-          font-size: 1.5rem;
-        }
-
-        .wrapper {
-          padding-top: 5rem;
+        .info {
+            flex-grow: 0;
+            flex-shrink: 0;
         }
     }
 
-    .info {
-        flex-grow: 0;
-        flex-shrink: 0;
-    }
+
 }
