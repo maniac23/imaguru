@@ -12993,7 +12993,7 @@ $(document).ready(function() {
    // вешает на элемент button обработчик события по click
    // на который открывается элемент element
    
-   var dropDown = function(button, element) {
+   var dropDown = function(button, element, scrollFlag) {
    
    	button.on('click', function(evt){
    		evt.preventDefault();
@@ -13002,29 +13002,39 @@ $(document).ready(function() {
    		var transition = element.css('transition');
    		var textBefore = button.data('textbefore');
    		var textAfter = button.data('textafter');
+   		// console.log(textBefore, textAfter);
+   		// console.log(transition)
    		if (element.outerHeight() == 0) {
+   
    			element.css('transition', '');
    			element.css('height', 'auto');
    			height = element.outerHeight();
    			element.css('height', '0');
    			element.css('transition', transition);
-   			element.css('height', height);
+   			setTimeout(function(){element.css('height', height + 'px');}, 0)
    
    //меняем текст в кнопке, на указанный в атрибутах data-textbefore/text-after
    			if (textAfter) {
    				$(self).text(textAfter);
    			};
    
-   			element.css('height', height + 'px');
-   			scrollTo(element, 300, 30);
+   
+   			if (!scrollFlag) {
+   				scrollTo(element, 300, 30);
+   			}
+   
    		} else {
    //меняем текст в кнопке, на указанный в атрибутах data-textbefore/text-after
    			if (textBefore) {
    				$(self).text(textBefore);
    			};
-   			scrollTo(element.parent(), 300, 100, function(){
+   			if (!scrollFlag) {
+   				scrollTo(element.parent(), 300, 100, function(){
+   					element.css('height', height + 'px');
+   				});
+   			} else {
    				element.css('height', height + 'px');
-   			});
+   			};
    		};
    	});
    
@@ -13044,10 +13054,30 @@ $(document).ready(function() {
    };
    
    var createTabDep = function(tabElement, tabContent) {
-   	tabElement.on('click', function(){
-   		tabElement.addClass('_active').siblings().removeClass('_active');
-   		tabContent.addClass('_active').siblings().removeClass('_active');
-   	});
+   
+   	var addEvent = function(elem, content){
+   		elem.on('click', function(){
+   			elem.addClass('_active').siblings().removeClass('_active');
+   			content.addClass('_active').siblings().removeClass('_active');
+   		});
+   	};
+   // если передаем наборы элементов
+   	if (tabElement.length > 0 && tabContent.length > 0) {
+   		var firstActiveIndex = firstActiveIndex || Math.floor(tabElement.length/2);
+   		tabElement.eq(firstActiveIndex).addClass('_active');
+   		tabContent.eq(firstActiveIndex).addClass('_active');
+   
+   		if (tabElement && tabContent && tabElement.length == tabContent.length) {
+   			for (var i = 0; i < tabElement.length; i++) {
+   				addEvent(tabElement.eq(i), tabContent.eq(i));
+   			};
+   		};
+   
+   		return;
+   	};
+   
+   	addEvent(tabElement, tabContent);
+   //если одиночный элемент
    };
    // open menu
    $('.menu-icon').click(function() {
@@ -13478,24 +13508,35 @@ $(document).ready(function() {
    }(jQuery));
    ;(function($){
    
+   //icons - tabs
+   
+   	//promo feature tabs
    	var listItems = $('.promo__main__features-carousel__list__item');
    	var blocksForShow = $('.feature-text');
+   	createTabDep(listItems, blocksForShow);
    
-   	listItems.eq(Math.floor(listItems.length/2)).addClass('_active');
-   	blocksForShow.eq(Math.floor(blocksForShow.length/2)).addClass('_active');
-   
-   	if (listItems && blocksForShow && listItems.length == blocksForShow.length) {
-   		for (var i = 0; i < listItems.length; i++) {
-   			createTabDep(listItems.eq(i), blocksForShow.eq(i));
-   		}
-   	}
+   	//success story tabs
+   	var listItems = $('.success-story__carousell__list__item');
+   	var blocksForShow = $('.success-story__carousell__text');
+   	createTabDep(listItems, blocksForShow);
    
    
+   // dropdown
    
+   	var buttonsDrop = $('.success-story__carousell__text .show-hidden');
    
+   	for (var i = 0; i < buttonsDrop.length; i++) {
    
+   		var dropBtn = buttonsDrop.eq(i);
+   		var dropElement = dropBtn.siblings('.hidden-text');
    
+   		dropBtn.data('textbefore','Развернуть');
+   		dropBtn.data('textafter', 'Свернуть');
    
+   		if (dropBtn.is('.show-hidden') && dropElement.is('.hidden-text')) {
+   			dropDown(dropBtn, dropElement, 'noscroll');
+   		};
+   	};
    }(jQuery))
 
 });

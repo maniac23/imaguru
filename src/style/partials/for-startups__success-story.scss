@@ -2,7 +2,7 @@
 
 	padding: 2rem 0;
 
-	.success-story__carousell {
+	&__carousell {
 		margin: 0 auto;
 		text-align: center;
 
@@ -12,7 +12,7 @@
 				list-style: none;
 				margin: 0;
 				padding: 0;
-				white-space: nowrap;
+				// white-space: nowrap;
 				overflow: hidden;
 				li {
 					display: inline-block;
@@ -20,9 +20,11 @@
 					height: 10rem;
 					padding: .5rem;
 					box-sizing: border-box;
+					font-size: 0;
 					cursor: pointer;
 					transform: scale(.9);
 					opacity: .2;
+					transform-origin: 50% 50%;
 					transition: opacity .2s, transform .2s;
 					img {
 						max-width: 100%;
@@ -39,40 +41,58 @@
 						opacity: 1;
 					}
 
-
 					&:before {
 						content: '';
 						display: inline-block;
 						height: 100%;
 						width: 0;
-						font-size: 0;
 						vertical-align: middle;
 					}
 				}
 			}
 		}
 
-		&__text {
+		&__description-section {
 			max-width: 50rem;
 			margin: 0 auto;
+			padding: 0 10.9%;
+			position: relative;
+			overflow: hidden;
+		}
 
-			&__article {
-				h3 {
-					font-size: 1.875rem;
-					font-weight: 500;
-					margin: 0;
-					margin-bottom: 1em;
-				}
-				p {
-					font-size: 1.25rem;
-					line-height: 1.4;
-					margin: 0;
-				}
+		&__text {
+			// display: none;
+			position: absolute;
+			left: 100%;
+			opacity: 0;
+			transform: translateX(300px);
+			transition: none;
+			&._active {
+				position: relative;
+				left: 0;
+				opacity: 1;
+				transform: translateX(0);
+				transition: transform .4s, opacity .4s;
 			}
 
-			.hidden-text {
-				padding: 1rem 0;
+			h3 {
+				font-size: 1.875rem;
+				font-weight: 500;
+				margin: 0;
+				margin-bottom: 1em;
 			}
+			p {
+				font-size: 1.25rem;
+				line-height: 1.4;
+				margin: 0;
+			}
+		}
+
+		.hidden-text {
+			margin: 1rem 0;
+			height: 0;
+			overflow: hidden;
+			transition: height .2s;
 		}
 
 		.btn {
@@ -97,4 +117,68 @@
 		}
 	}
 
+}
+
+@media only screen and (max-width: 900px) {
+	.success-story {
+		&__carousell {
+			&__list {
+				ul li {
+					width: 8rem;
+					height: 8rem;
+				}
+			}
+		}
+	}
+}
+@media only screen and (max-width: 680px) {
+	.success-story {
+		&__carousell {
+			&__list {
+				ul li {
+					width: 7rem;
+					height: 7rem;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.success-story {
+		&__carousell {
+			&__list {
+				ul li {
+					width: 9rem;
+					height: 9rem;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 540px) {
+	.success-story {
+		&__carousell {
+			&__list {
+				ul li {
+					width: 8rem;
+					height: 8rem;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.success-story {
+		&__carousell {
+			&__list {
+				ul li {
+					display: block;
+					margin: 0 auto;
+				}
+			}
+		}
+	}
 }

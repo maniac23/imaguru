@@ -179,7 +179,33 @@
 
 
 @media only screen and (max-width: 768px) {
-	.find-somebody {	
+	.find-somebody {
+
+
+		&__article {
+			padding: 60px 10.9%;
+		}
+
+		&__form {
+
+			.form-group {
+				flex-wrap: wrap;
+				margin: 0;
+
+				.group-element,
+				.group-element:not(:last-child) {
+					flex-basis: 100%;
+					flex-grow: 1;
+					margin-right: 0;
+					margin-bottom: 1em;
+				}
+
+				&:last-child {
+					margin-bottom: 2em;
+				}
+
+			}
+		}
 
 		.btn {
 			min-width: 15em;
