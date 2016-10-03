@@ -1,46 +1,147 @@
 .short-form {
-	margin: 0 auto;
-	width: 100%;
-	max-width: 50em;
-	text-align: center;
+  width: 100%;
+  max-width: 50em;
+  margin: 0 auto;
 
-	&__box {
-		input,
-		.btn {
-			display: block;
-			margin: 3em auto;
-		}
+  text-align: center;
 
-		input {
-			width: 75%;
-			text-align: center;
-			&:focus {
-				width: 75%;
-			}
-		}
-		.btn {
-		}
-	}
+  &__box {
+    input,
+    .btn {
+      display: block;
+      margin: 3em auto;
+    }
+
+    input {
+      width: 75%;
+
+      text-align: center;
+
+      &:focus {
+        width: 75%;
+      }
+    }
+  }
+}
+
+.fullwidth-form {
+  padding: 60px $section-padding;
+  width: 100%;
+  background-color: $grey;
+  display: none;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.3s ease-in;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2.5%;
+    left: 15%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #f2f2f2;
+    transform: rotate(-45deg);
+  }
+
+  &#timetable {
+    &::before {
+      left: 30%;
+    }
+  }
+
+  &#team {
+    &::before {
+      left: 60%;
+    }
+  }
+
+  &#pres {
+    &::before {
+      left: 80%;
+    }
+  }
+
+  &--active {
+    display: flex;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    input {
+      flex: 0 0 30%;
+    }
+  }
+
+  input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $dark-font-color;
+    transition: all 0.3s ease-in;
+    padding: 10px 0;
+    outline: none;
+    margin-bottom: 30px;
+    border-radius: 0;
+
+    &:focus {
+      border-bottom: 1px solid $orange;
+    }
+  }
+
+  .btn {
+    align-self: center;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .short-form {
+    &__box {
+      input,
+      .btn {
+        display: inline-block;
+      }
+
+      .btn {
+        float: right;
+      }
+
+      input {
+        float: left;
+        width: 60%;
+
+        text-align: left;
+
+        &:focus {
+          width: 60%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .fullwidth-form {
+    &::before {
+      display: none;
+    }
+  }
 
 }
-@media only screen and (min-width: 768px) {
-	.short-form {
-		&__box {
-			input,
-			.btn {
-				display: inline-block;
-			}
-			.btn {
-				float: right;
-			}
-			input {
-				text-align: left;
-				float: left;
-				width: 60%;
-				&:focus {
-					width: 60%;
-				}
-			}
-		}
-	}
+
+@media only screen and (max-width: 640px) {
+  .fullwidth-form {
+    &__wrap {
+      flex-direction: column;
+      margin-bottom: 0;
+
+      input {
+        flex: 0 0 100%;
+      }
+    }
+  }
 }
