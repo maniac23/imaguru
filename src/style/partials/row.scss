@@ -10,10 +10,11 @@
 
 .content-block {
   position: relative;
+
   display: flex;
+  flex-basis: 50%;
   flex-direction: column;
   justify-content: center;
-  flex-basis: 50%;
   padding: 60px 9.375%;
 
   font-weight: 500;
@@ -91,7 +92,8 @@
   // }
 
   &--white {
-    color: $dark-font-color;
+    color: $orange;
+
     background-color: $white-color;
   }
 
@@ -154,16 +156,16 @@
     font-size: 2.2rem;
     line-height: 1.2;
 
-    // &--coworking {
-    //   margin-bottom: 40px;
-    //
-    //   font-weight: 400;
-    //   font-size: 2.25rem;
-    //   text-align: center;
-    // }
+    &--semibold {
+      font-weight: 600;
+    }
   }
 
-  & > p {
+  &__text {
+    font-size: 2.5rem;
+  }
+
+  p {
     margin: 0;
     margin-bottom: 30px;
     padding: 0;
@@ -241,55 +243,6 @@
 
     font-size: 1.25rem;
     line-height: 1.5;
-
-    // &--coworking {
-    //   font-weight: 600;
-    //   font-size: 2.25rem;
-    // }
-
-    // &--academy {
-    //   font-weight: 300;
-    // }
-
-    // &--sale {
-    //   margin-bottom: 0;
-    //
-    //   font-weight: 700;
-    //   font-size: 3.5rem;
-    //   text-align: center;
-    // }
-
-    // &--price {
-    //   font-weight: 700;
-    //   font-size: 5.25rem;
-    //   text-align: center;
-    // }
-
-    // &--cite {
-    //   position: relative;
-    //
-    //   margin: 0;
-    //   padding: 10px 0;
-    //
-    //   font-weight: 700;
-    //   font-size: 2.5rem;
-    //
-    //   &::after {
-    //     content: "";
-    //     position: absolute;
-    //     top: 50%;
-    //     right: -15%;
-    //     bottom: 0;
-    //
-    //     width: 0;
-    //     height: 0;
-    //
-    //     border-top: 50px solid transparent;
-    //     border-bottom: 50px solid transparent;
-    //     border-left: 50px solid $orange;
-    //     transform: translateY(-50%);
-    //   }
-    // }
   }
 
   &__wrap {
@@ -368,8 +321,8 @@
   .btn {
     bottom: 10%;
 
-    margin-top: 20px;
     align-self: flex-start;
+    margin-top: 20px;
   }
 }
 
@@ -381,6 +334,7 @@
       .slick-dots {
         top: 50%;
         left: 10%;
+
         transform: translateY(-50%);
         li {
           display: block;
@@ -404,6 +358,7 @@
       .slick-dots {
         top: 90%;
         left: 50%;
+
         transform: translateX(-50%);
 
         li {
