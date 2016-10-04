@@ -1,0 +1,13 @@
+.flex-33 {
+	display: flex;
+	flex-direction: row;
+	&__element {
+		flex-grow: 1;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.flex-33 {
+		flex-direction: column;
+	}
+}

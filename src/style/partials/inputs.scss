@@ -15,7 +15,13 @@
 		width: 100%;
 	}
 
-
+	&--white {
+		border-bottom: 2px solid $white-color;
+		opacity: .8;
+		&:focus {
+			opacity: 1;
+		}
+	}
 
 	&--blur {
 		opacity: .8;

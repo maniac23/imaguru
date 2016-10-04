@@ -4,12 +4,16 @@
 
   &__element {
     flex: 1 1 384px;
+    display: flex;
+    .container {
+      height: auto;
+      margin: auto;
+    }
   }
 }
 
 @media only screen and (min-width: 768px) {
   .offers .flex-container-50-50:nth-child(2n) {
-    background-color: #aaaaaa;
 
     .flex-container-50-50__element:last-child {
       order: 1;

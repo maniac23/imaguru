@@ -1,0 +1,21 @@
+.banner.coding-academy {
+
+	.btn {
+		margin: 1.2rem 0;
+		padding: 10px 40px;
+	}
+
+	.btn.no-border {
+		border: none;
+		padding: 0;
+		margin: 10px 40px;
+		border-bottom: 2px dashed $red;
+		border-radius: 0;
+
+		&:hover {
+			border-bottom: 2px solid $red;
+			background-color: inherit;
+			color: $red;
+		}
+	}
+}

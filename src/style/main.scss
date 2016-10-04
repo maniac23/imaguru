@@ -1,6 +1,8 @@
 @import "fonts";
 @import "variables";
 @import "mixins";
+
+@import "partials/common.scss";
 @import "partials/normalize";
 @import "partials/buttons";
 @import "partials/magnific-popup";
@@ -56,6 +58,7 @@
 @import "partials/calc";
 @import "partials/colored-info-boxes.scss";
 @import "partials/flex-50-50.scss";
+@import "partials/flex-33.scss";
 @import "partials/icons-list.scss";
 @import "partials/links.scss";
 @import "partials/org-with-us.scss";
@@ -72,3 +75,16 @@
 @import "partials/course-registration";
 @import "partials/text-block";
 @import "partials/tabs";
+@import "partials/for-startups";
+@import "partials/for-startups__we-offer";
+@import "partials/for-startups__posts";
+@import "partials/for-startups__success-story";
+@import "partials/for-startups__contactus";
+@import "partials/for-startups__find-somebody";
+@import "partials/image-banner";
+@import "partials/flex-25";
+@import "partials/for-programmers__banner-coding-academy";
+@import "partials/box-with-hover-active-effect";
+@import "partials/inner-title-content-styles";
+@import "partials/vertical-flex";
+@import "partials/for-programmers__you-can";
