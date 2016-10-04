@@ -37,75 +37,11 @@
     padding: 0;
   }
 
-  // &--corners {
-  //   padding-top: 60px;
-  //   padding-bottom: 60px;
-  //
-  //   &::before {
-  //     content: "";
-  //     position: absolute;
-  //     top: 0;
-  //     left: 0;
-  //
-  //     width: 0;
-  //     height: 0;
-  //
-  //     border-top: 180px solid $white-color;
-  //     border-right: 180px solid transparent;
-  //   }
-  //
-  //   &::after {
-  //     content: "";
-  //     position: absolute;
-  //     right: 0;
-  //     bottom: 0;
-  //
-  //     width: 0;
-  //     height: 0;
-  //
-  //     border-bottom: 180px solid $white-color;
-  //     border-left: 180px solid transparent;
-  //   }
-  // }
-
-  // &--flex {
-  //   display: flex;
-  //   padding: 1rem 1rem;
-  //
-  //   &__wrapper {
-  //     max-width: 8.5em;
-  //     margin: auto;
-  //
-  //     font-weight: 600;
-  //     font-size: 3.2rem;
-  //     text-align: center;
-  //   }
-  //
-  //   &__descr {
-  //     margin: 0.5em 0;
-  //
-  //     &--price {
-  //       font-weight: 700;
-  //       font-size: 1.6em;
-  //     }
-  //   }
-  // }
-
   &--white {
     color: $orange;
 
     background-color: $white-color;
   }
-
-  // &--yellow {
-  //   padding-bottom: 60px;
-  //
-  //   background-color: $yellow;
-  // }
-
-  // &--grey {
-  //   background-color: $grey-content;
-  // }
 
   &--blue {
     background-color: $blue;
@@ -124,38 +60,6 @@
     background-color: $light-blue;
   }
 
-  // &--move {
-  //   position: relative;
-  //
-  //   padding: 0;
-  //
-  //   background-image: url("../img/move_bg.jpg");
-  //   background-position: center;
-  //   background-size: cover;
-  // }
-
-  // &--work {
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   align-items: center;
-  //   padding: 50px 0;
-  //
-  //   text-align: center;
-  //
-  //   .btn {
-  //     width: 40%;
-  //   }
-  // }
-
-  // &--work-bg {
-  //   padding: 50px 0;
-  //
-  //   background: url("../img/coworking_bg_1.jpg");
-  //   background-position: center;
-  //   background-size: cover;
-  // }
-
   &__title {
     margin: 0;
     margin-bottom: 30px;
@@ -171,10 +75,11 @@
   }
 
   &__text {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+    font-weight: 300;
   }
 
-  p {
+  &__paragraph {
     margin: 0;
     margin-bottom: 30px;
     padding: 0;
