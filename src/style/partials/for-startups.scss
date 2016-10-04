@@ -28,20 +28,29 @@
 
             &__features-carousel {
               margin-bottom: 2rem;
-
+              width: 21em;
+              overflow: hidden;
+              margin-left: auto;
+              margin-right: auto;
               &__list {
+                position: relative;
                 list-style: none;
                 padding: 0;
                 margin: 0;
-
+                // width: 21em;
+                // overflow: hidden;
+                white-space: nowrap;
+                margin: 0 auto;
+                transition: transform .4s ease-in-out;
                 &__item {
                   display: inline-block;
                   width: 7em;
                   height: 7em;
+                  margin-left: -5px;
                   padding: .5em;
                   opacity: .6;
                   transform: scale(.7);
-                  transition: opacity .2s, transform .2s;
+                  transition: opacity .2s, transform .2s ease-in-out;
                   cursor: pointer;
 
                   img {
@@ -58,7 +67,6 @@
                     opacity: 1;
                   }
                 }
-
               }
             }
 
