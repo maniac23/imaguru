@@ -1,18 +1,20 @@
 .social {
-  flex: 1 1 auto;
-  padding: 50px 12.5%;
-
+  flex: 1  1 auto;
+  padding: 60px 0;
   color: $white-color;
 
   background-color: $blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   &--fullwidth {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding-top: 100px;
     padding-bottom: 100px;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   &__title {
@@ -52,6 +54,11 @@
   &__icon {
     width: 100%;
     max-height: 60px;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
 
@@ -59,6 +66,9 @@
 // *********** MEDIA **************
 @media only screen and (max-width: 768px) {
   .social {
+    padding: 60px 11.71875%;
+    align-items: flex-start;
+
     &--fullwidth {
       display: block;
       width: 100%;

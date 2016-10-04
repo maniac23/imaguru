@@ -1,144 +1,139 @@
-// .event-gallery {
-//   h2 {
-//     margin: 70px 20px 30px;
-//     padding: 0;
+.event-gallery {
+  h2 {
+    margin: 70px 20px 30px;
+    padding: 0;
 
-//     font-weight: 300;
-//     font-size: 1.875rem;
-//     font-family: Raleway, Arial, sans-serif;
-//     text-align: center;
-//   }
+    font-weight: 300;
+    font-size: 1.875rem;
+    font-family: Raleway, Arial, sans-serif;
+    text-align: center;
+  }
 
-//   &__list {
-//     display: flex;
-//     flex-wrap: wrap;
-//   }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-//   &__item {
-//     flex-basis: 20%;
-//     padding: 3rem 0;
-//     img {
-//       width: 100%;
-//       margin-bottom: -4px;
-//     }
-//   }
+  &__item {
+    flex-basis: 20%;
 
-//   &__more {
-//     display: flex;
-//     flex: 20%;
-//     justify-content: center;
-//     align-content: center;
-//     align-items: center;
+    img {
+      width: 100%;
+      margin-bottom: -4px;
+    }
+  }
 
-//     font-weight: 600;
-//     font-size: 1rem;
-//     font-family: Raleway;
-//     color: $white-color;
-//     text-decoration: none;
+  &__more {
+    display: flex;
+    flex: 20%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 
-//     background-color: $blue;
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: Raleway;
+    color: $white-color;
+    text-decoration: none;
 
-//     &:hover {
-//       text-decoration: underline;
-//     }
-//   }
+    background-color: $blue;
 
-//   &__content {
-//     padding: 5rem 0;
-//   }
-// }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__content {
+    padding: 5rem 0;
+  }
+}
 
 .evts-gallery {
   display: flex;
   flex-wrap: wrap;
-  &__item {
-    flex-basis: 100%;
-    color: #fff;
-    height: 15rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    order: 1;
-    &__content {
-      text-align: center;
-      height: 100%;
-      position: relative;
-      &__container {
-        padding: 2rem 1rem;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-      h3 {
-        font-size: 1.675rem;
-        margin-top: 0;
-        text-transform: uppercase;
-      }
-    }
 
+  &__item {
+    display: flex;
+    flex: 1 1 30%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+    height: 20rem;
+
+    color: $white-color;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &:nth-child(2) {
+      order: -1;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+
+    font-size: 1.675rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
   }
 }
 
-@media only screen and (min-width: 550px) {
-  .evts-gallery {
+
+// // ********** MEDIA ************
+@media only screen and (max-width: 768px) {
+  .event-gallery {
     &__item {
       flex-basis: 50%;
-      flex-grow: 1;
-      &--main {
-        flex-basis: 100%;
-        height: 25rem;
-      }
+    }
+
+    &__more {
+      flex: 50%;
     }
   }
-}
 
-
-@media only screen and (min-width: 768px) {
   .evts-gallery {
     &__item {
-      flex-basis: 33%;
-      flex-grow: 1;
+      flex: 1 1 50%;
       height: 20rem;
 
       &--main {
-        flex-basis: 33%;
+        flex: 0 0 100%;
         height: 20rem;
-        order: 2;
-      }
-      &--right {
-        order: 3;
+        order: -1;
+
+        background-position: center top;
       }
     }
   }
 }
 
-// // ********** MEDIA ************
-// @media only screen and (max-width: 768px) {
-//   .event-gallery {
-//     &__item {
-//       flex-basis: 50%;
-//     }
+@media only screen and (max-width: 480px) {
+  .event-gallery {
+    h2 {
+      margin-top: 40px;
+    }
 
-//     &__more {
-//       flex: 50%;
-//       min-height: 200px;
-//     }
-//   }
-// }
+    &__item {
+      flex-basis: 100%;
+    }
 
-// @media only screen and (max-width: 480px) {
-//   .event-gallery {
-//     h2 {
-//       margin-top: 40px;
-//     }
+    &__more {
+      flex: 100%;
+      min-height: 200px;
+    }
+  }
 
-//     &__item {
-//       flex-basis: 100%;
-//     }
-
-//     &__more {
-//       flex: 100%;
-//       min-height: 200px;
-//     }
-//   }
-// }
+  .evts-gallery {
+    &__item {
+      flex: 1 1 100%;
+    }
+  }
+}
