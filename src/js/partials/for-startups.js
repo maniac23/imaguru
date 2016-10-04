@@ -46,7 +46,7 @@
 	// AUTOPLAY
 	var carouselTimer
 	var setTimer = function(){
-		carouselTimer = setInterval(sliderTick, 100);
+		carouselTimer = setInterval(sliderTick, 5000);
 	};
 	var unSetTimer = function(){
 		clearInterval(carouselTimer);
