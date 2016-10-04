@@ -1,13 +1,12 @@
-.codefest {
+.codefest,
+.event-banner {
   padding: 90px $section-padding 60px;
-  background: linear-gradient(45deg, #ec593f, #b93541);
   display: flex;
   justify-content: space-between;
 
   &__left,
   &__right {
     flex: 0 0 40%;
-    color: $yellow;
   }
 
   &__logo {
@@ -26,11 +25,39 @@
     padding: 0;
     margin-bottom: 40px;
   }
+
+
+  .btn {
+    padding: 10px 40px;
+  }
 }
+
+.sturtup-life {
+  background: url(../img/startuplife_bg.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  .event-banner__left,
+  .event-banner__right {
+    color: $white-color;
+  }
+}
+
+.codefest {
+  background: linear-gradient(45deg, #ec593f, #b93541);
+  &__left,
+  &__right {
+    color: $yellow;
+  }
+}
+
 
 // ************ MEDIA ****************
 @media only screen and (max-width: 480px) {
   .codefest {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .sturtup-life {
     flex-direction: column;
   }
 }

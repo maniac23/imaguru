@@ -1,0 +1,96 @@
+.contact-us {
+
+	&--for-startups {
+
+		.short-form {
+
+			&__box {
+				input,
+				.btn {
+					display: block;
+					margin: 0;
+				}
+
+				input {
+					width: 100%;
+					max-width: 15rem;
+					text-align: left;
+					float: left;
+					opacity: .7;
+					margin: 1.5em auto;
+					margin-right: calc(100% - 15rem);
+					// border-color: rgba(255,255,255,.6);
+					&:focus {
+						width: 100%;
+						border-color: $white-color;
+						opacity: 1;
+					}
+				}
+				.btn {
+					float: left;
+					margin: 0;
+				}
+			}
+
+		}
+	}
+}
+
+
+@media only screen and (min-width: 600px),
+	   only screen and (min-width: 1400px) {
+	.contact-us {
+		.short-form {
+			&__box {
+				input,
+				.btn {
+					margin: 1.5em auto;
+				}
+				.btn {
+					float: right;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1400px) {
+	.contact-us {
+		.short-form {
+			&__box {
+				input,
+				.btn {
+				}
+				input {
+					margin-right: calc(100% - 15rem);
+				}
+				.btn {
+					float: left;
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+// @media only screen and (min-width: 320px) {
+// 	.short-form {
+// 		&__box {
+// 			input,
+// 			.btn {
+// 				display: inline-block;
+// 			}
+// 			.btn {
+// 				float: right;
+// 			}
+// 			input {
+// 				text-align: left;
+// 				float: left;
+// 				width: 60%;
+// 				&:focus {
+// 					width: 60%;
+// 				}
+// 			}
+// 		}
+// 	}
+// }

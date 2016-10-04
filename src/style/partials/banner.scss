@@ -12,6 +12,57 @@
     flex: 0 0 60%;
     margin: 0;
     padding: 0;
+
+    h3 {
+      font-size: 1.875rem;
+      text-align: center;
+      font-weight: 400;
+      margin: 0;
+      margin-bottom: .8em;
+      b {
+        font-weight: 600;
+      }
+    }
+
+    p {
+      font-size: 1.125rem;
+      line-height: 1.4;
+    }
+  }
+
+  &--blue {
+    background-color: $blue;
+  }
+
+  &--red {
+    background-color: $red;
+  }
+
+  &--grey {
+    background-color: $grey;
+
+    .banner__text {
+      color: $dark-font-color;
+    }
+
+  }
+
+  &--white {
+    background-color: $white-color;
+
+    .banner__text {
+      color: $dark-font-color;
+    }
+
+  }
+
+
+  &--for-startups {
+    text-align: center;
+    .banner__text {
+      margin-bottom: 0;
+      flex: 0 0 50rem;
+    }
   }
 
   .btn {
@@ -29,6 +80,14 @@
       flex: 0 0 100%;
       margin-bottom: 50px;
       text-align: center;
+    }
+
+    &--for-startups {
+      min-height: auto;
+      flex-direction: row;
+      .banner__text {
+        flex: 0 0 100%;
+      }
     }
   }
 
