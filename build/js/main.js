@@ -12993,7 +12993,7 @@ $(document).ready(function() {
    // вешает на элемент button обработчик события по click
    // на который открывается элемент element
    
-   var dropDown = function(button, element) {
+   var dropDown = function(button, element, scrollFlag) {
    
    	button.on('click', function(evt){
    		evt.preventDefault();
@@ -13002,29 +13002,39 @@ $(document).ready(function() {
    		var transition = element.css('transition');
    		var textBefore = button.data('textbefore');
    		var textAfter = button.data('textafter');
+   		// console.log(textBefore, textAfter);
+   		// console.log(transition)
    		if (element.outerHeight() == 0) {
+   
    			element.css('transition', '');
    			element.css('height', 'auto');
    			height = element.outerHeight();
    			element.css('height', '0');
    			element.css('transition', transition);
-   			element.css('height', height);
+   			setTimeout(function(){element.css('height', height + 'px');}, 0)
    
    //меняем текст в кнопке, на указанный в атрибутах data-textbefore/text-after
    			if (textAfter) {
    				$(self).text(textAfter);
    			};
    
-   			element.css('height', height + 'px');
-   			scrollTo(element, 300, 30);
+   
+   			if (!scrollFlag) {
+   				scrollTo(element, 300, 30);
+   			}
+   
    		} else {
    //меняем текст в кнопке, на указанный в атрибутах data-textbefore/text-after
    			if (textBefore) {
    				$(self).text(textBefore);
    			};
-   			scrollTo(element.parent(), 300, 100, function(){
+   			if (!scrollFlag) {
+   				scrollTo(element.parent(), 300, 100, function(){
+   					element.css('height', height + 'px');
+   				});
+   			} else {
    				element.css('height', height + 'px');
-   			});
+   			};
    		};
    	});
    
@@ -13041,6 +13051,33 @@ $(document).ready(function() {
    	element.find('.close-button').on('click', function(){
    		element.removeClass('_show');
    	});
+   };
+   
+   var createTabDep = function(tabElement, tabContent) {
+   
+   	var addEvent = function(elem, content){
+   		elem.on('click', function(){
+   			elem.addClass('_active').siblings().removeClass('_active');
+   			content.addClass('_active').siblings().removeClass('_active');
+   		});
+   	};
+   // если передаем наборы элементов
+   	if (tabElement.length > 0 && tabContent.length > 0) {
+   		var firstActiveIndex = firstActiveIndex || Math.floor(tabElement.length/2);
+   		tabElement.eq(firstActiveIndex).addClass('_active');
+   		tabContent.eq(firstActiveIndex).addClass('_active');
+   
+   		if (tabElement && tabContent && tabElement.length == tabContent.length) {
+   			for (var i = 0; i < tabElement.length; i++) {
+   				addEvent(tabElement.eq(i), tabContent.eq(i));
+   			};
+   		};
+   
+   		return;
+   	};
+   
+   	addEvent(tabElement, tabContent);
+   //если одиночный элемент
    };
    // open menu
    $('.menu-icon').click(function() {
@@ -13469,5 +13506,128 @@ $(document).ready(function() {
    	});
    
    }(jQuery));
+   ;(function($){
+   
+   //icons - tabs
+   
+   	// //promo feature tabs
+   	// var listItems = $('.promo__main__features-carousel__list__item');
+   	// var blocksForShow = $('.feature-text');
+   	// createTabDep(listItems, blocksForShow);
+   	var list = $('.promo__main__features-carousel__list');
+   	var listItems = list.children('li');
+   	var featureText = $('.feature-text');
+   
+   	var showFeatureText = function(index) {
+   		featureText.eq(index).addClass('_active').siblings().removeClass('_active');
+   	};
+   
+   	list.slideTo = function(slide){
+   		var self = this;
+   		var viewArea = self.parent().outerWidth();
+   		var slideWidth = slide.outerWidth();
+   		var slideOffset = slide.position().left;
+   		var toTranslate = -(slideOffset + slideWidth / 2 - viewArea / 2);
+   		self.css('transform', 'translateX(' + toTranslate + 'px)');
+   	};
+   
+   	listItems.each(function(){
+   		$(this).data('index', $(this).index());
+   	});
+   
+   	list.append(listItems.eq(0).clone(true));
+   	list.prepend(listItems.eq(listItems.length - 1).clone(true));
+   	listItems.eq(0).addClass('_active');
+   	showFeatureText(listItems.eq(0).data('index'));
+   
+   	var sliderTick = function(){
+   		var currSlide = list.children('li').filter('._active')
+   		var currIndex = list.children('li').index(currSlide);
+   		var nextSlide = list.children('li').eq(currIndex + 1);
+   		list.append(nextSlide.clone(true));
+   		currSlide.removeClass('_active');
+   		nextSlide.addClass('_active');
+   		list.slideTo(nextSlide);
+   		showFeatureText(nextSlide.data('index'));
+   	};
+   
+   	// AUTOPLAY
+   	var carouselTimer
+   	var setTimer = function(){
+   		carouselTimer = setInterval(sliderTick, 100);
+   	};
+   	var unSetTimer = function(){
+   		clearInterval(carouselTimer);
+   	};
+   
+   	setTimer();
+   
+   	featureText.on('mouseenter', function(){
+   		unSetTimer();
+   	});
+   
+   	featureText.on('mouseleave', function(){
+   		setTimer();
+   	});
+   
+   
+   	//success story tabs
+   	var listItems = $('.success-story__carousell__list__item');
+   	var blocksForShow = $('.success-story__carousell__text');
+   	createTabDep(listItems, blocksForShow);
+   
+   
+   // dropdown
+   
+   	var buttonsDrop = $('.success-story__carousell__text .show-hidden');
+   
+   	for (var i = 0; i < buttonsDrop.length; i++) {
+   
+   		var dropBtn = buttonsDrop.eq(i);
+   		var dropElement = dropBtn.siblings('.hidden-text');
+   
+   		dropBtn.data('textbefore','Развернуть');
+   		dropBtn.data('textafter', 'Свернуть');
+   
+   		if (dropBtn.is('.show-hidden') && dropElement.is('.hidden-text')) {
+   			dropDown(dropBtn, dropElement, 'noscroll');
+   		};
+   	};
+   }(jQuery))
+   ;(function($){
+   
+   	var coolBoxes = $('.hover-ative-box');
+   	coolBoxes.eq(0).addClass('_active');
+   
+   	coolBoxes.on('click', function(){
+   		$(this).addClass('_active').siblings().removeClass('_active');
+   	});
+   
+   }(jQuery));
+   // ;(function($){
+   
+   // 	// promo-carousel
+   // 	var features = $('.promo__main__features-carousel__list');
+   // 	var text = $('.promo__main__features-text');
+   
+   // 	features.slick({
+   // 		slidesToShow: 3,
+   // 		slidesToScroll: 1,
+   // 		asNavFor: '.promo__main__features-text',
+   // 		dots: true,
+   // 		centerMode: true,
+   // 		focusOnSelect: true
+   // 	});
+   
+   // 	text.slick({
+   // 		slidesToShow: 1,
+   // 		slidesToScroll: 1,
+   // 		arrows: false,
+   // 		fade: true,
+   // 		asNavFor: '.promo__main__features-carousel__list'
+   // 	});
+   
+   
+   // }(jQuery));
 
 });

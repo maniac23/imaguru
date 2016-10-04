@@ -1,0 +1,128 @@
+.promo {
+    /* see all styles in promo.scss */
+
+    &--for-startups {
+
+        label {
+          display: block;
+        }
+
+        .promo__main {
+            display: flex;
+            flex-grow: 1;
+            text-align: center;
+            color: $white-color;
+            padding: 3rem 0;
+            font-size: 1.2rem;
+            &__title {
+                margin: 0;
+                margin-bottom: 2rem;
+                padding: 0;
+
+                h2 {
+                  font-size: 2.2em;
+                  font-weight: 400;
+                  margin: 0;
+                }
+            }
+
+            &__features-carousel {
+              margin-bottom: 2rem;
+              width: 21em;
+              overflow: hidden;
+              margin-left: auto;
+              margin-right: auto;
+              &__list {
+                position: relative;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                // width: 21em;
+                // overflow: hidden;
+                white-space: nowrap;
+                margin: 0 auto;
+                transition: transform .4s ease-in-out;
+                &__item {
+                  display: inline-block;
+                  width: 7em;
+                  height: 7em;
+                  margin-left: -5px;
+                  padding: .5em;
+                  opacity: .6;
+                  transform: scale(.7);
+                  transition: opacity .2s, transform .2s ease-in-out;
+                  cursor: pointer;
+
+                  img {
+                    min-width: 100%;
+                    min-width: 100%;
+                  }
+
+                  &._active {
+                    transform: scale(1);
+                    opacity: 1;
+                  }
+
+                  &:hover {
+                    opacity: 1;
+                  }
+                }
+              }
+            }
+
+            &__features-text {
+              max-width: 35rem;
+              margin: 0 auto;
+              position: relative;
+              overflow: hidden;
+              &__text {
+                position: absolute;
+                left: 100%;
+                opacity: 0;
+                transform: translateX(300px);
+                transition: none;
+                p {
+                  margin: 0;
+                  font-size: 1.5em;
+                }
+                &._active {
+                  position: relative;
+                  left: 0;
+                  opacity: 1;
+                  transform: translateX(0);
+                transition: transform .4s, opacity .4s;
+                }
+              }
+            }
+
+            &__wrapper {
+              margin: auto;
+            }
+        }
+
+        .info {
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+    }
+
+
+}
+
+@media only screen and (max-width: 1200px) {
+  .promo--for-startups {
+
+    .promo__main {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .promo--for-startups {
+
+    .promo__main {
+      font-size: .8rem;
+    }
+  }
+}
