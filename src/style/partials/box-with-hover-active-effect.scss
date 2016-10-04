@@ -1,0 +1,59 @@
+.hover-ative-box {
+	height: 14rem;
+	background-size: cover;
+	background-position: 50% 50%;
+
+	.container {
+		display: flex;
+		height: 100%;
+		padding: 2rem 5rem;
+		transition: background-color .2s;
+		cursor: pointer;
+		&-inner-wrapper {
+			margin: auto;
+			width: 100%;
+		}
+	}
+
+	&.grey-red {
+		.container {
+			color: $white-color;
+			background-color: rgba(67,62,61,.8);
+		}
+
+		&:hover,
+		&._active {
+			.container {
+				background-color: rgba(240,80,48,.8);
+			}
+		}
+	}
+
+	&.grey-light-green {
+		.container {
+			color: $white-color;
+			background-color: rgba(67,62,61,.8);
+		}
+
+		&:hover,
+		&._active {
+			.container {
+				background-color: rgba(0,169,157,.8);
+			}
+		}
+	}
+
+	&.grey-blue {
+		.container {
+			color: $white-color;
+			background-color: rgba(67,62,61,.8);
+		}
+
+		&:hover,
+		&._active {
+			.container {
+			background-color: rgba(70,101,187,.8);
+			}
+		}
+	}
+}

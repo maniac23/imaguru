@@ -1,14 +1,33 @@
-.find-somebody {
+.find-somebody,
+.ico-title-flex-content-btn {
 
 	&__article {
 		display: flex;
 		flex-direction: column;
 
 		padding: 60px 4%;
-		color: $white-color;
-
+		color: $dark-font-color;
 		svg {
-			fill: $white-color;
+			fill: $dark-font-color;
+		}
+
+		&.red-bg,
+		&.light-green-bg,
+		&.blue-bg {
+			color: $white-color;
+			svg {
+				fill: $white-color;
+			}
+		}
+
+
+		.btn {
+			flex-grow: 0;
+			padding: 12px 18px;
+			display: block;
+			width: 85%;
+			max-width: 16em;
+			margin: 0 auto;
 		}
 	}
 
@@ -45,14 +64,6 @@
 			line-height: 1.4;
 			margin: 0;
 		}
-	}
-
-	.btn {
-		flex-grow: 0;
-		padding: 12px 18px;
-		display: block;
-		min-width: 85%;
-		margin: 0 auto;
 	}
 
 	&__forms {
@@ -142,6 +153,16 @@
 		display: none;
 	}
 }
+
+.you-can {
+	.ico-title-flex-content-btn__article:not(.red-bg) {
+		color: $red;
+		svg {
+			fill: $red;
+		}
+	}
+}
+
 
 #find-dev-radio:checked ~ .find-somebody__forms,
 #find-mentor-radio:checked ~ .find-somebody__forms,
