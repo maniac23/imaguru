@@ -115,6 +115,15 @@
     background-color: $light-green;
   }
 
+  &--yellow {
+    background-color: $dark-yellow;
+    color: $white-color;
+  }
+
+  &--light-blue {
+    background-color: $light-blue;
+  }
+
   // &--move {
   //   position: relative;
   //
