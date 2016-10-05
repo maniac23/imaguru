@@ -156,9 +156,9 @@
 
 .you-can {
 	.ico-title-flex-content-btn__article:not(.red-bg) {
-		color: $red;
+		color: $orange;
 		svg {
-			fill: $red;
+			fill: $orange;
 		}
 	}
 }
@@ -194,8 +194,8 @@
 
 #find-dev-freelance:checked ~ label[for="find-dev-freelance"] .radio-box,
 #find-dev-in-team:checked ~ label[for="find-dev-in-team"] .radio-box{
-	border-color: $red;
-	background-color: $red;
+	border-color: $orange;
+	background-color: $orange;
 }
 
 

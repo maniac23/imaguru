@@ -1,5 +1,5 @@
 .banner {
-  background-color: $red;
+  background-color: $orange;
   padding: 60px $section-padding;
   display: flex;
   justify-content: space-around;
@@ -35,7 +35,7 @@
   }
 
   &--red {
-    background-color: $red;
+    background-color: $orange;
   }
 
   &--grey {
@@ -85,6 +85,7 @@
     &--for-startups {
       min-height: auto;
       flex-direction: row;
+
       .banner__text {
         flex: 0 0 100%;
       }
