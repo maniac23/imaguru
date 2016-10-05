@@ -1,21 +1,22 @@
 .banner.coding-academy {
+  .btn {
+    margin: 1.2rem 0;
+    padding: 10px 40px;
+  }
 
-	.btn {
-		margin: 1.2rem 0;
-		padding: 10px 40px;
-	}
+  .btn.no-border {
+    margin: 10px 40px;
+    padding: 0;
 
-	.btn.no-border {
-		border: none;
-		padding: 0;
-		margin: 10px 40px;
-		border-bottom: 2px dashed $orange;
-		border-radius: 0;
+    border: none;
+    border-bottom: 2px dashed $orange;
+    border-radius: 0;
 
-		&:hover {
-			border-bottom: 2px solid $orange;
-			background-color: inherit;
-			color: $orange;
-		}
-	}
+    &:hover {
+      color: $orange;
+
+      background-color: inherit;
+      border-bottom: 2px solid $orange;
+    }
+  }
 }
