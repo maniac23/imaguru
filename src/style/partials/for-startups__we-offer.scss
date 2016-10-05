@@ -56,20 +56,17 @@
     font-size: 1rem;
     line-height: 1.5;
   }
-}
 
-.banner {
-  padding-top: 0;
-  padding-bottom: 0;
+  .banner {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
-
 
 @media only screen and (max-width: 900px) {
   .we-offer {
-    &__content {
-      &__article {
-        flex-basis: 50%;
-      }
+    &__article {
+      flex-basis: 50%;
     }
   }
 }
@@ -79,10 +76,9 @@
     &__content {
       max-width: 30rem;
       margin: 0 auto;
-
-      &__article {
-        flex-basis: 100%;
-      }
+    }
+    &__article {
+      flex-basis: 100%;
     }
   }
 }
