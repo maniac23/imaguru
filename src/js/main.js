@@ -33,5 +33,4 @@ $(document).ready(function() {
    //= partials/course-page.js
    //= partials/for-startups.js
    //= partials/hov-act-boxes.js
-
 });

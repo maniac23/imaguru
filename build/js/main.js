@@ -13613,5 +13613,4 @@ $(document).ready(function() {
    	});
    
    }(jQuery));
-
 });
