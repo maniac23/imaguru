@@ -1,0 +1,3 @@
+tick-white.svg
+clock.svg
+tick.svg
