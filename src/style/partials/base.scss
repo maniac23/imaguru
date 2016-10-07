@@ -20,3 +20,11 @@ body {
   max-width: 1440px;
   margin: 0 auto;
 }
+
+
+// ********* MEDIA ***********
+@media only screen and (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}

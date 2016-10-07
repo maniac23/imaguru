@@ -41,6 +41,14 @@
     color: $orange;
 
     background-color: $white-color;
+
+    .slick-dots {
+      left: 90%;
+
+      button {
+        background-color: $orange;
+      }
+    }
   }
 
   &--blue {
@@ -58,6 +66,17 @@
 
   &--light-blue {
     background-color: $light-blue;
+  }
+
+  &--dark {
+    background-color: $dark-font-color;
+    color: $white-color;
+
+    .slick-dots {
+      button {
+        background-color: $orange;
+      }
+    }
   }
 
   &__title {
@@ -250,10 +269,17 @@
         left: 10%;
 
         transform: translateY(-50%);
+
         li {
           display: block;
           margin-bottom: 10px;
         }
+      }
+    }
+
+    &--white {
+      .slick-dots {
+        left: 90%;
       }
     }
   }
