@@ -64,15 +64,11 @@
     background-size: cover;
   }
 
-  // &__video-iframe {
-  //   position: absolute;
-  //   left: 0;
-  //
-  //   width: 100%;
-  //   height: 100%;
-  //
-  //   background-color: #000000;
-  // }
+  &--design {
+    background-image: url("../img/design_bg.jpg");
+    background-size: cover;
+  }
+
 
   &__shadow {
     position: absolute;
@@ -198,7 +194,7 @@
   width: 100%;
   margin-top: 15px;
 
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-family: "Open Sans", Arial, sans-serif;
   color: $white-color;
 
