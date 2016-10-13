@@ -71,11 +71,12 @@
     list-style-type: none;
   }
 
-  &__item {
+  .menu-item {
     margin-bottom: 10px;
+    padding: 0;
   }
 
-  &__link {
+  a {
     font-size: 0.875rem;
     line-height: 1.2;
     color: $white-color;
@@ -92,11 +93,20 @@
   @extend .footer-menu__list;
 
   &__item {
-    @extend .footer-menu__item;
+    margin-bottom: 10px;
+    padding: 0;
   }
 
   a {
-    @extend .footer-menu__link;
+    font-size: 0.875rem;
+    line-height: 1.2;
+    color: $white-color;
+    text-decoration: none;
+
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -130,7 +140,11 @@
     font-size: 1rem;
   }
 
-  .footer-menu__link {
-    font-size: 1.2rem;
+  .footer-menu a {
+    font-size: 1.1rem;
+  }
+
+  .footer-social a {
+    font-size: 1.1rem;
   }
 }

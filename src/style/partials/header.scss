@@ -153,6 +153,12 @@
   color: $white-color;
 
   background-color: $header-font-color;
+  list-style-type: none;
+
+  li {
+    flex: none;
+    padding: 0;
+  }
 
   a {
     margin-right: 30px;
