@@ -1,0 +1,23 @@
+.game-pong {
+	padding: 0;
+	background: linear-gradient(to right, $orange 0%, $orange 50%, $blue 50%, $blue 100%);
+	position: relative;
+
+}
+
+#pong-game-field {
+
+	canvas {
+		width: 80%;
+		height: auto;
+		margin: 0 auto;
+		display: block;
+		box-shadow: 0 0 2px rgba(255,255,255,.9);
+	}
+
+}
+// @media only screen and (max-width: 768px) {
+// 	#pong-game-field {
+// 		transform: rotateZ(90deg);
+// 	}
+// }
