@@ -123,3 +123,36 @@
     }
   }
 }
+
+.logged-in-as {
+  a {
+    color: $dark-font-color;
+    font-weight: 600;
+  }
+}
+
+.children {
+  list-style-type: none;
+}
+
+.form-group {
+  text-align: left;
+
+  label {
+    font-weight: 700;
+  }
+
+  input {
+    margin-top: 20px;
+    max-width: 300px;
+  }
+}
+
+.comment-reply-title {
+  a {
+    color: $dark-font-color;
+    font-weight: 700;
+    margin: 0 10px;
+  }
+
+}

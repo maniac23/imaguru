@@ -13201,6 +13201,11 @@ $(document).ready(function() {
      e.preventDefault();
      $('.comments__form').slideToggle();
    });
+   
+   var header = document.querySelector('.comment-reply-title');
+   if (header.offsetHeight > 0) {
+     document.querySelector('.comments__form').style.display = 'block';
+   }
    $('.reviews').slick({
      infinite: true,
      slidesToShow: 1,
