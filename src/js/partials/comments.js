@@ -4,6 +4,8 @@ $('#comments__btn').click(function(e) {
 });
 
 var header = document.querySelector('.comment-reply-title');
-if (header.offsetHeight > 0) {
-  document.querySelector('.comments__form').style.display = 'block';
+if (header) {
+  if (header.offsetHeight > 0) {
+    document.querySelector('.comments__form').style.display = 'block';
+  }
 }
