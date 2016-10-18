@@ -181,7 +181,33 @@
       text-decoration: underline;
     }
   }
+}
 
+.post-categories {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    padding: 0 5px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid $white-color;
+    }
+  }
+
+  a {
+    color: $white-color;
+    font-weight: 300;
+    font-size: 1.2rem;
+    text-decoration: none;
+    line-height: 1.2;
+  }
 }
 
 // **************** MEDIA *******************
