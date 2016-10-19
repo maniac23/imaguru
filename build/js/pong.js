@@ -16,23 +16,28 @@
 
 	var Model = {
 
-		fieldWidth : 1000,
-		fieldHeight : 500,
+		fieldWidth : 2000,
+		fieldHeight : 1000,
+
+		scores: {
+			left: 4,
+			right: 4,
+		},
 
 		ball : {
 				name: 'ball',
 				type: 'ball',
-				size: {x: 30, y: 30},
+				size: {x: 50, y: 50},
 				position: {x: 0, y: 0},
-				velocity: {x: 500, y: 500},
+				velocity: {x: 1600, y: 0},
 				acceleration: {x: 0, y: 0},
 			},
 
 		leftPlatform : {
 				name: 'leftPlatform',
 				type: 'platform',
-				size: {x: 5, y: 100},
-				position: {x: -400, y: 0},
+				size: {x: 20, y: 200},
+				position: {x: -900, y: 0},
 				velocity: {x: 0, y: 0},
 				acceleration: {x: 0, y: 0}
 			},
@@ -40,11 +45,15 @@
 		rightPlatform: {
 				name: 'rightPlatform',
 				type: 'platform',
-				size: {x: 5, y: 100},
-				position: {x: 400, y: 0},
+				size: {x: 17 , y: 200},
+				position: {x: 900, y: 0},
 				velocity: {x: 0, y: 0},
 				acceleration: {x: 0, y: 0}
 			},
+
+		const: {
+			platformVelocity: 500,
+		},
 
 		gameItems: [],
 
@@ -87,36 +96,45 @@
 			var self = this;
 			self.gameItems.forEach(function(item, i){
 // ball - walls
+			var changeV = function(item, comp) {
+				switch (item.type) {
+					case 'ball' : {
 
-			switch (item.type) {
-				case 'ball' : {
-					if ((item.position.x + item.size.x/2 > self.fieldWidth/2)) {
-
-						item.position.x = self.fieldWidth / 2 - item.size.x/2;
-						item.velocity.x *= -1;
-
-					} else if (item.position.x - item.size.x/2 < -self.fieldWidth/2){
-
-						item.position.x = -self.fieldWidth/2 + item.size.x/2;
-						item.velocity.x *= -1;
-
-					} else if (item.position.y + item.size.y/2 > self.fieldHeight/2) {
-
-						item.position.y = self.fieldHeight/2 - item.size.y/2;
-						item.velocity.y *= -1;
-
-					} else if (item.position.y - item.size.y/2 < -self.fieldHeight/2) {
-
-						item.position.y = -self.fieldHeight/2 + item.size.y/2;
-						item.velocity.y *= -1;
-
+							item.velocity[comp] *= -1;
+							if (comp == 'x') {
+								Model.gameScore(item.position.x);
+							};
+						break;
 					};
-					break;
-				};
 
-				case 'platform': {
-					break;
+					case 'platform': {
+
+							item.velocity[comp] = 0;
+
+						break;
+					};
 				};
+			};
+			if ((item.position.x + item.size.x/2 > self.fieldWidth/2)) {
+
+				item.position.x = self.fieldWidth / 2 - item.size.x/2;
+				changeV(item, 'x');
+
+			} else if (item.position.x - item.size.x/2 < -self.fieldWidth/2){
+
+				item.position.x = -self.fieldWidth/2 + item.size.x/2;
+				changeV(item, 'x');
+
+			} else if (item.position.y + item.size.y/2 > self.fieldHeight/2) {
+
+				item.position.y = self.fieldHeight/2 - item.size.y/2;
+				changeV(item, 'y');
+
+			} else if (item.position.y - item.size.y/2 < -self.fieldHeight/2) {
+
+				item.position.y = -self.fieldHeight/2 + item.size.y/2;
+				changeV(item, 'y');
+
 			};
 
 
@@ -148,6 +166,7 @@
 						};
 
 						ballItem.velocity.y *= -1;
+						ballItem.velocity.y += platformItem.velocity.y;
 
 					} else if (distance.x > distance.y) {
 
@@ -157,7 +176,13 @@
 							ballItem.position.x = platformItem.position.x + ballItem.size.x/2 + platformItem.size.x/2;
 						};
 
+						var keff = (ballItem.position.y - platformItem.position.y)/(platformItem.size.y)
+
+// 						if (Math.abs(keff) > .3) {
+							ballItem.velocity.y = keff * Math.abs(ballItem.velocity.x);
+// 						};
 						ballItem.velocity.x *= -1;
+						ballItem.velocity.x += platformItem.velocity.x;
 
 					};
 
@@ -169,11 +194,62 @@
 
 		},
 
-		f: 0,
+		score: {
+			left: 4,
+			right: 4,
+		},
+
+		inPlay: false,
+		gameStarted: false,
+
+		startGame: function(){
+			this.gameStarted = true;
+			this.startRound();
+		},
+
+		startRound: function(){
+			this.inPlay = true;
+			this.gameStep();
+		},
+
+		pauseGame: function(){
+			this.inPlay = false;
+		},
+
+		restoreGame: function() {
+			this.inPlay = true;
+			Model.gameStep();
+		},
+
+
+
+		endRound: function(evt) {
+			this.inPlay = false;
+		},
+
+		endGame: function(){
+
+		},
+
+		gameScore : function(flag){
+			if (flag < 0) {
+				this.score.right += 1;
+			} else {
+				this.score.left += 1;
+			};
+			console.log(this.score);
+		},
+
+		gameStep : function(){
+			if (!Model.inPlay) return;
+			Model.tick();
+			requestAnimationFrame(Model.gameStep);
+		},
 
 		init: function(){
 			this.gameItems = [this.ball, this.leftPlatform, this.rightPlatform];
 			View.init(this.gameItems);
+			this.gameStep();
 			// View.saveItems(this.gameItems);
 		},
 
@@ -192,8 +268,8 @@
 		gameCanvas : '',
 		drawField : '',
 
-		canvasWidth : 1000,
-		canvasHeight : 500,
+		canvasWidth : 2000,
+		canvasHeight : 1000,
 
 		viewItems: [], //массив, DOM-элементтов например, объектов, с какими-то параметрами для канваса
 
@@ -266,14 +342,27 @@
 
 	var Controller = {
 // up - 38; down - 40
+		startButton: function() {
+
+			if (!Model.gameStarted){
+				Model.startGame();
+			} else {
+				if (Model.inPlay) {
+					Model.pauseGame();
+				} else {
+					Model.restoreGame();
+				}
+			}
+		},
 		keyDownAction: function(keyCode) {
 			switch (keyCode) {
 				case 38: {
-					Model.rightPlatform.velocity.y = -200;
+
+					Model.rightPlatform.velocity.y = -Model.const.platformVelocity;
 					break;
 				};
 				case 40 : {
-					Model.rightPlatform.velocity.y = 200;
+					Model.rightPlatform.velocity.y = Model.const.platformVelocity;
 					break;
 				};
 			}
@@ -308,18 +397,14 @@
 
 			main: function(){
 				Model.init();
-				var step = function(){
-					Model.tick();
-					requestAnimationFrame(step);
-				};
 
-				step();
 			},
 
 			events: function() {
 				keysDown = {};
 
 				var onKeyDown = function(evt){
+// 32 - space
 					if (evt.keyCode == 38 || evt.keyCode == 40) {
 						evt.preventDefault();
 						if (!keysDown[evt.keyCode]) {
@@ -340,8 +425,18 @@
 					};
 				};
 
+				var onKeyPress = function(evt) {
+					if (evt.keyCode == 32) {
+						evt.preventDefault();
+						console.log(32)
+						Controller.startButton();
+					};
+				};
+
 				$(document).on('keydown', onKeyDown);
 				$(document).on('keyup', onKeyUp);
+				$(document).on('keypress', onKeyPress);
+
 
 
 

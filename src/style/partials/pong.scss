@@ -2,10 +2,37 @@
 	padding: 0;
 	background: linear-gradient(to right, $orange 0%, $orange 50%, $blue 50%, $blue 100%);
 	position: relative;
+	justify-content: space-between;
+	min-height: calc(100vh - 68px);
 
+	&__text {
+		color: $white-color;
+		text-align: center;
+		h3 {
+			font-weight: 400;
+			font-size: 1.5rem;
+		}
+		ul {
+			list-style: none;
+			text-align: center;
+			padding: 0;
+			li {
+				display: inline-block;
+				padding: .7rem;
+				a {
+					color: $white-color;
+
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
 }
 
 #pong-game-field {
+
 
 	canvas {
 		width: 80%;
