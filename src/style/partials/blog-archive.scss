@@ -1,10 +1,6 @@
 .blog-archive {
   position: relative;
 
-  &--hidden {
-    height: 0;
-  }
-
   h2 {
     position: relative;
 
@@ -81,12 +77,6 @@
     font-size: 1.25rem;
   }
 
-  &__category {
-    padding-right: 10px;
-
-    border-right: 1px solid $white-color;
-  }
-
   &__subscribe {
     font-weight: 700;
     color: $white-color;
@@ -130,7 +120,7 @@
   &__more {
     position: relative;
 
-    display: block;
+    display: none;
     padding: 70px 0;
 
     font-weight: 700;

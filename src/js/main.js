@@ -5,8 +5,7 @@
  //= ../../bower_components/slick-carousel/slick/slick.js
  //= jquery.magnific-popup.min.js
 
-
-$(document).ready(function() {
+ $(document).ready(function() {
    //= partials/common-functions.js
    //= partials/menu.js
    //= partials/slider.js
@@ -33,4 +32,4 @@ $(document).ready(function() {
    //= partials/course-page.js
    //= partials/for-startups.js
    //= partials/hov-act-boxes.js
-});
+ });
