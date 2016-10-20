@@ -15,6 +15,7 @@
     position: relative;
 
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
   }
@@ -158,8 +159,20 @@
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .blog-archive {
+    &__slide {
+      flex: 1 0 50%;
+    }
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .blog-archive {
+    &__slide {
+      flex: 1 0 100%;
+    }
+
     .slick-next {
       left: 84%;
     }

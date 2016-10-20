@@ -14,8 +14,6 @@
    //= partials/events-gallery.js
    //= partials/gallery.js
    //= partials/blog-archive-slider.js
-   //= partials/blog-show.js
-   //= partials/blog-more.js
    //= partials/comments.js
    //= partials/review-slider.js
    //= partials/tabs.js
