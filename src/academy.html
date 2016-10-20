@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Imaguru | Coding Academy</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+//= template/sprite.html
+<div class="wrapper">
+  //= template/header.html
+  <!--Promo section  -->
+  <div class="promo">
+    <div class="breadcrumbs">
+      <a href="index.html" class="breadcrumbs__item">Главная</a>
+      <a href="courses.html" class="breadcrumbs__item">Обучение</a>
+      <a href="academy.html" class="breadcrumbs__item breadcrumbs__item--active">Coding academy</a>
+    </div>
+    <div class="info">
+      <div class="info__left">
+
+        <div class="info__adress">
+          <span>Минск, ул. Фабрициуса 4</span>
+          <span>пн-вс: 08.00 - 22.00</span>
+        </div>
+
+        <div class="info__phone">
+          <span>+375 29 1 189 189</span>
+          <span>+375 29 1 189 189</span>
+        </div>
+
+      </div>
+      <div class="info__right">
+        <a href="mailto:info@imaguru.by" class="info__mail">info@imaguru.by</a>
+        <div class="info__social">
+          <a href="#" class="info__fb">
+            <svg class="info__icon">
+              <use xlink:href="#info_fb"></use>
+            </svg>
+            Facebook
+          </a>
+          <a href="#" class="info__tw">
+            <svg class="info__icon">
+              <use xlink:href="#info_twitter"></use>
+            </svg>
+            Twitter
+          </a>
+          <a href="#" class="info__insta">
+            <svg class="info__icon">
+              <use xlink:href="#info_insta"></use>
+            </svg>
+            Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-text">
+      <svg class="main-text__img main-text__img--academy">
+       <use xlink:href="#academy_logo"></use>
+     </svg>
+      <p class="main-text__paragraph">Место обучения инноваторов в  бизнесе</p>
+    </div>
+<!--Заменить иконки на svg  -->
+    <div class="features">
+      <ul class="features__list">
+        <li class="features__item">
+          <img src="img/kids.png" alt="" class="features__icon">
+          <a href="#">Teen &amp; Kids</a>
+        </li>
+        <li class="features__item features__item--begginer">
+          <img src="img/beginner.png" alt="" class="features__icon">
+          <a href="#">Начинающим</a>
+        </li>
+        <li class="features__item features__item--devs">
+            <img src="img/devs.png" alt="" class="features__icon">
+          <a href="#">Программистам</a>
+        </li>
+        <li class="features__item features__item--owners">
+            <img src="img/owners.png" alt="" class="features__icon">
+          <a href="#">Собственникам</a>
+        </li>
+        <li class="features__item features__item--corps">
+            <img src="img/corps.png" alt="" class="features__icon">
+          <a href="#">Корпорациям</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="content-block">
+      <h2 class="content-block__title">Новичкам</h2>
+      <p>Только думаете войти в IT и не знаете, что вам подойдет? Приходите на наши преивенты и определяйтесь. А если уже знаете чем хотите заниматься - выбирайте курс и начинайте строить новое будущее вместе с imaguru.</p>
+      <a href="#" class="btn">Просмотреть курсы</a>
+    </div>
+    <div class="content-block content-block--white content-block--no-padding">
+      <!--Course tabs junior  -->
+      <ul class="course-tab" id="junior">
+        <li class="course-tab__links course-tab__links--active" data-tab="junior_frontend">
+            <div class="course-tab__date">
+              <p class="course-tab__month">июль</p>
+              <p class="course-tab__day">29</p>
+            </div>
+            <div class="course-tab__info">
+              <h3 class="course-tab__title">Front-end developer</h3>
+              <p class="course-tab__subtitle">
+                Первый модуль
+              </p>
+            </div>
+        </li>
+        <li class="course-tab__links" data-tab="junior_backend">
+            <div class="course-tab__date">
+              <p class="course-tab__month">август</p>
+              <p class="course-tab__day">2</p>
+            </div>
+            <div class="course-tab__info">
+              <h3 class="course-tab__title">Back-end developer</h3>
+              <p class="course-tab__subtitle">
+                Первый модуль
+              </p>
+            </div>
+        </li>
+        <li class="course-tab__links" data-tab="junior_ios">
+            <div class="course-tab__date">
+              <p class="course-tab__month">август</p>
+              <p class="course-tab__day">10</p>
+            </div>
+            <div class="course-tab__info">
+              <h3 class="course-tab__title">iOS developer</h3>
+              <p class="course-tab__subtitle">
+                Для начинающих
+              </p>
+            </div>
+        </li>
+        <li class="course-tab__links" data-tab="junior_php">
+            <div class="course-tab__date">
+              <p class="course-tab__month">август</p>
+              <p class="course-tab__day">10</p>
+            </div>
+            <div class="course-tab__info">
+              <h3 class="course-tab__title">PHP разработчик</h3>
+              <p class="course-tab__subtitle">
+                Для начинающих
+              </p>
+            </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="course course--is-active course--junior" id="junior_frontend">
+    <div class="course__header">
+      <div class="course__header-left">
+        <h3 class="course__title">Front-end developer</h3>
+        <p class="course__subtitle">Первый модуль</p>
+      </div>
+      <div class="course__header-right">
+        <h3 class="course__start">Старт курса</h3>
+        <p class="course__date">29 июля</p>
+      </div>
+    </div>
+    <p class="course__descr">Front-end — это разработка той части сайта или веб-приложения, которая видна пользователю, с которой ему предстоит взаимодействовать. Для сайта это: верстка страниц, программирование кнопок, выпадающих списков меню и других интерактивных элементов.  Кстати, знаменитый стандарт HTML5, позволяющий создавать даже мобильные приложения также относится к front-end разработке.</p>
+    <div class="course__footer">
+      <div class="course__footer-left">
+        <div class="course__info-wrap">
+          <p class="course__info">Продолжительность обучения</p>
+          <p class="course__info-text">3 месяца (160 ак. ч.)</p>
+        </div>
+        <div class="course__info-wrap">
+          <p class="course__info">Средняя зарплата</p>
+          <p class="course__info-text">800$</p>
+        </div>
+      </div>
+      <div class="course__footer-right">
+        <a href="#" class="btn btn--orange">Перейти к курсу</a>
+      </div>
+    </div>
+  </div>
+  <div class="course course--junior" id="junior_ios">
+    <div class="course__header">
+      <div class="course__header-left">
+        <h3 class="course__title">iOS developer</h3>
+        <p class="course__subtitle">Первый модуль</p>
+      </div>
+      <div class="course__header-right">
+        <h3 class="course__start">Старт курса</h3>
+        <p class="course__date">29 июля</p>
+      </div>
+    </div>
+    <p class="course__descr">Front-end — это разработка той части сайта или веб-приложения, которая видна пользователю, с которой ему предстоит взаимодействовать. Для сайта это: верстка страниц, программирование кнопок, выпадающих списков меню и других интерактивных элементов.  Кстати, знаменитый стандарт HTML5, позволяющий создавать даже мобильные приложения также относится к front-end разработке.</p>
+    <div class="course__footer">
+      <div class="course__footer-left">
+        <div class="course__info-wrap">
+          <p class="course__info">Продолжительность обучения</p>
+          <p class="course__info-text">3 месяца (160 ак. ч.)</p>
+        </div>
+        <div class="course__info-wrap">
+          <p class="course__info">Средняя зарплата</p>
+          <p class="course__info-text">800$</p>
+        </div>
+      </div>
+      <div class="course__footer-right">
+        <a href="#" class="btn btn--orange">Перейти к курсу</a>
+      </div>
+    </div>
+  </div>
+  <div class="course course--junior" id="junior_backend">
+    <div class="course__header">
+      <div class="course__header-left">
+        <h3 class="course__title">Back-end developer</h3>
+        <p class="course__subtitle">Первый модуль</p>
+      </div>
+      <div class="course__header-right">
+        <h3 class="course__start">Старт курса</h3>
+        <p class="course__date">29 июля</p>
+      </div>
+    </div>
+    <p class="course__descr">Front-end — это разработка той части сайта или веб-приложения, которая видна пользователю, с которой ему предстоит взаимодействовать. Для сайта это: верстка страниц, программирование кнопок, выпадающих списков меню и других интерактивных элементов.  Кстати, знаменитый стандарт HTML5, позволяющий создавать даже мобильные приложения также относится к front-end разработке.</p>
+    <div class="course__footer">
+      <div class="course__footer-left">
+        <div class="course__info-wrap">
+          <p class="course__info">Продолжительность обучения</p>
+          <p class="course__info-text">3 месяца (160 ак. ч.)</p>
+        </div>
+        <div class="course__info-wrap">
+          <p class="course__info">Средняя зарплата</p>
+          <p class="course__info-text">800$</p>
+        </div>
+      </div>
+      <div class="course__footer-right">
+        <a href="#" class="btn btn--orange">Перейти к курсу</a>
+      </div>
+    </div>
+  </div>
+  <div class="course course--junior" id="junior_php">
+    <div class="course__header">
+      <div class="course__header-left">
+        <h3 class="course__title">PHP developer</h3>
+        <p class="course__subtitle">Первый модуль</p>
+      </div>
+      <div class="course__header-right">
+        <h3 class="course__start">Старт курса</h3>
+        <p class="course__date">29 июля</p>
+      </div>
+    </div>
+    <p class="course__descr">Front-end — это разработка той части сайта или веб-приложения, которая видна пользователю, с которой ему предстоит взаимодействовать. Для сайта это: верстка страниц, программирование кнопок, выпадающих списков меню и других интерактивных элементов.  Кстати, знаменитый стандарт HTML5, позволяющий создавать даже мобильные приложения также относится к front-end разработке.</p>
+    <div class="course__footer">
+      <div class="course__footer-left">
+        <div class="course__info-wrap">
+          <p class="course__info">Продолжительность обучения</p>
+          <p class="course__info-text">3 месяца (160 ак. ч.)</p>
+        </div>
+        <div class="course__info-wrap">
+          <p class="course__info">Средняя зарплата</p>
+          <p class="course__info-text">800$</p>
+        </div>
+      </div>
+      <div class="course__footer-right">
+        <a href="#" class="btn btn--orange">Перейти к курсу</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="content-block content-block--blue">
+      <h2 class="content-block__title">Продвинутым</h2>
+      <p>Вы уже многое знаете, но хотите большего? В имагуру всегда можно найти новые знания и повысить свой уровень.</p>
+      <a href="#" class="btn">Просмотреть курсы</a>
+    </div>
+    <div class="content-block content-block--white content-block--no-padding">
+      <!--Course tabs upper  -->
+      <ul class="course-tab course-tab--senior" id="senior">
+        <li class="course-tab__links course-tab__links--active" data-tab="senior_frontend">
+            <div class="course-tab__date">
+              <p class="course-tab__month">июль</p>
+              <p class="course-tab__day">29</p>
+            </div>
+            <div class="course-tab__info">
+              <h3 class="course-tab__title">Front-end developer</h3>
+              <p class="course-tab__subtitle">
+                Первый модуль
+              </p>
+            </div>
+        </li>
+        <li class="course-tab__links" data-tab="senior_backend">
+            <div class="course-tab__date">
+              <p class="course-tab__month">август</p>
+              <p class="course-tab__day">2</p>
+            </div>
+            <div class="course-tab__info">
+              <h3 class="course-tab__title">Back-end developer</h3>
+              <p class="course-tab__subtitle">
+                Первый модуль
+              </p>
+            </div>
+        </li>
+        <li class="course-tab__links" data-tab="senior_ios">
+            <div class="course-tab__date">
+              <p class="course-tab__month">август</p>
+              <p class="course-tab__day">10</p>
+            </div>
+            <div class="course-tab__info">
+              <h3 class="course-tab__title">iOS developer</h3>
+              <p class="course-tab__subtitle">
+                Для продвинутых
+              </p>
+            </div>
+        </li>
+        <li class="course-tab__links" data-tab="senior_php">
+            <div class="course-tab__date">
+              <p class="course-tab__month">август</p>
+              <p class="course-tab__day">10</p>
+            </div>
+            <div class="course-tab__info">
+              <h3 class="course-tab__title">PHP разработчик</h3>
+              <p class="course-tab__subtitle">
+                Для продвинутых
+              </p>
+            </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="course course--is-active course--senior" id="senior_frontend">
+    <div class="course__header">
+      <div class="course__header-left">
+        <h3 class="course__title">Front-end developer</h3>
+        <p class="course__subtitle">Первый модуль</p>
+      </div>
+      <div class="course__header-right">
+        <h3 class="course__start">Старт курса</h3>
+        <p class="course__date">29 июля</p>
+      </div>
+    </div>
+    <p class="course__descr">Front-end — это разработка той части сайта или веб-приложения, которая видна пользователю, с которой ему предстоит взаимодействовать. Для сайта это: верстка страниц, программирование кнопок, выпадающих списков меню и других интерактивных элементов.  Кстати, знаменитый стандарт HTML5, позволяющий создавать даже мобильные приложения также относится к front-end разработке.</p>
+    <div class="course__footer">
+      <div class="course__footer-left">
+        <div class="course__info-wrap">
+          <p class="course__info">Продолжительность обучения</p>
+          <p class="course__info-text">3 месяца (160 ак. ч.)</p>
+        </div>
+        <div class="course__info-wrap">
+          <p class="course__info">Средняя зарплата</p>
+          <p class="course__info-text">800$</p>
+        </div>
+      </div>
+      <div class="course__footer-right">
+        <a href="#" class="btn btn--blue">Перейти к курсу</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="course course--senior" id="senior_backend">
+    <div class="course__header">
+      <div class="course__header-left">
+        <h3 class="course__title">Back-end developer</h3>
+        <p class="course__subtitle">Первый модуль</p>
+      </div>
+      <div class="course__header-right">
+        <h3 class="course__start">Старт курса</h3>
+        <p class="course__date">29 июля</p>
+      </div>
+    </div>
+    <p class="course__descr">Front-end — это разработка той части сайта или веб-приложения, которая видна пользователю, с которой ему предстоит взаимодействовать. Для сайта это: верстка страниц, программирование кнопок, выпадающих списков меню и других интерактивных элементов.  Кстати, знаменитый стандарт HTML5, позволяющий создавать даже мобильные приложения также относится к front-end разработке.</p>
+    <div class="course__footer">
+      <div class="course__footer-left">
+        <div class="course__info-wrap">
+          <p class="course__info">Продолжительность обучения</p>
+          <p class="course__info-text">3 месяца (160 ак. ч.)</p>
+        </div>
+        <div class="course__info-wrap">
+          <p class="course__info">Средняя зарплата</p>
+          <p class="course__info-text">800$</p>
+        </div>
+      </div>
+      <div class="course__footer-right">
+        <a href="#" class="btn btn--blue">Перейти к курсу</a>
+      </div>
+    </div>
+  </div>
+  <div class="course course--senior" id="senior_php">
+    <div class="course__header">
+      <div class="course__header-left">
+        <h3 class="course__title">PHP developer</h3>
+        <p class="course__subtitle">Первый модуль</p>
+      </div>
+      <div class="course__header-right">
+        <h3 class="course__start">Старт курса</h3>
+        <p class="course__date">29 июля</p>
+      </div>
+    </div>
+    <p class="course__descr">Front-end — это разработка той части сайта или веб-приложения, которая видна пользователю, с которой ему предстоит взаимодействовать. Для сайта это: верстка страниц, программирование кнопок, выпадающих списков меню и других интерактивных элементов.  Кстати, знаменитый стандарт HTML5, позволяющий создавать даже мобильные приложения также относится к front-end разработке.</p>
+    <div class="course__footer">
+      <div class="course__footer-left">
+        <div class="course__info-wrap">
+          <p class="course__info">Продолжительность обучения</p>
+          <p class="course__info-text">3 месяца (160 ак. ч.)</p>
+        </div>
+        <div class="course__info-wrap">
+          <p class="course__info">Средняя зарплата</p>
+          <p class="course__info-text">800$</p>
+        </div>
+      </div>
+      <div class="course__footer-right">
+        <a href="#" class="btn btn--blue">Перейти к курсу</a>
+      </div>
+    </div>
+  </div>
+  <div class="course course--senior" id="senior_ios">
+    <div class="course__header">
+      <div class="course__header-left">
+        <h3 class="course__title">iOS developer</h3>
+        <p class="course__subtitle">Первый модуль</p>
+      </div>
+      <div class="course__header-right">
+        <h3 class="course__start">Старт курса</h3>
+        <p class="course__date">29 июля</p>
+      </div>
+    </div>
+    <p class="course__descr">Front-end — это разработка той части сайта или веб-приложения, которая видна пользователю, с которой ему предстоит взаимодействовать. Для сайта это: верстка страниц, программирование кнопок, выпадающих списков меню и других интерактивных элементов.  Кстати, знаменитый стандарт HTML5, позволяющий создавать даже мобильные приложения также относится к front-end разработке.</p>
+    <div class="course__footer">
+      <div class="course__footer-left">
+        <div class="course__info-wrap">
+          <p class="course__info">Продолжительность обучения</p>
+          <p class="course__info-text">3 месяца (160 ак. ч.)</p>
+        </div>
+        <div class="course__info-wrap">
+          <p class="course__info">Средняя зарплата</p>
+          <p class="course__info-text">800$</p>
+        </div>
+      </div>
+      <div class="course__footer-right">
+        <a href="#" class="btn btn--blue">Перейти к курсу</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="content-block content-block--green">
+      <h2 class="content-block__title">Детям</h2>
+      <p>Только думаете войти в IT и не знаете, что вам подойдет? Приходите на наши преивенты и определяйтесь. А если уже знаете чем хотите заниматься - выбирайте курс и начинайте строить новое будущее вместе с imaguru.</p>
+      <a href="#" class="btn">Просмотреть курсы</a>
+    </div>
+    <div class="content-block content-block--white content-block--no-padding">
+      <!--Course tabs upper  -->
+      <ul class="course-tab course-tab--children" id="children">
+        <li class="course-tab__links course-tab__links--active" data-tab="children_frontend">
+            <div class="course-tab__date">
+              <p class="course-tab__month">июль</p>
+              <p class="course-tab__day">29</p>
+            </div>
+            <div class="course-tab__info">
+              <h3 class="course-tab__title">Front-end developer</h3>
+              <p class="course-tab__subtitle">
+                Первый модуль
+              </p>
+            </div>
+        </li>
+        <li class="course-tab__links" data-tab="children_backend">
+            <div class="course-tab__date">
+              <p class="course-tab__month">август</p>
+              <p class="course-tab__day">2</p>
+            </div>
+            <div class="course-tab__info">
+              <h3 class="course-tab__title">Back-end developer</h3>
+              <p class="course-tab__subtitle">
+                Первый модуль
+              </p>
+            </div>
+        </li>
+        <li class="course-tab__links" data-tab="children_ios">
+            <div class="course-tab__date">
+              <p class="course-tab__month">август</p>
+              <p class="course-tab__day">10</p>
+            </div>
+            <div class="course-tab__info">
+              <h3 class="course-tab__title">iOS developer</h3>
+              <p class="course-tab__subtitle">
+                Для детей
+              </p>
+            </div>
+        </li>
+        <li class="course-tab__links" data-tab="children_php">
+            <div class="course-tab__date">
+              <p class="course-tab__month">август</p>
+              <p class="course-tab__day">10</p>
+            </div>
+            <div class="course-tab__info">
+              <h3 class="course-tab__title">PHP разработчик</h3>
+              <p class="course-tab__subtitle">
+                Для детей
+              </p>
+            </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<!-- Children courses  -->
+  <div class="course course--is-active course--children" id="children_frontend" style="background-image: url('img/chiidren_image.jpg')">
+    <div class="course__header">
+      <div class="course__header-left">
+        <h3 class="course__title">Front-end developer</h3>
+        <p class="course__subtitle">Первый модуль</p>
+      </div>
+      <div class="course__header-right">
+        <h3 class="course__start">Старт курса</h3>
+        <p class="course__date">29 июля</p>
+      </div>
+    </div>
+    <p class="course__descr">Front-end — это разработка той части сайта или веб-приложения, которая видна пользователю, с которой ему предстоит взаимодействовать. Для сайта это: верстка страниц, программирование кнопок, выпадающих списков меню и других интерактивных элементов.  Кстати, знаменитый стандарт HTML5, позволяющий создавать даже мобильные приложения также относится к front-end разработке.</p>
+    <div class="course__footer">
+      <div class="course__footer-left">
+        <div class="course__info-wrap">
+          <p class="course__info">Продолжительность обучения</p>
+          <p class="course__info-text">3 месяца (160 ак. ч.)</p>
+        </div>
+        <div class="course__info-wrap">
+          <p class="course__info">Средняя зарплата</p>
+          <p class="course__info-text">800$</p>
+        </div>
+      </div>
+      <div class="course__footer-right">
+        <a href="#" class="btn btn--green">Перейти к курсу</a>
+      </div>
+    </div>
+  </div>
+  <div class="course course--children" id="children_ios" style="background-image: url('img/chiidren_image.jpg')">
+    <div class="course__header">
+      <div class="course__header-left">
+        <h3 class="course__title">iOS developer</h3>
+        <p class="course__subtitle">Первый модуль</p>
+      </div>
+      <div class="course__header-right">
+        <h3 class="course__start">Старт курса</h3>
+        <p class="course__date">29 июля</p>
+      </div>
+    </div>
+    <p class="course__descr">Front-end — это разработка той части сайта или веб-приложения, которая видна пользователю, с которой ему предстоит взаимодействовать. Для сайта это: верстка страниц, программирование кнопок, выпадающих списков меню и других интерактивных элементов.  Кстати, знаменитый стандарт HTML5, позволяющий создавать даже мобильные приложения также относится к front-end разработке.</p>
+    <div class="course__footer">
+      <div class="course__footer-left">
+        <div class="course__info-wrap">
+          <p class="course__info">Продолжительность обучения</p>
+          <p class="course__info-text">3 месяца (160 ак. ч.)</p>
+        </div>
+        <div class="course__info-wrap">
+          <p class="course__info">Средняя зарплата</p>
+          <p class="course__info-text">800$</p>
+        </div>
+      </div>
+      <div class="course__footer-right">
+        <a href="#" class="btn btn--green">Перейти к курсу</a>
+      </div>
+    </div>
+  </div>
+  <div class="course course--children" id="children_backend" style="background-image: url('img/chiidren_image.jpg')">
+    <div class="course__header">
+      <div class="course__header-left">
+        <h3 class="course__title">Backend developer</h3>
+        <p class="course__subtitle">Первый модуль</p>
+      </div>
+      <div class="course__header-right">
+        <h3 class="course__start">Старт курса</h3>
+        <p class="course__date">29 июля</p>
+      </div>
+    </div>
+    <p class="course__descr">Front-end — это разработка той части сайта или веб-приложения, которая видна пользователю, с которой ему предстоит взаимодействовать. Для сайта это: верстка страниц, программирование кнопок, выпадающих списков меню и других интерактивных элементов.  Кстати, знаменитый стандарт HTML5, позволяющий создавать даже мобильные приложения также относится к front-end разработке.</p>
+    <div class="course__footer">
+      <div class="course__footer-left">
+        <div class="course__info-wrap">
+          <p class="course__info">Продолжительность обучения</p>
+          <p class="course__info-text">3 месяца (160 ак. ч.)</p>
+        </div>
+        <div class="course__info-wrap">
+          <p class="course__info">Средняя зарплата</p>
+          <p class="course__info-text">800$</p>
+        </div>
+      </div>
+      <div class="course__footer-right">
+        <a href="#" class="btn btn--green">Перейти к курсу</a>
+      </div>
+    </div>
+  </div>
+  <div class="course course--children" id="children_php" style="background-image: url('img/chiidren_image.jpg')">
+    <div class="course__header">
+      <div class="course__header-left">
+        <h3 class="course__title">PHP developer</h3>
+        <p class="course__subtitle">Первый модуль</p>
+      </div>
+      <div class="course__header-right">
+        <h3 class="course__start">Старт курса</h3>
+        <p class="course__date">29 июля</p>
+      </div>
+    </div>
+    <p class="course__descr">Front-end — это разработка той части сайта или веб-приложения, которая видна пользователю, с которой ему предстоит взаимодействовать. Для сайта это: верстка страниц, программирование кнопок, выпадающих списков меню и других интерактивных элементов.  Кстати, знаменитый стандарт HTML5, позволяющий создавать даже мобильные приложения также относится к front-end разработке.</p>
+    <div class="course__footer">
+      <div class="course__footer-left">
+        <div class="course__info-wrap">
+          <p class="course__info">Продолжительность обучения</p>
+          <p class="course__info-text">3 месяца (160 ак. ч.)</p>
+        </div>
+        <div class="course__info-wrap">
+          <p class="course__info">Средняя зарплата</p>
+          <p class="course__info-text">800$</p>
+        </div>
+      </div>
+      <div class="course__footer-right">
+        <a href="#" class="btn btn--green">Перейти к курсу</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="three-cols">
+    <h2 class="three-cols__title">Развивайте свои навыки после обучения</h2>
+    <p class="three-cols__text">Мы - команда активных и амбициозных молодых людей, которые ставят перед собой  большие цели и  не боятся трудностей их реализации. Это люди, обладающие различными навыками и талантами – предприниматели, организаторы, дизайнеры, программисты и маркетологи.</p>
+    <ul class="three-cols__list">
+      <li class="three-cols__item">
+        <svg class="three-cols__icon">
+          <use xlink:href="#academy_icon1"></use>
+        </svg>
+        <h4 class="three-cols__subtitle">Создать свой стартап</h4>
+        <p class="three-cols__descr">Очень умный карлик, которого насмешливо называют "Бес" и "Полумуж", хотя Тирион разделяет талант своего отца к политическому маневрированию</p>
+        <a href="#" class="three-cols__link">Ссылка на хакатоны</a>
+      </li>
+      <li class="three-cols__item">
+        <svg class="three-cols__icon">
+          <use xlink:href="#academy_icon2"></use>
+        </svg>
+        <h4 class="three-cols__subtitle">Устроиться в IT компанию</h4>
+        <p class="three-cols__descr">урожденная Талли, - старший ребенок в семье Хостера Талли. Будучи женой Эддарда Старка, Леди Винтерфелла - мать пятерых детей</p>
+        <a href="#" class="three-cols__link">Ссылка на партнеров</a>
+      </li>
+      <li class="three-cols__item">
+        <svg class="three-cols__icon">
+          <use xlink:href="#academy_icon3"></use>
+        </svg>
+        <h4 class="three-cols__subtitle">Фрилансить</h4>
+        <p class="three-cols__descr">Выпускник королевства Ланистеров. Лихой рыцарь из блатной Королевской гвардии. Обучает Фехтованию одной рукой</p>
+        <a href="#" class="three-cols__link">Ссылка на коворкинг</a>
+      </li>
+    </ul>
+  </section>
+
+  <div class="posts">
+
+    <div class="preview">
+      <div class="preview__overlay">
+        <div class="preview__content">
+          <h2 class="preview__title">Ближайшие мероприятия</h2>
+          <a href="#" class="btn btn-white">Показать все</a>
+        </div>
+      </div>
+    </div>
+    <div class="posts__item">
+      <span class="posts__date posts__date--no-border-right">12. 07. 2016</span>
+      <p class="posts__category">Coding Fest</p>
+      <a href="#" class="posts__title posts__title--no-border-left posts__title--light">День, когда каждый может стать программистом. Приходите и сами убедитесь!</a>
+    </div>
+
+    <div class="posts__item">
+      <span class="posts__date posts__date--no-border-right">11. 07. 2016</span>
+      <p class="posts__category">FinTech Hackaton</p>
+      <a href="#" class="posts__title posts__title--no-border-left posts__title--light">Есть идея или хотите попасть в инновационную команду? А может есть идея и команда, но нет инвестора? </a>
+    </div>
+
+  </div>
+
+  <section class="three-cols three-cols--grey">
+    <h2 class="three-cols__title">Наши преподаватели</h2>
+    <p class="three-cols__text">Мы - команда активных и амбициозных молодых людей, которые ставят перед собой  большие цели и  не боятся трудностей их реализации. Это люди, обладающие различными навыками и талантами – предприниматели, организаторы, дизайнеры, программисты и маркетологи.</p>
+    <ul class="three-cols__list">
+      <li class="three-cols__item">
+        <img src="img/teachers1.jpg" alt="" class="three-cols__image">
+        <h4 class="three-cols__subtitle">Тирион Ланнистер</h4>
+        <p class="three-cols__position">CEO &amp; Co-founder</p>
+        <p class="three-cols__descr">Очень умный карлик, которого насмешливо называют "Бес" и "Полумуж", хотя Тирион разделяет талант своего отца к политическому маневрированию</p>
+      </li>
+      <li class="three-cols__item">
+        <img src="img/teachers2.jpg" alt="" class="three-cols__image">
+        <h4 class="three-cols__subtitle">Кейтлин Старк</h4>
+        <p class="three-cols__position">CEO &amp; Co-founder</p>
+        <p class="three-cols__descr">урожденная Талли, - старший ребенок в семье Хостера Талли. Будучи женой Эддарда Старка, Леди Винтерфелла - мать пятерых детей</p>
+      </li>
+      <li class="three-cols__item">
+        <img src="img/teachers3.jpg" alt="" class="three-cols__image">
+        <h4 class="three-cols__subtitle">Джейми Ланнистер</h4>
+        <p class="three-cols__position">CEO &amp; Co-founder</p>
+        <p class="three-cols__descr">Выпускник королевства Ланистеров. Лихой рыцарь из блатной Королевской гвардии. Обучает Фехтованию одной рукой</p>
+      </li>
+    </ul>
+  </section>
+
+  <div class="row">
+    <div class="blog-latest">
+
+      <div class="blog-latest__item blog-latest__item--high" style="background-image: url('img/blog_img1.jpg')">
+        <div class="blog-latest__overlay">
+          <h2 class="blog-latest__title">
+            Pokemon GO создал ажиотаж на акции Nintendo, Google и Apple
+          </h2>
+          <p class="blog-latest__descr">
+            <span class="blog-latest__category">Такие дела</span>
+            <span class="blog-latest__date">15 августа 2015</span>
+          </p>
+          <p class="blog-latest__text">
+            Белорусы стали активно интересоваться инвестициями в акции компаний, имеющих отношение к популярной игре Pokemon GO. Если в середине июля востребованы были в основном акции Nintendo, то к началу августа интерес сдвинулся в сторону ценных бумаг Google и Apple. Возможность инвестировать
+          </p>
+          <a href="#" class="blog-latest__more">Читать далее</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="blog-latest blog-latest--column">
+
+      <div class="blog-latest__item" style="background-image: url('img/blog_img2.jpg')">
+        <div class="blog-latest__overlay blog-latest__overlay--orange">
+          <h2 class="blog-latest__title">О Беларуси прочитала вся Западная Европа и США</h2>
+          <p class="blog-latest__descr">
+            <span class="blog-latest__category">Тема недели</span>
+            <span class="blog-latest__date">15 августа 2015</span>
+          </p>
+          <a href="#" class="blog-latest__more">Читать далее</a>
+        </div>
+      </div>
+
+      <div class="blog-latest__item" style="background-image: url('img/blog_img2.jpg')">
+        <div class="blog-latest__overlay blog-latest__overlay--light-blue">
+          <h2 class="blog-latest__title">О Беларуси прочитала вся Западная Европа и США</h2>
+          <p class="blog-latest__descr">
+            <span class="blog-latest__category">Тема недели</span>
+            <span class="blog-latest__date">15 августа 2015</span>
+          </p>
+          <a href="#" class="blog-latest__more">Читать далее</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="comments">
+    <div class="comments__wrapper comments__wrapper--white">
+      <h2 class="comments__title">Отзывы о наших курсах</h2>
+      <button id="comments__btn" class="btn btn--orange">Оставить комментарий</button>
+      <form action="none" class="comments__form">
+        <input type="text" placeholder="Введите ваше сообщение">
+        <button class="btn btn--orange">Отправить</button>
+      </form>
+    </div>
+    <div class="comments__wrapper comments__wrapper--white">
+      <p class="comments__count">2 комментария</p>
+      <ul class="comments__list">
+        <li class="comments__item">
+          <p class="comments__author">Марта Стюарт</p>
+          <p class="comments__text">Хочу пикачу! пика-пика чууууу</p>
+          <div class="comments__info">
+            <span class="comments__date">18.08.2016</span>
+            <a  class="comments__reply" href="#">Ответить</a>
+          </div>
+        </li>
+        <li class="comments__item">
+          <p class="comments__author">Марта Стюарт</p>
+          <p class="comments__text">Хочу пикачу! пика-пика чууууу</p>
+          <div class="comments__info">
+            <span class="comments__date">18.08.2016</span>
+            <a  class="comments__reply" href="#">Ответить</a>
+          </div>
+        </li>
+        <li class="comments__item">
+          <p class="comments__author">Марта Стюарт</p>
+          <p class="comments__text">Хочу пикачу! пика-пика чууууу</p>
+          <div class="comments__info">
+            <span class="comments__date">18.08.2016</span>
+            <a  class="comments__reply" href="#">Ответить</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="codefest">
+    <div class="codefest__left">
+      <svg class="codefest__logo">
+        <use xlink:href="#codefest_logo"></use>
+      </svg>
+      <p class="codefest__subtitle">День, когда каждый <br> может стать программистом</p>
+    </div>
+    <div class="codefest__right">
+      <p class="codefest__text">Белорусы стали активно интересоваться инвестициями в акции компаний, имеющих отношение к популярной игре Pokemon GO. Если в середине июля востребованы были в основном акции Nintendo, то к началу августа интерес сдвинулся в сторону ценных бумаг Google и Apple.</p>
+      <a href="#" class="btn btn--yellow">Узнать больше</a>
+    </div>
+  </div>
+
+  <div class="coworkers">
+    <h2 class="coworkers__title">Наши партнеры</h2>
+    <ul class="coworkers__list">
+      <li class="coworkers__item">
+        <img src="img/lifehacker.png" alt="Лайфхакер">
+      </li>
+      <li class="coworkers__item">
+        <img src="img/microsoft.png" alt="Microsoft">
+      </li>
+      <li class="coworkers__item">
+        <img src="img/intel.png" alt="Intel">
+      </li>
+      <li class="coworkers__item">
+        <img src="img/ubuntu.png" alt="Ubuntu">
+      </li>
+    </ul>
+  </div>
+
+  <div class="row">
+    <div class="welcome welcome--half">
+      <h2 class="welcome__title">Заходите к нам</h2>
+      <p>г. Минск, ул. Фабрициуса, 4</p>
+    </div>
+    <div class="social social--events">
+      <h2 class="social__title">Мы в социальных сетях</h2>
+      <ul class="social__list">
+        <li class="social__item">
+          <a href="#">
+            <svg class="social__icon">
+              <use xlink:href="#fb_icon"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#">
+            <svg class="social__icon">
+              <use xlink:href="#twitter_icon"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#">
+            <svg class="social__icon">
+              <use xlink:href="#instagram_icon"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#">
+            <svg class="social__icon">
+              <use xlink:href="#linkedin_icon"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  //= template/footer.html

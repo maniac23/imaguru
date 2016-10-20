@@ -29,21 +29,46 @@
       <svg class="menu-icon">
         <use xlink:href="#menu-icon"></use>
       </svg>
-      <nav class="menu">
-        <ul class="menu__list">
-          <li class="menu-item current-menu-item"><a href="about.html">О клубе</a></li>
-          <li class="menu-item"><a href="coworking.html">Коворкинг</a></li>
-          <li class="menu-item"><a href="events.html">Мероприятия</a></li>
-          <li class="menu-item menu-item-has-children"><a href="academy.html">Обучение</a>
-            <ul class="sub-menu">
-              <a href="#">Coding Academy</a>
-              <a href="#">Business Academy</a>
+            <nav class="menu">
+            <ul class="menu__list">
+    
+              <li class="menu-item menu-item-has-children"><a href="about.html">О клубе</a>
+                <ul class="sub-menu">
+                  <a href="#">Контакты</a>
+                  <a href="#">Вакансии</a>
+                </ul>
+              </li>
+    
+              <li class="menu-item menu-item-has-children">Кому
+                <ul class="sub-menu">
+                  <a href="#">Teen &amp; kids</a>
+                  <a href="for-startups.html">Стартапам</a>
+                  <a href="for-programmers.html">Программистам</a>
+                  <a href="corps.html">Корпорациям</a>
+                </ul>
+              </li>
+    
+              <li class="menu-item"><a href="coworking.html">Коворкинг</a></li>
+              <li class="menu-item menu-item-has-children"><a href="events.html">Мероприятия</a>
+                <ul class="sub-menu">
+                  <a href="#">Хакатоны</a>
+                </ul>
+              </li>
+    
+              <li class="menu-item menu-item-has-children"><a href="courses.html">Обучение</a>
+                <ul class="sub-menu">
+                  <a href="academy.html">Coding Academy</a>
+                  <a href="#">Teen Guru</a>
+                  <a href="design-thinking.html">Design Thinking</a>
+                </ul>
+              </li>
+    
+              <li class="menu-item"><a href="org-with-us.html">Организуй у нас</a></li>
+    
+              <li class="menu-item"><a href="blog.html">Блог</a></li>
+    
             </ul>
-          </li>
-          <li class="menu-item"><a href="org-with-us.html">Организуй у нас</a></li>
-          <li class="menu-item"><a href="#">Контакты</a></li>
-        </ul>
-      </nav>
+          </nav>
       <form action="none" class="menu__form">
         <input class="menu__search" type="search" placeholder="Поиск">
         
@@ -73,7 +98,11 @@
   <main class="wrapper">
     <!--Promo section  -->
     <div class="promo promo--for-startups">
-
+      <div class="breadcrumbs">
+        <a href="index.html" class="breadcrumbs__item">Главная</a>
+        <!-- <a href="#" class="breadcrumbs__item">Обучение</a> -->
+        <a href="for-startups.html" class="breadcrumbs__item breadcrumbs__item--active">Стартапам</a>
+      </div>
       <div class="info">
         <div class="info__left">
       
@@ -117,7 +146,7 @@
         <div class="promo__main__wrapper">
 
           <div class="promo__main__title">
-            <h2>Стартаперам</h2>
+            <h2>Стартапам</h2>
           </div>
 
           <div class="promo__main__features-carousel">
