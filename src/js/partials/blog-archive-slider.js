@@ -1,7 +1,7 @@
 // проходим по каждому элементу blog-archive
 $('.blog-archive').each(function() {
   // если в нем больше 3 слайдов - делаем слайдер
-  if($(this).find('.blog-archive__slide').length > 3) {
+  if($(this).find('.blog-archive__slide').length >= 3) {
     $(this).find('.blog-archive__slider').slick({
       infinite: false,
       slidesToShow: 3,
