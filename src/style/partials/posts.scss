@@ -7,8 +7,11 @@
   color: $white-color;
 
   &__item {
+    display: flex;
     flex: 1 1 33.33%;
-    padding: 60px 4.6875%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px 4.6875%;
 
     color: $white-color;
     text-decoration: none;
@@ -22,8 +25,9 @@
     }
 
     &--blog {
-      background-color: $orange;
       padding: 90px 4.6875%;
+
+      background-color: $orange;
 
       &:nth-child(2n+1) {
         order: 2;
@@ -40,10 +44,12 @@
   }
 
   &__date {
-    font-family: "Open Sans", Arial, sans-serif;
-    font-size: 1.125rem;
-    font-weight: 400;
     padding-right: 10px;
+
+    font-weight: 400;
+    font-size: 1.125rem;
+    font-family: "Open Sans", Arial, sans-serif;
+
     border-right: 1px solid $white-color;
 
     &--post {
@@ -59,38 +65,41 @@
   }
 
   &__day {
-    font-family: "Open Sans", Arial, sans-serif;
-    font-size: 1.625rem;
     font-weight: 600;
+    font-size: 1.625rem;
+    font-family: "Open Sans", Arial, sans-serif;
   }
 
   &__month {
-    font-family: "Open Sans", Arial, sans-serif;
-    font-size: 1rem;
     font-weight: 400;
+    font-size: 1rem;
+    font-family: "Open Sans", Arial, sans-serif;
   }
 
   &__period {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+
     font-weight: 300;
     font-size: 1.875rem;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 30px;
   }
 
   &__price {
-    font-weight: 600;
-    font-size: 1.875rem;
     margin: 0;
     padding: 0;
+
+    font-weight: 600;
+    font-size: 1.875rem;
   }
 
   &__tags {
     a {
-      color: $white-color;
-      font-size: 0.875rem;
-      text-decoration: none;
       padding-right: 5px;
+
+      font-size: 0.875rem;
+      color: $white-color;
+      text-decoration: none;
 
       &:not(:last-child) {
         border-right: 1px solid $white-color;
@@ -101,8 +110,8 @@
   &__title {
     display: block;
     margin: 0;
-    padding: 0;
     margin-bottom: 40px;
+    padding: 0;
     padding-left: 12px;
 
     font-weight: 500;
@@ -111,6 +120,7 @@
     font-family: Raleway, Arial, sans-serif;
     color: $white-color;
     text-decoration: none;
+
     border-left: 3px solid $white-color;
 
     &--light {
@@ -119,37 +129,42 @@
     }
 
     &--blog {
-      border: none;
       padding: 0;
+
+      border: none;
     }
 
     &--post {
       margin-bottom: 40px;
+      padding: 0;
 
       font-weight: 600;
       font-size: 1.5rem;
+
       border: none;
-      padding: 0;
     }
 
     &--no-border-left {
-      border-left: none;
       padding: 0;
+
+      border-left: none;
     }
 
     &--courses {
+      padding-left: 0;
 
-      border: none;
       font-weight: 600;
       font-size: 1.875rem;
-      padding-left: 0;
+
+      border: none;
     }
   }
 
   &__author {
-    font-size: 1.125rem;
-    font-weight: 400;
     padding: 0 10px;
+
+    font-weight: 400;
+    font-size: 1.125rem;
   }
 
   &__category {
@@ -171,10 +186,10 @@
   }
 
   &__more {
+    font-weight: 500;
+    font-size: 1rem;
     color: $white-color;
     text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
 
     &:hover,
     &:active {
@@ -184,10 +199,11 @@
 }
 
 .post-categories {
-  list-style-type: none;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
+  padding: 0;
+
+  list-style-type: none;
 
   li {
     padding: 0 5px;
@@ -202,11 +218,11 @@
   }
 
   a {
-    color: $white-color;
     font-weight: 300;
     font-size: 1.2rem;
-    text-decoration: none;
     line-height: 1.2;
+    color: $white-color;
+    text-decoration: none;
   }
 }
 

@@ -39,11 +39,11 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
     width: 100%;
     height: 100%;
-    padding: 0 14.05%;
+    padding: 50px 14.05%;
 
     color: $white-color;
 
