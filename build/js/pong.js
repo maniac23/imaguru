@@ -29,7 +29,7 @@
 				type: 'ball',
 				size: {x: 50, y: 50},
 				position: {x: 0, y: 0},
-				velocity: {x: 1600, y: 0},
+				velocity: {x: 1500, y: 0},
 				acceleration: {x: 0, y: 0},
 			},
 
@@ -37,7 +37,7 @@
 				name: 'leftPlatform',
 				type: 'platform',
 				size: {x: 20, y: 200},
-				position: {x: -900, y: 0},
+				position: {x: -990, y: 0},
 				velocity: {x: 0, y: 0},
 				acceleration: {x: 0, y: 0}
 			},
@@ -46,7 +46,7 @@
 				name: 'rightPlatform',
 				type: 'platform',
 				size: {x: 17 , y: 200},
-				position: {x: 900, y: 0},
+				position: {x: 990, y: 0},
 				velocity: {x: 0, y: 0},
 				acceleration: {x: 0, y: 0}
 			},
@@ -71,9 +71,9 @@
 		tick: function(dT) {
 			dT = dT || 1000/60;
 			var self = this;
-
 			self.playScene(dT);
 			self.checkCollisions();
+			AI.play();
 			View.drawAllItems(self.gameItems);
 		},
 
@@ -155,7 +155,6 @@
 					y: Math.abs(item1.position.y - item2.position.y) - item1.size.y/2 - item2.size.y/2,
 				};
 
-
 				if (distance.x < 0 && distance.y < 0) {
 
 					if (distance.y >= distance.x) {
@@ -186,12 +185,27 @@
 
 					};
 
-				}
+				};
 
 			};
 
 			});
 
+		},
+
+		platformUp : function(name){
+			var self = this;
+			self[name].velocity.y = -self.const.platformVelocity;
+		},
+
+		platformDown : function(name){
+			var self = this;
+			self[name].velocity.y = self.const.platformVelocity;
+		},
+
+		stopPlatform : function(name) {
+			var self = this;
+			self[name].velocity.y = 0;
 		},
 
 		score: {
@@ -357,13 +371,19 @@
 		keyDownAction: function(keyCode) {
 			switch (keyCode) {
 				case 38: {
-
-					Model.rightPlatform.velocity.y = -Model.const.platformVelocity;
+					Model.platformUp('rightPlatform');
 					break;
 				};
 				case 40 : {
-					Model.rightPlatform.velocity.y = Model.const.platformVelocity;
+					Model.platformDown('rightPlatform');
 					break;
+				};
+				case 87 : {
+					Model.platformUp('leftPlatform');
+					break;
+				};
+				case 83 : {
+					Model.platformDown('leftPlatform');
 				};
 			}
 		},
@@ -371,9 +391,13 @@
 			switch (keyCode) {
 				case 38:
 				case 40: {
-					Model.rightPlatform.velocity.y = 0;
+					Model.stopPlatform('rightPlatform');
 					break;
 				};
+				case 87:
+				case 83: {
+					Model.stopPlatform('leftPlatform');
+				}
 			};
 		},
 
@@ -381,7 +405,89 @@
 
 /*  =========== end CONTROLLER ===========*/
 
+var AI = {
 
+	watch: false,
+	key: null,
+	predictBallPosition: null,
+
+	ball: Model.ball,
+	position: Model.leftPlatform.position,
+
+	calculateBallPosition: function(){
+		var self = this;
+		var ballAbsY = self.ball.position.y + Model.fieldHeight / 2;
+		var deltaX = Math.abs(self.ball.position.x - self.position.x) - (Model.leftPlatform.size.x / 2 + self.ball.size.x / 2);
+		// console.log( )
+		var deltaY = Math.abs(deltaX/self.ball.velocity.x)*self.ball.velocity.y;
+
+		var predictY = self.ball.position.y + deltaY;
+
+		return {x: self.position.x, y: predictY};
+	},
+
+	slide: function(flag){
+		var self = this;
+		var eventUp;
+		var eventDown;
+		var flagKey;
+
+		if (flag == 'up') {
+			flagKey = 87;
+		} else if (flag == 'down') {
+			flagKey = 83;
+		};
+
+		if (self.key != flagKey) {
+
+			if (self.key) {
+				var eventUp = new Event('keyup');
+				eventUp.keyCode = self.key;
+				document.dispatchEvent(eventUp);
+				self.key = null;
+			}
+			var eventDown = new Event('keydown');
+			eventDown.keyCode = flagKey;
+			self.key = flagKey;
+			document.dispatchEvent(eventDown);
+		};
+
+	},
+
+	stop: function(){
+		var self = this;
+		if (self.key) {
+			var event = new Event('keyup');
+			event.keyCode = self.key;
+			self.key = null;
+			self.predictBallPosition = null;
+			document.dispatchEvent(event);
+		};
+	},
+
+	play : function(){
+		var self = this;
+		if (self.watch) {
+			if (self.ball.velocity.x < 0) {
+				// if (!self.predictBallPosition) {
+					self.predictBallPosition = self.calculateBallPosition();
+					 // console.log(self.predictBallPosition)
+				// }
+				if (self.position.y - self.predictBallPosition.y > 50 ) {
+					self.slide('up');
+					// console.log ('up')
+				} else if (self.position.y - self.predictBallPosition.y < -50){
+					self.slide('down');
+				};
+			} else {
+				self.stop();
+			};
+		} else {
+			return false;
+		};
+	},
+
+};
 
 //  app
 	(function(){
@@ -405,7 +511,7 @@
 
 				var onKeyDown = function(evt){
 // 32 - space
-					if (evt.keyCode == 38 || evt.keyCode == 40) {
+					if (evt.keyCode == 38 || evt.keyCode == 40 || evt.keyCode == 87 || evt.keyCode == 83) {
 						evt.preventDefault();
 						if (!keysDown[evt.keyCode]) {
 							keysDown[evt.keyCode] = true;
@@ -416,7 +522,7 @@
 				};
 
 				var onKeyUp = function(evt) {
-					if (evt.keyCode == 38 || evt.keyCode == 40) {
+					if (evt.keyCode == 38 || evt.keyCode == 40 || evt.keyCode == 87 || evt.keyCode == 83) {
 						evt.preventDefault();
 						if (keysDown[evt.keyCode]) {
 							keysDown[evt.keyCode] = false;
@@ -428,7 +534,6 @@
 				var onKeyPress = function(evt) {
 					if (evt.keyCode == 32) {
 						evt.preventDefault();
-						console.log(32)
 						Controller.startButton();
 					};
 				};
@@ -436,9 +541,6 @@
 				$(document).on('keydown', onKeyDown);
 				$(document).on('keyup', onKeyUp);
 				$(document).on('keypress', onKeyPress);
-
-
-
 
 			},
 
