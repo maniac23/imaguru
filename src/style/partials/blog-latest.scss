@@ -28,7 +28,7 @@
     position: relative;
     z-index: 1000000;
     width: 100%;
-    min-height: 300px;
+    min-height: 350px;
     background-size: cover;
     background-position: center top;
   }
@@ -103,7 +103,7 @@
     }
 
     &__item {
-      min-height: 400px;
+      min-height: 300px;
 
       &--high {
         min-height: 500px;
@@ -129,7 +129,7 @@
       width: 100%;
 
       &--high {
-        min-height: 740px;
+        min-height: 600px;
       }
     }
 

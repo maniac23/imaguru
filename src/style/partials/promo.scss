@@ -193,6 +193,7 @@
   align-self: flex-start;
   width: 100%;
   margin-top: 15px;
+  margin-bottom: 50px;
 
   font-size: 0.9rem;
   font-family: "Open Sans", Arial, sans-serif;
@@ -571,6 +572,9 @@
   }
 
   .main-text {
+    &__title {
+      font-size: 2rem;
+    }
     &--post {
       margin-bottom: 40px;
     }
@@ -661,7 +665,7 @@
       &--post {
         margin-bottom: 0;
 
-        font-size: 1.5rem;
+        font-size: 1.3rem;
       }
     }
   }
