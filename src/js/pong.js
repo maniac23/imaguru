@@ -407,7 +407,8 @@
 
 var AI = {
 
-	watch: false,
+	watch: true,
+	watchTimer: false,
 	key: null,
 	predictBallPosition: null,
 
@@ -487,6 +488,10 @@ var AI = {
 		};
 	},
 
+	setTimer: function(){
+		// var self.watchTimer = setTimeout( );
+	}
+
 };
 
 //  app
@@ -510,7 +515,8 @@ var AI = {
 				keysDown = {};
 
 				var onKeyDown = function(evt){
-// 32 - space
+// 32 - space	
+// console.log(evt.keyCode)
 					if (evt.keyCode == 38 || evt.keyCode == 40 || evt.keyCode == 87 || evt.keyCode == 83) {
 						evt.preventDefault();
 						if (!keysDown[evt.keyCode]) {
@@ -522,6 +528,10 @@ var AI = {
 				};
 
 				var onKeyUp = function(evt) {
+					if (evt.keyCode == 32) {
+						evt.preventDefault();
+						Controller.startButton();
+					};
 					if (evt.keyCode == 38 || evt.keyCode == 40 || evt.keyCode == 87 || evt.keyCode == 83) {
 						evt.preventDefault();
 						if (keysDown[evt.keyCode]) {
@@ -533,6 +543,7 @@ var AI = {
 
 				var onKeyPress = function(evt) {
 					if (evt.keyCode == 32) {
+
 						evt.preventDefault();
 						Controller.startButton();
 					};
