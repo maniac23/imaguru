@@ -31,13 +31,25 @@
 
   &__categories {
     margin-right: 18.98%;
+    font-size: 0;
 
     span {
       font-size: 1rem;
       color: $orange;
     }
 
-    span:not(:last-child) {
+    a {
+      font-size: 1rem;
+      color: $orange;
+      text-decoration: none;
+
+      &:hover,
+      &:active {
+        text-decoration: underline;
+      }
+    }
+
+    a:not(:last-child) {
       &::after {
         content: "";
 

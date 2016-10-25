@@ -15,10 +15,12 @@
   }
 
   &__item {
-    flex-basis: 20%;
+    flex: 1 0 20%;
 
     img {
       width: 100%;
+      max-width: 300px;
+      height: 100%;
       margin-bottom: -4px;
     }
   }
