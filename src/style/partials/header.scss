@@ -159,6 +159,10 @@
   li {
     flex: none;
     padding: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
 
   a {
