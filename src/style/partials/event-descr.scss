@@ -6,6 +6,10 @@
 
   color: $dark-font-color;
 
+  &__content {
+    flex: 1 1 auto;
+  }
+
   p {
     margin: 0;
     margin-bottom: 40px;
