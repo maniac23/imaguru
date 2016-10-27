@@ -13453,13 +13453,15 @@
          $('#partners-button').fadeOut();
        }
      });
-   
+   if ($('#team li').length > 3) {
+     $('#team-button').show();
      $('#team-button').click(function() {
        $('#team li:hidden').slice(0, 3).fadeIn();
        if ($('#team li').length == $('#team li:visible').length) {
          $('#team-button').fadeOut();
        }
      });
+   }
      $('#jobs-button').click(function() {
        $('#jobs li:hidden').slice(0, 3).fadeIn();
        if ($('#jobs li').length == $('#jobs li:visible').length) {

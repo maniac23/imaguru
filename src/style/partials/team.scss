@@ -37,7 +37,7 @@
   }
 
   &__item {
-    flex: 0 0 30%;
+    flex: 1 0 30%;
     margin-bottom: 40px;
 
     &:nth-child(n+4) {
@@ -76,6 +76,7 @@
 
   &__button {
     @extend .benefits__button;
+    display: none;
   }
 }
 
