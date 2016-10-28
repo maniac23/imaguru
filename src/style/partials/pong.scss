@@ -15,7 +15,7 @@
 		ul {
 			list-style: none;
 			text-align: center;
-			padding: 0;
+			padding: 0 3rem;
 			li {
 				display: inline-block;
 				padding: .7rem;
@@ -32,19 +32,163 @@
 }
 
 #pong-game-field {
-
-
+	position: relative;
+	margin-bottom: 20px;
 	canvas {
-		width: 80%;
+		max-width: calc(100% - 6rem);
+		max-height: 90vh;
 		height: auto;
+		width: auto;
 		margin: 0 auto;
 		display: block;
-		box-shadow: 0 0 2px rgba(255,255,255,.9);
+		// box-shadow: 0 0 2px rgba(255,255,255,.9);
+		border: 1px solid #fff;
 	}
 
+	.info-msg {
+		position: absolute;
+		display: block;
+		text-align: center;
+		left: calc(50% - 25px);
+		top: 50px;
+		box-sizing: border-box;
+
+		background: radial-gradient(rgba(255,255,255,.9) 0%, rgba(255,255,255,.9) 20%, rgba(255,255,255,.3) 100%);
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		font-size: 1.5rem;
+		transform: translateY(0);
+		box-shadow: 0 0 5px rgba(0,0,0,.3);
+		transition: transform 2s, opacity 1.5s;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			height: 100%;
+			vertical-align: middle;
+		}
+		&.bad-message {
+			color: $orange;
+		}
+		&.good-message {
+			color: green;
+		}
+		&.run {
+			transform: translateY(-100px);
+			opacity: 0;
+		}
+	}
+
+	.countdown {
+		position: absolute;
+		display: block;
+		font-size: 30px;
+		color: #fff;
+		font-family: 'Raleway', Arial, sans-serif;
+		top: 5px;
+		left: calc(3rem + 15px);
+		opacity: .6;
+	}
+
+	.game-over {
+		position: absolute;
+
+		padding: 20px 50px;
+		top: 50%;
+		left: 50%;
+		background: linear-gradient(to right, $orange 0%, $orange 50%, $blue 50%, $blue 100%);
+		transform: translate(-50%, -50%);
+		color: #fff;
+		font-family: 'Raleway', Arial, sans-serif;
+		text-shadow: 0 0 1px rgba(255,255,255,.5);
+		text-align: center;
+		border: 1px solid #fff;
+		border-radius: 10px;
+		visibility: hidden;
+		opacity: 0;
+
+		h2 {
+			font-weight: 400;
+			margin: 0;
+		}
+
+		h3 {
+			font-weight: 300;
+			span {
+				font-weight: 400;
+			}
+		}
+
+		&.show {
+			visibility: visible;
+			opacity: 1;
+			transition: opacity .3s;
+		}
+
+		.non-btn {
+			margin: 0 20px;
+			color: #fff;
+			cursor: pointer;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		.close-button {
+			position: absolute;
+			width: 16px;
+			height: 16px;
+			border-radius: 50%;
+			overflow: hidden;
+			right: 5px;
+			top: 5px;
+			cursor: pointer;
+
+			&:before,
+			&:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 50%;
+				height: 1px;
+				width: 100%;
+				background-color: #fff;
+				transform-origin: 50%, 50%;
+			}
+			&:before {
+				transform: rotateZ(45deg);
+			}
+			&:after {
+				transform: rotateZ(-45deg);
+			}
+		}
+
+	}
 }
 // @media only screen and (max-width: 768px) {
 // 	#pong-game-field {
 // 		transform: rotateZ(90deg);
 // 	}
 // }
+
+@media only screen and (max-width: 540px) {
+	.game-pong {
+		&__text {
+			h3 {
+				padding: 0 2rem;
+			}
+			ul {
+				padding: 0 2rem;
+				&>li {
+					display: block;
+					text-align: left;
+				}
+			}
+		}
+	}
+	#pong-game-field {
+		display: none;
+	}
+}

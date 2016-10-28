@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title>Imaguru</title>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&subset=cyrillic" rel="stylesheet">
+<!-- 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&subset=cyrillic" rel="stylesheet"> -->
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -72,7 +72,15 @@
           <li><a href="#">Блог</a></li>
         </ul>
       </div>
-      <div id="pong-game-field"></div>
+      <div id="pong-game-field">
+        <span class="countdown">30.00</span>
+        <div class="game-over">
+          <h2>Время закончилось</h2>
+          <h3>Результат: <span class="score">0</span></h3>
+          <span class="non-btn closeButton">Продолжить</span><a href="/" class="non-btn link">На главную</a>
+          <div class="closeButton close-button"></div>
+        </div>
+      </div>
       <div class="game-pong__button">
         <a href="/" class="btn">На главную</a>
       </div>
