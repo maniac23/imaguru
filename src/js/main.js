@@ -18,6 +18,7 @@
    //= partials/review-slider.js
    //= partials/tabs.js
    //= partials/pricelist-slider.js
+   //= partials/coworking-slider.js
    //= partials/content-block-slider.js
    //= partials/show.js
    //= partials/image-slider.js
