@@ -1,6 +1,10 @@
 .learn-more {
-	height: 0;
-	padding: 0;
-	overflow: hidden;
-	transition: height .4s;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: height 0.4s;
+
+  & > .colored-info-box:nth-child(2n) {
+    background-color: $grey;
+  }
 }
