@@ -1,0 +1,135 @@
+.woocommerce-breadcrumb {
+  padding: 3px 10.9375%;
+  background-color: rgba(67, 62, 61, 0.6);
+
+  a {
+    margin-right: 15px;
+    padding: 0;
+    font-weight: 400;
+    color: $white-color;
+    opacity: 0.8;
+    transition: all 0.3s ease-in;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      margin-left: 15px;
+      vertical-align: middle;
+      background-color: $orange;
+      border-radius: 50%;
+    }
+  }
+}
+
+.page-title {
+  text-align: center;
+  font-weight: 600;
+  margin: 30px 0;
+  font-size: 2.5rem;
+  color: $dark-font-color;
+}
+
+.woocommerce-result-count {
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.woocommerce-ordering {
+  padding: 0 5%;
+  margin-bottom: 40px;
+
+  select {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+}
+
+.products {
+  padding: 0 5%;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  list-style-type: none;
+
+  li {
+    flex: 0 0 23%;
+    margin-right: 2%;
+    margin-bottom: 30px;
+    box-shadow: 0 0 8px rgba($orange, 70%);
+    border: 2px solid transparent;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s all ease-in;
+
+    &:hover {
+      border: 2px solid $orange;
+      box-shadow: none;
+    }
+
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-decoration: none;
+      color: $dark-font-color;
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      text-align: center;
+      padding: 0 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .price {
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: 500;
+
+    }
+
+    .btn--orange-bg {
+      color: $white-color;
+      width: 70%;
+      padding: 10px 15px;
+      margin: 0 auto 30px;
+      text-align: center;
+      border: 3px solid $orange;
+
+      &:hover {
+        color: $dark-font-color;
+      }
+    }
+  }
+}
+
+
+// ********** MEDIA **************
+
+@media only screen and (max-width: 980px) {
+  .products {
+    li {
+      flex-basis: 48%;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .products {
+    li {
+      flex-basis: 100%;
+    }
+  }
+}
