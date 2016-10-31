@@ -1,6 +1,7 @@
 .woocommerce-breadcrumb {
   padding: 3px 10.9375%;
   background-color: rgba(67, 62, 61, 0.6);
+  font-weight: 700;
 
   a {
     margin-right: 15px;
@@ -123,6 +124,12 @@
     li {
       flex-basis: 48%;
     }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .orderby {
+    width: 100%;
   }
 }
 
