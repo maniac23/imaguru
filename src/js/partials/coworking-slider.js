@@ -6,6 +6,7 @@ $('.events-timetable__list').slick({
   arrows: true,
   draggable: true,
   infinite: false,
+  adaptiveHeight: true,
   responsive: [
     {
       breakpoint: 800,

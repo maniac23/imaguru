@@ -13340,6 +13340,7 @@
      arrows: true,
      draggable: true,
      infinite: false,
+     adaptiveHeight: true,
      responsive: [
        {
          breakpoint: 800,
