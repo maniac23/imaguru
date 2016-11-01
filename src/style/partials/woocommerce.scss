@@ -85,6 +85,12 @@
       text-decoration: none;
       color: $dark-font-color;
       margin-bottom: 30px;
+
+      img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
     }
 
     h3 {
@@ -116,6 +122,140 @@
   }
 }
 
+div[id^="product"] {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 40px 5%;
+}
+
+.images {
+  flex: 1 0 45%;
+  margin-right: 2%;
+  margin-bottom: 40px;
+
+  img {
+    width: 100%;
+    max-width: 450px;
+  }
+}
+
+.summary {
+  flex: 1 0 45%;
+  margin-bottom: 40px;
+
+  h1 {
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
+  .price {
+    font-size: 1.875rem;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+
+  div[itemprop^="description"] {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+    font-weight: 300;
+  }
+
+  .cart {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    input {
+      padding: 10px 15px;
+      outline: none;
+      transition: all 0.3s ease-in;
+
+      &:focus {
+        border-color: $orange;
+        border-style: solid;
+      }
+    }
+
+    .btn--orange-bg {
+      border: 2px solid $orange;
+      padding: 10px 15px;
+
+      &:hover,
+      &:active {
+        background: transparent;
+        color: $dark-font-color;
+      }
+    }
+  }
+
+  .product_meta {
+    font-size: 1.2rem;
+
+    a {
+      color: $orange;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.woocommerce-tabs {
+  flex: 1 0 100%;
+
+  .wc-tabs {
+    display: none;
+  }
+
+  div[id="tab-additional_information"] {
+    h2 {
+      font-weight: 500;
+      font-size: 1.5rem;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 30px;
+    }
+
+    .shop_attributes {
+      border-collapse: collapse;
+      margin-bottom: 60px;
+
+      th,
+      td {
+        border: 1px solid $dark-font-color;
+        padding: 3%;
+      }
+    }
+  }
+}
+
+.related_products {
+  h2 {
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  .products {
+    padding: 0;
+
+    li {
+      flex: 1 0 23%;
+    }
+  }
+}
 
 // ********** MEDIA **************
 
@@ -125,11 +265,31 @@
       flex-basis: 48%;
     }
   }
+
+  .summary {
+    .quantity {
+      margin-left: 5px;
+      margin-bottom: 20px;
+    }
+  }
 }
 
 @media only screen and (max-width: 768px) {
   .orderby {
     width: 100%;
+  }
+
+  .images,
+  .summary {
+    flex: 1 0 100%;
+  }
+
+  .related_products {
+    .products {
+      li {
+        flex: 0 0 48%;
+      }
+    }
   }
 }
 
@@ -137,6 +297,14 @@
   .products {
     li {
       flex-basis: 100%;
+    }
+  }
+
+  .related_products {
+    .products {
+      li {
+        flex: 0 0 100%;
+      }
     }
   }
 }
