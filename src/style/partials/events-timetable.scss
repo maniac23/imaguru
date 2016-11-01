@@ -69,18 +69,19 @@
     //   display: block;
     //   clear: both;
     // }
-    &.tech {
+    &.it,
+    &.mk {
       border-left: 3px solid $green;
     }
 
-    &.meetup,
-    &.startup,
-    &.business,
+    &.mitup,
+    &.startups,
+    &.biz,
     &.courses {
       border-left: 3px solid $orange;
     }
 
-    &.it {
+    &.enterprise {
       border-left: 3px solid $blue;
     }
   }
@@ -129,19 +130,19 @@
       border-right: 1px solid $dark-font-color;
     }
 
-    &[data-category="business"] {
+    &[data-category="biz"] {
       color: $green;
     }
 
-    &[data-category="masterclass"],
-    &[data-category="meetup"],
+    &[data-category="ml"],
+    &[data-category="mitup"],
     &[data-category="courses"],
-    &[data-category="startup"] {
+    &[data-category="startups"] {
       color: $orange;
     }
 
     &[data-category="it"],
-    &[data-category="tech"] {
+    &[data-category="enterprise"] {
       color: $blue;
     }
   }

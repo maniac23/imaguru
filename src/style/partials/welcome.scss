@@ -1,12 +1,17 @@
 .welcome {
-  padding: 60px 11.71875%;
+  padding: 60px 0;
 
   color: $white-color;
 
   background-color: $orange;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 
   &--half {
     flex: 0 0 50%;
+
   }
 
   &--post {

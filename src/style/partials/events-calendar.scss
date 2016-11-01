@@ -19,6 +19,12 @@
       font-size: 1.875rem;
       color: $dark-font-color;
       text-transform: uppercase;
+
+      a {
+        text-decoration: none;
+        color: $dark-font-color;
+        font-weight: 500;
+      }
     }
 
     .month-name {
@@ -63,6 +69,19 @@
       text-align: center;
       color: rgba($dark-font-color, 0.8);
 
+      &.tribe-events-has-events {
+        a {
+          color: $orange;
+          text-decoration: none;
+          transition: all 0.3s ease-in;
+
+          &:hover,
+          &:active {
+            text-decoration: underline;
+          }
+        }
+      }
+
       .active {
         padding: 5px;
 
@@ -70,10 +89,6 @@
 
         background: $orange;
         opacity: 1;
-      }
-
-      &.hasEvent {
-        color: $orange;
       }
     }
   }

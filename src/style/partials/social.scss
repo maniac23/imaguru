@@ -6,7 +6,7 @@
   background-color: $blue;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 
   &--fullwidth {
@@ -66,8 +66,7 @@
 // *********** MEDIA **************
 @media only screen and (max-width: 768px) {
   .social {
-    padding: 60px 11.71875%;
-    align-items: flex-start;
+    padding: 60px 0;
 
     &--fullwidth {
       display: block;
