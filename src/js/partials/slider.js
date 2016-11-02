@@ -17,3 +17,6 @@ $('.slider').slick({
     }
   ]
 });
+
+
+$('.slider .slider__slide').equalHeights();

@@ -1,5 +1,5 @@
 $('#events-timetable').slick({
-  slidesToShow: 2,
+  slidesToShow: 3,
   slidesToScroll: 1,
   vertical: true,
   dots: false,
@@ -21,3 +21,5 @@ $('#events-timetable').slick({
     }
   ]
 });
+
+$('#events-timetable .events-timetable__item').equalHeights();

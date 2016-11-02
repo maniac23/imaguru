@@ -4,6 +4,7 @@
  //= ../../bower_components/jquery/dist/jquery.js
  //= ../../bower_components/slick-carousel/slick/slick.js
  //= jquery.magnific-popup.min.js
+ //= jquery.equalheights.min.js
 
  $(document).ready(function() {
    //= partials/common-functions.js

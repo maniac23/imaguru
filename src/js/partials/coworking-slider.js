@@ -22,3 +22,5 @@ $('.events-timetable__list').slick({
     }
   ]
 });
+
+$('.events-timetable__list .events-timetable__item').equalHeights();
