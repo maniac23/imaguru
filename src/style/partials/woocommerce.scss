@@ -1,3 +1,8 @@
+.wrapper > h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
 .woocommerce-breadcrumb {
   padding: 3px 10.9375%;
   background-color: rgba(67, 62, 61, 0.6);
@@ -257,6 +262,92 @@ div[id^="product"] {
   }
 }
 
+
+.woocommerce {
+  form {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  & table {
+    border-collapse: collapse;
+    
+    &.shop_table {
+      border: 1px solid $dark-font-color;
+      border-radius: none;
+    }
+    
+    th {
+      font-size: 1.2rem;
+      border-bottom: 1px solid $dark-font-color;
+    }
+
+    .product-name {
+      a {
+        font-size: 1.2rem;
+        color: $dark-font-color;
+        text-decoration: none;
+      }
+    }
+    
+    .product-price {
+      span {
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+    }
+    
+    .product-subtotal {
+      span {
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+    }
+    
+    td.actions {
+      padding: 20px 15px;
+      
+      .coupon-input {
+        width: 200px;
+        padding: 10px 15px;
+        margin-right: 15px;
+        outline: none;
+        transition: all 0.3s ease-in;
+        
+        &:focus {
+          border-color: $orange;
+          border-style: solid;
+        }
+      }
+    }
+    .btn--orange-bg {
+      padding: 10px 15px;
+      border: 2px solid $orange;
+      margin-bottom: 0;
+      
+      &:hover,
+      &:active {
+        color: $dark-font-color;
+        background-color: transparent;
+      }
+    }
+  }
+  .cart-collaterals {
+    width: 90%;
+    margin: 0 auto;
+    .shop_table {
+      border-radius: none;
+      
+      th, td {
+        border: 1px solid $dark-font-color;
+      }
+    }
+  }
+
+}
+
+
+
 // ********** MEDIA **************
 
 @media only screen and (max-width: 980px) {
@@ -293,11 +384,38 @@ div[id^="product"] {
   }
 }
 
+@media only screen and (max-width: 640px) {
+  .woocommerce {
+    & table {
+      td.actions {
+        .coupon-input {
+          display: block;
+          margin: 0 auto 20px;
+        }
+        
+        .btn--orange-bg {
+          display: block;
+          margin: 0 auto 40px;
+        }
+      }
+    }
+  }
+  
+  .woocommerce table.cart td.actions .coupon input {
+    width: 70%;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .products {
     li {
       flex-basis: 100%;
     }
+    
+    .woocommerce table.cart td.actions .coupon input {
+      width: 90%;
+    }
+    
   }
 
   .related_products {
