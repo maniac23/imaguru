@@ -16,3 +16,5 @@ $('.content-block--slider').slick({
     }
   ]
 });
+
+$('.content-block--slider .content-block__wrapper').equalHeights();

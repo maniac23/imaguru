@@ -274,7 +274,7 @@ div[id^="product"] {
 
   & table {
     border-collapse: collapse;
-    
+
     &.shop_table {
       border: 1px solid $dark-font-color;
       border-radius: none;
@@ -352,6 +352,7 @@ div[id^="product"] {
 .checkout {
   input {
     border: none;
+    border-radius: 0;
     border-bottom: 1px solid $dark-font-color;
     margin-bottom: 20px;
     padding: 5px 10px;
@@ -365,6 +366,7 @@ div[id^="product"] {
 
   select {
     border: none;
+    border-radius: 0;
     border-bottom: 1px solid $dark-font-color;
     padding: 5px 10px;
   }
