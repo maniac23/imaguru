@@ -46,7 +46,7 @@
       border: 2px solid $orange;
       left: 50%;
       transform: translateX(-50%) rotate(45deg);
-      top: -5%;
+      top: -12%;
       width: 30px;
       height: 30px;
       border-bottom: none;
@@ -168,12 +168,28 @@
       text-decoration: underline;
     }
   }
-  &--height-100 {
-
-  }
 }
 
 // *********** MEDIA *************
+@media only screen and (max-width: 768px) {
+  .events-timetable {
+    &__item {
+      display: block !important;
+    }
+
+    &__list {
+      & .slick-arrow {
+        top: -7%;
+      }
+
+      & .slick-next {
+        top: 100%;
+        transform: translateX(-50%) rotate(225deg);
+      }
+    }
+  }
+
+}
 @media only screen and (max-width: 480px) {
   .events-timetable {
     &__item {
