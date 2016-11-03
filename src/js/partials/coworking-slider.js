@@ -1,4 +1,4 @@
-$('#coworking-slider, #events-slider').slick({
+$('#eventsTimetable, #events-slider').slick({
   slidesToShow: 7,
   slidesToScroll: 1,
   vertical: true,
