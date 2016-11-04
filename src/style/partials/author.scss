@@ -1,0 +1,35 @@
+.wrapper   .author{
+  &__title {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.5rem;
+
+    span {
+      font-weight: 500;
+      color: $orange;
+    }
+  }
+
+  &__pic {
+    img {
+      width: 100%;
+      max-width: 150px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &__name {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+
+  &__descr {
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+  }
+
+}
