@@ -32,4 +32,5 @@
    //= partials/course-page.js
    //= partials/for-startups.js
    //= partials/hov-act-boxes.js
+   //= partials/booking-form.js
  });

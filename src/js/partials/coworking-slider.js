@@ -24,7 +24,7 @@ $('#eventsTimetable').slick({
 
 $('.events-timetable__list .events-timetable__item').equalHeights();
 
-$('#events-slider').slick({
+$('#events-slider ul').slick({
   slidesToShow: 5,
   slidesToScroll: 1,
   vertical: true,
