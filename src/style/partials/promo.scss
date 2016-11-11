@@ -8,65 +8,80 @@
   min-height: 90vh;
   padding: 0 $section-padding 60px;
 
-  background: url("../img/main-bg.jpg") center;
-  background-size: cover;
+  background:
+  linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  url("../img/main-bg.jpg") no-repeat center center / cover;
 
   &--event {
-    background: url("../img/event__bg.jpg") center;
-    background-size: cover;
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../img/event__bg.jpg") no-repeat center center / cover;
   }
 
   &--startups {
-    background: url("../img/startups_bg.jpg") center;
-    background-size: cover;
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../img/startups_bg.jpg") no-repeat center center / cover;
   }
 
   &--for-startups {
-    background: url("../img/for-startups.jpg") center;
-    background-size: cover;
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../img/for-startups.jpg") no-repeat center center / cover;
   }
 
   &--academy {
-    background: url("../img/academy_bg.jpg") center;
-    background-size: cover;
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../img/academy_bg.jpg") no-repeat center center / cover;
   }
 
   &--courses {
-    background: url("../img/courses_bg.jpg") center;
-    background-size: cover;
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../img/courses_bg.jpg") no-repeat center center / cover;
   }
 
   &--events {
-    background: url("../img/events_bg.jpg") center;
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../img/events_bg.jpg") no-repeat center center / cover;
     background-size: cover;
   }
 
   &--contact-us {
     min-height: calc(100vh - 79px);
 
-    background: url("../img/contact-us_bg.jpg") center;
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../img/contact-us_bg.jpg") no-repeat center center / cover;
   }
 
   &--blog {
-    background: url("../img/blog__bg.jpg") center;
-    background-size: cover;
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../img/blog__bg.jpg") no-repeat center center / cover;
   }
 
   &--post {
     padding: 200px $section-padding 30px;
 
-    background: url("../img/blog__bg.jpg") center;
-    background-size: cover;
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../img/blog__bg.jpg") no-repeat center center / cover;
   }
 
   &--coworking {
-    background-image: url("../img/coworking_bg.jpg");
-    background-size: cover;
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../img/coworking_bg.jpg") no-repeat center center / cover;
+
   }
 
   &--design {
-    background-image: url("../img/design_bg.jpg");
-    background-size: cover;
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../img/design_bg.jpg") no-repeat center center / cover;
   }
 
 
@@ -80,49 +95,12 @@
     padding: 0 $section-padding 60px;
 
     background-color: rgba(0, 0, 0, 0.5);
-
-    // &__video-button {
-    //   position: absolute;
-    //   top: calc((100% - #{$playVidD}) / 2);
-    //   left: calc((100% - #{$playVidD}) / 2);
-    //
-    //   width: $playVidD;
-    //   height: $playVidD;
-    //
-    //   border: 0.3rem solid $white-color;
-    //   border-radius: 50%;
-    //   cursor: pointer;
-    //   // transition: transform .1s;
-    //   &:hover {
-    //     box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
-    //     transform: scale(1.05);
-    //   }
-    //
-    //   &:active {
-    //     transform: scale(1);
-    //   }
-    //
-    //   &::before {
-    //     content: "";
-    //     position: absolute;
-    //     top: 50%;
-    //     left: 50%;
-    //
-    //     display: block;
-    //     width: 0;
-    //     height: 0;
-    //
-    //     border-top: 1rem solid transparent;
-    //     border-bottom: 1rem solid transparent;
-    //     border-left: 1.5rem solid $white-color;
-    //     transform: translate(-0.5rem, -50%);
-    //   }
-    // }
   }
 
   &--about {
-    background: url("../img/about_bg.jpg") top center;
-    background-size: cover;
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../img/about_bg.jpg") no-repeat top center / cover;
   }
 }
 

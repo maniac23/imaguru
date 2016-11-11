@@ -13723,7 +13723,7 @@
    	});
    
    }(jQuery));
-   if (document.getElementsByClassName('booking-btn')) {
+   if (document.getElementsByClassName('booking-btn').length > 0) {
    
      var buttons = document.getElementsByClassName('booking-btn');
      var form = document.getElementById('booking').getElementsByTagName('form')[0];
