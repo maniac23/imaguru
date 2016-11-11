@@ -53,11 +53,23 @@
     outline: none;
   }
 
-  .btn {
+  input[type="submit"] {
     padding: 7px 20px;
-
     font-weight: 600;
     font-family: Raleway;
+    opacity: 1;
+
+    @extend .btn;
+  }
+
+  input[type="submit"]:disabled {
+    opacity: 0.1;
+
+    &:hover {
+      background: initial;
+      cursor: default;
+      color: initial;
+    }
   }
 }
 
