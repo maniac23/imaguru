@@ -1,13 +1,9 @@
 .course {
   padding: 60px $section-padding;
   background-color: $grey;
-  display: none;
+  display: block;
   background-size: cover;
   background-position: center;
-
-  &--is-active {
-    display: block;
-  }
 
   &--senior {
     .course__title {

@@ -17,7 +17,6 @@
    //= partials/blog-archive-slider.js
    //= partials/comments.js
    //= partials/review-slider.js
-   //= partials/tabs.js
    //= partials/pricelist-slider.js
    //= partials/coworking-slider.js
    //= partials/content-block-slider.js
@@ -34,4 +33,5 @@
    //= partials/hov-act-boxes.js
    //= partials/footer-form-validation.js
    //= partials/booking-form.js
+   //= partials/academy-sliders.js
  });
