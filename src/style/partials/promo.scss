@@ -196,9 +196,18 @@
   &__adress {
     margin-bottom: 10px;
 
-    span {
+    a {
       margin-right: 20px;
+      color: $white-color;
+      opacity: 0.8;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
     }
+
   }
 
   &__phone {
