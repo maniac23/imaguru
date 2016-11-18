@@ -6,3 +6,4 @@ $('#about-academy .slider__slide').equalHeights();
 $('#about-history .slider__slide').equalHeights();
 $('#about-success .slider__slide').equalHeights();
 $('#about-community .slider__slide').equalHeights();
+$('#corps-sponsor .slider__slide').equalHeights();

@@ -13149,6 +13149,7 @@
    $('#about-history .slider__slide').equalHeights();
    $('#about-success .slider__slide').equalHeights();
    $('#about-community .slider__slide').equalHeights();
+   $('#corps-sponsor .slider__slide').equalHeights();
    $('.main-text--slider').slick({
      infinite: true,
      slidesToShow: 1,
