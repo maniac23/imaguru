@@ -11,6 +11,7 @@
    //= partials/menu.js
    //= partials/slider.js
    //= partials/timetable-slider.js
+   //= partials/equalHeight.js
    //= partials/main-text__slider.js
    //= partials/events-gallery.js
    //= partials/gallery.js

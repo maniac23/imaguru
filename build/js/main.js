@@ -13116,9 +13116,6 @@
        }
      ]
    });
-   
-   
-   $('.slider .slider__slide').equalHeights();
    $('#events-timetable').slick({
      slidesToShow: 3,
      slidesToScroll: 1,
@@ -13144,6 +13141,9 @@
    });
    
    $('#events-timetable .events-timetable__item').equalHeights();
+   $('#index-org .slider__slide').equalHeights();
+   $('#index-study .slider__slide').equalHeights();
+   $('#index-success .slider__slide').equalHeights();
    $('.main-text--slider').slick({
      infinite: true,
      slidesToShow: 1,
