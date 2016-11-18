@@ -14,3 +14,4 @@ $('#courses-tech .slider__slide').equalHeights();
 $('#courses-designThinking .slider__slide').equalHeights();
 $('#courses-lang .slider__slide').equalHeights();
 $('#courses-events .slider__slide').equalHeights();
+$('#coworking-partners .slider__slide').equalHeights();

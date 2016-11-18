@@ -13157,6 +13157,7 @@
    $('#courses-designThinking .slider__slide').equalHeights();
    $('#courses-lang .slider__slide').equalHeights();
    $('#courses-events .slider__slide').equalHeights();
+   $('#coworking-partners .slider__slide').equalHeights();
    $('.main-text--slider').slick({
      infinite: true,
      slidesToShow: 1,
