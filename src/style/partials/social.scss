@@ -28,6 +28,7 @@
     &--fullwidth {
       margin-bottom: 0;
       margin-right: 80px;
+      text-align: center;
     }
   }
 
@@ -71,6 +72,10 @@
     &--fullwidth {
       display: block;
       width: 100%;
+    }
+
+    &__list {
+      justify-content: center;
     }
 
     &__title {
