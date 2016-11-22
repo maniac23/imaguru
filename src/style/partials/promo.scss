@@ -295,7 +295,6 @@
 
     font-weight: 400;
     font-size: 2.125rem;
-    text-transform: uppercase;
 
     &--event {
       margin-bottom: 20px;
@@ -591,6 +590,14 @@
 }
 
 @media only screen and (max-width: 650px) {
+  .main-text__title {
+    font-size: 1.8rem;
+
+    &--post {
+      font-size: 1.8rem;
+    }
+  }
+
   .features {
     &__item {
       flex-basis: 50%;
@@ -663,8 +670,6 @@
     &__title {
       &--post {
         margin-bottom: 0;
-
-        font-size: 1.3rem;
       }
     }
   }

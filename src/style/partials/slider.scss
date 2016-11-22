@@ -7,6 +7,7 @@
   color: $dark-font-color;
 
   background-color: $white-color;
+
   &__slide {
     display: flex !important;
   }
@@ -51,7 +52,7 @@
     justify-content: center;
     align-items: flex-start;
     width: 70%;
-    padding: 90px 0;
+    padding: 60px 0;
     margin: auto;
   }
 
@@ -122,4 +123,32 @@
   .slider__content {
     width: 90%;
   }
+
+  .slider__image {
+    flex: 0 0 auto;
+    min-height: 250px;
+    background-position: center;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .slider {
+    &__title {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    &__content {
+      padding: 40px 0;
+    }
+
+    &__image {
+      min-height: 200px;
+    }
+
+    &__price {
+      font-size: 1.6rem;
+    }
+  }
+
 }

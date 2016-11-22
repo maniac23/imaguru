@@ -37,3 +37,9 @@
     margin: 0 auto 60px;
   }
 }
+
+@media only screen and (max-width: 480px) {
+  .tour__content {
+    padding: 40px 0;
+  }
+}

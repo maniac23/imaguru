@@ -49,3 +49,16 @@
     }
   }
 }
+
+
+@media only screen and (max-width: 480px) {
+  .reviews {
+    &__name {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}
