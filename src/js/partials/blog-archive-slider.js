@@ -28,7 +28,7 @@ $('.blog-archive').each(function() {
     // вставляем заглушку
     $(this).find('.blog-archive__slider').append('<div class=\'blog-archive__slide\'><img src=\'img/blog_slider3.jpg\' height=\'420\'><div class=\'blog-archive__overlay blog-archive__overlay--subscribe\'><h3 class=\'blog-archive__title blog-archive__title--subscribe\'>Прямо сейчас мы пишем для ваc новый пост</h3><a href=\'#\' class=\'blog-archive__subscribe\'>Подписаться на обновления</a></div></div>');
     // вставляем скрытую форму подписки
-    $(this).append('<div class=\'blog-subscribe\'><h2 class=\'blog-subscribe__title\'>Новостная рассылка</h2><form class=\'blog-subscribe__form\'><input type=\'email\' placeholder=\'Введите ваш Email\'><button type=\'submit\' name=\'button\' class=\'btn btn--orange\'>Подписаться</button></form></div>');
+    // $(this).append('<div class=\'blog-subscribe\'><h2 class=\'blog-subscribe__title\'>Новостная рассылка</h2><form class=\'blog-subscribe__form\'><input type=\'email\' placeholder=\'Введите ваш Email\'><button type=\'submit\' name=\'button\' class=\'btn btn--orange\'>Подписаться</button></form></div>');
     // открываем форму по клику
     $(this).find('.blog-archive__subscribe').on('click', function(e) {
       e.preventDefault();
