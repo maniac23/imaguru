@@ -35,4 +35,5 @@
    //= partials/footer-form-validation.js
    //= partials/booking-form.js
    //= partials/academy-sliders.js
+   //= partials/form-add-title.js
  });

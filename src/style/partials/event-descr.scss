@@ -8,6 +8,24 @@
 
   &__content {
     flex: 1 1 auto;
+
+    a {
+      color: $orange;
+      text-decoration: none;
+
+      &:hover,
+      &:active {
+        text-decoration: underline;
+      }
+    }
+
+    ul {
+      font-size: 1.25rem;
+
+      li {
+        padding: 10px 5px;
+      }
+    }
   }
 
   p {
@@ -70,8 +88,11 @@
   }
 
   &__organizer {
+    color: $orange;
+
     strong {
       font-weight: 600;
+      color: $dark-font-color;
     }
   }
 

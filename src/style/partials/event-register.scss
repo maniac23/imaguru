@@ -35,6 +35,10 @@
       &:focus {
         border-bottom: 1px solid $orange;
       }
+
+      &.hidden {
+        display: none;
+      }
     }
 
     .btn {
