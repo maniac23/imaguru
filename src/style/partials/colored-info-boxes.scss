@@ -26,6 +26,10 @@
       }
     }
 
+    .colored-info-box__title--inline__item {
+      font-family: "Open Sans", Arial, sans-serif;
+    }
+
     .colored-info-box__description {
       margin: 0 auto;
 
@@ -96,7 +100,7 @@
   }
 
   &__description {
-    max-width: 45em;
+    // max-width: 45em;
 
     ul,
     p {

@@ -61,7 +61,7 @@
     transition: all 0.3s ease-in;
 
     &:hover {
-      a {
+      & > a {
         color: $orange;
       }
     }
@@ -84,7 +84,7 @@
   }
 
   .current-menu-item {
-    a {
+    & > a {
       color: $orange;
     }
   }
@@ -159,10 +159,6 @@
   li {
     flex: none;
     padding: 0;
-
-    &:not(:last-child) {
-      margin-bottom: 10px;
-    }
   }
 
   a {
@@ -193,9 +189,6 @@
     list-style-type: none;
     margin: 0;
 
-    .menu-item {
-
-    }
   }
 
   .menu-item {
@@ -328,6 +321,10 @@
     padding: 20px 0 10px;
 
     background-color: transparent;
+
+    li:not(:last-child) {
+      margin-bottom: 10px;
+    }
 
     a {
       width: 100%;

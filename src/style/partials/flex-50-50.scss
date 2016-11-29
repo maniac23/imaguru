@@ -20,11 +20,11 @@
 @media only screen and (min-width: 768px) {
   .offers .flex-container-50-50:nth-child(2n) {
     .flex-container-50-50__element:last-child {
-      order: 1;
+      order: 2;
     }
 
     .flex-container-50-50__element:first-child {
-      order: 2;
+      order: 1;
     }
   }
 }
