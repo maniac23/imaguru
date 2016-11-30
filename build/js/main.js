@@ -13139,8 +13139,7 @@
        }
      ]
    });
-   
-   $('#events-timetable .events-timetable__item').equalHeights();
+   $('#events-timetable li').equalHeights();
    $('#index-org .slider__slide').equalHeights();
    $('#index-study .slider__slide').equalHeights();
    $('#index-success .slider__slide').equalHeights();
@@ -13149,6 +13148,7 @@
    $('#about-history .slider__slide').equalHeights();
    $('#about-success .slider__slide').equalHeights();
    $('#about-community .slider__slide').equalHeights();
+   $('#eventsTimetable li').equalHeights();
    $('#corps-sponsor .slider__slide').equalHeights();
    $('#courses-study .slider__slide').equalHeights();
    $('#courses-kids .slider__slide').equalHeights();
@@ -13160,6 +13160,10 @@
    $('#coworking-partners .slider__slide').equalHeights();
    $('#dt-experience .slider__slide').equalHeights();
    $('#dt-laboratory .slider__slide').equalHeights();
+   $('#events-slider li').equalHeights();
+   $('#events-academy-middle li').equalHeights();
+   $('#events-academy-junior li').equalHeights();
+   $('#events-academy-children li').equalHeights();
    $('.main-text--slider').slick({
      infinite: true,
      slidesToShow: 1,
@@ -13359,9 +13363,6 @@
      });
    }
    
-   
-   
-   $('.events-timetable__list .events-timetable__item').equalHeights();
    
    $('#events-slider ul').slick({
      slidesToShow: 5,

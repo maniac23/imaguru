@@ -1,5 +1,5 @@
 .social {
-  flex: 0  1 auto;
+  flex: 1 1 auto;
   padding: 60px 0;
   color: $white-color;
 
@@ -8,6 +8,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  max-height: 300px;
 
   &--fullwidth {
     width: 100%;

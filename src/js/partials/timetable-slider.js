@@ -21,5 +21,3 @@ $('#events-timetable').slick({
     }
   ]
 });
-
-$('#events-timetable .events-timetable__item').equalHeights();

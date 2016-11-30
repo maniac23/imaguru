@@ -45,9 +45,6 @@ if(slides < 5) {
 }
 
 
-
-$('.events-timetable__list .events-timetable__item').equalHeights();
-
 $('#events-slider ul').slick({
   slidesToShow: 5,
   slidesToScroll: 1,
