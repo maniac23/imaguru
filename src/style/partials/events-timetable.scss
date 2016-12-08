@@ -57,33 +57,53 @@
       top: 101%;
       transform: translateX(-50%) rotate(225deg);
     }
+
+    & li.events-timetable__item.slick-slide {
+      border-left: 3px solid #f05030;
+      &.it,
+      &.mk {
+        border-left: 3px solid $green;
+      }
+
+      &.mitup,
+      &.startups,
+      &.biz,
+      &.courses {
+        border-left: 3px solid $orange;
+      }
+      &.startups,
+      &.enterprise {
+        border-left: 3px solid $blue;
+      }
+    }
   }
+
 
   &__item {
     margin-bottom: 40px;
     display: flex !important;
     justify-content: flex-start;
-
+    border-left: 3px solid #f05030;
     // &::after {
     //   content: "";
     //   display: block;
     //   clear: both;
     // }
-    &.it,
-    &.mk {
-      border-left: 3px solid $green;
-    }
-
-    &.mitup,
-    &.startups,
-    &.biz,
-    &.courses {
-      border-left: 3px solid $orange;
-    }
-
-    &.enterprise {
-      border-left: 3px solid $blue;
-    }
+    // &.it,
+    // &.mk {
+    //   border-left: 3px solid $green;
+    // }
+    //
+    // &.mitup,
+    // &.startups,
+    // &.biz,
+    // &.courses {
+    //   border-left: 3px solid $orange;
+    // }
+    // &.startups,
+    // &.enterprise {
+    //   border-left: 3px solid $blue;
+    // }
   }
 
   &__time {
@@ -169,6 +189,10 @@
     }
   }
 }
+
+// .events-timetable__list li.events-timetable__item.slick-slide {
+//   border-left: 3px solid #f05030;
+// }
 
 // *********** MEDIA *************
 @media only screen and (max-width: 768px) {

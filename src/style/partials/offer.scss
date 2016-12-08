@@ -24,6 +24,12 @@
     position: relative;
     z-index: 20;
     padding: 60px 10%;
+
+    a {
+      color: $white-color;
+      font-weight: bold;
+      text-decoration: underline;
+    }
   }
 
   &__title {

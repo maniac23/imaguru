@@ -17,6 +17,16 @@ body {
   color: $dark-font-color;
 }
 
+
+a {
+  color: $orange;
+  text-decoration: none;
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+}
+
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
