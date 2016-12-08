@@ -5,6 +5,7 @@
  //= ../../bower_components/slick-carousel/slick/slick.js
  //= jquery.magnific-popup.min.js
  //= jquery.equalheights.min.js
+ //= jquery.maskedinput.min.js
 
  $(document).ready(function() {
    //= partials/common-functions.js
@@ -36,4 +37,5 @@
    //= partials/booking-form.js
    //= partials/academy-sliders.js
    //= partials/form-add-title.js
+   //= partials/phone-mask.js
  });
