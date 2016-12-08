@@ -61,6 +61,12 @@ img {
   display: none;
 }
 
+input {
+  border-radius: none;
+}
+input[type="tel"] {
+  font-family: "Open Sans", Arial, sans-serif;
+}
 
 // ********* MEDIA ***********
 @media only screen and (max-width: 640px) {

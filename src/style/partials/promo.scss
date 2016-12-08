@@ -212,6 +212,10 @@
 
   &__phone {
     @extend .info__adress;
+
+    span {
+      margin-right: 20px;
+    }
   }
 
   &__mail {
