@@ -17,22 +17,10 @@
   }
 
   &__wrap {
-    display: flex;
-    justify-content: space-between;
+    column-count: 2;
+    column-gap: 40px;
   }
 
-  &__left,
-  &__right {
-    flex: 0 0 48%;
-    padding: 0 20px;
-  }
-
-  &__left {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-  }
 
   &__title {
     margin: 0;
@@ -62,12 +50,7 @@
     background-size: contain;
 
     &__wrap {
-      display: block;
-    }
-
-    &__left,
-    &__right {
-      width: 100%;
+      column-count: 1;
     }
 
     &__title {

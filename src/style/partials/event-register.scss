@@ -13,7 +13,7 @@
     font-size: 1.875rem;
   }
 
-  &__form {
+  form {
     width: 37.5%;
     margin: 0 auto;
 
@@ -56,7 +56,7 @@
 // ************ MEDIA ************
 @media only screen and (max-width: 768px) {
   .event-register {
-    &__form {
+    form {
       width: 80%;
     }
   }
