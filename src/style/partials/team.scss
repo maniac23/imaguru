@@ -39,6 +39,7 @@
   &__item {
     flex: 1 0 30%;
     margin-bottom: 40px;
+    padding: 0 20px;
 
     &:nth-child(n+4) {
       display: none;

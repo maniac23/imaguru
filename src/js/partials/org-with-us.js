@@ -20,6 +20,7 @@
     autoplay: true
   });
 
+  $('.slider-block__catering article').equalHeights();
 // скрытые формы
 	// var offers = $('.offer-item');
 	// for (var i = 0; i < offers.length; i++) {

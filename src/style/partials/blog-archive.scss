@@ -23,7 +23,11 @@
   &__slide {
     position: relative;
 
-    flex: 1 0 30%;
+    flex: 0 0 30%;
+
+    &--flex {
+      flex: 1 0 30%;
+    }
 
     img {
       display: block;
