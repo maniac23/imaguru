@@ -28,8 +28,20 @@
     display: none;
     justify-content: space-between;
 
+    & > div {
+      width: 100%;
+    }
+
     &--is-visible {
       display: flex;
+    }
+
+    form {
+      text-align: center;
+
+      input {
+        margin: 0 auto 30px;
+      }
     }
   }
 
