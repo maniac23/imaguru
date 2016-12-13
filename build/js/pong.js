@@ -1,1 +1,817 @@
-var animationFrame=function(){return requestAnimationFrame||webkitRequestAnimationFrame||mozRequestAnimationFrame||oRequestAnimationFrame||msRequestAnimationFrame||function(e){setTimeout(e,1e3/60)}}(),getRandom=function(e,t){return Math.round(Math.random()*(t-e)+e)},probably=function(e){return e=e||.5,Math.random()<e},Model={fieldWidth:2e3,fieldHeight:1e3,startTime:30,currentTime:null,score:0,scores:{left:4,right:4},ball:{},leftPlatform:{},rightPlatform:{},const:{platformVelocity:500},gameItems:[],getItem:function(e){var t=this;t.gameItems.forEach(function(t){if(t.name==e)return t})},resetGame:function(){this.ball={name:"ball",type:"ball",size:{x:50,y:50},position:{x:0,y:0},velocity:{x:1500,y:0},acceleration:{x:0,y:0}},this.leftPlatform={name:"leftPlatform",type:"platform",size:{x:20,y:200},position:{x:-990,y:0},velocity:{x:0,y:0},acceleration:{x:0,y:0}},this.rightPlatform={name:"rightPlatform",type:"platform",size:{x:17,y:200},position:{x:990,y:0},velocity:{x:0,y:0},acceleration:{x:0,y:0}},this.score=0,this.currentTime=this.startTime,this.gameItems=[this.ball,this.leftPlatform,this.rightPlatform]},tick:function(e){e=e||1e3/60;var t=this;t.playScene(e).mayBeBonus().countdown(e).scoreUp(e).checkCollisions(),AI.play(),View.drawAllItems(t.gameItems),View.drawCounter(t.currentTime)},countdown:function(e){return this.currentTime-=e/1e3,this.currentTime<0&&(this.currentTime=0,$(document).trigger("gameover")),this},scoreUp:function(e){return this.score+=e/100,this},playScene:function(e){var t=this;return t.gameItems.forEach(function(t){t.position.x+=t.velocity.x*e/1e3,t.position.y+=t.velocity.y*e/1e3,t.velocity.x+=t.acceleration.x*e/1e3,t.velocity.y+=t.acceleration.y*e/1e3}),t},checkCollisions:function(){var e=this;return e.gameItems.forEach(function(t,o){var i=function(e,t){switch(e.type){case"ball":e.velocity[t]*=-1,"x"==t&&Model.changeTime(5*(e.position.x<0?1:-1));break;case"platform":e.velocity[t]=0}};t.position.x+t.size.x/2>e.fieldWidth/2?(t.position.x=e.fieldWidth/2-t.size.x/2,i(t,"x")):t.position.x-t.size.x/2<-e.fieldWidth/2?(t.position.x=-e.fieldWidth/2+t.size.x/2,i(t,"x")):t.position.y+t.size.y/2>e.fieldHeight/2?(t.position.y=e.fieldHeight/2-t.size.y/2,i(t,"y")):t.position.y-t.size.y/2<-e.fieldHeight/2&&(t.position.y=-e.fieldHeight/2+t.size.y/2,i(t,"y"));for(var n=o+1;n<e.gameItems.length;n++){var a=e.gameItems[o],l=e.gameItems[n],s=null,r=null,c=null;if(a&&l){"ball"===a.type&&(s=e.gameItems[o]),"platform"===l.type&&(r=e.gameItems[n]),"bonus"===l.type&&(c=e.gameItems[n]);var d={x:Math.abs(a.position.x-l.position.x)-a.size.x/2-l.size.x/2,y:Math.abs(a.position.y-l.position.y)-a.size.y/2-l.size.y/2};if(d.x<0&&d.y<0){if(s&&r)if(d.y>=d.x)s.position.y<r.position.y?s.position.y=r.position.y-s.size.y/2-r.size.y/2:s.position.y=r.position.y+s.size.y/2+r.size.y/2,s.velocity.y*=-1,s.velocity.y+=r.velocity.y;else if(d.x>d.y){s.position.x<r.position.x?s.position.x=r.position.x-s.size.x/2-r.size.x/2:s.position.x=r.position.x+s.size.x/2+r.size.x/2;var m=(s.position.y-r.position.y)/r.size.y;s.velocity.y=m*Math.abs(s.velocity.x),s.velocity.x*=-1,s.velocity.x+=r.velocity.x}s&&c&&(delete e.gameItems[n],e.checkBonus(c))}}}}),e},mayBeBonus:function(){var e=this;return probably(.007)&&!e.bonusFlag&&(e.createBonus(),e.bonusFlag=!0,setTimeout(function(){e.bonusFlag=!1},2e3)),e},checkBonus:function(e){var t=e.value;this.changeTime(t)},createBonus:function(){var e,t=getRandom(1,5);e={type:"bonus",position:{x:getRandom(-200,200),y:getRandom(-200,200)},velocity:{x:0,y:0},acceleration:{x:0,y:0},size:{x:75,y:75},value:t},this.gameItems.push(e)},bonusFlag:null,platformUp:function(e){var t=this;t[e].velocity.y=-t.const.platformVelocity},platformDown:function(e){var t=this;t[e].velocity.y=t.const.platformVelocity},stopPlatform:function(e){var t=this;t[e].velocity.y=0},inPlay:!1,gameStarted:!1,startGame:function(){this.gameStarted=!0,this.currentTime=this.startTime,this.startRound()},startRound:function(){this.inPlay=!0,this.gameStep()},pauseGame:function(){this.inPlay=!1},restoreGame:function(){this.inPlay=!0,Model.gameStep()},gameOver:function(){this.inPlay=!1,this.gameStarted=!1,View.drawCounter(this.currentTime),View.drawScore(Math.round(this.score))},gameRestart:function(){this.inPlay=!0,this.resetGame(),View.drawAllItems(this.gameItems).unDrawScore().drawCounter(this.currentTime)},changeTime:function(e){console.log(e),this.currentTime+=e,View.showChangedTime(e),this.currentTime<0&&(this.currentTime=0,$(document).trigger("gameover"))},restartGame:function(){this.resetGame(),View.drawAllItems(this.gameItems)},gameStep:function(){return Model.inPlay&&Model.currentTime>0&&(Model.tick(),requestAnimationFrame(Model.gameStep)),this},init:function(){this.resetGame(),this.gameItems=[this.ball,this.leftPlatform,this.rightPlatform],View.init(this.gameItems)}},View={message:{text:"",sense:null},gameField:"",gameCanvas:"",drawField:"",scoreWindowElement:$(".game-over"),countdownElement:$(".countdown"),canvasWidth:2e3,canvasHeight:1e3,drawItem:function(e){var t=this,o=e.type,i=e.position,n=e.size;switch(t.drawField.beginPath(),o){case"ball":var a={x:i.x+t.canvasWidth/2,y:i.y+t.canvasHeight/2};t.drawField.arc(a.x,a.y,n.x/2,0,2*Math.PI,!1);var l=t.drawField.createRadialGradient(a.x,a.y,0,a.x,a.y,n.x/2);l.addColorStop(0,"white"),l.addColorStop(.8,"white"),l.addColorStop(1,"rgba(255,255,255,.1)"),t.drawField.fillStyle=l;break;case"platform":t.drawField.rect(i.x+t.canvasWidth/2-n.x/2,i.y+t.canvasHeight/2-n.y/2,n.x,n.y),t.drawField.fillStyle="#fff";break;case"bonus":var a={x:i.x+t.canvasWidth/2,y:i.y+t.canvasHeight/2};t.drawField.arc(a.x,a.y,n.x/2,0,2*Math.PI,!1);var l=t.drawField.createRadialGradient(a.x,a.y,0,a.x,a.y,n.x/2);l.addColorStop(0,"rgba(55,255,55,.2)"),l.addColorStop(.8,"rgba(55,255,55,.2)"),l.addColorStop(1,"rgba(55,255,55,.9)"),t.drawField.font="50px Raleway",t.drawField.fillStyle="white",t.drawField.fillText(e.value,a.x-13,a.y+12),t.drawField.fillStyle=l}return t.drawField.fill(),this},drawScore:function(e){return this.scoreWindowElement.find(".score").text(e),this.scoreWindowElement.addClass("show"),this},unDrawScore:function(){return this.scoreWindowElement.removeClass("show"),this},drawCounter:function(e){e=Math.round(100*e)/100+"";var t=e.split(".");return t.length>1?1===t[1].length&&(e+=0):e+=".00",this.countdownElement.text(e),this},drawAllItems:function(e,t){var o=this;return o.drawField.clearRect(0,0,o.canvasWidth,o.canvasHeight),e.forEach(function(e){o.drawItem(e)}),o},showChangedTime:function(e){e>0&&(e="+"+e);var t=$("<span>"+e+"</span>"),o=e<0?"bad-message":"good-message";t.addClass("info-msg "+o),this.gameField.append(t),setTimeout(function(){t.addClass("run")},0),setTimeout(function(){t.remove()},1500)},init:function(e){var t=this;t.gameField=$("#pong-game-field"),t.gameCanvas=$('<canvas width="'+t.canvasWidth+'" height="'+t.canvasHeight+'"></canvas>'),t.gameField.append(t.gameCanvas),t.drawField=t.gameCanvas.get(0).getContext("2d"),t.drawAllItems(e)}},Controller={keysInPlay:{},startButton:function(){Model.gameStarted?Model.inPlay?Model.pauseGame():Model.restoreGame():Model.startGame()},keyDownAction:function(e){switch(e){case 38:Model.platformUp("rightPlatform");break;case 40:Model.platformDown("rightPlatform");break;case 87:Model.platformUp("leftPlatform");break;case 83:Model.platformDown("leftPlatform")}},keyUpAction:function(e){switch(e){case 38:case 40:Model.stopPlatform("rightPlatform");break;case 87:case 83:Model.stopPlatform("leftPlatform")}},touchPlay:function(e){e>Model.rightPlatform.position.y?(this.keysInPlay.touch=40,this.keyDownAction(40)):(this.keysInPlay.touch=38,this.keyDownAction(38))},touchEndPlay:function(){this.keysInPlay.touch&&this.keyUpAction(this.keysInPlay.touch)},gameOver:function(){Model.gameOver()},gameRestart:function(){Model.gameRestart()},bonusAdd:function(){console.log("bonusadded")}},AI={watch:!0,watchTimer:!1,key:null,predictBallPosition:null,timeout:200,ball:Model.ball,position:Model.leftPlatform.position,calculateBallPosition:function(){var e=(Model.ball.position.y+Model.fieldHeight/2,Math.abs(Model.ball.position.x-Model.leftPlatform.position.x)-(Model.leftPlatform.size.x/2+Model.ball.size.x/2)),t=Math.abs(e/Model.ball.velocity.x)*Model.ball.velocity.y,o=Model.ball.position.y+t;return{x:Model.leftPlatform.position.x,y:o}},slide:function(e){var t,o,i,n=this;if("up"==e?i=87:"down"==e&&(i=83),n.key!=i){if(n.key){var t=new Event("keyup");t.keyCode=n.key,document.dispatchEvent(t),n.key=null}var o=new Event("keydown");o.keyCode=i,n.key=i,document.dispatchEvent(o)}},stop:function(){var e=this;if(e.key){var t=new Event("keyup");t.keyCode=e.key,e.key=null,e.predictBallPosition=null,document.dispatchEvent(t)}},play:function(){var e=this;return!!e.watch&&void(Model.ball.velocity.x<0?(e.predictBallPosition=e.calculateBallPosition(),Model.leftPlatform.position.y-e.predictBallPosition.y>50?setTimeout(function(){e.slide("up"),e.timeout=1},e.timeout):Model.leftPlatform.position.y-e.predictBallPosition.y<-50&&setTimeout(function(){e.slide("down"),e.timeout=1},e.timeout)):(e.stop(),e.timeout=200))},setTimer:function(){}};!function(){var e={init:function(){this.main(),this.events()},main:function(){Model.init()},events:function(){keysDown={};var e=function(e){32==e.keyCode&&(e.preventDefault(),Controller.startButton()),38!=e.keyCode&&40!=e.keyCode&&87!=e.keyCode&&83!=e.keyCode||(e.preventDefault(),keysDown[e.keyCode]||(keysDown[e.keyCode]=!0,Controller.keyDownAction(e.keyCode)))},t=function(e){38!=e.keyCode&&40!=e.keyCode&&87!=e.keyCode&&83!=e.keyCode||(e.preventDefault(),keysDown[e.keyCode]&&(keysDown[e.keyCode]=!1,Controller.keyUpAction(e.keyCode)))},o=function(e){32==e.keyCode&&(e.preventDefault(),Controller.startButton())},i=function(e){if(Model.inPlay){e.preventDefault();var t=e.originalEvent.touches[0]||e.originalEvent.changedTouches[0],o=(t.pageY-$("canvas").offset().top)/$("canvas").outerHeight()*$("canvas").attr("height")-$("canvas").attr("height")/2;Controller.touchPlay(o)}},n=function(e){Model.inPlay&&Controller.touchEndPlay()};$(document).on("keydown",e),$(document).on("keyup",t),$(document).on("keypress",o),$(document).on("click",".closeButton",Controller.gameRestart),$(document).on("touchstart","canvas",i),$(document).on("touchend",n),$(document).on("bonusadded",Controller.bonusAdd),$(document).on("gameover",Controller.gameOver)}};e.init()}();
+//  ;(function($){
+
+//  кроссбраузерный AnimationFrame
+	var animationFrame = (function(){
+		return requestAnimationFrame ||
+		webkitRequestAnimationFrame  ||
+		mozRequestAnimationFrame     ||
+		oRequestAnimationFrame       ||
+		msRequestAnimationFrame      ||
+		function(callback){
+			setTimeout(callback, 1000/60);
+		};
+	}());
+// 
+	var getRandom = function(min, max) {
+		return Math.round(Math.random() * (max - min) + min);;
+	};
+
+	var probably = function(prob) {
+		prob = prob || .5;
+		return Math.random() < prob;
+	};
+
+/*  ============= MODEL =============*/
+
+	var Model = {
+
+		fieldWidth : 2000,
+		fieldHeight : 1000,
+
+		startTime: 30,
+		currentTime: null,
+		score: 0,
+
+		scores: {
+			left: 4,
+			right: 4,
+		},
+
+
+		ball : {},
+
+		leftPlatform : {},
+
+		rightPlatform: {},
+
+		const: {
+			platformVelocity: 500,
+		},
+
+		gameItems: [],
+
+		getItem: function(name) {
+			var self = this;
+			var forReturn;
+			self.gameItems.forEach(function(item){
+				if (item.name == name) {
+					return item;
+				};
+			});
+		},
+
+		resetGame: function(){
+
+			this.ball = {
+					name: 'ball',
+					type: 'ball',
+					size: {x: 50, y: 50},
+					position: {x: 0, y: 0},
+					velocity: {x: 1500, y: 0},
+					acceleration: {x: 0, y: 0},
+				};
+
+			this.leftPlatform  = {
+					name: 'leftPlatform',
+					type: 'platform',
+					size: {x: 20, y: 200},
+					position: {x: -990, y: 0},
+					velocity: {x: 0, y: 0},
+					acceleration: {x: 0, y: 0}
+				};
+
+			this.rightPlatform = {
+					name: 'rightPlatform',
+					type: 'platform',
+					size: {x: 17 , y: 200},
+					position: {x: 990, y: 0},
+					velocity: {x: 0, y: 0},
+					acceleration: {x: 0, y: 0}
+				};
+
+			this.score = 0;
+			this.currentTime = this.startTime;
+			this.gameItems = [this.ball, this.leftPlatform, this.rightPlatform];
+		},
+
+		tick: function(dT) {
+
+			dT = dT || 1000/60;
+			var self = this;
+			self.playScene(dT)
+				.mayBeBonus()
+				.countdown(dT)
+				.scoreUp(dT)
+				.checkCollisions();
+
+			AI.play();
+
+			View.drawAllItems(self.gameItems);
+			View.drawCounter(self.currentTime);
+		},
+
+		countdown: function(dT) {
+			this.currentTime -= dT / 1000;
+			if (this.currentTime < 0) {
+				this.currentTime = 0;
+				$(document).trigger('gameover');
+			}
+			return this;
+		},
+
+		scoreUp: function(dT) {
+			this.score += dT / 100;
+			return this;
+		},
+
+		playScene: function(dT) {
+
+			var self = this;
+			self.gameItems.forEach(function(item){
+
+				item.position.x += item.velocity.x * dT / 1000;
+				item.position.y += item.velocity.y * dT / 1000;
+				item.velocity.x += item.acceleration.x * dT / 1000;
+				item.velocity.y += item.acceleration.y * dT / 1000;
+
+			});
+
+			return self;
+		},
+
+		checkCollisions: function(){
+
+			var self = this;
+			self.gameItems.forEach(function(item, i){
+// ball - walls
+			var changeV = function(item, comp) {
+				switch (item.type) {
+					case 'ball' : {
+
+							item.velocity[comp] *= -1;
+							if (comp == 'x') {
+								Model.changeTime(5 * (item.position.x < 0 ? 1 : -1));
+							};
+						break;
+					};
+
+					case 'platform': {
+
+							item.velocity[comp] = 0;
+
+						break;
+					};
+				};
+			};
+
+			if ((item.position.x + item.size.x/2 > self.fieldWidth/2)) {
+
+				item.position.x = self.fieldWidth / 2 - item.size.x/2;
+				changeV(item, 'x');
+
+			} else if (item.position.x - item.size.x/2 < -self.fieldWidth/2){
+
+				item.position.x = -self.fieldWidth/2 + item.size.x/2;
+				changeV(item, 'x');
+
+			} else if (item.position.y + item.size.y/2 > self.fieldHeight/2) {
+
+				item.position.y = self.fieldHeight/2 - item.size.y/2;
+				changeV(item, 'y');
+
+			} else if (item.position.y - item.size.y/2 < -self.fieldHeight/2) {
+
+				item.position.y = -self.fieldHeight/2 + item.size.y/2;
+				changeV(item, 'y');
+
+			};
+
+
+			for (var j = i + 1; j < self.gameItems.length; j++) {
+
+				var item1 = self.gameItems[i];
+				var item2 = self.gameItems[j];
+				var ballItem = null, platformItem = null, bonusItem = null;
+				if (item1 && item2){
+
+
+					if (item1.type === 'ball') {
+						ballItem = self.gameItems[i];
+					};
+
+					if (item2.type === 'platform') {
+						platformItem = self.gameItems[j]
+					};
+
+					if (item2.type === 'bonus') {
+						bonusItem = self.gameItems[j]
+					};
+
+					var distance = {
+						x: Math.abs(item1.position.x - item2.position.x) - item1.size.x/2 - item2.size.x/2,
+						y: Math.abs(item1.position.y - item2.position.y) - item1.size.y/2 - item2.size.y/2,
+					};
+
+					if (distance.x < 0 && distance.y < 0) {
+
+						if (ballItem && platformItem) {
+
+							if (distance.y >= distance.x) {
+								if (ballItem.position.y < platformItem.position.y) {
+									ballItem.position.y = platformItem.position.y - ballItem.size.y/2 - platformItem.size.y/2;
+								} else {
+									ballItem.position.y = platformItem.position.y + ballItem.size.y/2 + platformItem.size.y/2;
+								};
+
+								ballItem.velocity.y *= -1;
+								ballItem.velocity.y += platformItem.velocity.y;
+
+							} else if (distance.x > distance.y) {
+
+								if (ballItem.position.x < platformItem.position.x) {
+									ballItem.position.x = platformItem.position.x - ballItem.size.x/2 - platformItem.size.x/2;
+								} else {
+									ballItem.position.x = platformItem.position.x + ballItem.size.x/2 + platformItem.size.x/2;
+								};
+
+								var keff = (ballItem.position.y - platformItem.position.y)/(platformItem.size.y)
+
+		// 						if (Math.abs(keff) > .3) {
+									ballItem.velocity.y = keff * Math.abs(ballItem.velocity.x);
+		// 						};
+								ballItem.velocity.x *= -1;
+								ballItem.velocity.x += platformItem.velocity.x;
+
+							};
+
+						};
+						if (ballItem && bonusItem) {
+							delete self.gameItems[j];
+							self.checkBonus(bonusItem);
+						};
+					};
+				};
+			};
+
+			});
+			return self;
+		},
+
+		mayBeBonus: function() {
+			var self = this;
+			if (probably(.007) && !self.bonusFlag) {
+				self.createBonus();
+				self.bonusFlag = true;
+				setTimeout(function(){
+					self.bonusFlag = false;
+				}, 2000)
+			};
+			return self;
+		},
+
+		checkBonus: function(bonusItem){
+			var value = bonusItem.value;
+			this.changeTime(value);
+		},
+
+		createBonus: function(){
+			var value = getRandom(1, 5);
+			var bonusItem;
+			bonusItem = {
+				type: 'bonus',
+				position: {
+					x: getRandom(-200,200),
+					y: getRandom(-200,200)
+				},
+				velocity: {
+					x: 0,
+					y: 0
+				},
+				acceleration: {
+					x: 0,
+					y: 0
+				},
+				size: {x: 75, y: 75},
+				value: value,
+			};
+			this.gameItems.push(bonusItem);
+		},
+
+		bonusFlag: null,
+
+
+
+		platformUp : function(name){
+			var self = this;
+			self[name].velocity.y = -self.const.platformVelocity;
+		},
+
+		platformDown : function(name){
+			var self = this;
+			self[name].velocity.y = self.const.platformVelocity;
+		},
+
+		stopPlatform : function(name) {
+			var self = this;
+			self[name].velocity.y = 0;
+		},
+
+		inPlay: false,
+		gameStarted: false,
+
+		startGame: function(){
+			this.gameStarted = true;
+			this.currentTime = this.startTime;
+			this.startRound();
+		},
+
+		startRound: function(){
+			this.inPlay = true;
+			this.gameStep();
+		},
+
+		pauseGame: function(){
+			this.inPlay = false;
+		},
+
+		restoreGame: function() {
+			this.inPlay = true;
+			Model.gameStep();
+		},
+
+		// endRound: function(evt) {
+		// 	this.inPlay = false;
+		// },
+
+		gameOver: function(){
+			this.inPlay = false;
+			this.gameStarted = false;
+			View.drawCounter(this.currentTime);
+			View.drawScore(Math.round(this.score));
+
+		},
+
+		gameRestart: function() {
+			this.inPlay = true;
+			this.resetGame();
+			View.drawAllItems(this.gameItems)
+				.unDrawScore()
+				.drawCounter(this.currentTime);
+		},
+
+		changeTime: function(value){
+				console.log(value)
+				this.currentTime += value;
+				View.showChangedTime(value);
+				if (this.currentTime < 0) {
+					this.currentTime = 0;
+					$(document).trigger('gameover');
+				};
+		},
+
+		restartGame : function() {
+			this.resetGame();
+			View.drawAllItems(this.gameItems);
+		},
+
+		gameStep : function(){
+			if (Model.inPlay && Model.currentTime > 0){
+				Model.tick();
+				requestAnimationFrame(Model.gameStep);
+			};
+			return this;
+		},
+
+		init: function(){
+			this.resetGame();
+			this.gameItems = [this.ball, this.leftPlatform, this.rightPlatform];
+			View.init(this.gameItems);
+			// this.gameStep();
+			// View.saveItems(this.gameItems);
+		},
+
+	};
+
+/*  =========== end MODEL ===========*/
+
+
+
+/*  ============= VIEW =============*/
+//  DOM view
+	var View = {
+
+		message: {
+			text: '',
+			sense: null, //true or false  -  good or bad
+		},
+
+		gameField : '',
+
+		gameCanvas : '',
+		drawField : '',
+
+		scoreWindowElement: $('.game-over'),
+		countdownElement: $('.countdown'),
+
+		canvasWidth : 2000,
+		canvasHeight : 1000,
+
+		drawItem: function(item){
+
+			var self = this;
+			var type = item.type;
+			var position = item.position;
+			var size = item.size;
+			self.drawField.beginPath();
+
+			switch (type) {
+				case 'ball' : {
+					var cords = {
+						x: position.x + self.canvasWidth/2,
+						y:  position.y + self.canvasHeight/2,
+					};
+					self.drawField.arc(cords.x, cords.y, size.x/2 , 0, 2*Math.PI, false);
+					var grd = self.drawField.createRadialGradient(cords.x, cords.y, 0, cords.x, cords.y, size.x/2);
+					grd.addColorStop(0,"white");
+					grd.addColorStop(.8,"white");
+					grd.addColorStop(1,"rgba(255,255,255,.1)");
+					self.drawField.fillStyle = grd;
+					break;
+				};
+				case 'platform': {
+					self.drawField.rect(position.x + self.canvasWidth/2 - size.x/2, position.y + self.canvasHeight/2 - size.y/2, size.x, size.y);
+					self.drawField.fillStyle = '#fff';
+					break;
+				};
+
+				case 'bonus': {
+					var cords = {
+						x: position.x + self.canvasWidth/2,
+						y:  position.y + self.canvasHeight/2,
+					};
+					self.drawField.arc(cords.x, cords.y, size.x/2 , 0, 2*Math.PI, false);
+					var grd = self.drawField.createRadialGradient(cords.x, cords.y, 0, cords.x, cords.y, size.x/2);
+					grd.addColorStop(0,"rgba(55,255,55,.2)");
+					grd.addColorStop(.8,"rgba(55,255,55,.2)");
+					grd.addColorStop(1,"rgba(55,255,55,.9)");
+
+					self.drawField.font="50px Raleway";
+					self.drawField.fillStyle = 'white';
+					self.drawField.fillText(item.value,cords.x-13,cords.y+12);
+
+					self.drawField.fillStyle = grd;
+					break;
+				}
+			};
+
+			self.drawField.fill();
+
+			return this;
+		},
+
+		drawScore: function(score){
+
+			this.scoreWindowElement.find('.score').text(score);
+			this.scoreWindowElement.addClass('show');
+
+			return this;
+		},
+
+		unDrawScore: function(){
+			this.scoreWindowElement.removeClass('show');
+			return this;
+		},
+
+		drawCounter: function(time){
+			time = Math.round(time * 100) / 100 + '';
+			var splited = time.split('.');
+			if (splited.length > 1) {
+				if (splited[1].length === 1) {
+					time += 0;
+				}
+			} else {
+				time += '.00';
+			};
+
+			this.countdownElement.text(time);
+			return this;
+		},
+
+		drawAllItems: function(array, score) {
+
+			var self = this;
+			self.drawField.clearRect(0,0,self.canvasWidth, self.canvasHeight);
+			array.forEach(function(item){
+				self.drawItem(item);
+			});
+
+			return self;
+		},
+
+		showChangedTime: function(value){
+			if (value > 0) { value = '+' + value;}
+			var message = $('<span>' + value +'</span>');
+			var addedClass = value < 0 ? 'bad-message' : 'good-message';
+
+			message.addClass('info-msg ' + addedClass);
+
+			this.gameField.append(message);
+			setTimeout(function(){message.addClass('run');}, 0);
+			setTimeout(function(){
+				message.remove();
+			}, 1500);
+		},
+
+		init: function(array) {
+			var self = this;
+			self.gameField = $('#pong-game-field');
+			self.gameCanvas = $('<canvas width="'+ self.canvasWidth +'" height="'+ self.canvasHeight +'"></canvas>');
+			self.gameField.append(self.gameCanvas);
+			self.drawField = self.gameCanvas.get(0).getContext('2d');
+
+			// array.forEach(function(item, i){
+			// 	// self.viewItems[i] = item;
+			// });
+
+			self.drawAllItems(array);
+		},
+
+	};
+
+/*  =========== end VIEW ===========*/
+
+
+
+/*  ============= CONTROLLER =============*/
+
+	var Controller = {
+// up - 38; down - 40
+		keysInPlay: {},
+		startButton: function() {
+
+			if (!Model.gameStarted){
+				Model.startGame();
+			} else {
+				if (Model.inPlay) {
+					Model.pauseGame();
+				} else {
+					Model.restoreGame();
+				}
+			}
+		},
+		keyDownAction: function(keyCode) {
+			switch (keyCode) {
+				case 38: {
+					Model.platformUp('rightPlatform');
+					break;
+				};
+				case 40 : {
+					Model.platformDown('rightPlatform');
+					break;
+				};
+				case 87 : {
+					Model.platformUp('leftPlatform');
+					break;
+				};
+				case 83 : {
+					Model.platformDown('leftPlatform');
+				};
+			}
+		},
+
+		keyUpAction: function(keyCode) {
+			switch (keyCode) {
+				case 38:
+				case 40: {
+					Model.stopPlatform('rightPlatform');
+					break;
+				};
+				case 87:
+				case 83: {
+					Model.stopPlatform('leftPlatform');
+				}
+			};
+		},
+
+		touchPlay: function(touchY) {
+			if (touchY > Model.rightPlatform.position.y) {
+				this.keysInPlay.touch = 40;
+				this.keyDownAction(40);
+			} else {
+				this.keysInPlay.touch = 38;
+				this.keyDownAction(38);
+			};
+		},
+
+		touchEndPlay: function() {
+			if (this.keysInPlay.touch){
+				this.keyUpAction(this.keysInPlay.touch);
+			}
+		},
+
+		gameOver: function(){
+			Model.gameOver();
+		},
+
+		gameRestart: function() {
+			Model.gameRestart();
+		},
+
+		bonusAdd: function(){
+			console.log('bonusadded');
+		},
+	};
+
+/*  =========== end CONTROLLER ===========*/
+
+var AI = {
+
+	watch: true,
+	watchTimer: false,
+	key: null,
+	predictBallPosition: null,
+	timeout: 200,
+	ball: Model.ball,
+	position: Model.leftPlatform.position,
+
+	calculateBallPosition: function(){
+		var self = this;
+		var ballAbsY = Model.ball.position.y + Model.fieldHeight / 2;
+		var deltaX = Math.abs(Model.ball.position.x - Model.leftPlatform.position.x) - (Model.leftPlatform.size.x / 2 + Model.ball.size.x / 2);
+		// console.log( )
+		var deltaY = Math.abs(deltaX/Model.ball.velocity.x)*Model.ball.velocity.y;
+
+		var predictY = Model.ball.position.y + deltaY;
+
+		return {x: Model.leftPlatform.position.x, y: predictY};
+	},
+
+	slide: function(flag){
+		var self = this;
+		var eventUp;
+		var eventDown;
+		var flagKey;
+
+		if (flag == 'up') {
+			flagKey = 87;
+		} else if (flag == 'down') {
+			flagKey = 83;
+		};
+
+		if (self.key != flagKey) {
+
+			if (self.key) {
+				var eventUp = new Event('keyup');
+				eventUp.keyCode = self.key;
+				document.dispatchEvent(eventUp);
+				self.key = null;
+			}
+			var eventDown = new Event('keydown');
+			eventDown.keyCode = flagKey;
+			self.key = flagKey;
+			document.dispatchEvent(eventDown);
+		};
+
+	},
+
+	stop: function(){
+		var self = this;
+		if (self.key) {
+			var event = new Event('keyup');
+			event.keyCode = self.key;
+			self.key = null;
+			self.predictBallPosition = null;
+			document.dispatchEvent(event);
+		};
+	},
+
+	play : function(){
+		var self = this;
+		if (self.watch) {
+			if (Model.ball.velocity.x < 0) {
+				// if (!self.predictBallPosition) {
+					self.predictBallPosition = self.calculateBallPosition();
+					 // console.log(self.predictBallPosition)
+				// }
+				if (Model.leftPlatform.position.y - self.predictBallPosition.y > 50 ) {
+					setTimeout(function(){
+						self.slide('up')
+						self.timeout = 1;
+					}, self.timeout);
+					// console.log ('up')
+				} else if (Model.leftPlatform.position.y - self.predictBallPosition.y < -50){
+					setTimeout(function(){
+						self.slide('down');
+						self.timeout = 1;
+					}, self.timeout);
+				};
+			} else {
+				self.stop();
+				self.timeout = 200;
+			};
+		} else {
+			return false;
+		};
+	},
+
+	setTimer: function(){
+		// var self.watchTimer = setTimeout( );
+	}
+
+};
+
+//  app
+	(function(){
+
+		var app = {
+
+			init: function(){
+
+				this.main();
+				this.events();
+
+			},
+
+			main: function(){
+				Model.init();
+
+			},
+
+			events: function() {
+				keysDown = {};
+
+				var onKeyDown = function(evt){
+// 32 - space	
+// console.log(evt.keyCode)
+					if (evt.keyCode == 32) {
+						evt.preventDefault();
+						Controller.startButton();
+					};
+					if (evt.keyCode == 38 || evt.keyCode == 40 || evt.keyCode == 87 || evt.keyCode == 83) {
+						evt.preventDefault();
+						if (!keysDown[evt.keyCode]) {
+							keysDown[evt.keyCode] = true;
+							Controller.keyDownAction(evt.keyCode);
+						};
+
+					};
+				};
+
+				var onKeyUp = function(evt) {
+					if (evt.keyCode == 38 || evt.keyCode == 40 || evt.keyCode == 87 || evt.keyCode == 83) {
+						evt.preventDefault();
+						if (keysDown[evt.keyCode]) {
+							keysDown[evt.keyCode] = false;
+							Controller.keyUpAction(evt.keyCode);
+						};
+					};
+				};
+
+				var onKeyPress = function(evt) {
+					if (evt.keyCode == 32) {
+
+						evt.preventDefault();
+						Controller.startButton();
+					};
+				};
+
+// touch events 
+				var onTouchStart = function(evt) {
+					if (Model.inPlay) {
+						evt.preventDefault();
+
+						var touch = evt.originalEvent.touches[0] || evt.originalEvent.changedTouches[0];
+				
+						var relY = (touch.pageY - $('canvas').offset().top)/($('canvas').outerHeight()) * $('canvas').attr('height') - $('canvas').attr('height') / 2 ;
+
+						Controller.touchPlay(relY);
+					};
+				};
+
+				var onTouchEnd = function(evt) {
+					if (Model.inPlay) {
+						Controller.touchEndPlay();
+					};
+				};
+
+				$(document).on('keydown', onKeyDown);
+				$(document).on('keyup', onKeyUp);
+				$(document).on('keypress', onKeyPress);
+
+				$(document).on('click', '.closeButton', Controller.gameRestart);
+
+
+				$(document).on('touchstart', 'canvas', onTouchStart);
+				$(document).on('touchend', onTouchEnd);
+
+				$(document).on('bonusadded', Controller.bonusAdd);
+				$(document).on('gameover', Controller.gameOver);
+			},
+
+		};
+
+		app.init();
+
+	}());
+
+//  }(jQuery));
