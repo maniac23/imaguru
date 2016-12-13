@@ -1,69 +1,30 @@
 ;(function($){
 
-//icons - tabs
-
-	// //promo feature tabs
-	// var listItems = $('.promo__main__features-carousel__list__item');
-	// var blocksForShow = $('.feature-text');
-	// createTabDep(listItems, blocksForShow);
-// >>>>>>>>>>>>>>>>>>>>>>>>
 	var list = $('.promo__main__features-carousel__list');
-	var listItems = list.children('li');
-	var featureText = $('.feature-text');
-
 	if (list.is('*')) {
-		var showFeatureText = function(index) {
-			featureText.eq(index).addClass('_active').siblings().removeClass('_active');
-		};
+		$('.sliderFor').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			fade: true,
 
-		list.slideTo = function(slide){
-			var self = this;
-			var viewArea = self.parent().outerWidth();
-			var slideWidth = slide.outerWidth();
-			var slideOffset = slide.position().left;
-			var toTranslate = -(slideOffset + slideWidth / 2 - viewArea / 2);
-			self.css('transform', 'translateX(' + toTranslate + 'px)');
-		};
-
-		listItems.each(function(){
-			$(this).data('index', $(this).index());
+			asNavFor: '.sliderNav'
 		});
-
-		list.append(listItems.eq(0).clone(true));
-		list.prepend(listItems.eq(listItems.length - 1).clone(true));
-		listItems.eq(0).addClass('_active');
-		showFeatureText(listItems.eq(0).data('index'));
-
-		var sliderTick = function(){
-			var currSlide = list.children('li').filter('._active')
-			var currIndex = list.children('li').index(currSlide);
-			var nextSlide = list.children('li').eq(currIndex + 1);
-			list.append(nextSlide.clone(true));
-			currSlide.removeClass('_active');
-			nextSlide.addClass('_active');
-			list.slideTo(nextSlide);
-			showFeatureText(nextSlide.data('index'));
-		};
-
-		// AUTOPLAY
-		var carouselTimer
-		var setTimer = function(){
-			carouselTimer = setInterval(sliderTick, 5000);
-		};
-		var unSetTimer = function(){
-			clearInterval(carouselTimer);
-		};
-
-		setTimer();
-
-		featureText.on('mouseenter', function(){
-			unSetTimer();
-		});
-
-		featureText.on('mouseleave', function(){
-			setTimer();
+		$('.sliderNav').slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			asNavFor: '.sliderFor',
+			autoplay: true,
+			autoplaySpeed: 5000,
+			arrows: false,
+			dots: false,
+			centerMode: true,
+			focusOnSelect: true
 		});
 	};
+
+
+
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 	//success story tabs
