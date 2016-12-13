@@ -33,36 +33,6 @@
   position: relative;
   transition: all 0.3s ease-in;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: -2.5%;
-    left: 15%;
-    display: block;
-    width: 20px;
-    height: 20px;
-    background-color: #f2f2f2;
-    transform: rotate(-45deg);
-  }
-
-  &#timetable {
-    &::before {
-      left: 30%;
-    }
-  }
-
-  &#team {
-    &::before {
-      left: 60%;
-    }
-  }
-
-  &#pres {
-    &::before {
-      left: 80%;
-    }
-  }
-
   &--active {
     display: flex;
   }

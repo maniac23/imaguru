@@ -38,4 +38,5 @@
    //= partials/academy-sliders.js
    //= partials/form-add-title.js
    //= partials/phone-mask.js
+   //= partials/tabs.js
  });
