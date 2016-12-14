@@ -46,7 +46,7 @@ if(slides < 5) {
 
 
 $('#events-slider ul').slick({
-  slidesToShow: 5,
+  slidesToShow: 7,
   slidesToScroll: 1,
   vertical: true,
   dots: false,

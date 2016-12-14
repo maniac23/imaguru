@@ -5,6 +5,10 @@
   justify-content: space-around;
   align-items: center;
 
+  .btn {
+    margin-bottom: 0;
+  }
+
   &--transparent {
     background-color: transparent;
 
@@ -23,10 +27,6 @@
     .banner__text {
       flex-basis: 70%;
     }
-
-    .btn {
-      margin-bottom: 0;
-    }
   }
 
   &__text {
@@ -36,6 +36,10 @@
     flex: 0 0 60%;
     margin: 0;
     padding: 0;
+
+    &--hidden {
+      display: none;
+    }
 
     h3 {
       font-size: 1.875rem;

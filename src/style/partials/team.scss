@@ -40,9 +40,16 @@
     flex: 1 0 30%;
     margin-bottom: 40px;
     padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     &:nth-child(n+4) {
       display: none;
+    }
+
+    & > p:not(.team__position){
+      flex: 1;
     }
   }
 
@@ -53,6 +60,7 @@
     border-radius: 50%;
     margin: 0 auto;
     margin-bottom: 30px;
+    object-fit: cover;
   }
 
   &__name {
@@ -81,22 +89,6 @@
   }
 }
 
-.team--vacancies {
-  .team__item {
-    position: relative;
-
-    .btn {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-
-      &:active {
-        transform: translateX(-50%) scale(0.97);
-      }
-    }
-  }
-}
 // ************ MEDIA *************
 
 @media only screen and (max-width: 640px) {

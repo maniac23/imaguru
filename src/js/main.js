@@ -39,4 +39,6 @@
    //= partials/form-add-title.js
    //= partials/phone-mask.js
    //= partials/tabs.js
+   //= partials/secret.js
+    //= partials/scroll.js
  });
