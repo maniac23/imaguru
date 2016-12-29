@@ -46,7 +46,7 @@ button {
 
     &:hover {
       background-color: $orange;
-      color: $white-color;
+      color: $white-color !important;
     }
   }
 

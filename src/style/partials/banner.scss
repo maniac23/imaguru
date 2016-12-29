@@ -1,9 +1,21 @@
 .banner {
   background-color: $orange;
   padding: 60px $section-padding;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  display: block;
+
+  &__wrap {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &--hidden {
+      display: none;
+
+      p {
+        text-align: center;
+      }
+    }
+  }
 
   .btn {
     margin-bottom: 0;
@@ -36,10 +48,6 @@
     flex: 0 0 60%;
     margin: 0;
     padding: 0;
-
-    &--hidden {
-      display: none;
-    }
 
     h3 {
       font-size: 1.875rem;

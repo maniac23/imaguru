@@ -38,19 +38,20 @@
 
   &__item {
     flex: 1 0 30%;
+    max-width: 30%;
     margin-bottom: 40px;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
 
     &:nth-child(n+4) {
       display: none;
     }
 
-    & > p:not(.team__position){
-      flex: 1;
-    }
+    // & > p:not(.team__position){
+    //   flex: 1;
+    // }
   }
 
   &__image {
@@ -81,6 +82,7 @@
 
   &__item-descr {
     @extend .team__position;
+    flex: 1;
   }
 
   &__button {

@@ -81,15 +81,13 @@
           }
         }
       }
-
-      .active {
-        padding: 5px;
-
-        color: white !important;
-
-        background: $orange;
-        opacity: 1;
-      }
     }
   }
+}
+
+a.selected {
+  padding: 5px;
+  color: white !important;
+  background: $orange;
+  opacity: 1;
 }
