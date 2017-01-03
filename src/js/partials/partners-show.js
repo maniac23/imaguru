@@ -1,6 +1,12 @@
-  $('#partners-button').click(function() {
-    $('#partners li:hidden').slice(0, 4).fadeIn();
-    if ($('#partners li').length == $('#partners li:visible').length) {
-      $('#partners-button').fadeOut();
-    }
-  });
+  if ($('.partners__item').length > 3) {
+    $('#partners-button').show();
+    $('#partners-button').click(function() {
+      $('#partners li:nth-child(n+4)').fadeToggle(400, function() {
+        if ($('#partners li:nth-child(n+4)').is(":visible")) {
+          $('#partners-button').text('Скрыть');
+        } else {
+          $('#partners-button').text('Показать еще');
+        }
+      });
+    });
+  }

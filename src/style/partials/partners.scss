@@ -24,7 +24,7 @@
     flex: 1 1 25%;
     margin-bottom: 40px;
 
-    &:nth-child(1) {
+    &:nth-child(n+4) {
       display: none;
     }
 
@@ -38,6 +38,7 @@
 
   &__button {
     @extend .benefits__button;
+    display: none;
   }
 }
 
