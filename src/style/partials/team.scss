@@ -81,6 +81,7 @@
 
   &__item-descr {
     @extend .team__position;
+    font-weight: 300;
     flex: 1;
   }
 
