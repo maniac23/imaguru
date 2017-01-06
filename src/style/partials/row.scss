@@ -16,9 +16,12 @@
   flex-direction: column;
   justify-content: center;
   padding: 60px 1% 60px 5%;
-
+  min-height: 500px;
   font-weight: 500;
   color: $white-color;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex: 1;
 
   background-color: $orange;
 
@@ -292,12 +295,18 @@
 
 @media screen and (max-width: 768px) {
   .row {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 
   .content-block {
     display: block;
     width: 100%;
+    min-height: 200px;
+
+    &--order {
+      order: -1;
+    }
 
     &--slider {
       .slick-dots {
