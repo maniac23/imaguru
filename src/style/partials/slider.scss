@@ -8,6 +8,21 @@
 
   background-color: $white-color;
 
+  &--orange {
+    .slider__text {
+      background-color: $orange;
+      color: $white-color;
+    }
+
+    .slider__title {
+      color: $white-color;
+    }
+
+    .slick-dots button {
+      background-color: $white-color;
+    }
+  }
+
   &__slide {
     display: flex !important;
   }
