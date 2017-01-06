@@ -58,6 +58,7 @@
     font-weight: 600;
     font-family: Raleway;
     opacity: 1;
+    min-width: 250px;
 
     @extend .btn;
   }

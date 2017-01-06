@@ -114,17 +114,17 @@
       flex: 0 0 50rem;
     }
   }
-
-  .btn {
-    // font-size: 2rem;
-    // padding: 20px 40px;
-  }
 }
 
 @media only screen  and (max-width: 980px) {
   .banner {
-    flex-direction: column;
-    min-height: 400px;
+    &__wrap {
+      display: block;
+
+      &--hidden {
+        display: none;
+      }
+    }
 
     &__text {
       flex: 0 0 100%;
@@ -147,6 +147,13 @@
       .banner__text {
         margin-bottom: 30px;
       }
+    }
+
+    .btn {
+      display: block;
+      margin: 0 auto;
+      width: 70%;
+      max-width: 220px;
     }
   }
 
