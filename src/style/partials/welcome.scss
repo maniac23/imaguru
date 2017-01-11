@@ -57,7 +57,7 @@
 // ************ MEDIA ************
 @media only screen and (max-width: 768px) {
   .welcome {
-    min-height: 100px;
+    flex: 1 1 auto;
   }
 }
 
