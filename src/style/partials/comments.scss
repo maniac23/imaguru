@@ -4,6 +4,11 @@
 
   background-color: $grey;
 
+  .btn {
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
+
   &__wrapper {
     padding: 45px $section-padding;
 
