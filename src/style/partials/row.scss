@@ -12,7 +12,7 @@
   position: relative;
 
   display: flex;
-  flex-basis: 50%;
+  flex: 0 0 50%;
   flex-direction: column;
   justify-content: center;
   padding: 60px 1% 60px 5%;
@@ -21,7 +21,6 @@
   color: $white-color;
   background-repeat: no-repeat;
   background-size: cover;
-  flex: 1;
 
   background-color: $orange;
 
