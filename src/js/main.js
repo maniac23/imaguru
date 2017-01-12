@@ -1,12 +1,12 @@
 /*
  * Third party
  */
- //= ../../bower_components/jquery/dist/jquery.js
+
  //= ../../bower_components/slick-carousel/slick/slick.js
  //= jquery.magnific-popup.min.js
  //= jquery.equalheights.min.js
  //= jquery.maskedinput.min.js
-
+jQuery(function($) {
  $(document).ready(function() {
    //= partials/common-functions.js
    //= partials/menu.js
@@ -42,4 +42,5 @@
    //= partials/tabs.js
    //= partials/secret.js
     //= partials/scroll.js
+ });
  });

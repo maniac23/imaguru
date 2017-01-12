@@ -321,10 +321,14 @@
   .content-block {
     display: block;
     width: 100%;
-    min-height: 200px;
+    min-height: initial;
 
     &--order {
       order: -1;
+    }
+
+    &--image {
+      min-height: 200px;
     }
 
     &--slider {
