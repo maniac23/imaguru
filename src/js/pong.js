@@ -1,5 +1,5 @@
 //  ;(function($){
-
+jQuery(function($) {
 //  кроссбраузерный AnimationFrame
 	var animationFrame = (function(){
 		return requestAnimationFrame ||
@@ -11,7 +11,7 @@
 			setTimeout(callback, 1000/60);
 		};
 	}());
-// 
+//
 	var getRandom = function(min, max) {
 		return Math.round(Math.random() * (max - min) + min);;
 	};
@@ -741,7 +741,7 @@ var AI = {
 				keysDown = {};
 
 				var onKeyDown = function(evt){
-// 32 - space	
+// 32 - space
 // console.log(evt.keyCode)
 					if (evt.keyCode == 32) {
 						evt.preventDefault();
@@ -775,13 +775,13 @@ var AI = {
 					};
 				};
 
-// touch events 
+// touch events
 				var onTouchStart = function(evt) {
 					if (Model.inPlay) {
 						evt.preventDefault();
 
 						var touch = evt.originalEvent.touches[0] || evt.originalEvent.changedTouches[0];
-				
+
 						var relY = (touch.pageY - $('canvas').offset().top)/($('canvas').outerHeight()) * $('canvas').attr('height') - $('canvas').attr('height') / 2 ;
 
 						Controller.touchPlay(relY);
@@ -813,5 +813,6 @@ var AI = {
 		app.init();
 
 	}());
+   });
 
 //  }(jQuery));
