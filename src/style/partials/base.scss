@@ -36,9 +36,15 @@ ul {
   margin: 0;
 }
 
-p,
 li {
   font-size: 1.25rem;
+  font-weight: 400;
+  padding: 0.4rem 0;
+}
+
+p {
+  font-size: 1.25rem;
+  font-weight: 400;
 }
 
 .wrapper {
