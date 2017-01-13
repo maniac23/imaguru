@@ -23,20 +23,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    cursor: pointer;
     transition: all 0.3s ease-in;
-
-    &:hover {
-      .we-offer__title {
-        color: $orange;
-      }
-
-      .we-offer__icon {
-        use {
-          fill: $orange !important;
-        }
-      }
-    }
   }
 
   &__title {
@@ -51,11 +38,11 @@
     width: 3rem;
     height: 3rem;
     margin-bottom: 1rem;
-
-    use {
-      fill: $dark-font-color !important;
-      transition: all 0.3s ease-in;
-    }
+    //
+    // use {
+    //   fill: $dark-font-color !important;
+    //   transition: all 0.3s ease-in;
+    // }
   }
 
   &__text {
