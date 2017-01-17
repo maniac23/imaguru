@@ -1,4 +1,4 @@
-$('#events-timetable').slick({
+$('#teenguru').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   vertical: true,
@@ -10,13 +10,13 @@ $('#events-timetable').slick({
     {
       breakpoint: 800,
       settings: {
-        slidesToShow: 3
+        slidesToShow: 4
       }
     },
     {
       breakpoint: 640,
       settings: {
-        slidesToShow: 1
+        slidesToShow: 2
       }
     }
   ]

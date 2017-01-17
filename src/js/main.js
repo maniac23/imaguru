@@ -37,6 +37,7 @@ jQuery(function($) {
    //= partials/phone-mask.js
    //= partials/tabs.js
    //= partials/secret.js
-    //= partials/scroll.js
+   //= partials/scroll.js
+   //= partials/teenguru-slider.js
  });
  });
