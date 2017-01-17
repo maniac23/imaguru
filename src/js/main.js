@@ -1,7 +1,6 @@
 /*
  * Third party
  */
-
  //= ../../bower_components/slick-carousel/slick/slick.js
  //= jquery.magnific-popup.min.js
  //= jquery.equalheights.min.js
@@ -28,9 +27,6 @@ jQuery(function($) {
    //= partials/calc.js
    //= partials/moveSocial.js
    //= partials/org-with-us.js
-   //= partials/partners-show.js
-   //= partials/team-show.js
-   //= partials/jobs-show.js
    //= partials/course-page.js
    //= partials/for-startups.js
    //= partials/hov-act-boxes.js
