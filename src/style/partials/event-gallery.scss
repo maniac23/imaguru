@@ -76,6 +76,15 @@
     &:nth-child(2) {
       order: -1;
     }
+
+    &__content__container {
+      &--flex {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
   }
 
   &__title {

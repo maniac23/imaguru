@@ -96,10 +96,10 @@
   &__search {
     position: absolute;
     right: 100px;
-    top: 3px;
+    top: 5px;
     z-index: 20000;
 
-    width: 1.2rem;
+    width: 1.15rem;
     height: 21px;
 
     font-size: 0;
@@ -208,7 +208,7 @@
       border-top: none;
       transform: rotate(45deg);
       position: relative;
-      left: 5px;
+      left: 3px;
       top: -2px;
       transition: all 0.3s ease-in;
     }
@@ -242,6 +242,10 @@
       color: $dark-font-color;
     }
   }
+}
+
+.qtranxs-lang-menu {
+  padding-top: 0;
 }
 // *********************** MEDIA ***********************
 

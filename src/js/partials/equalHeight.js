@@ -25,3 +25,4 @@ $('#events-academy-junior li').equalHeights();
 $('#events-academy-children li').equalHeights();
 $('#dt-experience .slider__slide').equalHeights();
 $('#dt-laboratory .slider__slide').equalHeights();
+$('.pricelist__item').equalHeights();

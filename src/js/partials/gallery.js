@@ -4,5 +4,5 @@ $('.event-gallery__item, .image-slider__slide').magnificPopup({
     enabled: true
   },
   removalDelay: 300,
-  mainClass: 'mfp-fade'
+  mainClass: 'mfp-fade',
 });

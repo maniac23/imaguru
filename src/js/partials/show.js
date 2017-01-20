@@ -2,7 +2,6 @@ function showItems(item) {
   var itemLi = item + ' li';
   var button = item + '-button';
   var child = itemLi + ':nth-child(n+4)';
-  console.log(button);
   if ($(itemLi).length > 3) {
     $(button).show();
     $(button).click(function () {
@@ -21,3 +20,13 @@ function showItems(item) {
 showItems('#team');
 showItems('#jobs');
 showItems('#partners');
+
+$('#fix__button').on('click', function() {
+  $('.fix__container').slideToggle(400, function () {
+    if($('.fix__container').is(':visible')) {
+      $('#fix__button').text('Скрыть');
+    } else {
+      $('#fix__button').text('Заполнить форму');
+    }
+  });
+})
