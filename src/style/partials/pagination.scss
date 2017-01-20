@@ -1,0 +1,23 @@
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px $section-padding;
+
+  list-style-type: none;
+
+  li {
+    padding-right: 15px;
+    padding-left: 15px;
+
+    a {
+      color: $dark-font-color;
+    }
+
+    &.active {
+      span {
+        color: $orange;
+      }
+    }
+  }
+}

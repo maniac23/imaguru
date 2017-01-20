@@ -271,6 +271,13 @@
   text-align: center;
   color: #ffffff;
 
+  &--flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   p {
     font-size: 1.875rem;
     margin: 0 0 30px 0;
