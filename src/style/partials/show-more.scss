@@ -1,17 +1,21 @@
 .show-more-info {
-	height: 0;
-	overflow: hidden;
-	transition: height .2s;
-	transform: translateZ(0);
-	.container {
-		height: auto;
-	}
+  overflow: hidden;
+
+  transform: translateZ(0);
+
+  transition: height 0.2s;
+
+  .container {
+    height: auto;
+  }
 }
 
 .show-more {
-	cursor: pointer;
-	padding: 0;
-	&:hover {
-		text-decoration: underline;
-	}
+  padding: 0;
+
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
