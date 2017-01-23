@@ -73,6 +73,9 @@
 //   width: 100%;
 // }
 
+.slick-slide:focus {
+  outline: none;
+}
 
 @media only screen and (max-width: 1024px) {
   .slick-dots,

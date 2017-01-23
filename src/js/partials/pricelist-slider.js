@@ -13,6 +13,14 @@ if ($('.pricelist > ul') && $('.pricelist > ul li').length > 2) {
         settings: 'unslick'
       },
       {
+        breakpoint: 1920,
+        settings: {
+          slidesToShow: 5,
+          arrows: true,
+          draggable: true
+        }
+      },
+      {
         breakpoint: 1200,
         settings: {
           slidesToShow: 3,
