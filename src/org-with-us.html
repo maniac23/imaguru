@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-	<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
   <title>Организуй у нас</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
-
 </head>
-<body>
-//= template/sprite.html
-  <div class="wrapper">
 
+<body>
+  //= template/sprite.html
+  <div class="wrapper">
     //= template/header.html
   </div>
-
   <main class="wrapper">
     <!--Promo section  -->
     <section class="promo promo--event promo--section">
@@ -25,7 +23,6 @@
         <a href="/org-with-us.html" class="breadcrumbs__item breadcrumbs__item--active">Организуй у нас</a>
       </div>
       //= template/promo-info.html
-
       <div class="colored-info-box colored-info-box--promo-text">
         <div class="colored-info-box__title">
           <h2>Стильная и удобная площадка для проведения ваших мероприятий</h2>
@@ -41,42 +38,92 @@
         </div>
       </div>
     </section>
-
     <section class="catering-promotion">
-
       <input type="radio" name="tabs" id="tab-maintenance" checked>
       <input type="radio" name="tabs" id="tab-catering">
       <input type="radio" name="tabs" id="tab-promotion">
-
-        <div class="colored-info-box tabs-container">
-          <div class="container">
-             <div class="colored-info-box__title tabs">
-              <label for="tab-maintenance" class="tabs__tab">
+      <div class="colored-info-box tabs-container">
+        <div class="container">
+          <div class="colored-info-box__title tabs">
+            <label for="tab-maintenance" class="tabs__tab">
                 <h3>Сопровождение</h3>
               </label>
-              <label for="tab-catering" class="tabs__tab">
+            <label for="tab-catering" class="tabs__tab">
                 <h3>Кейтеринг</h3>
               </label>
-              <label for="tab-promotion" class="tabs__tab">
+            <label for="tab-promotion" class="tabs__tab">
                 <h3>Продвижение</h3>
               </label>
-            </div>
           </div>
         </div>
-
-        <article class="tab-content tab-content--maintenance">
-          <section class="main-info colored-info-box">
-                <div class="container">
-                    <div class="colored-info-box__title">
-                      <h3>Сопровождение</h3>
-                    </div>
-                    <div class="colored-info-box__description">
-                      <p>Мы - команда активных и амбициозных молодых людей, которые ставят перед собой  большие цели и  не боятся трудностей их реализации. Это люди, обладающие различными навыками и талантами – предприниматели, организаторы, дизайнеры, программисты и маркетологи.</p>
-                    </div>
+      </div>
+      <article class="tab-content tab-content--maintenance">
+        <section class="main-info colored-info-box">
+          <div class="container">
+            <div class="colored-info-box__title">
+              <h3>Сопровождение</h3>
+            </div>
+            <div class="colored-info-box__description">
+              <p>Современное техническое оборудование и теплые индивидуальные отношения позволяют нам с уверенностью говорить
+                о том, что Ваше мероприятие любой сложности и масштаба будет проведено на высоком уровне и не оставит равнодушными
+                Ваших гостей.</p>
+              <p>Мы предлагаем оптимальные технические и организационные решения, исходя из Ваших предпочтений и бюджета.</p>
+            </div>
+            <div class="maintain-free">
+              <h3 class="maintain-free__title">Включено</h3>
+              <div class="maintain-free__wrap">
+                <div class="maintain-free__item">
+                  <svg>
+                    <use xlink:href="#team_icon"></use>
+                  </svg>
+                  <h4>Профессиональная команда</h4>
+                  <ul>
+                    <li>Технический специалист</li>
+                    <li>Клиент-менеджер</li>
+                    <li>Регистрация гостей</li>
+                  </ul>
                 </div>
-          </section>
-
-          <section class="show-more-info">
+                <div class="maintain-free__item">
+                  <svg>
+                    <use xlink:href="#equipment"></use>
+                  </svg>
+                  <h4>Техническое оборудование</h4>
+                  <ul>
+                    <li>Проектор</li>
+                    <li>Экран</li>
+                    <li>Ноутбук</li>
+                    <li>Телевизор</li>
+                    <li>Веб-камера</li>
+                    <li>Адаптеры</li>
+                  </ul>
+                </div>
+                <div class="maintain-free__item">
+                  <svg>
+                    <use xlink:href="#audio"></use>
+                  </svg>
+                  <h4>Звукоусиление</h4>
+                  <ul>
+                    <li>Микрофон</li>
+                    <li>Колонки</li>
+                    <li>Микшерный пульт</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="maintain-paid">
+              <h3 class="maintain-paid__title">Дополнительно</h3>
+              <ul>
+                <li class="checked" data-name="light">Профессиональный свет</li>
+                <li data-name="translate">Синхронный перевод</li>
+                <li data-name="photo">Фотосъемка</li>
+                <li data-name="video">Видеосъемка</li>
+                <li data-name="live">Прямая трансляция</li>
+                <li data-name="org">Организация мероприятия под ключ</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!--<section class="show-more-info">
             <div class="colored-info-box">
                 <div class="container">
                       <div class="colored-info-box__description">
@@ -94,135 +141,134 @@
                       </div>
                 </div>
             </div>
-          </section>
-          <section class="colored-info-box button-section">
-            <div class="container">
-              <span class="show-more" data-textBefore='Развернуть' data-textAfter='Свернуть'>Развернуть</span>
+          </section>-->
+      </article>
+      <article class="tab-content tab-content--catering">
+        <section class="main-info colored-info-box">
+          <div class="container">
+            <div class="colored-info-box__title">
+              <h3>Кейтеринг</h3>
             </div>
-          </section>
-        </article>
-
-        <article class="tab-content tab-content--catering">
-          <section class="main-info colored-info-box">
-                <div class="container">
-                    <div class="colored-info-box__title">
-                      <h3>Кейтеринг</h3>
-                    </div>
-                    <div class="colored-info-box__description">
-                      <p>Для участников конференций, семинаров, тренингов, серьезных деловых переговоров кофе-пауза – это приятный перерыв для нетворкинга и возобновления силы и энергии. Мы возьмем на себя все хлопоты по организации.</p>
-                    </div>
+            <div class="colored-info-box__description">
+              <p>Для участников конференций, семинаров, тренингов, серьезных деловых переговоров кофе-пауза – это приятный перерыв
+                для нетворкинга и возобновления силы и энергии. Мы возьмем на себя все хлопоты по организации.</p>
+            </div>
+          </div>
+        </section>
+        <section class="show-more-info">
+          <div class="slider-block__catering">
+            <article class="colored-info-box colored-info-box--image-bg slider-block__item" style="background-image: url(img/catering-1.jpg)">
+              <div class="container">
+                <div class="colored-info-box__title">
+                  <h2>Кофе-пауза сет №3</h2>
+                  <h3>12 BYN/чел.</h3>
                 </div>
-          </section>
-
-          <section class="show-more-info">
-
-            <div class="slider-block__catering">
-
-              <article class="colored-info-box colored-info-box--image-bg slider-block__item" style="background-image: url(img/catering-1.jpg)">
-                  <div class="container">
-                        <div class="colored-info-box__title">
-                          <h2>Кофе-пауза сет №3</h2>
-                          <h3>12 BYN/чел.</h3>
-                        </div>
-                        <div class="colored-info-box__description">
-                          <ul>
-                            <li>Кофе, чай</li>
-                            <li>Сахар</li>
-                            <li>Молоко</li>
-                            <li>Лимон</li>
-                            <li>Печенье с различными начинками</li>
-                            <li>Шоколадные конфеты</li>
-                            <li>Канапе с колбасой, сыром, оливками</li>
-                            <li>Роллы с красной рыбой и крабовым мясом/сэндвичи</li>
-                          </ul>
-                        </div>
-                  </div>
-              </article>
-
-              <article class="colored-info-box colored-info-box--image-bg slider-block__item" style="background-image: url(img/catering-1.jpg)">
-                  <div class="container">
-                        <div class="colored-info-box__title">
-                          <h2>Кофе-пауза сет №4</h2>
-                          <h3>12 BYN/чел.</h3>
-                        </div>
-                        <div class="colored-info-box__description">
-                          <ul>
-                            <li>Кофе, чай</li>
-                            <li>Сахар</li>
-                            <li>Молоко</li>
-                            <li>Лимон</li>
-                            <li>Печенье с различными начинками</li>
-                            <li>Шоколадные конфеты</li>
-                            <li>Канапе с колбасой, сыром, оливками</li>
-                            <li>Роллы с красной рыбой и крабовым мясом/сэндвичи</li>
-                          </ul>
-                        </div>
-                  </div>
-              </article>
-
-              <article class="colored-info-box colored-info-box--image-bg slider-block__item" style="background-image: url(img/catering-1.jpg)">
-                  <div class="container">
-                        <div class="colored-info-box__title">
-                          <h2>Кофе-пауза сет №5</h2>
-                          <h3>12 BYN/чел.</h3>
-                        </div>
-                        <div class="colored-info-box__description">
-                          <ul>
-                            <li>Кофе, чай</li>
-                            <li>Сахар</li>
-                            <li>Молоко</li>
-                            <li>Лимон</li>
-                            <li>Печенье с различными начинками</li>
-                            <li>Шоколадные конфеты</li>
-                            <li>Канапе с колбасой, сыром, оливками</li>
-                            <li>Роллы с красной рыбой и крабовым мясом/сэндвичи</li>
-                          </ul>
-                        </div>
-                  </div>
-              </article>
-            </div>
-          </section>
-
-          <section class="colored-info-box button-section">
-            <div class="container">
-              <span class="show-more" data-textBefore='Развернуть' data-textAfter='Свернуть'>Развернуть</span>
-            </div>
-          </section>
-        </article>
-
-        <article class="tab-content tab-content--promotion">
-          <section class="main-info colored-info-box">
-                <div class="container">
-                    <div class="colored-info-box__title">
-                      <h3>Продвижение</h3>
-                    </div>
-                    <div class="colored-info-box__description">
-                      <p>Заинтересовать и привлечь людей - это легко. И мы знаем, как это сделать!</p>
-                    </div>
+                <div class="colored-info-box__description">
+                  <ul>
+                    <li>Кофе, чай</li>
+                    <li>Сахар</li>
+                    <li>Молоко</li>
+                    <li>Лимон</li>
+                    <li>Печенье с различными начинками</li>
+                    <li>Шоколадные конфеты</li>
+                    <li>Канапе с колбасой, сыром, оливками</li>
+                    <li>Роллы с красной рыбой и крабовым мясом/сэндвичи</li>
+                  </ul>
                 </div>
-          </section>
-
-          <section class="show-more-info">
-            <div class="colored-info-box">
-                <div class="container">
-                      <div class="colored-info-box__description">
-                        <p>Широкий спектр опций для брендирования и нестандартных промо-решений: еженедельная рассылка, размещение анонсов TB роликов и компьютерной графики на LCD панелях бизнес-клуба, продвижение в социальных медиа, раздаточные материалы на стойках, афиши и плакаты, звуковая реклама и многое другое.</p>
-                      </div>
+                <button class="btn btn--transparent catering" data-order="set 3">Выбрать</button>
+              </div>
+            </article>
+            <article class="colored-info-box colored-info-box--image-bg slider-block__item" style="background-image: url(img/catering-1.jpg)">
+              <div class="container">
+                <div class="colored-info-box__title">
+                  <h2>Кофе-пауза сет №4</h2>
+                  <h3>12 BYN/чел.</h3>
                 </div>
+                <div class="colored-info-box__description">
+                  <ul>
+                    <li>Кофе, чай</li>
+                    <li>Сахар</li>
+                    <li>Молоко</li>
+                    <li>Лимон</li>
+                    <li>Печенье с различными начинками</li>
+                    <li>Шоколадные конфеты</li>
+                    <li>Канапе с колбасой, сыром, оливками</li>
+                    <li>Роллы с красной рыбой и крабовым мясом/сэндвичи</li>
+                  </ul>
+                </div>
+                <button class="btn btn--transparent catering" data-order="set 4">Выбрать</button>
+              </div>
+            </article>
+            <article class="colored-info-box colored-info-box--image-bg slider-block__item" style="background-image: url(img/catering-1.jpg)">
+              <div class="container">
+                <div class="colored-info-box__title">
+                  <h2>Кофе-пауза сет №5</h2>
+                  <h3>12 BYN/чел.</h3>
+                </div>
+                <div class="colored-info-box__description">
+                  <ul>
+                    <li>Кофе, чай</li>
+                    <li>Сахар</li>
+                    <li>Молоко</li>
+                    <li>Лимон</li>
+                    <li>Печенье с различными начинками</li>
+                    <li>Шоколадные конфеты</li>
+                    <li>Канапе с колбасой, сыром, оливками</li>
+                    <li>Роллы с красной рыбой и крабовым мясом/сэндвичи</li>
+                  </ul>
+                </div>
+                <button class="btn btn--transparent catering" data-order="set 5">Выбрать</button>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="colored-info-box button-section">
+          <div class="container">
+            <span class="show-more" data-textBefore='Развернуть' data-textAfter='Свернуть'>Развернуть</span>
+          </div>
+        </section>
+      </article>
+      <article class="tab-content tab-content--promotion">
+        <section class="main-info colored-info-box">
+          <div class="container">
+            <div class="colored-info-box__title">
+              <h3>Продвижение</h3>
             </div>
-            <div class="img-box">
-              <img src="img/promotion.jpg" alt="">
+            <div class="colored-info-box__description">
+              <p>Широкий спектр опций и промо-решений для комплексного продвижения бренда компании и ее продуктов традиционными
+                и нетривиальными способами</p>
             </div>
-          </section>
-          <section class="colored-info-box button-section">
-            <div class="container">
-              <span class="show-more" data-textBefore='Развернуть' data-textAfter='Свернуть'>Развернуть</span>
+            <div class="maintain-paid">
+              <h3 class="maintain-paid__title maintain-paid__title--promo-offline">Реклама на площадках 10.000+ посетителей в месяц</h3>
+              <ul>
+                <li class="checked">Раздаточная печатная продукция</li>
+                <li data-name="afisha">Стенд, плакат, роллап, афиша</li>
+                <li data-name="ridgepole">Растяжка</li>
+                <li data-name="wall">Бренд волл</li>
+                <li data-name="lightbox">Световой короб</li>
+                <li data-name="stickers">Наклейки</li>
+                <li data-name="workplace">Брендирование команты, рабочего места</li>
+                <li data-name="photogallery">Фотовыставка</li>
+                <li data-name="movie">Видеоролик</li>
+                <li data-name="audioads">Аудиореклама</li>
+                <li data-name="lcd">Компьютерная графика на ЛСД панели</li>
+              </ul>
             </div>
-          </section>
-        </article>
-
+            <div class="maintain-paid">
+              <h3 class="maintain-paid__title maintain-paid__title--promo-online">Реклама в интернете 9.000+ подписчиков в соцсетях 8.000+ e-mail подписчиков</h3>
+              <ul>
+                <li data-name="newsletter" class="checked">Групповая и индивидуальная рассылка </li>
+                <li data-name="teaser">Анонс мероприятия на сайте и/или в соцсетях</li>
+                <li data-name="article">Рекламная статья</li>
+                <li data-name="banner">Баннер</li>
+                <li data-name="landing">Лендинг</li>
+                <li data-name="blog">Видеоблог</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </article>
     </section>
-
     <section class="colored-info-box colored-info-box--red call-us">
       <div class="container">
         <div class="colored-info-box__title colored-info-box__title">
@@ -231,7 +277,6 @@
         </div>
       </div>
     </section>
-
     <section class="offers ">
       <article class="flex-container-50-50 offer-item">
         <div class="flex-container-50-50__element colored-info-box offer-item__text">
@@ -239,52 +284,10 @@
             <div class='colored-info-box__title colored-info-box__title--org'>
               <h2>Nordic</h2>
             </div>
-
             <div class="colored-info-box__description">
-              <p>Самое просторное помещение Imaguru, которое способно обеспечить комфорт участникам разных форматов мероприятий: от большой конференции до хакатона</p>
+              <p>Самое просторное помещение Imaguru, которое способно обеспечить комфорт участникам разных форматов мероприятий:
+                от большой конференции до хакатона</p>
             </div>
-
-            <div class="colored-info-box__data-info">
-              <ul>
-                <li class="icon-before icon-before--people">До 30 человек</li>
-                <li class="icon-before icon-before--price">От 60 BYN/час</li>
-              </ul>
-            </div>
-            <button class="btn show-hidden booking-btn">Бронирование</button>
-          </div>
-
-          <div class="colored-info-box colored-info-box--hidden">
-            <div class="container">
-              <div class="colored-info-box__title">
-                <h2>Бронирование</h2>
-              </div>
-              <div class="colored-info-box__description">
-                <p>Дата проведения</p>
-                <span class="icon-before icon-before--calendar check-date"><input type="date"></span>
-
-                <p>Время проведения</p>
-                <span class="icon-before icon-before--clock check-time"><input type="time"></span>
-                <button class="btn">Забронировать</button>
-                <button class="close-button"></button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex-container-50-50__element colored-info-box--image offer-item__photo" style="background-image: url('img/nordic.jpg')">
-        </div>
-      </article>
-
-      <article class="flex-container-50-50 offer-item">
-        <div class="flex-container-50-50__element colored-info-box offer-item__text">
-          <div class="container">
-            <div class='colored-info-box__title colored-info-box__title--org'>
-              <h2>Nordic</h2>
-            </div>
-
-            <div class="colored-info-box__description">
-              <p>Самое просторное помещение Imaguru, которое способно обеспечить комфорт участникам разных форматов мероприятий: от большой конференции до хакатона</p>
-            </div>
-
             <div class="colored-info-box__data-info">
               <ul>
                 <li class="icon-before icon-before--people">До 30 человек</li>
@@ -301,7 +304,6 @@
               <div class="colored-info-box__description">
                 <p>Дата проведения</p>
                 <span class="icon-before icon-before--calendar check-date"><input type="date"></span>
-
                 <p>Время проведения</p>
                 <span class="icon-before icon-before--clock check-time"><input type="time"></span>
                 <button class="btn">Забронировать</button>
@@ -313,18 +315,53 @@
         <div class="flex-container-50-50__element colored-info-box--image offer-item__photo" style="background-image: url('img/nordic.jpg')">
         </div>
       </article>
-
       <article class="flex-container-50-50 offer-item">
         <div class="flex-container-50-50__element colored-info-box offer-item__text">
           <div class="container">
             <div class='colored-info-box__title colored-info-box__title--org'>
               <h2>Nordic</h2>
             </div>
-
             <div class="colored-info-box__description">
-              <p>Самое просторное помещение Imaguru, которое способно обеспечить комфорт участникам разных форматов мероприятий: от большой конференции до хакатона</p>
+              <p>Самое просторное помещение Imaguru, которое способно обеспечить комфорт участникам разных форматов мероприятий:
+                от большой конференции до хакатона</p>
             </div>
-
+            <div class="colored-info-box__data-info">
+              <ul>
+                <li class="icon-before icon-before--people">До 30 человек</li>
+                <li class="icon-before icon-before--price">От 60 BYN/час</li>
+              </ul>
+            </div>
+            <button class="btn show-hidden booking-btn">Бронирование</button>
+          </div>
+          <div class="colored-info-box colored-info-box--hidden">
+            <div class="container">
+              <div class="colored-info-box__title">
+                <h2>Бронирование</h2>
+              </div>
+              <div class="colored-info-box__description">
+                <p>Дата проведения</p>
+                <span class="icon-before icon-before--calendar check-date"><input type="date"></span>
+                <p>Время проведения</p>
+                <span class="icon-before icon-before--clock check-time"><input type="time"></span>
+                <button class="btn">Забронировать</button>
+                <button class="close-button"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-container-50-50__element colored-info-box--image offer-item__photo" style="background-image: url('img/nordic.jpg')">
+        </div>
+      </article>
+      <article class="flex-container-50-50 offer-item">
+        <div class="flex-container-50-50__element colored-info-box offer-item__text">
+          <div class="container">
+            <div class='colored-info-box__title colored-info-box__title--org'>
+              <h2>Nordic</h2>
+            </div>
+            <div class="colored-info-box__description">
+              <p>Самое просторное помещение Imaguru, которое способно обеспечить комфорт участникам разных форматов мероприятий:
+                от большой конференции до хакатона</p>
+            </div>
             <div class="colored-info-box__data-info">
               <ul>
                 <li class="icon-before icon-before--people">До 30 человек</li>
@@ -341,7 +378,6 @@
               <div class="colored-info-box__description">
                 <p>Дата проведения</p>
                 <span class="icon-before icon-before--calendar check-date"><input type="date"></span>
-
                 <p>Время проведения</p>
                 <span class="icon-before icon-before--clock check-time"><input type="time"></span>
                 <button class="btn">Забронировать</button>
@@ -353,19 +389,16 @@
         <div class="flex-container-50-50__element colored-info-box--image offer-item__photo" style="background-image: url('img/nordic.jpg')">
         </div>
       </article>
-
-
       <article class="flex-container-50-50 offer-item">
         <div class="flex-container-50-50__element colored-info-box offer-item__text">
           <div class="container">
             <div class='colored-info-box__title colored-info-box__title--org'>
               <h2>Nordic</h2>
             </div>
-
             <div class="colored-info-box__description">
-              <p>Самое просторное помещение Imaguru, которое способно обеспечить комфорт участникам разных форматов мероприятий: от большой конференции до хакатона</p>
+              <p>Самое просторное помещение Imaguru, которое способно обеспечить комфорт участникам разных форматов мероприятий:
+                от большой конференции до хакатона</p>
             </div>
-
             <div class="colored-info-box__data-info">
               <ul>
                 <li class="icon-before icon-before--people">До 30 человек</li>
@@ -382,7 +415,6 @@
               <div class="colored-info-box__description">
                 <p>Дата проведения</p>
                 <span class="icon-before icon-before--calendar check-date"><input type="date"></span>
-
                 <p>Время проведения</p>
                 <span class="icon-before icon-before--clock check-time"><input type="time"></span>
                 <button class="btn">Забронировать</button>
@@ -395,9 +427,102 @@
         </div>
       </article>
     </section>
+    <section class="room-booking" id="booking">
+      <!--вставляем форму  -->
+      <div role="form" class="wpcf7" id="wpcf7-f234-o2" lang="ru-RU" dir="ltr">
+        <div class="screen-reader-response"></div>
+        <form action="/organizuy-u-nas/#wpcf7-f234-o2" method="post" class="wpcf7-form booking-form" novalidate="novalidate">
+          <div style="display: none;">
+            <input type="hidden" name="_wpcf7" value="234">
+            <input type="hidden" name="_wpcf7_version" value="4.5.1">
+            <input type="hidden" name="_wpcf7_locale" value="ru_RU">
+            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f234-o2">
+            <input type="hidden" name="_wpnonce" value="4b9df23d36">
+          </div>
+          <h2 class="room-booking__title">Бронирование помещения</h2>
+          <p>
+            <label>Ваше имя</label><span class="wpcf7-form-control-wrap your-name">
+            <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+            </span>
+            <label>Ваш email</label><span class="wpcf7-form-control-wrap your-email">
+              <input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false">
+              </span>
+              <label>Дата бронирования</label>
+              <span class="wpcf7-form-control-wrap date-322">
+                <input type="date" name="date-322" value="" class="wpcf7-form-control wpcf7-date wpcf7-validates-as-required wpcf7-validates-as-date" aria-required="true" aria-invalid="false">
+                </span>
+                <label>Название помещения</label>
+                <span class="wpcf7-form-control-wrap rooms">
+                  <select name="rooms" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+                    <option value="">---</option>
+                    <option value="Madrid">Madrid</option>
+                    <option value="Forum">Forum</option>
+                    <option value="Nordic">Nordic</option>
+                    <option value="Global">Global</option>
+                    <option value="California">California</option>
+                    <option value="13">13</option>
+                    <option value="Design Thinking Room">Design Thinking Room</option>
+                    <option value="London">London</option>
+                    <option value="Library">Library</option>
+                    <option value="Baltic">Baltic</option>
+                    </select>
+                    </span>
+                    <label>Время бронирования </label>
+                    <span class="wpcf7-form-control-wrap time">
+                      <select name="time" class="wpcf7-form-control wpcf7-select" aria-invalid="false">
+                        <option value="9:00">9:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="15:00">15:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="17:00">17:00</option>
+                        <option value="18:00">18:00</option>
+                        <option value="19:00">19:00</option>
+                        <option value="20:00">20:00</option>
+                        <option value="21:00">21:00</option>
+                        </select>
+                        </span>
+                        <label>Ваш номер телефона</label>
+                        <span class="wpcf7-form-control-wrap tel-266">
+                          <input type="tel" name="tel-266" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false">
+                        </span>
+                        <input type="checkbox" name="light" value="Свет" hidden>
+                        <input type="checkbox" name="translate" value="синхронный перевод" hidden>
+                        <input type="checkbox" name="photo" value="фотосъемка" hidden>
+                        <input type="checkbox" name="video" value="Видеосъемка" hidden>
+                        <input type="checkbox" name="live" value="прямая трансляция" hidden>
+                        <input type="checkbox" name="org" value="под ключ" hidden>
+                        <input type="checkbox" name="print" value="Печатная продукция"hidden>
+                        <input type="checkbox" name="afisha" value="Афиша, плакат" hidden>
+                        <input type="checkbox" name="ridgepole" value="Растяжка" hidden>
+                        <input type="checkbox" name="wall" value="Бренд волл" hidden>
+                        <input type="checkbox" name="lightbox" value="Световой короб" hidden>
+                        <input type="checkbox" name="stickers" value="Наклейки" hidden>
+                        <input type="checkbox" name="workplace" value="Рабочие места" hidden>
+                        <input type="checkbox" name="photogallery" value="Фотовыставка" hidden>
+                        <input type="checkbox" name="movie" value="Видеоролик" hidden>
+                        <input type="checkbox" name="audioads" value="Аудиореклама" hidden>
+                        <input type="checkbox" name="lcd" value="LCD панель" hidden>
+                        <input type="checkbox" name="newsletter" value="почтовая рассылка" hidden>
+                        <input type="checkbox" name="teaser"  value="Анонс мероприятия" hidden>
+                        <input type="checkbox" name="article" value="Рекламная статья" hidden>
+                        <input type="checkbox" name="banner" value="Баннер" hidden>
+                        <input type="checkbox" name="landing" value="Лендинг" hidden>
+                        <input type="checkbox" name="blog" value="Видеоблог" hidden>
+                        <input type="checkbox" name="set 3" value="Сет № 3" hidden>
+                        <input type="checkbox" name="set 4" value="Сет № 4" hidden>
+                        <input type="checkbox" name="set 5" value="Сет № 5" hidden>
 
+                        <button type="submit" class="btn btn--orange">Забронировать</button>
+                        </p>
+                        <div class="wpcf7-response-output wpcf7-display-none"></div>
+                        </form>
+                        </div>
+                        </section>
     //= template/social.html
-</main>
-
-    <!--Footer -->
-//= template/footer.html
+  </main>
+  <!--Footer -->
+  //= template/footer.html

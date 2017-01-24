@@ -40,13 +40,28 @@ button {
     transform: scale(0.97);
   }
 
+  &--transparent {
+    color: $white-color !important;
+    border: 3px solid $white-color !important;
+
+    &:hover {
+      background-color: $white-color !important;
+      color: $dark-font-color !important;
+    }
+
+    &.active {
+      background-color: $white-color !important;
+      color: $dark-font-color !important;
+    }
+  }
+
   &--orange {
     color: $orange;
     border: 3px solid $orange;
 
     &:hover {
       background-color: $orange;
-      color: $white-color !important;
+      color: $white-color;
     }
   }
 

@@ -39,5 +39,6 @@ jQuery(function($) {
    //= partials/secret.js
    //= partials/scroll.js
    //= partials/teenguru-slider.js
+   //= partials/org-form.js
  });
  });
