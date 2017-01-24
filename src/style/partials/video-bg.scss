@@ -1,0 +1,26 @@
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  }
+
+.promo--video {
+  overflow: hidden;
+
+  .main-text,
+  .info {
+    position: relative;
+    z-index: 9;
+  }
+}
+
+
+@media only screen and (max-width: 980px) {
+  .video-background {
+    display: none;
+  }
+}
