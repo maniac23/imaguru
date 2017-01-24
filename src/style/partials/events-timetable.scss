@@ -2,23 +2,25 @@
   padding: 60px 8.5%;
 
   &__main-title {
-    font-size: 1.875rem;
-    font-weight: 500;
-    text-align: center;
     margin: 0;
-    padding: 0;
     margin-bottom: 30px;
+    padding: 0;
+
+    font-weight: 500;
+    font-size: 1.875rem;
+    text-align: center;
   }
 
   &__filters {
-    text-align: center;
     margin-bottom: 50px;
+
+    text-align: center;
   }
 
   &__radio {
     position: absolute;
-    left: -100px;
     right: -100px;
+    left: -100px;
 
     &:checked {
       & + .events-timetable__filters-item {
@@ -28,12 +30,14 @@
   }
 
   &__filters-item {
-    font-size: 1rem;
-    font-weight: 500;
-    opacity: 0.7;
-    padding: 10px 0;
     margin-right: 40px;
+    padding: 10px 0;
+
+    font-weight: 500;
+    font-size: 1rem;
+
     cursor: pointer;
+    opacity: 0.7;
   }
 
   &__list {
@@ -43,46 +47,63 @@
     list-style-type: none;
 
     & .slick-arrow {
-      border: 2px solid $orange;
-      left: 50%;
-      transform: translateX(-50%) rotate(45deg);
       top: -4%;
+      left: 50%;
+
       width: 30px;
       height: 30px;
-      border-bottom: none;
+
+      border: 2px solid $orange;
       border-right: none;
+      border-bottom: none;
+      transform: translateX(-50%) rotate(45deg);
     }
 
     & .slick-next {
       top: 101%;
+
       transform: translateX(-50%) rotate(225deg);
     }
 
     & li.events-timetable__item.slick-slide {
       border-left: 3px solid #f05030;
+
+
+      &.coding-academy,
+      &.teenguru,
+      &.language,
+      &.courses,
+      &.training-topic {
+        border-left: 3px solid $blue;
+      }
+
+      &.enterprise,
+      &.biz,
+      &.sale {
+        border-left: 3px solid $red;
+      }
+
       &.it,
       &.mk {
+        border-left: 3px solid $orange;
+      }
+
+      &.startups {
         border-left: 3px solid $green;
       }
 
-      &.mitup,
-      &.startups,
-      &.biz,
-      &.courses {
-        border-left: 3px solid $orange;
-      }
-      &.startups,
-      &.enterprise {
-        border-left: 3px solid $blue;
+      &.administration {
+        border-left: 3px solid $light-green;
       }
     }
   }
 
 
   &__item {
-    margin-bottom: 40px;
     display: flex !important;
     justify-content: flex-start;
+    margin-bottom: 40px;
+
     border-left: 3px solid #f05030;
     // &::after {
     //   content: "";
@@ -109,9 +130,9 @@
   &__time {
     flex: 0 0 25%;
     padding: 10px 3.5% 30px;
-    text-align: left;
 
     font-family: "Open Sans", Arial, sans-serif;
+    text-align: left;
 
     p {
       margin: 0;
@@ -134,13 +155,14 @@
   }
 
   &__category-item {
+    padding: 0 10px;
+
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.2;
     font-family: Raleway, Arial, sans-serif;
     color: $dark-font-color;
     text-decoration: none;
-    padding: 0 10px;
 
     &:first-child {
       padding-left: 0;
@@ -150,20 +172,37 @@
       border-right: 1px solid $dark-font-color;
     }
 
+    &[data-category="coding-academy"],
+    &[data-category="teenguru"],
+    &[data-category="language"],
+    &[data-category="courses"],
+    &[data-category="training"],
+    &[data-category="training-topic"] {
+      color: $blue;
+    }
+
+    &[data-category="enterprise"],
+    &[data-category="biz"],
+    &[data-category="sale"],
     &[data-category="biz"] {
+      color: $red;
+    }
+
+    &[data-category="startups"] {
       color: $green;
     }
 
-    &[data-category="ml"],
-    &[data-category="mitup"],
-    &[data-category="courses"],
-    &[data-category="startups"] {
+    &[data-category="it"],
+    &[data-category="mk"],
+    &[data-category="mitup"] {
       color: $orange;
     }
 
-    &[data-category="it"],
-    &[data-category="enterprise"] {
-      color: $blue;
+    &[data-category="administration"],
+    &[data-category="other"],
+    &[data-category="other-events-types"],
+    {
+      color: $light-green;
     }
   }
 
@@ -208,11 +247,11 @@
 
       & .slick-next {
         top: 100%;
+
         transform: translateX(-50%) rotate(225deg);
       }
     }
   }
-
 }
 @media only screen and (max-width: 480px) {
   .events-timetable {
