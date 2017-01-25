@@ -175,7 +175,7 @@
                     <li>Роллы с красной рыбой и крабовым мясом/сэндвичи</li>
                   </ul>
                 </div>
-                <button class="btn btn--transparent catering" data-order="set 3">Выбрать</button>
+                <button class="btn btn--transparent catering" data-order="set3">Выбрать</button>
               </div>
             </article>
             <article class="colored-info-box colored-info-box--image-bg slider-block__item" style="background-image: url(img/catering-1.jpg)">
@@ -196,7 +196,7 @@
                     <li>Роллы с красной рыбой и крабовым мясом/сэндвичи</li>
                   </ul>
                 </div>
-                <button class="btn btn--transparent catering" data-order="set 4">Выбрать</button>
+                <button class="btn btn--transparent catering" data-order="set4">Выбрать</button>
               </div>
             </article>
             <article class="colored-info-box colored-info-box--image-bg slider-block__item" style="background-image: url(img/catering-1.jpg)">
@@ -217,7 +217,7 @@
                     <li>Роллы с красной рыбой и крабовым мясом/сэндвичи</li>
                   </ul>
                 </div>
-                <button class="btn btn--transparent catering" data-order="set 5">Выбрать</button>
+                <button class="btn btn--transparent catering" data-order="set5">Выбрать</button>
               </div>
             </article>
           </div>
@@ -241,7 +241,7 @@
             <div class="maintain-paid">
               <h3 class="maintain-paid__title maintain-paid__title--promo-offline">Реклама на площадках 10.000+ посетителей в месяц</h3>
               <ul>
-                <li class="checked">Раздаточная печатная продукция</li>
+                <li class="checked" data-name="print">Раздаточная печатная продукция</li>
                 <li data-name="afisha">Стенд, плакат, роллап, афиша</li>
                 <li data-name="ridgepole">Растяжка</li>
                 <li data-name="wall">Бренд волл</li>
@@ -489,32 +489,68 @@
                         <span class="wpcf7-form-control-wrap tel-266">
                           <input type="tel" name="tel-266" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false">
                         </span>
-                        <input type="checkbox" name="light" value="Свет" hidden>
-                        <input type="checkbox" name="translate" value="синхронный перевод" hidden>
-                        <input type="checkbox" name="photo" value="фотосъемка" hidden>
-                        <input type="checkbox" name="video" value="Видеосъемка" hidden>
-                        <input type="checkbox" name="live" value="прямая трансляция" hidden>
-                        <input type="checkbox" name="org" value="под ключ" hidden>
-                        <input type="checkbox" name="print" value="Печатная продукция"hidden>
-                        <input type="checkbox" name="afisha" value="Афиша, плакат" hidden>
-                        <input type="checkbox" name="ridgepole" value="Растяжка" hidden>
-                        <input type="checkbox" name="wall" value="Бренд волл" hidden>
-                        <input type="checkbox" name="lightbox" value="Световой короб" hidden>
-                        <input type="checkbox" name="stickers" value="Наклейки" hidden>
-                        <input type="checkbox" name="workplace" value="Рабочие места" hidden>
-                        <input type="checkbox" name="photogallery" value="Фотовыставка" hidden>
-                        <input type="checkbox" name="movie" value="Видеоролик" hidden>
-                        <input type="checkbox" name="audioads" value="Аудиореклама" hidden>
-                        <input type="checkbox" name="lcd" value="LCD панель" hidden>
-                        <input type="checkbox" name="newsletter" value="почтовая рассылка" hidden>
-                        <input type="checkbox" name="teaser"  value="Анонс мероприятия" hidden>
-                        <input type="checkbox" name="article" value="Рекламная статья" hidden>
-                        <input type="checkbox" name="banner" value="Баннер" hidden>
-                        <input type="checkbox" name="landing" value="Лендинг" hidden>
-                        <input type="checkbox" name="blog" value="Видеоблог" hidden>
-                        <input type="checkbox" name="set 3" value="Сет № 3" hidden>
-                        <input type="checkbox" name="set 4" value="Сет № 4" hidden>
-                        <input type="checkbox" name="set 5" value="Сет № 5" hidden>
+                        <div class="form-wrapper">
+                          <h3>Выберите необходимые дополнительные услуги</h3>
+                          <p>Сопровождение</p>
+                          <label for="light">Профессиональный свет</label>
+                          <input type="checkbox" name="light" value="Свет" id="light">
+                          <label for="translate">Синхронный перевод</label>
+                          <input type="checkbox" name="translate" value="Перевод" id="translate">
+                          <label for="photo">Фотосъемка</label>
+                          <input type="checkbox" name="photo" value="Фотосъемка" id="photo">
+                          <label for="video">Видеосъемка</label>
+                          <input type="checkbox" name="video" value="Видеосъемка" id="video">
+                          <label for="live">Прямая трансляция</label>
+                          <input type="checkbox" name="live" value="Трансляция" id="video">
+                          <label for="org">Организация мероприятия под ключ</label>
+                          <input type="checkbox" name="org" value="Прямая трансляция" id="org">
+                        </div>
+                        <div class="form-wrapper">
+                          <p>Кейтеринг</p>
+                         <label for="set3">Кейтеринг №3</label>
+                         <input type="checkbox" name="set3" value="Сет № 3" id="set3">
+                         <label for="set4">Кейтеринг №4</label>
+                         <input type="checkbox" name="set4" value="Сет № 4" id="set4">
+                         <label for="set5">Кейтеринг №5</label>
+                         <input type="checkbox" name="set5" value="Сет № 5" id="set5">
+                        </div>
+                        <div class="form-wrapper">
+                          <p>Продвижение</p>
+                          <label for="print">Печатная продукция</label>
+                          <input type="checkbox" name="print" value="Печатная продукция" id="print">
+                          <label for="afisha">Афиша, плакат</label>
+                          <input type="checkbox" name="afisha" value="Афиша, плакат" id="afisha">
+                          <label for="ridgepole">Растяжка</label>
+                          <input type="checkbox" name="ridgepole" value="Растяжка" id="ridgepole">
+                          <label for="wall">Бренд волл</label>
+                          <input type="checkbox" name="wall" value="Бренд волл" id="wall">
+                          <label for="lightbox">Световой короб</label>
+                          <input type="checkbox" name="lightbox" value="Световой короб" id="lightbox">
+                          <label for="stickers">Наклейки</label>
+                          <input type="checkbox" name="stickers" value="Наклейки" id="stickers">
+                          <label for="workplace">Брендированные рабочие места</label>
+                          <input type="checkbox" name="workplace" value="Рабочие места" id="workplace">
+                          <label for="photogallery">Фотовыставка</label>
+                          <input type="checkbox" name="photogallery" value="Фотовыставка" id="photogallery">
+                          <label for="movie">Видеоролик</label>
+                          <input type="checkbox" name="movie" value="Видеоролик" id="movie">
+                          <label for="audioads">Аудиореклама</label>
+                          <input type="checkbox" name="audioads" value="Аудиореклама" id="audioads">
+                          <label for="lcd">Реклама на LCD панели</label>
+                          <input type="checkbox" name="lcd" value="LCD панель" id="lcd">
+                          <label for="newsletter">Email расслылка</label>
+                          <input type="checkbox" name="newsletter" value="email рассылка" id="newsletter">
+                          <label for="teaser">Анонс мероприятия на сайте и в соц. сетях</label>
+                          <input type="checkbox" name="teaser"  value="Анонс мероприятия" id="teaser">
+                          <label for="article">Рекламная статья</label>
+                          <input type="checkbox" name="article" value="Рекламная статья" id="article">
+                          <label for="banner">Баннер</label>
+                          <input type="checkbox" name="banner" value="Баннер" id="banner">
+                          <label for="landing">Лендинг</label>
+                          <input type="checkbox" name="landing" value="Лендинг" id="landing">
+                          <label for="blog">Видеоблог</label>
+                          <input type="checkbox" name="blog" value="Видеоблогг" id="blog">
+                        </div>
 
                         <button type="submit" class="btn btn--orange">Забронировать</button>
                         </p>

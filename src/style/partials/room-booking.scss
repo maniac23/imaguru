@@ -54,5 +54,42 @@
       display: block;
       min-width: 200px;
     }
+
+    .form-wrapper {
+      width: 100%;
+      margin-bottom: 40px;
+
+      input[type="checkbox"] {
+        position: absolute;
+        left: -9999px;
+      }
+
+      h3 {
+        font-weight: 700;
+        font-size: 1.25rem;
+      }
+
+      p {
+        padding: 0;
+        margin: 0;
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: inline-block;
+        padding: 10px;
+        padding-left: 0;
+        margin-bottom: 0;
+        transition: all 0.1s  ease-in;
+        font-size: 1.125rem;
+        cursor: pointer;
+
+        &.checked {
+          color: $orange;
+        }
+      }
+    }
   }
 }
