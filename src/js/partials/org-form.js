@@ -1,6 +1,6 @@
-$('.maintain-paid li').on('click', function() {
+$('.maintain-paid li').on('click touch', function() {
 var atribute = $(this).attr('data-name');
-var checkBox = $("input[name='"+ atribute + "'");
+var checkBox = $("input[name='"+ atribute + "']");
 var label = $('label[for="'+ atribute +'"]');
 $(this).toggleClass('checked');
 label.toggleClass('checked');
@@ -8,10 +8,10 @@ checkBox.attr("checked", !checkBox.attr("checked"));
 });
 
 
-$('.catering').on('click', function(e) {
+$('.catering').on('click touch', function(e) {
   e.preventDefault();
   var atribute = $(this).attr('data-order');
-  var checkBox = $("input[name='"+ atribute + "'");
+  var checkBox = $("input[name='"+ atribute + "']");
   var label = $('label[for="'+ atribute +'"]');
   $(this).toggleClass('active');
   label.toggleClass('checked');
