@@ -40,5 +40,6 @@ jQuery(function($) {
    //= partials/scroll.js
    //= partials/teenguru-slider.js
    //= partials/org-form.js
+   //= partials/main-footer-slider.js
  });
  });
