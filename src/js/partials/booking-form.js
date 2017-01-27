@@ -40,15 +40,15 @@ if (document.getElementsByClassName('booking-btn').length > 0) {
   }
 
   // выбираем все кнопки с классом catering
-  var cateringButtons = document.querySelectorAll('button.catering');
+  // var cateringButtons = document.querySelectorAll('button.catering');
   // проходим циклом по кнопкам
-  for (var x = 0; x < cateringButtons.length; x++) {
-    // ищем родителя, потом его первого потомка и его h2.catering
-    var parent = cateringButtons[x].parentNode;
-    var childText = parent.querySelector('.colored-info-box__title h2').innerHTML;
-    var name = cateringButtons[i].getAttribute('data-order');
-    var newOption = new Option(childText, name, false, false);
-    newOption.setAttribute('name', name);
-    form.elements.catering.appendChild(newOption);
-  }
+  // for (var x = 0; x < cateringButtons.length; x++) {
+  //   // ищем родителя, потом его первого потомка и его h2.catering
+  //   var parent = cateringButtons[x].parentNode;
+  //   var childText = parent.querySelector('.colored-info-box__title h2').innerHTML;
+  //   var name = cateringButtons[i].getAttribute('data-order');
+  //   var newOption = new Option(childText, name, false, false);
+  //   newOption.setAttribute('name', name);
+  //   form.elements.catering.appendChild(newOption);
+  // }
 }

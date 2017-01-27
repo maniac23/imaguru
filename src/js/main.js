@@ -5,6 +5,7 @@
  //= jquery.magnific-popup.min.js
  //= jquery.equalheights.min.js
  //= jquery.maskedinput.min.js
+ //= chosen.jquery.min.js
 jQuery(function($) {
  $(document).ready(function() {
    //= partials/common-functions.js
@@ -41,5 +42,6 @@ jQuery(function($) {
    //= partials/teenguru-slider.js
    //= partials/org-form.js
    //= partials/main-footer-slider.js
+   //= partials/selects.js
  });
  });
