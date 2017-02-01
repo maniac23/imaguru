@@ -1,27 +1,27 @@
 if ($('.pricelist > ul') && $('.pricelist > ul li').length > 2) {
   $('.pricelist > ul').slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    vertical: false,
-    dots: false,
-    arrows: false,
-    draggable: false,
-    infinite: false,
+    // slidesToShow: 5,
+    // slidesToScroll: 1,
+    // vertical: false,
+    // dots: false,
+    // arrows: false,
+    // draggable: false,
+    // infinite: false,
     responsive: [
       {
         breakpoint: 5000, // такой костыль чтоб на боьших слайдера не было
         settings: 'unslick'
       },
+      // {
+      //   breakpoint: 1920,
+      //   settings: {
+      //     slidesToShow: 5,
+      //     arrows: true,
+      //     draggable: true
+      //   }
+      // },
       {
-        breakpoint: 1920,
-        settings: {
-          slidesToShow: 5,
-          arrows: true,
-          draggable: true
-        }
-      },
-      {
-        breakpoint: 1200,
+        breakpoint: 1220,
         settings: {
           slidesToShow: 3,
           arrows: true,
@@ -29,7 +29,7 @@ if ($('.pricelist > ul') && $('.pricelist > ul li').length > 2) {
         }
       },
       {
-        breakpoint: 800,
+        breakpoint: 801,
         settings: {
           slidesToShow: 2,
           arrows: true,
@@ -37,7 +37,7 @@ if ($('.pricelist > ul') && $('.pricelist > ul li').length > 2) {
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 481,
         settings: {
           slidesToShow: 1,
           arrows: true,

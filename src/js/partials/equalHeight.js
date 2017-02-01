@@ -26,3 +26,6 @@ $('#events-academy-children li').equalHeights();
 $('#dt-experience .slider__slide').equalHeights();
 $('#dt-laboratory .slider__slide').equalHeights();
 $('.pricelist__item').equalHeights();
+$('#org-conference .slider__slide').equalHeights();
+$('#org-training .slider__slide').equalHeights();
+$('#org-meeting .slider__slide').equalHeights();

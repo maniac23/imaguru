@@ -19,7 +19,7 @@ if (document.getElementsByClassName('booking-btn').length > 0) {
     for (var i = 0; i < element.length; i++) {
       var item = element[i].getAttribute('data-name');
       var text = element[i].innerHTML;
-      var newOption = new Option(text, item, false, false);
+      var newOption = new Option(text, text, false, false);
       newOption.setAttribute('name', item);
       fragment.appendChild(newOption);
     }
@@ -32,9 +32,9 @@ if (document.getElementsByClassName('booking-btn').length > 0) {
 
   for (var i = 0; i < buttons.length; i++) {
     // из каждой кнопки берем аттрибут data-room и добавляем options в select
-    var rooms = buttons[i].getAttribute('data-room');
-    var option = new Option(rooms, rooms, false, false);
-    selectField.appendChild(option);
+    // var rooms = buttons[i].getAttribute('data-room');
+    // var option = new Option(rooms, rooms, false, false);
+    // selectField.appendChild(option);
     // вешаем listener на клик
     buttons[i].addEventListener('click', setOption);
   }

@@ -40,8 +40,8 @@ $('.blog-archive').each(function() {
 setTimeout(function() {
   if ($('.blog-archive')) {
     // если больше трех месяцев с архивом, то скрываем все с третьего и показываем кнопку
-    if($('.blog-archive').length > 2) {
-      $('.blog-archive').slice(2).hide();
+    if($('.blog-archive').length > 3) {
+      $('.blog-archive').slice(3).fadeOut();
       $('.blog-archive__more').css('display', 'block');
       $('.blog-archive__more').on('click', function(e) {
         e.preventDefault();
