@@ -52,8 +52,27 @@
     }
   }
 
+  &--timetable {
+    max-width: 50%;
+  }
+
   &--no-padding {
     padding: 0;
+  }
+
+  &--mh {
+    min-height: 400px;
+    color: $dark-font-color !important;
+  }
+
+  &--video {
+    padding: 0;
+    min-height: 400px;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &--white {
@@ -139,6 +158,21 @@
 
     &--semibold {
       font-weight: 600;
+    }
+
+    &--live {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 53px;
+        height: 22px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 43.9 18.02'%3E%3Cdefs%3E%3Cstyle%3E.cls-1,.cls-2%7Bfill:%23f05030;%7D.cls-2%7Bfont-size:16px;font-family:OpenSans-Light, Open Sans;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eic_live%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Home'%3E%3Ccircle class='cls-1' cx='5' cy='9.01' r='5'/%3E%3Ctext class='cls-2' transform='translate%2815.97 13.71%29'%3ELive%3C/text%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        top: 0;
+        left: 30%;
+      }
     }
   }
 
@@ -311,6 +345,18 @@
 
 // ************ MEDIA *************
 
+@media screen and (max-width: 1280px) {
+  .content-block {
+    &__title {
+      &--live {
+        &::after {
+          left: 50%;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .row {
     &--wrap {
@@ -374,6 +420,10 @@
       min-height: 300px;
     }
 
+    &--timetable {
+      max-width: 100%;
+    }
+
     &--slider {
       .slick-dots {
         top: 90%;
@@ -384,6 +434,14 @@
         li {
           display: inline-block;
           margin-bottom: 0;
+        }
+      }
+    }
+
+    &__title {
+      &--live {
+        &::after {
+          display: none;
         }
       }
     }

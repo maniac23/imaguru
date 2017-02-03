@@ -6,6 +6,7 @@
  //= jquery.equalheights.min.js
  //= jquery.maskedinput.min.js
  //= chosen.jquery.min.js
+ //= blazy.min.js
 jQuery(function($) {
  $(document).ready(function() {
    //= partials/common-functions.js
@@ -42,5 +43,6 @@ jQuery(function($) {
    //= partials/teenguru-slider.js
    //= partials/org-form.js
    //= partials/selects.js
+   //= partials/lazyloading.js
  });
  });
