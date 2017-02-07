@@ -90,6 +90,15 @@ input[type="tel"] {
   font-family: "Open Sans", Arial, sans-serif;
 }
 
+label.required {
+  &::after {
+    content: "*";
+    color: $orange;
+    font-size: 2rem;
+    line-height: 1;
+  }
+}
+
 // стили для плавного появления lazy loaded картинок
 .b-lazy {
   -webkit-transition: opacity 500ms ease-in-out;

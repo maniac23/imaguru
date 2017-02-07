@@ -54,7 +54,8 @@
     background-color: rgba(#000000, 0.7);
 
     &--subscribe {
-      background-color: $blue;
+      background-color: $grey;
+
     }
   }
 
@@ -72,6 +73,7 @@
     &--subscribe {
       font-weight: 400;
       font-size: 2rem;
+      color: $dark-font-color;
     }
   }
 
@@ -85,7 +87,7 @@
 
   &__subscribe {
     font-weight: 700;
-    color: $white-color;
+    color: $dark-font-color;
     text-decoration: none;
 
     &:hover,
