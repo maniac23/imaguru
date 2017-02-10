@@ -1,7 +1,7 @@
 // проходим по каждому элементу blog-archive
 $('.blog-archive').each(function() {
   // если в нем больше 3 слайдов - делаем слайдер
-  if($(this).find('.blog-archive__slide').length >= 3) {
+  if($(this).find('.blog-archive__slide').length >=4) {
     $(this).find('.blog-archive__slider').slick({
       infinite: false,
       slidesToShow: 3,
@@ -25,6 +25,7 @@ $('.blog-archive').each(function() {
       ]
     });
   } else { // если меньше 3 слайдов
+
     // открываем форму по клику
     $(this).find('.blog-archive__subscribe').on('click', function(e) {
       e.preventDefault();
@@ -34,18 +35,25 @@ $('.blog-archive').each(function() {
 });
 
 setTimeout(function() {
-  if ($('.blog-archive')) {
+  // if ($('.blog-archive')) {
     // если больше трех месяцев с архивом, то скрываем все с третьего и показываем кнопку
     if($('.blog-archive').length > 3) {
       $('.blog-archive').slice(3).fadeOut();
       $('.blog-archive__more').css('display', 'block');
       $('.blog-archive__more').on('click', function(e) {
         e.preventDefault();
-        $('.blog-archive:hidden').slice(0, 1).fadeIn();
-        if ($('.blog-archive').length === $('.blog-archive:visible').length) {
+        var slider = $('.blog-archive:hidden').slice(0, 1);
+        if ($('.blog-archive').length - 1 === $('.blog-archive:visible').length) {
           $('.blog-archive__more').fadeOut();
+        }
+        slider.fadeIn();
+        var slide = slider.find('.blog-archive__slider');
+        if(slide.length > 3) {
+          slide.slick();
+        } else {
+          return true;
         }
       });
     }
-  }
-}, 500);
+  // }
+}, 1200);

@@ -1,6 +1,10 @@
 .blog-archive {
   position: relative;
 
+  &--grey {
+    background-color: $grey;
+  }
+
   & > h2 {
     position: relative;
 
@@ -13,7 +17,6 @@
 
   &__slider {
     position: relative;
-
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -21,43 +24,58 @@
   }
 
   &__slide {
-    position: relative;
-
-    flex: 0 0 30%;
+    // position: relative;
+    flex: 0 0 33.33%;
+    width: 33.33%;
 
     &--flex {
-      flex: 1 0 30%;
+      flex: 1 0 33.33%;
     }
-
-    img {
-      display: block;
-      width: 100%;
-      height: 300px;
-    }
+    // img {
+    //   display: block;
+    //   width: 100%;
+    //   height: 300px;
+    // }
   }
 
-  &__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-
+  &__content {
+    flex: 0 0 33.33%;
+    padding: 30px 5%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    height: 100%;
-    padding: 50px 14.05%;
-
-    color: $white-color;
-
-    background-color: rgba(#000000, 0.7);
-
-    &--subscribe {
-      background-color: $grey;
-
-    }
+    min-height: 300px;
   }
+
+  &__wrapper {
+    color: $white-color;
+  }
+
+  &__category {
+    margin-bottom: 10px;
+  }
+  // &__overlay {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: space-between;
+  //   align-items: flex-start;
+  //   width: 100%;
+  //   height: 100%;
+  //   padding: 50px 14.05%;
+  //
+  //   color: $white-color;
+  //
+  //   background-color: rgba(#000000, 0.7);
+  //
+  //   &--subscribe {
+  //     background-color: $grey;
+  //
+  //   }
+  // }
 
   &__title {
     width: 100%;// fix for ie
@@ -69,6 +87,7 @@
     font-size: 1.25rem;
     color: $white-color;
     text-decoration: none;
+    flex: 1;
 
     &--subscribe {
       font-weight: 400;
