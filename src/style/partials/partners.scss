@@ -2,6 +2,10 @@
   padding: 60px $section-padding;
   text-align: center;
 
+  &--grey {
+    background-color: $grey;
+  }
+
   &__title {
     font-size: 1.85rem;
     font-weight: 400;

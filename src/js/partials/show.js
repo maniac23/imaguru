@@ -1,3 +1,4 @@
+// показываем скрытых партнеров, команду и вакансии
 function showItems(item) {
   var itemLi = item + ' li';
   var button = item + '-button';
@@ -28,6 +29,7 @@ showItems('#team');
 showItems('#jobs');
 showItems('#partners');
 
+// скрытие/открытие форм на плашках
 $('#fix__button').on('click', function() {
   $('.fix__container').slideToggle(400, function() {
     if($('.fix__container').is(':visible')) {
@@ -38,3 +40,18 @@ $('#fix__button').on('click', function() {
     }
   });
 });
+
+// скрытие/открытие форм на хакатонах
+$('.section .btn').on('click', function() {
+  var dataId = $(this).attr('data-id');
+  var container = $('.section-container[data-id="'+dataId+'"]');
+  var title = container.find('.contact-form__title');
+  var containers = $('.section-container').not(container);
+  var button = $('.section .btn[data-id="'+dataId+'"]');
+  containers.hide();
+  container.slideToggle(400, function() {
+    if(container.is(':visible')) {
+      scrollTo(button, 400);
+    }
+  })
+})

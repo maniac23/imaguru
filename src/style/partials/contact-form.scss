@@ -43,6 +43,10 @@
     border: 3px solid $orange;
     width: auto;
 
+    &:hover {
+      color: $white-color;
+    }
+
     // background: none;
   }
 }
