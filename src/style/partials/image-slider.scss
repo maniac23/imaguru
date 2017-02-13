@@ -1,10 +1,14 @@
 .image-slider {
-  display: flex;
-  position: relative;
-  margin-bottom: -2px;
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 
   &__slide {
-    flex: 0 0 33.33%;
+    // flex: 0 0 33.33%;
+    float: left;
+    width: 33.33%;
     display: block;
     position: relative;
 

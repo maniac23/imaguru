@@ -66,16 +66,16 @@ var dropDown = function(button, element, scrollFlag) {
 
 // функция для скрытых форм регистрации,
 // как на странице организуй у нас
-var showHiddenBox = function(button, element){
-
-	button.on('click', function(evt){
-		evt.preventDefault();
-		element.addClass('_show');
-	});
-	element.find('.close-button').on('click', function(){
-		element.removeClass('_show');
-	});
-};
+// var showHiddenBox = function(button, element){
+//
+// 	button.on('click', function(evt){
+// 		evt.preventDefault();
+// 		element.addClass('_show');
+// 	});
+// 	element.find('.close-button').on('click', function(){
+// 		element.removeClass('_show');
+// 	});
+// };
 
 var createTabDep = function(tabElement, tabContent) {
 
