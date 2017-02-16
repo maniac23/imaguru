@@ -1,6 +1,6 @@
 $('#events-timetable').slick({
   slidesToShow: 3,
-  slidesToScroll: 1,
+  slidesToScroll: 3,
   vertical: true,
   dots: false,
   arrows: true,
@@ -8,15 +8,10 @@ $('#events-timetable').slick({
   infinite: false,
   responsive: [
     {
-      breakpoint: 800,
-      settings: {
-        slidesToShow: 3
-      }
-    },
-    {
       breakpoint: 640,
       settings: {
-        slidesToShow: 1
+        slidesToShow: 1,
+        slidesToScroll: 1
       }
     }
   ]

@@ -12,9 +12,16 @@
   <svg class="search-icon">
     <use xlink:href="#search_icon"></use>
   </svg>
-  <svg class="menu-icon">
+  <!-- <svg class="menu-icon">
     <use xlink:href="#menu-icon"></use>
-  </svg>
+  </svg> -->
+  <button class="menu-icon">
+  <span class="sandwich">
+    <span class="sandwich__topper"></span>
+    <span class="sandwich__bottom"></span>
+    <span class="sandwich__footer"></span>
+  </span>
+</button>
   <nav class="menu">
     <ul class="menu__list">
       <li class="menu-item current-menu-item"><a href="/about.html">О клубе</a></li>
@@ -29,28 +36,39 @@
       <li class="menu-item"><a href="org-with-us.html">Организуй у нас</a></li>
       <li class="menu-item"><a href="#">Контакты</a></li>
     </ul>
-  </nav>
-  <form action="none" class="menu__form">
-    <input class="menu__search" type="search" placeholder="Поиск">
-    
     <div class="lang_menu">
-      <ul class="lang_menu-list">
-        <li class="menu-item">
-          <a href="#">Язык</a>
+      <ul id="menu-lang-menu" class="lang_menu-list">
+        <li id="menu-item-25" class="qtranxs-lang-menu qtranxs-lang-menu-ru menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-25">
+          <a title="RU" href="#">RU</a>
           <ul class="sub-menu">
-            <li class="menu-item">
-              <a href="#">RU</a>
+            <li id="menu-item-26" class="qtranxs-lang-menu-item qtranxs-lang-menu-item-ru menu-item menu-item-type-custom menu-item-object-custom menu-item-26">
+              <a title="RU" href="https://imaguru.by/ru/">RU</a>
             </li>
-            <li class="menu-item">
-              <a href="#">EN</a>
+            <li id="menu-item-27" class="qtranxs-lang-menu-item qtranxs-lang-menu-item-en menu-item menu-item-type-custom menu-item-object-custom menu-item-27">
+              <a title="EN" href="https://imaguru.by/en/">EN</a>
             </li>
           </ul>
         </li>
       </ul>
     </div>
-    <!-- <select class="menu__select" name="lang">
-      <option value="RU">RU</option>
-      <option value="EN">EN</option>
-    </select> -->
-  </form>
+  </nav>
+  <form role="search" method="get" class="menu__form" action="https://imaguru.by/">
+  		<input type="search" class="menu__search" id="search-field" placeholder="Поиск" value="" name="s">
+      <!--Language menu  -->
+      <div class="lang_menu">
+        <ul id="menu-lang-menu" class="lang_menu-list">
+          <li id="menu-item-25" class="qtranxs-lang-menu qtranxs-lang-menu-ru menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-25">
+            <a title="RU" href="#">RU</a>
+            <ul class="sub-menu">
+              <li id="menu-item-26" class="qtranxs-lang-menu-item qtranxs-lang-menu-item-ru menu-item menu-item-type-custom menu-item-object-custom menu-item-26">
+                <a title="RU" href="https://imaguru.by/ru/">RU</a>
+              </li>
+              <li id="menu-item-27" class="qtranxs-lang-menu-item qtranxs-lang-menu-item-en menu-item menu-item-type-custom menu-item-object-custom menu-item-27">
+                <a title="EN" href="https://imaguru.by/en/">EN</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </form>
 </header>

@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 90vh;
+  min-height: 100vh;
   padding: 0 $section-padding 60px;
 
   background:
@@ -134,7 +134,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2000;
 
   width: 100%;
   padding: 3px $section-padding;
@@ -309,6 +308,7 @@
     font-size: 1.875rem;
     margin: 0 0 30px 0;
     padding: 0;
+    font-weight: 300;
   }
 
   &--course-promo {
@@ -342,8 +342,6 @@
       animation: blink 1s infinite alternate;
     }
   }
-
-
 
   &__title {
     margin: 0;
@@ -570,12 +568,22 @@
     0% {
       transform: scale(1);
     }
-    to {
+
+    100% {
       transform: scale(0);
     }
 }
 
 // *********** MEDIA ****************
+@media only screen and (max-width: 1224px) {
+  .promo {
+    padding-top: 70px;
+  }
+
+  .breadcrumbs {
+    top: 70px;
+  }
+}
 
 @media only screen and (max-width: 1024px) {
   .info {
@@ -669,6 +677,14 @@
     &--post {
       font-size: 2rem;
     }
+
+    &--events {
+      font-size: 1.5rem;
+    }
+  }
+
+  .main-text p {
+    font-size: 1.2rem;
   }
 
   .features {
