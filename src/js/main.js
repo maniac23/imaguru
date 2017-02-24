@@ -44,5 +44,6 @@ jQuery(function($) {
    //= partials/org-form.js
    //= partials/selects.js
    //= partials/lazyloading.js
+   //= partials/vacancy.js
  });
  });
