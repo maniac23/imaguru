@@ -8,4 +8,10 @@
     font-weight: 400;
     text-align: center;
   }
+
+  & .row:nth-child(2n+1) {
+    .content-block--image {
+      order: -1;
+    }
+  }
 }
