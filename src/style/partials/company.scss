@@ -9,9 +9,18 @@
     text-align: center;
   }
 
-  & .row:nth-child(2n+1) {
-    .content-block--image {
-      order: -1;
+  & .row:nth-child(2n+2) {
+    .content-block--image,
+    .vacancy {
+      order: 2;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .company {
+    & .row {
+      display: block;
     }
   }
 }
