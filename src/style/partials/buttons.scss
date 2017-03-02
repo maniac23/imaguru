@@ -23,7 +23,7 @@ button {
   // background: none;
 
   cursor: pointer;
-  transition: all 0.3s ease-in;
+  transition: all 0.2s ease-in;
 
 
   &:hover,
@@ -107,6 +107,47 @@ button {
     color: $blue;
   }
 
+  &--register {
+    border: 3px solid $white-color;
+    background-color: $orange;
+    background-clip: content-box;
+    line-height: 3;
+    padding: 3px;
+    min-width: 250px;
+  }
+
+  &--free {
+    border: 3px solid $white-color;
+    background-color: $orange;
+    position: relative;
+    background-clip: content-box;
+    line-height: 3;
+    padding: 3px;
+    min-width: 250px;
+
+    &::after {
+      content: "free";
+      display: block;
+      position: absolute;
+      text-transform: uppercase;
+      line-height: 1.2;
+      padding: 5px 15px;
+      color: $orange;
+      background-color: $white-color;
+      top: 40px;
+      right: -20px;
+      transform: rotate(-15deg);
+      border: 2px solid transparent;
+      transition: all 0.2s ease-in;
+    }
+
+    &:hover {
+      &::after {
+        border: 2px solid $orange;
+      }
+    }
+  }
+
   .promo &,
   .main-footer & {
     &:hover {
@@ -124,5 +165,12 @@ button {
 
   @media only screen and (max-width: 480px) {
     padding: 15px 30px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .btn--free,
+  .btn--events {
+    padding: 3px;
   }
 }

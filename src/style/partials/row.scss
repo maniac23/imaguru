@@ -23,7 +23,12 @@
       }
     }
   }
+
+  & > .content-block {
+    width: 50%;
+  }
 }
+
 
 .content-block {
   position: relative;
@@ -34,7 +39,6 @@
   justify-content: center;
   min-height: 500px;
   padding: 60px 1% 60px 5%;
-
   font-weight: 500;
   color: $white-color;
 
@@ -409,6 +413,10 @@
           }
         }
       }
+    }
+
+    & > .content-block {
+      width: 100%;
     }
   }
 

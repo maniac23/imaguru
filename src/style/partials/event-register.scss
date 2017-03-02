@@ -55,6 +55,11 @@
       background-color: transparent;
       width: auto;
 
+      &:hover {
+        background-color: $orange;
+        color: $white-color;
+      }
+
     }
   }
 }

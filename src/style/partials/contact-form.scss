@@ -35,7 +35,7 @@
     }
   }
 
-  .btn {
+  .btn{
     margin-bottom: 0;
     padding: 12px 40px;
     display: inline-block;
@@ -44,9 +44,9 @@
     width: auto;
 
     &:hover {
-      color: $white-color;
+      background-color: #f05030 !important;
+      color: #ffffff !important;
     }
-
     // background: none;
   }
 }
