@@ -47,6 +47,20 @@
       background-color: #f05030 !important;
       color: #ffffff !important;
     }
+
+    &:disabled {
+      background-color: $grey;
+      color: $dark-font-color;
+      border-color: $dark-font-color;
+      opacity: 0.3;
+    }
+
+    &:disabled:hover {
+      background-color: $grey !important;
+      color: $dark-font-color !important;
+      border-color: $dark-font-color !important;
+      opacity: 0.3;
+    }
     // background: none;
   }
 }

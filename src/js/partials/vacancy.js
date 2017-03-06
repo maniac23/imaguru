@@ -21,6 +21,21 @@ fileInput.each(function() {
     } else {
       label.removeClass('uploaded').text('Загрузить файл');
     }
-
   });
+});
+
+
+var form = $('.vacancy__form form');
+form.each(function(){
+  var submitButton = $(this).find('input[type="submit"]');
+  submitButton.attr('disabled','disabled');
+  $(this).on('change', function() {
+    var file = $(this).find('input[type="file"]');
+    var url = $(this).find('input[type="url"]');
+    if(url.val() === '' && file.val() === '') {
+      submitButton.attr('disabled','disabled');
+    } else {
+      submitButton.removeAttr('disabled');
+    }
+  })
 });
