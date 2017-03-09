@@ -10,6 +10,7 @@
   padding: 3px 10.9375%;
   background-color: rgba(67, 62, 61, 0.6);
   font-weight: 700;
+  color: $white-color;
 
   a {
     margin-right: 15px;
@@ -40,7 +41,7 @@
 .page-title {
   text-align: center;
   font-weight: 600;
-  margin: 30px 0;
+  margin: 10px 0;
   font-size: 2.5rem;
   color: $dark-font-color;
 }
@@ -49,11 +50,12 @@
   text-align: center;
   font-weight: 300;
   font-size: 1.5rem;
+  margin: 10px 0;
 }
 
 .woocommerce-ordering {
   padding: 0 5%;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 
   select {
     padding: 10px 15px;
@@ -62,7 +64,7 @@
 }
 
 .products {
-  padding: 0 5%;
+  padding: 0;
   margin: 0;
   display: flex;
   justify-content: flex-start;
@@ -70,20 +72,25 @@
   list-style-type: none;
 
   li {
-    flex: 0 0 23%;
-    margin-right: 2%;
-    margin-bottom: 30px;
-    box-shadow: 0 0 8px #d0d0d0;
+    flex: 0 0 25%;
+    // margin-bottom: 30px;
+    // box-shadow: 0 0 8px #d0d0d0;
     border: 2px solid transparent;
-    border-radius: 3px;
+    // border-radius: 3px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: 0.3s all ease-in;
+    background-color: $grey;
+    padding: 0;
 
     &:hover {
       border: 2px solid $orange;
       box-shadow: none;
+    }
+
+    &:nth-child(2n + 2) {
+      background-color: $white-color;
     }
 
     a {
@@ -126,6 +133,19 @@
       &:hover {
         color: $dark-font-color;
       }
+    }
+  }
+}
+
+.woocommerce-pagination {
+  .page-numbers {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+
+    li {
+      margin-right: 10px;
     }
   }
 }
