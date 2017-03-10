@@ -563,12 +563,34 @@ address {
   text-align: center;
   margin-bottom: 30px;
 }
+
+abbr[title] {
+  text-decoration: none;
+}
+
+div[itemprop="description"] {
+  ul {
+    padding-left: 15px;
+  }
+}
+
 // ********** MEDIA **************
+
+@media only screen and (max-width: 1222px) {
+  .woocommerce-breadcrumb {
+    padding-top: 70px;
+  }
+
+  .wrapper > h1 {
+    padding-top: 80px;
+    margin-top: 0;
+  }
+}
 
 @media only screen and (max-width: 980px) {
   .products {
     li {
-      flex-basis: 48%;
+      flex-basis: 50%;
     }
   }
 
