@@ -98,3 +98,24 @@
 @import "partials/chosen";
 @import "partials/company";
 @import "partials/vacancy";
+
+
+.vd-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 50%;
+  margin: 60px auto 0;
+}
+
+@media screen and (max-width: 480px) {
+  .vd-buttons {
+    width: 100%;
+
+    a {
+      margin: 0 auto 15px;
+      padding: 3px;
+    }
+  }
+}
