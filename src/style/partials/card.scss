@@ -1,13 +1,16 @@
 .card {
   flex: 0 0 25%;
-  padding: 40px 2.5%;
+  padding: 40px 2%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   flex-wrap: wrap;
-
   &:nth-child(2n) {
     background-color: $grey;
+
+    a:not(.btn) {
+      color: $dark-font-color;
+    }
   }
 
   &__title {
@@ -19,13 +22,11 @@
     padding: 0;
     margin-bottom: 60px;
     flex: 1;
-
     span {
       font-size: 1.125rem;
       font-weight: 400;
     }
   }
-
   &__list {
     list-style-type: none;
     font-size: 1rem;
@@ -33,7 +34,6 @@
     margin-bottom: 60px;
     flex: 3;
   }
-
   &__date {
     p {
       margin: 0;
@@ -43,11 +43,9 @@
       font-family: "Open Sans", Arial, helvetica;
     }
   }
-
   &__start {
     text-transform: uppercase;
   }
-
   &--orange {
     background-color: $orange !important;
     text-align: center;
@@ -61,33 +59,70 @@
       li {
         padding: 20px 0;
       }
-
       a {
         color: $white-color;
         transition: all 0.3s ease-in;
-
         &:hover {
           text-decoration: none;
           color: $dark-font-color;
         }
       }
     }
+  }
+  &--blue {
+    background-color: $blue !important;
 
+    .card__title {
+      color: $white-color;
+      text-transform: uppercase;
+    }
+
+    a {
+      color: $white-color;
+    }
+
+    .card__list {
+      text-align: center;
+
+      li {
+        padding: 20px 0;
+      }
+      a {
+        color: $white-color;
+        transition: all 0.3s ease-in;
+        &:hover {
+          text-decoration: none;
+          color: $orange;
+        }
+      }
+    }
+
+    &:nth-child(2n) {
+      background-color: $grey !important;
+
+      .card__title {
+        color: $dark-font-color;
+      }
+
+      a{
+        color: $dark-font-color;
+
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
   }
 }
 
-
 // ****** MEDIA ********
-
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1280px) {
   .card {
     flex: 0 0 50%;
     padding: 60px 6%;
-
     &:first-child {
       background-color: $grey;
     }
-
     &:nth-child(2n) {
       background-color: $white-color;
     }
@@ -97,11 +132,9 @@
 @media only screen and (max-width: 768px) {
   .card {
     flex: 0 0 100%;
-
     &:first-child {
       background-color: $white-color;
     }
-
     &:nth-child(2n) {
       background-color: $grey;
     }

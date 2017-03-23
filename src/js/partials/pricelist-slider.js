@@ -4,10 +4,22 @@ if ($('.pricelist > ul') && $('.pricelist>ul>li').length > 4) {
     responsive: [
       {
         breakpoint: 5000, // такой костыль чтоб на боьших слайдера не было
-        settings: 'unslick'
+        settings: {
+          slidesToShow: 5,
+          arrows: true,
+          draggable: true
+        }
       },
       {
-        breakpoint: 1450,
+        breakpoint: 1925,
+        settings: {
+          slidesToShow: 5,
+          arrows: true,
+          draggable: true
+        }
+      },
+      {
+        breakpoint: 1444,
         settings: {
           slidesToShow: 4,
           arrows: true,
