@@ -29,3 +29,5 @@ $('.pricelist__item').equalHeights();
 $('#org-conference .slider__slide').equalHeights();
 $('#org-training .slider__slide').equalHeights();
 $('#org-meeting .slider__slide').equalHeights();
+$('#org-meeting .slider__slide').equalHeights();
+$('#hackathons-slider .slider__slide').equalHeights();
